@@ -23,7 +23,7 @@
 
 ### 导语 ###
 
-虽然之前写过![webpack常规配置总结](https://github.com/WeiJietao/WJT-Articles/blob/master/webpack%E5%B8%B8%E8%A7%84%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93.md)一文，但对于 webpack 的了解还是不深，于是决定从头开始再学一遍 webpack，本文是 webpack restart 系列第一篇，主要记录 webpack 最基本的配置选项和常用的命令等。
+虽然之前写过![webpack常规配置总结](https://github.com/WeiJietao/LogBase/blob/master/webpack%E5%B8%B8%E8%A7%84%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93.md)一文，但对于 webpack 的了解还是不深，于是决定从头开始再学一遍 webpack，本文是 webpack restart 系列第一篇，主要记录 webpack 最基本的配置选项和常用的命令等。
 
 脚手架源码：
 
@@ -76,7 +76,7 @@ module.exports = {
 }
 ```
 
-关于 entry 的三种写法和 output 的详细说明，参考![webpack常规配置总结](https://github.com/WeiJietao/WJT-Articles/blob/master/webpack%E5%B8%B8%E8%A7%84%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93.md)。
+关于 entry 的三种写法和 output 的详细说明，参考![webpack常规配置总结](https://github.com/WeiJietao/LogBase/blob/master/webpack%E5%B8%B8%E8%A7%84%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93.md)。
 
 ---
 
