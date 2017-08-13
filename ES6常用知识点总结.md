@@ -40,7 +40,7 @@
 
 ECMAScript6(简称 ES6) 是 JavaScript 语言的下一代标准，也称 ECMAScript2015。Node.js 环境下可以使用 Babel 转码器将 ES6 转换为 ES5 代码，从而使代码在现有环境中执行。
 
-关于 Babel 的安装和使用，可以参考文章：[Babel配置笔记](https://github.com/WeiJietao/WJT-Articles/blob/master/Babel%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0.md)
+关于 Babel 的安装和使用，可以参考文章：[Babel配置笔记](https://github.com/WeiJietao/LogBase/blob/master/Babel%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0.md)
 
 ---
 
