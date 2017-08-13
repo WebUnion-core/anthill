@@ -209,7 +209,7 @@ audio 标签支持 mp3、wav 和 ogg 三种音频格式，其中几乎所有浏�
 
 HTML5 新增的`<canvas>`和`<svg>`标签允许在页面中绘制复杂的图形。
 
-关于 canvas 和 svg 的详细讲解，可以参考文章：[SVG和Canvas](https://github.com/WeiJietao/WJT-Articles/blob/master/SVG%E5%92%8CCanvas.md)
+关于 canvas 和 svg 的详细讲解，可以参考文章：[SVG和Canvas](https://github.com/WeiJietao/LogBase/blob/master/SVG%E5%92%8CCanvas.md)
 
 ---
 
@@ -217,7 +217,7 @@ HTML5 新增的`<canvas>`和`<svg>`标签允许在页面中绘制复杂的图形
 
 HTML5 将拖拽标准化，任何元素都可以拖拽。
 
-关于拖拽的详细讲解，可以参考文章：[关于拖放事件的笔记](https://github.com/WeiJietao/WJT-Articles/blob/master/%E5%85%B3%E4%BA%8E%E6%8B%96%E6%94%BE%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%AC%94%E8%AE%B0.md)
+关于拖拽的详细讲解，可以参考文章：[关于拖放事件的笔记](https://github.com/WeiJietao/LogBase/blob/master/%E5%85%B3%E4%BA%8E%E6%8B%96%E6%94%BE%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%AC%94%E8%AE%B0.md)
 
 ---
 
@@ -225,7 +225,7 @@ HTML5 将拖拽标准化，任何元素都可以拖拽。
 
 HTML5 Geolocation API 用于获得用户的地理位置。这个新特性可能侵犯用户的隐私，除非用户同意，否则用户位置信息是不可用的。
 
-关于地理定位的详细讲解，可以参考文章：[关于地理位置定位的笔记](https://github.com/WeiJietao/WJT-Articles/blob/master/%E5%85%B3%E4%BA%8E%E5%9C%B0%E7%90%86%E5%AE%9A%E4%BD%8D%E7%9A%84%E7%AC%94%E8%AE%B0.md)
+关于地理定位的详细讲解，可以参考文章：[关于地理位置定位的笔记](https://github.com/WeiJietao/LogBase/blob/master/%E5%85%B3%E4%BA%8E%E5%9C%B0%E7%90%86%E5%AE%9A%E4%BD%8D%E7%9A%84%E7%AC%94%E8%AE%B0.md)
 
 ---
 
