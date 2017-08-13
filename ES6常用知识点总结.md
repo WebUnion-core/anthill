@@ -1,40 +1,42 @@
 
-### ES6常用知识点总结 ###
+## ES6常用知识点总结 ##
+
+---
 
 ### 目录 ###
 
-1. __参考链接__
-2. __ES6 概述__
-3. __let 命令__
-4. __const 命令__
-5. __解构赋值__
-    1. __数组解构赋值__
-    2. __不完全解构__
-    3. __解构赋默认值__
-    4. __对象解构赋值__
-    5. __函数参数解构赋值__
-    6. __其他类型解构赋值__
-6. __模板字符串__
-7. __rest 参数__
-8. __箭头函数__
-9. __类(class)__
-    1. __类的写法__
-    2. __类的继承(extends)__
-10. __模块(module)__
-    1. __export__
-    2. __import__
+1. 参考链接
+2. ES6概述
+3. let命令
+4. const命令
+5. 解构赋值
+    1. 数组解构赋值
+    2. 不完全解构
+    3. 解构赋默认值
+    4. 对象解构赋值
+    5. 函数参数解构赋值
+    6. 其他类型解构赋值
+6. 模板字符串
+7. rest 参数
+8. 箭头函数
+9. 类(class)
+    1. 类的写法
+    2. 类的继承(extends)
+10. 模块(module)
+    1. export
+    2. import
 
 ---
 
 ### 参考链接 ###
 
-- [ECMAScript 6 入门](http://es6.ruanyifeng.com/)
+- [ECMAScript6入门](http://es6.ruanyifeng.com/)
 
 - [关于ES6/ES2015的学习笔记](https://segmentfault.com/a/1190000008791037)
 
 ---
 
-### ES6 概述 ###
+### ES6概述 ###
 
 ECMAScript6(简称 ES6) 是 JavaScript 语言的下一代标准，也称 ECMAScript2015。Node.js 环境下可以使用 Babel 转码器将 ES6 转换为 ES5 代码，从而使代码在现有环境中执行。
 
@@ -42,7 +44,7 @@ ECMAScript6(简称 ES6) 是 JavaScript 语言的下一代标准，也称 ECMAScr
 
 ---
 
-### let 命令 ###
+### let命令 ###
 
 let 命令是 ES6 新增的用来声明变量的命令，与 var 类似，不同之处在于 let 声明的变量只在 let 命令所在的代码块内有效。
 
@@ -62,7 +64,7 @@ a[6]();//输出：6，如果不使用let声明，输出结果为10
 
 ---
 
-### const 命令 ###
+### const命令 ###
 
 const 命令用于声明一个只读的常量，const 声明的变量必须立即初始化，const 的作用于与 let 命令一样只在声明所在的作用域内有效。
 
@@ -184,7 +186,7 @@ Nice to meet you.`;
 
 ---
 
-### rest 参数 ###
+### rest参数 ###
 
 ES6 引入 rest 参数(形式为“...”)，用于获取函数的多余参数，其替代了 arguments 对象，rest 参数搭配的变量是一个数组，该变量将多余的参数放入数组中，注意，rest 参数之后不能再有其他参数，否则会报错。
 
@@ -339,4 +341,14 @@ import { stat, exists, readFile } from 'fs';
 
 ```
 import 'lodash';
+```
+
+---
+
+```
+ARTICLE_ID      : 4 
+POST_DATE       : 2017/08/13
+RECENTLY_MODIFY : 2017/08/13
+TIME_COUNTER    : 0D
+AUTHER          : WJT20
 ```
