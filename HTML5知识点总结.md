@@ -226,6 +226,7 @@ HTML5 将拖拽标准化，任何元素都可以拖拽。
 HTML5 Geolocation API 用于获得用户的地理位置。这个新特性可能侵犯用户的隐私，除非用户同意，否则用户位置信息是不可用的。
 
 关于地理定位的详细讲解，可以参考文章：[关于地理位置定位的笔记](https://github.com/WeiJietao/WJT-Articles/blob/master/%E5%85%B3%E4%BA%8E%E5%9C%B0%E7%90%86%E5%AE%9A%E4%BD%8D%E7%9A%84%E7%AC%94%E8%AE%B0.md)
+
 ---
 
 ```
