@@ -1,0 +1,222 @@
+
+## Web数据存储知识点总结 ##
+
+### 目录 ###
+
+1. 参考链接
+2. cookie
+3. sessionStorage
+4. sessionStorage、localStorage和cookie的异同
+5. JSON
+	1. 取值
+	2. 简单的JSON形式
+	3. JSON数组
+	4. JavaScript JSON API
+6. XML
+	1. 简单的XML形式
+	2. XML数组
+7. XML与JSON的对比
+
+---
+
+### 参考链接 ###
+
+- [cookie、 sessionStorage 、localStorage之间的区别和使用](http://www.cnblogs.com/caiyezi/p/5619506.html)
+
+- [你懂JSON么？](https://segmentfault.com/a/1190000008201431)
+
+- [XML与JSON的对比](http://www.cnblogs.com/yank/p/4028266.html)
+
+---
+
+### cookie ###
+
+cookie 指存储在用户本地终端上的数据，安全性较低，通常需要经过加密，典型的应用场景就是判断注册用户是否已经登过该网站。
+
+cookie 包装类：  
+
+```
+//cookie类
+var Cookie = {
+	setCookie: function(key, value, dayToLive) {//设置
+		var exp = new Date();
+		exp.setDate(exp.getDate() + dayToLive);
+		document.cookie = key + '=' + encodeURIComponent(value) + ((dayToLive === null) ? '' : '; expires=' +exp.toGMTString());
+	},
+
+	getCookie: function(key) {//获取
+		var arr = (decodeURIComponent(document.cookie)).split('; '),
+			eachCookie;
+		for (var i = 0; i < arr.length; i++) {
+			eachCookie = arr[i].split('=');
+			if (eachCookie[0] === key && eachCookie[1] != '') {
+				return eachCookie[1];
+			}
+		}
+	},
+
+	deleteCookie: function(key) {//删除
+		var exp = new Date();
+		exp.setTime(exp.getTime() - 1);
+		this.setCookie(key, '', exp);
+	},
+
+	clearCookie: function() {//清空
+		var arr = (decodeURIComponent(document.cookie)).split('; '),
+			eachCookie,
+			exp = new Date();
+		exp.setTime(exp.getTime() - 1);
+		for (var i = 0; i < arr.length; i++) {
+			eachCookie = arr[i].split('=');
+			this.setCookie(eachCookie[0], '', exp);
+		}
+	}
+};
+```
+
+---
+
+### localStorage ###
+
+localStorage 是没有时间限制的数据存储方式。
+
+localStorage 的使用：
+
+```
+var dataObj = {
+    name: 'WJT20',
+    id: 'ob3125cs'
+};
+localStorage.data = dataObj;//写
+console.log(localStorage.data);//读
+```
+
+---
+
+### sessionStorage ###
+
+sessionStorage 针对的是一个 session 数据的存储，当用户关闭浏览器窗口后，数据就会被删除。
+
+```
+var dataObj = {
+    name: 'WJT20',
+    id: 'ob3125cs'
+};
+sessionStorage.data = dataObj;//写
+console.log(sessionStorage.data);//读
+```
+
+---
+
+### sessionStorage、localStorage和cookie的异同 ###
+
+共同点：都是保存在浏览器端且同源。  
+
+区别：cookie 数据可以在浏览器和服务器之间来回传递，cookie 有 path 的概念，可以限制 cookie 只属于某个路径下，cookie 数据大小限制最大不能超过4k，所以 cookie 只适合保存很小的数据。  
+
+sessionStorage 和 localStorage 不会自动把数据发送给服务器，仅在本地保存，两者可存储的数据量比 cookie 要大得多，可以达到5M或更大。
+
+---
+
+### JSON ###
+
+JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。易于人阅读和编写。同时也易于机器解析和生成。  
+
+#### 取值 ####
+
+1. 数字(整型或浮点型)
+2. 字符串(由双括号包含)
+3. 逻辑值(true 或 false)
+4. 数组(由方括号包含)
+5. 对象(由花括号包含)
+6. null
+
+#### 简单的JSON形式 ####
+
+```
+{
+	"userName": "WeiJietao",
+	"userId": "0b9145cd"
+}
+```
+
+#### JSON数组 ####
+
+```
+{
+	"members": [
+		{ "userName": "PersonA", "userId": "4786de01" },
+		{ "userName": "PersonB", "userId": "5134cs47" }
+	]
+}
+```
+
+#### JavaScript JSON API ####
+
+将 JavaScript 对象转换为 JSON 字符串使用 JSON.stringify(obj) 方法，obj 参数就是所要操作的对象；将 JSON 字符串转换为 JavaScript 对象则使用 JSON.parse(json) 方法，json 参数就是所要操作的 JSON 字符串。
+
+```
+var originDataObj = {
+	userName: 'WeiJietao',
+	userId: '0b9145cd'
+};
+var json = JSON.stringify(originDataObj);
+var obj = JSON.parse(json);
+console.log(json, obj);
+```
+
+---
+
+### XML ###
+
+XML(Extensible Markup Language，扩展标记语言) 可以用来标记数据、定义数据类型，是一种允许用户对自己的标记语言进行定义的源语言。XML 使用 DTD(document type definition) 文档类型定义来组织数据。  
+
+XML 是标准通用标记语言(SGML)的子集，非常适合 Web 传输。XML 提供统一的方法来描述和交换独立于应用程序或供应商的结构化数据。
+
+#### 简单的XML形式 ####
+
+```
+<user userName="WeiJietao" userId="0b9145cd"></user>
+```
+
+#### XML数组 ####
+
+```
+<usersList>
+	<user userName="PersonA" userId="4786de01"></user>
+	<user userName="PersonB" userId="5134cs47"></user>
+</userList>
+```
+
+---
+
+### XML与JSON的对比 ###
+
+XML：
+
+1. 应用广泛，可扩展性强，被广泛应用各种场合；
+2. 读取、解析没有 JSON 快；
+3. 可读性强，可描述复杂结构。
+
+JSON：
+
+1. 结构简单，都是键值对；
+2. 读取、解析速度快，多语言支持；
+3. 传输数据量小，传输速率大大提高；
+4. 描述复杂结构能力较弱。
+
+选择原则：
+
+1. 对于复杂的数据结构使用 XML，简单的数据结构可采用 JSON；
+2. 在互联网应用数据传输中，更提倡使用 JSON；
+3. 针对前后端的差异，可以在服务端使用 XML，在前端使用 JSON，两者之间的转换在服务器端完成，这样可以各取所长。
+
+---
+
+```
+ARTICLE_ID      : 15
+POST_DATE       : 2017/08/19
+RECENTLY_MODIFY : 2017/08/19
+TIME_COUNTER    : 0D
+AUTHER          : WJT20
+```
