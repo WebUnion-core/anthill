@@ -52,3 +52,7 @@
 - ID:16 > [JSONP跨域分析](https://github.com/WeiJietao/LogBase/blob/master/JSONP%E8%B7%A8%E5%9F%9F%E5%88%86%E6%9E%90.md)
 
 - ID:18 > [HTTP协议知识总结](https://github.com/WeiJietao/LogBase/blob/master/HTTP%E5%8D%8F%E8%AE%AE%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.md)
+
+### 其他 ###
+
+- ID:19 > [什么乱七八糟的](https://github.com/WeiJietao/LogBase/blob/master/%E4%BB%80%E4%B9%88%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84.md)
