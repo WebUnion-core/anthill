@@ -3,11 +3,11 @@
 
 ### 目录 ###
 
-1. __什么是express__
-2. __启动express__
-3. __请求和响应__
-4. __静态资源配置__
-5. __启动服务__
+1. 什么是express
+2. 启动express
+3. 请求和响应
+4. 静态资源配置
+5. 启动服务
 
 ---
 
@@ -157,7 +157,7 @@ console.log("Server running on: http://127.0.0.1:8080");
 ```
 ARTICLE_ID      : 20
 POST_DATE       : 2017/08/22
-RECENTLY_MODIFY : 2017/08/22
-TIME_COUNTER    : 1D
+RECENTLY_MODIFY : 2017/08/24
+TIME_COUNTER    : 2D
 AUTHER          : WJT20
 ```
