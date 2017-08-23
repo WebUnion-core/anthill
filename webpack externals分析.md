@@ -1,4 +1,0 @@
-
-## webpack externals分析 ##
-
-###  ###

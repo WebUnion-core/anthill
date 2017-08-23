@@ -118,8 +118,6 @@ HTML 代码：
 
 在 server.js 文件中，我们把"/page/"路由下的静态资源调用路径统一设为与 server.js 同级的 src 目录。这样，当我们在 HTML 页面中通过"/page/css/style.css"路径获取的样式文件就是"/src/css/"下的 style.css 文件。
 
-如果我们设置的路由是"/"，那么 app.use() 的第一个参数可以省略。
-
 ---
 
 ### 启动服务 ###
