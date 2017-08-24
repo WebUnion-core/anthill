@@ -375,6 +375,6 @@ console.log(arr4.constructor === Array);//输出：true
 ARTICLE_ID : 21
 POST_DATE : 2017/08/24
 RECENTLY_MODIFY : 2017/08/24
-TIME_COUNTER : 2D
+TIME_COUNTER : 3D
 AUTHER : WJT20
 ```
