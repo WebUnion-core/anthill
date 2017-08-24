@@ -3,23 +3,21 @@
 
 ## 目录 ##
 
-```
 1 数据类型
-    1.1 类型判断
-    1.2 基本数据类型
-        1.2.1 Undefined类型
-        1.2.2 Null类型
-        1.2.3 Boolean类型
-        1.2.4 Number类型
-        1.2.5 String类型
-    1.3 引用数据类型
-        1.3.1 Object类型
-        1.3.2 Date类型
-        1.3.3 Array类型
+    1 类型判断
+    2 基本数据类型
+        1 Undefined类型
+        2 Null类型
+        3 Boolean类型
+        4 Number类型
+        5 String类型
+    3 引用数据类型
+        1 Object类型
+        2 Date类型
+        3 Array类型
 2 类型转换
     1 强制类型转换
     2 隐性类型转换
-```
 
 ---
 
