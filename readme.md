@@ -9,6 +9,8 @@
 
 - ID:22 > [JavaScript语句与函数](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E8%AF%AD%E5%8F%A5%E4%B8%8E%E5%87%BD%E6%95%B0.md)
 
+- ID:23 > [JavaScript BOM与DOM](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%20BOM%E4%B8%8EDOM.md)
+
 ### webpack系列 ###
 
 - ID:2 > [webpack常规配置总结](https://github.com/WeiJietao/LogBase/blob/master/webpack%E5%B8%B8%E8%A7%84%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93.md)
