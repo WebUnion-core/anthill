@@ -11,6 +11,8 @@
 
 - ID:23 > [JavaScript BOM与DOM](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%20BOM%E4%B8%8EDOM.md)
 
+- ID:24 > [JavaScript canvas介绍](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%20canvas%E4%BB%8B%E7%BB%8D.md)
+
 ### webpack系列 ###
 
 - ID:2 > [webpack常规配置总结](https://github.com/WeiJietao/LogBase/blob/master/webpack%E5%B8%B8%E8%A7%84%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93.md)
