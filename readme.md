@@ -43,6 +43,8 @@
 
 - ID:11 > [CSS3动画实践](https://github.com/WeiJietao/LogBase/blob/master/CSS3%E5%8A%A8%E7%94%BB%E5%AE%9E%E8%B7%B5.md)
 
+- ID:25 > [初探SASS](https://github.com/WeiJietao/LogBase/blob/master/%E5%88%9D%E6%8E%A2SASS.md)
+
 ### Node.js系列 ###
 
 - ID:12 > [Node.js基础知识点总结](https://github.com/WeiJietao/LogBase/blob/master/Node.js%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93.md)
