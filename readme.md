@@ -15,6 +15,8 @@
 
 - ID:26 > [JavaScript事件简讲](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E4%BA%8B%E4%BB%B6%E7%AE%80%E8%AE%B2.md)
 
+- ID:27 > [JSON、Ajax和JSONP记录](https://github.com/WeiJietao/LogBase/blob/master/JSON%E3%80%81Ajax%E5%92%8CJSONP%E8%AE%B0%E5%BD%95.md)
+
 ## webpack系列 ##
 
 - ID:2 > [webpack常规配置总结](https://github.com/WeiJietao/LogBase/blob/master/webpack%E5%B8%B8%E8%A7%84%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93.md)
