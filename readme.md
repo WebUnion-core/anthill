@@ -69,6 +69,8 @@
 
 - ID:18 > [HTTP协议知识总结](https://github.com/WeiJietao/LogBase/blob/master/HTTP%E5%8D%8F%E8%AE%AE%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.md)
 
+- ID:28 > [Web实用代码段集合(一)](https://github.com/WeiJietao/LogBase/blob/master/Web%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E9%9B%86%E5%90%88(%E4%B8%80).md)
+
 ## 其他 ##
 
 - ID:19 > [什么乱七八糟的](https://github.com/WeiJietao/LogBase/blob/master/%E4%BB%80%E4%B9%88%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84.md)
