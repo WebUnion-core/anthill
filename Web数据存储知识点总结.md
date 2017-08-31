@@ -1,7 +1,7 @@
 
-## Web数据存储知识点总结 ##
+# Web数据存储知识点总结 #
 
-### 目录 ###
+## 目录 ##
 
 1. 参考链接
 2. cookie
@@ -19,7 +19,7 @@
 
 ---
 
-### 参考链接 ###
+## 参考链接 ##
 
 - [cookie、 sessionStorage 、localStorage之间的区别和使用](http://www.cnblogs.com/caiyezi/p/5619506.html)
 
@@ -29,7 +29,7 @@
 
 ---
 
-### cookie ###
+## cookie ##
 
 cookie 指存储在用户本地终端上的数据，安全性较低，通常需要经过加密，典型的应用场景就是判断注册用户是否已经登过该网站。
 
@@ -76,7 +76,7 @@ var Cookie = {
 
 ---
 
-### localStorage ###
+## localStorage ##
 
 localStorage 是没有时间限制的数据存储方式。
 
@@ -93,7 +93,7 @@ console.log(localStorage.data);//读
 
 ---
 
-### sessionStorage ###
+## sessionStorage ##
 
 sessionStorage 针对的是一个 session 数据的存储，当用户关闭浏览器窗口后，数据就会被删除。
 
@@ -108,7 +108,7 @@ console.log(sessionStorage.data);//读
 
 ---
 
-### sessionStorage、localStorage和cookie的异同 ###
+## sessionStorage、localStorage和cookie的异同 ##
 
 共同点：都是保存在浏览器端且同源。  
 
@@ -118,11 +118,11 @@ sessionStorage 和 localStorage 不会自动把数据发送给服务器，仅在
 
 ---
 
-### JSON ###
+## JSON ##
 
 JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。易于人阅读和编写。同时也易于机器解析和生成。  
 
-#### 取值 ####
+## 取值 ##
 
 1. 数字(整型或浮点型)
 2. 字符串(由双括号包含)
@@ -131,7 +131,7 @@ JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。易�
 5. 对象(由花括号包含)
 6. null
 
-#### 简单的JSON形式 ####
+## 简单的JSON形式 ##
 
 ```
 {
@@ -140,7 +140,7 @@ JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。易�
 }
 ```
 
-#### JSON数组 ####
+## JSON数组 ##
 
 ```
 {
@@ -151,7 +151,7 @@ JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。易�
 }
 ```
 
-#### JavaScript JSON API ####
+## JavaScript JSON API ##
 
 将 JavaScript 对象转换为 JSON 字符串使用 JSON.stringify(obj) 方法，obj 参数就是所要操作的对象；将 JSON 字符串转换为 JavaScript 对象则使用 JSON.parse(json) 方法，json 参数就是所要操作的 JSON 字符串。
 
@@ -167,19 +167,19 @@ console.log(json, obj);
 
 ---
 
-### XML ###
+## XML ##
 
 XML(Extensible Markup Language，扩展标记语言) 可以用来标记数据、定义数据类型，是一种允许用户对自己的标记语言进行定义的源语言。XML 使用 DTD(document type definition) 文档类型定义来组织数据。  
 
 XML 是标准通用标记语言(SGML)的子集，非常适合 Web 传输。XML 提供统一的方法来描述和交换独立于应用程序或供应商的结构化数据。
 
-#### 简单的XML形式 ####
+## 简单的XML形式 ##
 
 ```
 <user userName="WeiJietao" userId="0b9145cd"></user>
 ```
 
-#### XML数组 ####
+## XML数组 ##
 
 ```
 <usersList>
@@ -190,7 +190,7 @@ XML 是标准通用标记语言(SGML)的子集，非常适合 Web 传输。XML �
 
 ---
 
-### XML与JSON的对比 ###
+## XML与JSON的对比 ##
 
 XML：
 
@@ -214,9 +214,9 @@ JSON：
 ---
 
 ```
-ARTICLE_ID      : 15
-POST_DATE       : 2017/08/19
-RECENTLY_MODIFY : 2017/08/19
-TIME_COUNTER    : 0D
-AUTHER          : WJT20
+ARTICLE_ID : 15
+POST_DATE : 2017/08/19
+RECENTLY_MODIFY : 2017/08/31
+TIME_COUNTER : 1
+AUTHER : WJT20
 ```
