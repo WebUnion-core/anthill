@@ -1,7 +1,7 @@
 
-## Mongoose实现增删改查 ##
+# Mongoose实现增删改查 #
 
-### 目录 ###
+## 目录 ##
 
 1. 参考链接
 2. Mongoose概述
@@ -14,7 +14,7 @@
 
 ---
 
-### 参考链接 ###
+## 参考链接 ##
 
 - [mongodb操作之mongoose(一)](https://segmentfault.com/a/1190000005711812)
 
@@ -22,7 +22,7 @@
 
 ---
 
-### Mongoose概述 ###
+## Mongoose概述 ##
 
 Mongoose 是一种利用 Node.js 模块对 MondoDB 数据库进行操作的工具包，它有着结构化、操作性强、可重复的优点，更重要的是它将 MongoDB 返回的 JSON 字符串包装成了 JSON 对象，这在操作时要比直接使用字符串方便得多。
 
@@ -30,7 +30,7 @@ Mongoose 是一种利用 Node.js 模块对 MondoDB 数据库进行操作的工�
 
 ---
 
-### 连接MongoDB ###
+## 连接MongoDB ##
 
 首先在项目中使用 npm(cnpm 更佳)安装 mongoose：`npm install --save-dev mongoose`，连接 Mongoose 需要先开启 MongoDB服务，接着在服务端脚本(index.js)中写入代码：
 
@@ -50,7 +50,7 @@ db.connection.on('open', function() {
 
 ---
 
-### Schema及Model ###
+## Schema及Model ##
 
 Schema 指数据库集合的模型骨架，或者是数据属性模型传统意义的表结构。
 
@@ -71,7 +71,7 @@ var TestModel = db.model('test', TestSchema);//将Schema转换为Model，test集
 
 ---
 
-### 增——增加记录 ###
+## 增——增加记录 ##
 
 增加记录有两种方法，分别是使用 Model 的 create() 方法和使用 Entity 的 save() 方法。
 
@@ -117,7 +117,7 @@ var TestModel = db.model('test', TestSchema);//将Schema转换为Model，test集
 
 ---
 
-### 删——删除记录 ###
+## 删——删除记录 ##
 
 删除记录使用的是 Model 的 remove(condition, callback) 方法，参数 condition(对象) 为所要删除记录的检索条件，参数 callback(函数) 只有一个参数 error 错误信息。
 
@@ -137,7 +137,7 @@ TestModel.remove({ name: 'WJT20' }, function(error) {
 
 ---
 
-### 改——修改记录 ###
+## 改——修改记录 ##
 
 修改记录使用的是 Model 的 update(condition, data, callback) 方法，参数 condition 与 Model.remove() 的 condition 参数形式相同；参数 data(对象) 为修改新内容，注意，data 的值会完全覆盖原来的所有字段的值，如果只想修改一个字段值，应使用 $set 操作符；参数 callback 与 Model.remove() 的 callback 形式相同。
 
@@ -157,7 +157,7 @@ TestModel.update({ name: 'WJT20' }, { $set: { name: 'Didy' } }, function(error) 
 
 ---
 
-### 查——查询记录 ###
+## 查——查询记录 ##
 
 查询记录使用的是 Model 的 find(condition, callback) 方法，参数 condition 同样是记录检索条件，参数 callback 同样有两个参数 error 错误信息和返回的记录。注意，查询返回的是一个记录数组。
 
@@ -178,9 +178,9 @@ TestModel.find({ name: 'WJT20' }, function(error, doc) {
 ---
 
 ```
-ARTICLE_ID      : 13
-POST_DATE       : 2017/08/14
-RECENTLY_MODIFY : 2017/08/14
-TIME_COUNTER    : 0D
-AUTHER          : WJT20
+ARTICLE_ID : 13
+POST_DATE : 2017/08/14
+RECENTLY_MODIFY : 2017/08/31
+TIME_COUNTER : 1
+AUTHER : WJT20
 ```
