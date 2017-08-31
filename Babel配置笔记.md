@@ -56,9 +56,9 @@ Babel 是一个广泛使用的转码器，可以将 ES6 代码转为 ES5 代码�
 ---
 
 ```
-ARTICLE_ID      : 3 
-POST_DATE       : 2017/08/13
+ARTICLE_ID : 3 
+POST_DATE : 2017/08/13
 RECENTLY_MODIFY : 2017/08/31
-TIME_COUNTER    : 1
-AUTHER          : WJT20
+TIME_COUNTER : 1
+AUTHER : WJT20
 ```
