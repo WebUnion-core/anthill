@@ -1,7 +1,7 @@
 
-## meta标签常用配置总结 ##
+# meta标签常用配置总结 #
 
-### 目录 ###
+## 目录 ##
 
 1. SEO相关
 2. 移动设备
@@ -9,7 +9,7 @@
 
 ---
 
-### SEO相关 ###
+## SEO相关 ##
 
 1. 页面关键词：`<meta name="keywords" content="words" />`
 
@@ -40,7 +40,7 @@
 
 ---
 
-### 移动设备 ###
+## 移动设备 ##
 
 1. viewport：`<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />`
 
@@ -66,7 +66,7 @@
 
 ---
 
-### 网页相关 ###
+## 网页相关 ##
 
 1. 声明编码：`<meta charset="UTF-8" />`
 
@@ -83,9 +83,9 @@
 ---
 
 ```
-ARTICLE_ID      : 6
-POST_DATE       : 2017/08/13
-RECENTLY_MODIFY : 2017/08/13
-TIME_COUNTER    : 0D
-AUTHER          : WJT20
+ARTICLE_ID : 6
+POST_DATE : 2017/08/13
+RECENTLY_MODIFY : 2017/08/31
+TIME_COUNTER : 1
+AUTHER : WJT20
 ```
