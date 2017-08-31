@@ -1,7 +1,7 @@
 
-## webpack常规配置总结 ##
+# webpack常规配置总结 #
 
-### 目录 ###
+## 目录 ##
 
 1. 参考链接
 2. 什么是webpack?
@@ -13,7 +13,7 @@
 
 ---
 
-### 参考链接 ###
+## 参考链接 ##
 
 - [webpack踩坑记录](http://www.tuicool.com/articles/7NvYZbv)
 
@@ -21,13 +21,13 @@
 
 ---
 
-### 什么是webpack? ###
+## 什么是webpack? ##
 
 继 gulp、grunt 等工程化工具出现一段时间后，webpack 也诞生了，webpack 早期只是为了实现前端各种资源的统一模块化管理，但是随后出现的各种 loader 和 plugin 将前端引入了新时代，webpack 也变得愈加流行。
 
 ---
 
-### 安装所需模块 ###
+## 安装所需模块 ##
 
 在使用 webpack 之前，需要使用 npm 安装 webpack，即使用命令：`npm install --save-dev webpack`。
 
@@ -35,7 +35,7 @@
 
 ---
 
-### webpack.config.js ###
+## webpack.config.js ##
 
 使用`webpack`命令可以执行编译，此时 webpack 会读取当前目录下的 webpack.config.js 文件，webpack.config.js 顾名思义，就是一个用来配置 webpack 的脚本文件，它使用 CommonJS 风格来书写。
 
@@ -48,7 +48,7 @@
 
 ---
 
-### entry——入口文件配置 ###
+## entry——入口文件配置 ##
 
 entry 项的取值有三种形式：
 
@@ -84,7 +84,7 @@ entry 项的取值有三种形式：
 
 ---
 
-### output——出口文件配置 ###
+## output——出口文件配置 ##
 
 output 项负责配置输出文件的生成方式，所有的入口文件都必须遵循 output 制定的规则输出。output 是一个对象，内部可以使用几个常用的配置项：path、publicPath、filename 及 chunkFilename。
 
@@ -124,7 +124,7 @@ output: {
 
 ---
 
-### mudule——各种Loader配置 ###
+## mudule——各种Loader配置 ##
 
 webpack 能够打包任何资源得益于一个名为 Loader 的类似于插件的机制，通过 Loader，webpack 能够针对每一种特定的资源做出相应的处理，使用 Loader 前要用 npm 安装对应的 Loader 模块，常用的 Loader 有以下这些：
 
@@ -179,9 +179,9 @@ module: {
 ---
 
 ```
-ARTICLE_ID      : 2 
-POST_DATE       : 2017/08/13
-RECENTLY_MODIFY : 2017/08/13
-TIME_COUNTER    : 0D
-AUTHER          : WJT20
+ARTICLE_ID : 2 
+POST_DATE : 2017/08/13
+RECENTLY_MODIFY : 2017/08/31
+TIME_COUNTER : 1
+AUTHER : WJT20
 ```
