@@ -1,7 +1,7 @@
 
-## Flex布局总结 ##
+# Flex布局总结 #
 
-### 目录 ###
+## 目录 ##
 
 1. 参考链接
 2. 什么是Flex布局
@@ -25,13 +25,13 @@
 
 ---
 
-### 参考链接 ###
+## 参考链接 ##
 
 - [Flex布局语法教程](http://www.tuicool.com/articles/vIJFfa)
 
 ---
 
-### 什么是Flex布局 ###
+## 什么是Flex布局 ##
 
 2009年，W3C提出了一种新的布局方案——Flex，Flex 可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，可以安全地使用这项功能。 
 
@@ -39,7 +39,7 @@ Flex(Flexible Box)，意为“弹性布局”，用来为盒状模型提供最�
 
 ---
 
-### 容器 ###
+## 容器 ##
 
 采用 Flex 布局的元素，称为 Flex 容器(Flex Container)，它的所有子元素自动成为容器成员，称为 Flex 项目(Flex Item)。
 
@@ -47,7 +47,7 @@ Flex(Flexible Box)，意为“弹性布局”，用来为盒状模型提供最�
 
 ---
 
-### 定义容器 ###
+## 定义容器 ##
 
 无论是块级元素还是行内元素都可以定义为容器：
 
@@ -73,7 +73,7 @@ Flex(Flexible Box)，意为“弹性布局”，用来为盒状模型提供最�
 
 ---
 
-### 构建测试页面 ###
+## 构建测试页面 ##
 
 构建测试页面 index.html：
 
@@ -125,7 +125,7 @@ ul li{
 
 ---
 
-### 容器的属性 ###
+## 容器的属性 ##
 
 容器元素可以设置6个 CSS 属性：
 - flex-direction
@@ -135,7 +135,7 @@ ul li{
 - align-items
 - align-content
 
-#### flex-direction属性 ####
+## flex-direction属性 ##
 
 flex-direction 属性决定项目的排列方向，其取值有：
 1. row：默认值，水平方向，起点在左端；
@@ -151,7 +151,7 @@ flex-direction 分别设为 column 和 column-reverse 的查看效果为：
 
 ![image](./images/w22.png)
 
-#### flex-wrap属性 ####
+## flex-wrap属性 ##
 
 默认情况下，项目都排在一条线上，flex-wrap 属性定义了如果一条线排不下时如何换行形成一根新的轴线，其取值有：
 1. nowrap：默认值，表示不换行；
@@ -162,11 +162,11 @@ flex-direction 分别设为 column 和 column-reverse 的查看效果为：
 
 ![image](./images/w23.png)
 
-#### flex-flow属性 ####
+## flex-flow属性 ##
 
 flex-flow 属性是 flex-direction 属性 和 flex-wrap 属性的组合，默认值为`row nowrap`。
 
-#### justify-content属性 ####
+## justify-content属性 ##
 
 justify-content 属性定义了项目在水平轴上的对齐方式，其取值有：
 1. flex-start：默认值，表示左对齐；
@@ -179,7 +179,7 @@ justify-content 属性定义了项目在水平轴上的对齐方式，其取值�
 
 ![image](./images/w24.png)
 
-#### align-items属性 ####
+## align-items属性 ##
 
 align-items 属性定义了项目在垂直轴上如何对齐，其取值有：
 1. flex-start：垂直轴上起点对齐；
@@ -192,13 +192,13 @@ align-items 属性定义了项目在垂直轴上如何对齐，其取值有：
 
 ![image](./images/w25.png)
 
-#### align-content属性 ####
+## align-content属性 ##
 
 align-content 属性定义了多根轴线(项目发生换行)的对齐方式，如果项目只有一根轴线，该属性不起作用，其取值与 align-items 属性的取值相同。
 
 ---
 
-### 项目的属性 ###
+## 项目的属性 ##
 
 项目同样可以设置6个 CSS 属性：
 - order
@@ -208,7 +208,7 @@ align-content 属性定义了多根轴线(项目发生换行)的对齐方式，�
 - flex
 - align-self
 
-#### order属性 ####
+## order属性 ##
 
 order 属性定义项目的排列顺序，其取值为一个整数，数值越小，该项目就越靠前，默认值为0。
 
@@ -227,7 +227,7 @@ order 属性定义项目的排列顺序，其取值为一个整数，数值越�
 
 ![image](./images/w26.png)
 
-#### flex-grow属性 ####
+## flex-grow属性 ##
 
 flex-grow 属性定义项目的放大比例，默认值为0，表示不放大。
 
@@ -246,7 +246,7 @@ flex-grow 属性定义项目的放大比例，默认值为0，表示不放大。
 
 ![image](./images/w27.png)
 
-#### flex-shrink属性 ####
+## flex-shrink属性 ##
 
 flex-shrink 属性定义了项目的缩小比例，不能取负值，默认值为1，取值为0表示不缩小。
 
@@ -267,7 +267,7 @@ flex-shrink 属性定义了项目的缩小比例，不能取负值，默认值�
 
 ![image](./images/w28.png)
 
-#### flex-basis属性 ####
+## flex-basis属性 ##
 
 flex-basis 属性定义了在分配多余空间之前，项目占据的水平轴空间，浏览器根据这个属性，计算水平轴是否有多余空间，默认值为   `auto`，即项目的本来大小。
 
@@ -275,13 +275,13 @@ flex-basis 属性定义了在分配多余空间之前，项目占据的水平轴
 
 ![image](./images/w29.png)
 
-#### flex属性 ####
+## flex属性 ##
 
 flex 属性是 flex-grow、flex-shrink 和 flex-basis 属性的组合，默认值为`0 1 auto`，后两个属性可选。
 
 flex 属性可以使用两个快捷值：`auto`和`none`，`auto`相当于`1 1 auto`，`none `相当于`0 0 auto`。
 
-#### align-self属性 ####
+## align-self属性 ##
 
 align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。默认值为`auto`，表示继承父元素的 align-items 属性，如果没有父元素，则等同于`stretch`。
 
@@ -294,9 +294,9 @@ align-self 属性允许单个项目有与其他项目不一样的对齐方式，
 ---
 
 ```
-ARTICLE_ID      : 1
-POST_DATE       : 2017/08/14
-RECENTLY_MODIFY : 2017/08/14
-TIME_COUNTER    : 0D
-AUTHER          : WJT20
+ARTICLE_ID : 1
+POST_DATE : 2017/08/14
+RECENTLY_MODIFY : 2017/08/31
+TIME_COUNTER : 1
+AUTHER : WJT20
 ```
