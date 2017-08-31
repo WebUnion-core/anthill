@@ -1,7 +1,7 @@
 
-## HTTP协议知识总结 ##
+# HTTP协议知识总结 #
 
-### 目录 ###
+## 目录 ##
 
 1. 参考链接
 2. HTTP概述
@@ -13,7 +13,7 @@
 
 ---
 
-### 参考链接 ###
+## 参考链接 ##
 
 - [HTTP协议详解（真的很经典）](http://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html)
 - [HTTP 协议入门](http://www.ruanyifeng.com/blog/2016/08/http.html)
@@ -21,7 +21,7 @@
 
 ---
 
-### HTTP概述 ###
+## HTTP概述 ##
 
 HTTP(Hyper Text Transfer Protocol，超文本传输协议) 是基于 TCP/IP 协议的应用层协议，主要规定了客户端和服务器之间的通信格式，默认使用80端口。HTTP 协议在1990年首次提出，HTTP 有多个版本：1991年发布的 HTTP/0.9、1996年发布的 HTTP/1.0、1997年发布的 HTTP/1.1 及2015年发布的 HTTP/2。
 
@@ -39,7 +39,7 @@ HTTP 协议的主要特点有：
 
 ---
 
-### URL ###
+## URL ##
 
 HTTP 使用 URI(Uniform Resource Identifiers, 统一资源标识符) 来传输数据和建立连接。URL(Uniform Resource Locator，统一资源定位符) 是一种特殊类型的 URI，包含了用于查找某个资源的足够信息。
 
@@ -61,7 +61,7 @@ HTTP 使用 URI(Uniform Resource Identifiers, 统一资源标识符) 来传输�
 
 ---
 
-### 请求报文(请求消息) ###
+## 请求报文(请求消息) ##
 
 HTTP 请求报文由请求行、请求头和请求体组成。
 
@@ -114,7 +114,7 @@ Connection: keep-alive
 
 ---
 
-### 响应报文(响应信息) ###
+## 响应报文(响应信息) ##
 
 HTTP 响应报文由状态行、响应头和响应体组成。
 
@@ -172,7 +172,7 @@ Connection: keep-alive
 
 ---
 
-### 请求方法 ###
+## 请求方法 ##
 
 HTTP 常用的请求方法有：
 
@@ -188,7 +188,7 @@ HTTP 常用的请求方法有：
 
 ---
 
-### 状态码 ###
+## 状态码 ##
 
 状态码由三位数字组成，第一个数字定义响应的类别，且有五种可能取值：
 
@@ -231,9 +231,9 @@ HTTP 常用的请求方法有：
 ---
 
 ```
-ARTICLE_ID      : 18
-POST_DATE       : 2017/08/19
-RECENTLY_MODIFY : 2017/08/19
-TIME_COUNTER    : 0D
-AUTHER          : WJT20
+ARTICLE_ID : 18
+POST_DATE : 2017/08/19
+RECENTLY_MODIFY : 2017/08/31
+TIME_COUNTER : 1
+AUTHER : WJT20
 ```
