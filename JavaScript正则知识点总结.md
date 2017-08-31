@@ -1,14 +1,14 @@
 
-## JavaScript正则知识点总结 ##
+# JavaScript正则知识点总结 #
 
-### 目录 ###
+## 目录 ##
 
 1. 字符
 2. RegExp类型
 
 ---
 
-### 字符 ###
+## 字符 ##
 
 1. 元字符  
 
@@ -40,7 +40,7 @@
 
 ---
 
-### RegExp 类型 ###
+## RegExp 类型 ##
 
 定义正则表达式有两种方式：
 
@@ -57,9 +57,9 @@
 ---
 
 ```
-ARTICLE_ID      : 17
-POST_DATE       : 2017/08/19
-RECENTLY_MODIFY : 2017/08/19
-TIME_COUNTER    : 0D
-AUTHER          : WJT20
+ARTICLE_ID : 17
+POST_DATE : 2017/08/19
+RECENTLY_MODIFY : 2017/08/31
+TIME_COUNTER : 1
+AUTHER : WJT20
 ```
