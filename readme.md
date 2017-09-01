@@ -61,6 +61,8 @@
 
 - ID:14 > [jQuery常用知识点总结](https://github.com/WeiJietao/LogBase/blob/master/jQuery%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93.md)
 
+- ID:29 > [jQuery源码解读系列(一)](https://github.com/WeiJietao/LogBase/blob/master/jQuery%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB%E7%B3%BB%E5%88%97(%E4%B8%80).md)
+
 ## Web神器系列 ##
 
 - ID:15 > [Web数据存储知识点总结](https://github.com/WeiJietao/LogBase/blob/master/Web%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93.md)
