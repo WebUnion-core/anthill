@@ -8,6 +8,7 @@
 3. 请求和响应
 4. 静态资源配置
 5. 启动服务
+6. 示例模板
 
 ---
 
@@ -154,10 +155,38 @@ console.log("Server running on: http://127.0.0.1:8080");
 
 ---
 
+## 示例模板 ##
+
+```
+//模块
+var express = require("express"),
+    path = require("path"),
+    app = express();
+
+//IP及端口
+var port = process.env.PORT || 8080,
+    ip = process.env.IP || "127.0.0.1",
+
+//静态资源
+app.use(express.static("/", path.join(__dirname, 'dist')));
+
+//路由
+app.get("/", function(req, res) {
+    res.sendFile(path.resolve(__dirname, "./view/index.html"));
+});
+
+//监听
+app.listen(port, ip, function() {
+    console.log("Server running on: http://%s:%s", ip, port);
+});
+```
+
+---
+
 ```
 ARTICLE_ID : 20
 POST_DATE : 2017/08/22
-RECENTLY_MODIFY : 2017/08/31
-TIME_COUNTER : 3
+RECENTLY_MODIFY : 2017/09/03
+TIME_COUNTER : 4
 AUTHER : WJT20
 ```
