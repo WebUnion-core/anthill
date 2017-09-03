@@ -165,10 +165,10 @@ var express = require("express"),
 
 //IP及端口
 var port = process.env.PORT || 8080,
-    ip = process.env.IP || "127.0.0.1",
+    ip = process.env.IP || "127.0.0.1";
 
 //静态资源
-app.use(express.static("/", path.join(__dirname, 'dist')));
+app.use("/", express.static(path.resolve(__dirname, "dist")));
 
 //路由
 app.get("/", function(req, res) {
