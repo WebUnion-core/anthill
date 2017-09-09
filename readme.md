@@ -17,6 +17,8 @@
 
 - ID:27 > [JSON、Ajax和JSONP记录](https://github.com/WeiJietao/LogBase/blob/master/JSON%E3%80%81Ajax%E5%92%8CJSONP%E8%AE%B0%E5%BD%95.md)
 
+- ID:30 > [JavaScript设计模式重啃——前奏](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E9%87%8D%E5%95%83%E2%80%94%E2%80%94%E5%89%8D%E5%A5%8F.md)
+
 ## webpack系列 ##
 
 - ID:2 > [webpack常规配置总结](https://github.com/WeiJietao/LogBase/blob/master/webpack%E5%B8%B8%E8%A7%84%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93.md)
