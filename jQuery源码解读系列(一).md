@@ -4,6 +4,8 @@
 ## 目录 ##
 
 1. 封闭作用域
+2. 封装(一)
+3. 封装(二)
 
 ---
 
@@ -98,7 +100,7 @@ function(window, noGlobal) {
 ```
 ARTICLE_ID : 29
 POST_DATE : 2017/09/01
-RECENTLY_MODIFY : 2017/09/02
-TIME_COUNTER : 2
+RECENTLY_MODIFY : 2017/09/09
+TIME_COUNTER : 3
 AUTHER : WJT20
 ```
