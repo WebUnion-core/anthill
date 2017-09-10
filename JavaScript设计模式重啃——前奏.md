@@ -13,6 +13,7 @@
     2. 封装实现
     3. 封装类型
     4. 封装变化
+5. JavaScript中的原型继承
 
 ---
 
@@ -96,10 +97,57 @@ selfAnim.begin();
 
 ---
 
+## JavaScript中的原型继承 ##
+
+JavaScript 所遵守的原型编程的基本规则主要有以下这些：
+
+1. 所有的数据都是对象；
+
+2. 要得到一个对象，不是通过实例化类，而是找到一个对象作为原型并克隆它；
+
+3. 对象会记住它的原型；
+
+4. 如果对象无法响应某个请求，它会把这个请求委托给它自己的原型。
+
+其实不能说 JavaScript 中的所有数据都是对象，但可以说绝大部分数据都是对象，所以 JavaScript 中有一个根对象，所有的对象都来源于这个根对象，这个根对象就是 Object.prototype 对象，然而这个对象是一个空的对象，其他所有的对象其实就是由它克隆而来。
+
+在 JavaScript 中没有类的概念，然而我们可以使用 new 关键字创建一个实例对象，但是 new 关键字不是根据类来创建实例对象，而是根据一个叫作构造函数的东西。以以下代码为例：
+
+```
+function Person(name) {
+    this.name = name;
+}
+var p1 = new Person("WJT20");
+console.log(p1.name);
+```
+
+以上代码中，function 定义的不是一个普通的函数，这个函数用于产生实例对象，而不是用于专门处理某种逻辑，所以我们给它起了另一个名字——构造函数。
+
+所谓“对象的原型”这种说法并不准确，准确的说法是，实例对象对应的构造函数有原型，而实例对象其实是把请求委托给它的构造函数的原型(这句话有点绕，需要用心理解)，所以，对于每个对象来说，它们至少要记住自己构造函数的原型是谁，要想知道它们对应的构造函数，我们可以访问它们的`__proto__`属性。
+
+当一个对象无法响应某个请求的时候，它会顺着原型链把请求传递下去，直到遇到一个可以处理该请求的对象为止，JavaScript 的对象虽然都是由 Object.prototype 对象克隆而来，但是可以将原型动态指向其他对象，达到继承的效果，示例代码：
+
+```
+var obj = { count: 1 };
+function Counter() {
+    this.getCount = function() {
+        console.log(this.count);
+    }
+}
+Counter.prototype = obj;//改变原型指向，实现继承
+
+var countObj = new Counter();
+countObj.getCount();//输出：1
+```
+
+使用原型链时要注意，原型链并不是无限长的。当请求在原型链上一直传递，最后到 Object.prototype 上查找请求项时无果，接着继续从 Object.prototype 的原型上去找，然而 Object.prototype 已经是尽头，它的原型是 null，至此，请求终止。
+
+---
+
 ```
 ARTICLE_ID : 30
 POST_DATE : 2017/09/09
-RECENTLY_MODIFY : 2017/09/09
-TIME_COUNTER : 0
+RECENTLY_MODIFY : 2017/09/10
+TIME_COUNTER : 1
 AUTHER : WJT20
 ```
