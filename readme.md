@@ -59,6 +59,8 @@
 
 - ID:20 > [express记录](https://github.com/WeiJietao/LogBase/blob/master/express%E8%AE%B0%E5%BD%95.md)
 
+- ID:31 > [Node.js常用原生模块系列——fs模块](https://github.com/WeiJietao/LogBase/blob/master/Node.js%E5%B8%B8%E7%94%A8%E5%8E%9F%E7%94%9F%E6%A8%A1%E5%9D%97%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94fs%E6%A8%A1%E5%9D%97.md)
+
 ## jQuery系列 ##
 
 - ID:14 > [jQuery常用知识点总结](https://github.com/WeiJietao/LogBase/blob/master/jQuery%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93.md)
