@@ -6,6 +6,7 @@
 1. 参考链接
 2. 介绍
 3. 读文件
+4. 写文件
 
 ---
 
@@ -33,7 +34,7 @@ fs.readFile(filename[, options], callback)
 
 1. filename：必需，要读取内容的文件绝对URL。
 2. options：可选，配置对象。其中的 flag 属性是文件操作选项(类型：字符串)，如r+代表读，w+代表写；encoding 属性则是用于指定字符集。
-3. callback：必需，读取文件后的操作回调函数，其第一个参数为错误对象，第二个参数是读取的数据。
+3. callback：读取文件后的操作回调函数，其第一个参数为错误对象，第二个参数是读取的数据。
 
 示例代码：
 
@@ -51,10 +52,36 @@ fs.readFile(__dirname + "/test.txt", { flag: "r+", encoding: "utf8" }, function(
 
 ---
 
+## 写文件 ##
+
+写文件使用的是 fs 模块的 writeFile 函数，其语法结构如下：
+
+```
+fs.writeFile(filename, data[, options], callback)
+```
+
+1. filename：必需，要写入内容的文件绝对URL。
+2. data：必需，要写入的内容。
+3. options：可选，配置对象。同 readFile。
+4. callback：写入文件后的操作回调函数，同 readFile。
+
+```
+//在当前目录下的test.txt文件末行写入内容
+fs.writeFile(__dirname + "/test.txt", "C: hhh.", {flag: "a"}, function(err, data) {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log("write success.");
+    }
+});
+```
+
+---
+
 ```
 ARTICLE_ID : 31
 POST_DATE : 2017/09/10
-RECENTLY_MODIFY : 2017/09/10
-TIME_COUNTER : 0
+RECENTLY_MODIFY : 2017/09/11
+TIME_COUNTER : 1
 AUTHER : WJT20
 ```
