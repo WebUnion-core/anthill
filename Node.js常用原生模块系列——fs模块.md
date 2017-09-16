@@ -253,15 +253,11 @@ fs.exists(path, callback)
 ```
 
 1. path：必需，要判断存在的文件或目录绝对URL。
-2. callback：判断文件或目录存在后的操作回调函数，其第一个参数为错误对象，第二个参数为表征存在的布尔值。
+2. callback：判断文件或目录存在后的操作回调函数，参数为表征存在的布尔值。
 
 ```
-fs.exists(__dirname + "/file", function(err, ifExist) {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log(ifExist);
-    }
+fs.exists(__dirname + "/file", function(ifExist) {
+    console.log(ifExist);
 })
 ```
 
