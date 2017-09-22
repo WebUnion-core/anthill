@@ -84,3 +84,5 @@
 ## 其他 ##
 
 - ID:19 > [other_note](https://github.com/WeiJietao/LogBase/blob/master/other_note.md)
+
+- ID:34 > [优质收藏集](https://github.com/WeiJietao/LogBase/blob/master/%E4%BC%98%E8%B4%A8%E6%94%B6%E8%97%8F%E9%9B%86.md)
