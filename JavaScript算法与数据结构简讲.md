@@ -57,9 +57,7 @@
 
 ## JavaScript中的基本数据结构 ##
 
-在了解 JavaScript 的数据结构前，你必须先对 JavaScript 的数据类型有所了解，可以先看看我之前写的一篇介绍 JavaScript 数据类型的文章：
-
-[JavaScript数据类型与类型转换](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.md)
+在了解 JavaScript 的数据结构前，你必须先对 JavaScript 的数据类型有所了解，可以先看看我之前写的一篇介绍 JavaScript 数据类型的文章：[JavaScript数据类型与类型转换](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.md)
 
 ---
 
