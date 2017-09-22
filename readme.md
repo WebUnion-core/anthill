@@ -81,4 +81,4 @@
 
 ## 其他 ##
 
-- ID:19 > [什么乱七八糟的](https://github.com/WeiJietao/LogBase/blob/master/%E4%BB%80%E4%B9%88%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84.md)
+- ID:19 > [other_note](https://github.com/WeiJietao/LogBase/blob/master/other_note.md)
