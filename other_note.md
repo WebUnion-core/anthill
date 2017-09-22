@@ -683,19 +683,8 @@ else
     echo '前端代码转译 成功'
 fi
 
-# echo '单元测试'
-# export IS_LOCAL=1&&export NODE_ENV=production&&export SERV_ENV=test&&npm test
-
-# if [ $? -ne 0 ]; then
-#     echo '单元测试 失败'
-#     exit 1
-# else
-#     echo '单元测试 成功'
-# fi
-
 echo '压缩需要部署的目录及文件'
 7z a frontend_car_service.zip views/ dist/ bin/ public/ .babelrc .npmrc package.json webpack.config.babel.js start.config.js
-# zip -r frontend_car_service.zip views/ dist/ bin/ public/ .babelrc .npmrc package.json webpack.config.babel.js start.config.js
 
 if [ $? -ne 0 ]; then
     echo '压缩需要部署的目录及文件 失败'
@@ -704,19 +693,28 @@ else
     echo '压缩需要部署的目录及文件 成功'
 fi
 
-# echo '上传文件'
-# sshpass -f ${passFile} scp ./frontend_car_service.zip ${user}@${host}:/data1/node/frontend_car_service_13353/
-
-# if [ $? -ne 0 ]; then
-#     echo '上传文件 失败'
-#     exit 1
-# else
-#     echo '上传文件 成功'
-# fi
-
 echo "部署测试"
-gradle -q deployTest --info -PisOfficial="${deployOfficialServer}"
+```
 
+压缩包上传filezilla
+
+```
+ip：115.28.187.30
+账号：shanghaitao
+密码：shanghaitao
+```
+
+上传后进入SecureCRT，输入内容同上，之后执行以下命令：
+
+```
+1. 进入操作根目录：cd /data1/node/frontend_car_service_13353/
+2. 解压压缩包：unzip -o frontend_car_service.zip
+3. 重启服务：export START_PORT=13353&&pm2 restart start.config.js --env dev
+
+其他辅助命令：
+
+1. 查看服务：pm2 ls
+2. 重启服务：pm2 restart
 ```
 
 ---
@@ -779,7 +777,7 @@ function translateCRT(CRTDate) {
 ```
 ARTICLE_ID : 19
 POST_DATE : 2017/08/21
-RECENTLY_MODIFY : 2017/09/15
-TIME_COUNTER : 15
+RECENTLY_MODIFY : 2017/09/22
+TIME_COUNTER : 16
 AUTHER : WJT20
 ```
