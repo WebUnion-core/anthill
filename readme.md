@@ -17,9 +17,11 @@
 
 - ID:27 > [JSON、Ajax和JSONP记录](https://github.com/WeiJietao/LogBase/blob/master/JSON%E3%80%81Ajax%E5%92%8CJSONP%E8%AE%B0%E5%BD%95.md)
 
+- ID:33 > [JavaScript算法与数据结构简讲](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%80%E8%AE%B2.md)
+
 - ID:30 > [JavaScript设计模式重啃——前奏](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E9%87%8D%E5%95%83%E2%80%94%E2%80%94%E5%89%8D%E5%A5%8F.md)
 
-- ID:33 > [JavaScript算法与数据结构简讲](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%80%E8%AE%B2.md)
+- ID:35 > [JavaScript设计模式重啃——单例模式](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E9%87%8D%E5%95%83%E2%80%94%E2%80%94%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.md)
 
 ## webpack系列 ##
 
