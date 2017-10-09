@@ -1,4 +1,34 @@
 
+# 信息 #
+
+## 通用 ##
+
+账号：weijietao
+密码：DktxWt29cwuW84
+
+## filezila ##
+
+```
+host = '115.28.187.30'
+user = 'xmiles'
+password = 'gisRG26dvvEEnhfZ'
+port = '22'
+```
+
+```
+host = '115.28.185.18'
+user = 'xmiles'
+password = '9gad^?z<Vo^{&DaEXs_Q!_r_\T&L-=w)'
+port = '22'
+```
+
+```
+host = '118.190.74.124'
+user = 'xmiles'
+password = 'mJH8ZVV1uaf13uOR'
+port = '22'
+```
+
 # SVN #
 
 ## SVN 的几个操作说明 ##
