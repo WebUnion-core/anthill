@@ -59,6 +59,8 @@
 
 - ID:34 > [CSS常用伪类与伪元素](https://github.com/WeiJietao/LogBase/blob/master/CSS%E5%B8%B8%E7%94%A8%E4%BC%AA%E7%B1%BB%E4%B8%8E%E4%BC%AA%E5%85%83%E7%B4%A0.md)
 
+- ID:36 > [CSS常用属性笔记](https://github.com/WeiJietao/LogBase/blob/master/CSS%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E7%AC%94%E8%AE%B0.md)
+
 ## Node.js系列 ##
 
 - ID:12 > [Node.js基础知识点总结](https://github.com/WeiJietao/LogBase/blob/master/Node.js%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93.md)
