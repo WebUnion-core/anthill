@@ -44,7 +44,7 @@
 
 1. viewport：`<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />`
 
-    content 的各参数含义：
+content 的各参数含义：
     1. width：宽度(取值为数值/device-width)，默认宽度为980px；
     2. height：高度(取值为数值/device-height)；
     3. initial-scale：初始的缩放比例(取值大于0小于10的数值)；
@@ -56,13 +56,15 @@
 
 3. 状态栏设置(需要实现开启WebApp全屏模式)：`<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />`
 
-    content 取值可以是 default、black 或 black-translucent。
+content 取值可以是 default、black 或 black-translucent。
 
 4. 设置添加到主屏后的标题：`<meta name="apple-mobile-web-app-title" content="title" />`
 
-    title 为设置的标题名。
+title 为设置的标题名。
 
 5. 忽略数字自动识别为电话号码和忽略自动识别邮箱：`<meta name="format-detection" content="telephone=no,email=no" />`
+
+6. 移动端全屏：`<meta name="full-screen" content="yes" />`
 
 ---
 
@@ -85,7 +87,5 @@
 ```
 ARTICLE_ID : 6
 POST_DATE : 2017/08/13
-RECENTLY_MODIFY : 2017/08/31
-TIME_COUNTER : 1
 AUTHER : WJT20
 ```
