@@ -25,6 +25,8 @@
 
 - ID:37 > [JavaScript设计模式重啃——策略模式](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E9%87%8D%E5%95%83%E2%80%94%E2%80%94%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F.md)
 
+- ID:38 > [JavaScript设计模式重啃——代理模式](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E9%87%8D%E5%95%83%E2%80%94%E2%80%94%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F.md)
+
 ## webpack系列 ##
 
 - ID:2 > [webpack常规配置总结](https://github.com/WeiJietao/LogBase/blob/master/webpack%E5%B8%B8%E8%A7%84%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93.md)
