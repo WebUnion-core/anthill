@@ -1,4 +1,19 @@
 
+# weinre #
+
+启动weinre: `weinre --boundHost 192.168.31.253 --httpPort 8080`
+插入script: `<script src="http://192.168.31.253:8080/target/target-script-min.js#anonymous"></script>`
+
+---
+
+# 资源URL #
+
+jquery: `//xmiles.cn/js_css/jquery.min.js`
+xm-bridge: `//xmiles.cn/js_css/xmiles-bridge.js`
+xmkit: `//img.xmiles.cn/xmkit/xmkit.0.1.4.js`
+
+---
+
 # 信息 #
 
 ## 通用 ##
@@ -12,21 +27,24 @@
 host = '115.28.187.30'
 user = 'xmiles'
 password = 'gisRG26dvvEEnhfZ'
-port = '22'
 ```
 
 ```
 host = '115.28.185.18'
 user = 'xmiles'
 password = '9gad^?z<Vo^{&DaEXs_Q!_r_\T&L-=w)'
-port = '22'
 ```
 
 ```
 host = '118.190.74.124'
 user = 'xmiles'
 password = 'mJH8ZVV1uaf13uOR'
-port = '22'
+```
+
+```
+host = '115.28.187.30'
+user = 'xmiles'
+password = 'gisRG26dvvEEnhfZ'
 ```
 
 # SVN #
@@ -744,7 +762,7 @@ ip：115.28.187.30
 其他辅助命令：
 
 1. 查看服务：pm2 ls
-2. 重启服务：pm2 restart
+2. 重启服务：pm2 restart 
 ```
 
 ---
@@ -804,10 +822,91 @@ function translateCRT(CRTDate) {
 
 ---
 
+# 分享 #
+
+参数：
+
+1. WEIXIN_CIRCLE = 1;
+2. WEIXIN = 2;
+3. SINA = 3;
+4. QZONE = 4;
+5. QQ = 5;
+
+代码：
+
+```
+
+
+https://open.mobile.qq.com/sdk/qqapi.js
+```
+
+```
+function isWechatInstall(install) {
+    if (!install) {
+        alert('未安装微信');
+    }
+}
+
+function checkWechatInstall() {
+    try {
+        //微信
+        platform_isAppInstall('com.tencent.mm', 'javascript:isWechatInstall()');
+
+        //QQ
+        platform_isAppInstall('com.tencent.mobileqq', 'javascript:isWechatInstall()');
+    } catch (error) {
+        
+    }
+}
+
+//点击微信分享按钮
+function wechat(){
+    checkWechatInstall();
+	platform_shareDirectly(shareTitle, shareContent, targetUrl, iconUrl,callBackUrl, 2);
+	setTimeout(function(){$("#click-btn-wechat").on('click',wechat);},500);
+};
+
+//点击朋友圈分享按钮
+function wechatgroup(){
+    checkWechatInstall();
+    platform_shareDirectly(shareTitle, shareTitle, targetUrl, iconUrl,callBackUrl, 1);
+    setTimeout(function(){$("#click-btn-wechatgroup").on('click',wechatgroup);},500);
+};
+```
+
+---
+
+# wiki #
+
+violation_service: `http://106.14.187.143:9000/jamwiki/en/%E8%BD%A6%E8%BE%86%E8%BF%9D%E7%AB%A0#a_.E6.96.B0.E7.94.A8.E6.88.B7.E6.9F.A5.E8.AF.A2.E6.97.A0.E8.BF.9D.E7.AB.A0.E9.80.81.E7.8E.B0.E9.87.91.E7.BA.A2.E5.8C.85`
+
+---
+
+# 页面 #
+
+## frontend_car_service ##
+
+新用户无违章领红包：`/frontend_car_service/common?appid=1&service=violation_service&funid=99&method=page&channel=1111`
+车主信用卡：`/frontend_car_service/common?appid=1&service=proxy&funid=16`
+
+## weixin_service ##
+
+微信查违章：`/weixin_service/pages/wechat-violation-edit/edit.jsp?openid=YW_EAG9DSNyhujqwD3VCrSupkca42M6tGgpQ63ePsW8`
+
+## discovery_service ##
+
+值得买：`/discovery_service/common?funid=14&tid=1&ispage=2`
+
+## violation_service ##
+
+贴条无忧险：`/violation_service/pages/insurance/index.jsp`
+
+---
+
 ```
 ARTICLE_ID : 19
 POST_DATE : 2017/08/21
-RECENTLY_MODIFY : 2017/09/22
-TIME_COUNTER : 16
+RECENTLY_MODIFY : 2017/10/09
+TIME_COUNTER : 17
 AUTHER : WJT20
 ```
