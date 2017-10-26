@@ -1,8 +1,8 @@
 
 # weinre #
 
-启动weinre: `weinre --boundHost 192.168.31.253 --httpPort 8080`
-插入script: `<script src="http://192.168.31.253:8080/target/target-script-min.js#anonymous"></script>`
+启动weinre: `weinre --boundHost 192.168.3.253 --httpPort 8080`
+插入script: `<script src="http://192.168.3.253:8080/target/target-script-min.js#anonymous"></script>`
 
 ---
 
@@ -762,7 +762,20 @@ ip：115.28.187.30
 其他辅助命令：
 
 1. 查看服务：pm2 ls
-2. 重启服务：pm2 restart 
+2. 重启服务：pm2 restart all
+```
+
+---
+
+# 获取URL查询字符串参数 #
+
+```
+$.getUrlParam = function(param_name) {
+    var reg = new RegExp("(^|&)" + param_name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]);
+    return null
+};
 ```
 
 ---
@@ -888,6 +901,7 @@ violation_service: `http://106.14.187.143:9000/jamwiki/en/%E8%BD%A6%E8%BE%86%E8%
 
 新用户无违章领红包：`/frontend_car_service/common?appid=1&service=violation_service&funid=99&method=page&channel=1111`
 车主信用卡：`/frontend_car_service/common?appid=1&service=proxy&funid=16`
+保险提醒：`/frontend_car_service/common?appid=1&service=violation_service&funid=104&method=get_info&carid=150302817255860&carplate=粤Y42M88`
 
 ## weixin_service ##
 
