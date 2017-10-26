@@ -1,36 +1,22 @@
-// <!DOCTYPE html>
-// <html>
-// <head>
-//     <meta charset="UTF-8"/>
-//     <script src="./selectPicker.js"></script>
-// </head>
-// <body>
-//     <input id="selectPicker-trigger" type="button" value="点击">
-//
-//     <script>
-//     //初始化
-//     var init = function() {
-//         var calendar = new selectPicker();
-//         calendar.init({
-//             trigger: "#selectPicker-trigger",
-//             options: [
-//                 "红",
-//                 "绿",
-//                 "蓝",
-//                 "黑",
-//                 "白",
-//                 "黄"
-//             ],
-//             defaultIndex: 0,
-//             onSubmit: function(v) {
-//                 console.log(v);
-//             }
-//         });
-//     }
-//     init();
-//     </script>
-// </body>
-// </html>
+// var init = function() {
+//     var picker = new selectPicker();
+//     picker.init({
+//         trigger: "#selectPicker-trigger",
+//         options: [
+//             "红",
+//             "绿",
+//             "蓝",
+//             "黑",
+//             "白",
+//             "黄"
+//         ],
+//         defaultIndex: 0,
+//         onSubmit: function(v) {
+//             console.log(v);
+//         }
+//     });
+// }
+// init();
 
 window.selectPicker = (function() {
     var MobilePicker = function() {
@@ -38,7 +24,7 @@ window.selectPicker = (function() {
         this.value = "";
     };
 
-    var cssHtm='.gearYM,.gearCont,.gearTime{font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:10px;background-color:rgba(0,0,0,0.2);display:block;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9900;overflow:hidden;-webkit-animation-fill-mode:both;animation-fill-mode:both}.date_ctrl{vertical-align:middle;background-color:#ffffff;color:#000;margin:0;height:auto;width:100%;position:absolute;left:0;bottom:0;z-index:9901;overflow:hidden;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slideInUp{animation:slideInUp .3s ease;-webkit-animation:slideInUp .3s ease;}@-webkit-keyframes slideInUp{from{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}.ym_roll,.date_roll,.datetime_roll,.time_roll{display:-webkit-box;width:100%;height:auto;overflow:hidden;font-weight:bold;background-color:transparent;-webkit-mask:-webkit-gradient(linear,0% 50%,0% 100%,from(#debb47),to(rgba(36,142,36,0)));-webkit-mask:-webkit-linear-gradient(top,#debb47 50%,rgba(36,142,36,0))}.ym_roll>div,.date_roll>div,.datetime_roll>div,.time_roll>div{font-size:2.3em;height:6em;float:left;background-color:transparent;position:relative;overflow:hidden;-webkit-box-flex:4}.ym_roll>div .gear,.date_roll>div .gear,.datetime_roll>div .gear,.time_roll>div .gear{width:100%;float:left;position:absolute;z-index:9902;margin-top:-6em}.date_roll_mask{-webkit-mask:-webkit-gradient(linear,0% 40%,0% 0%,from(#debb47),to(rgba(36,142,36,0)));-webkit-mask:-webkit-linear-gradient(bottom,#debb47 50%,rgba(36,142,36,0));padding:0 0 3em 0}.date_roll>div:nth-child(2){-webkit-box-flex:2}.date_roll>div:nth-child(1),.datetime_roll>div:nth-child(1){-webkit-box-flex:4}.datetime_roll>div:first-child{-webkit-box-flex:6}.datetime_roll>div:last-child{-webkit-box-flex:6}.date_grid{position:relative;top:2em;width:100%;height:2em;margin:0;box-sizing:border-box;z-index:0;border-top:1px solid #abaeb5;border-bottom:1px solid #abaeb5}.date_grid>div{color:#000;position:absolute;right:0;top:0;font-size:.8em;line-height:2.5em}.date_roll>div:nth-child(3) .date_grid>div{left:42%}.datetime_roll>div .date_grid>div{right:0}.datetime_roll>div:first-child .date_grid>div{left:auto;right:0%}.datetime_roll>div:last-child .date_grid>div{left:50%}.time_roll>div:nth-child(1) .date_grid>div{right:1em}.ym_roll>div:nth-child(1) .date_grid>div{right:.1em}.ym_roll>div .date_grid>div,.time_roll>div .date_grid>div{right:5em}.date_btn{color:#0575f2;font-size:1.6em;font-weight:bold;line-height:1em;text-align:center;padding:.8em 1em}.date_btn_box:before,.date_btn_box:after{content:"";position:absolute;height:1px;width:100%;display:block;background-color:#96979b;z-index:15;-webkit-transform:scaleY(0.33);transform:scaleY(0.33)}.date_btn_box{display:-webkit-box;-webkit-box-pack:justify;-webkit-box-align:stretch;border-bottom:1px solid #dcdcdc;position:relative}.date_btn_box:before{left:0;top:0;-webkit-transform-origin:50% 20%;transform-origin:50% 20%}.date_btn_box:after{left:0;bottom:0;-webkit-transform-origin:50% 70%;transform-origin:50% 70%}.date_roll>div:nth-child(1) .date_roll>div:nth-child(2) .gear{text-indent:-20%}.date_roll>div:nth-child(3) .gear{text-indent:-55%}.datetime_roll>div .gear{width:100%;text-indent:-25%}.datetime_roll>div:first-child .gear{text-indent:-10%}.datetime_roll>div:last-child .gear{text-indent:-50%}.ym_roll>div .gear,.time_roll>div .gear{width:100%;text-indent:-70%}.ym_roll>div:nth-child(1) .gear,.time_roll>div:nth-child(1) .gear{width:100%;text-indent:10%}.tooth{height:2em;line-height:2em;text-align:center}';
+    var cssHtm='.gearYM,.gearCont,.gearTime{font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:10px;background-color:rgba(0,0,0,0.2);display:block;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9900;overflow:hidden;-webkit-animation-fill-mode:both;animation-fill-mode:both}.gear_ctrl{vertical-align:middle;background-color:#ffffff;color:#000;margin:0;height:auto;width:100%;position:absolute;left:0;bottom:0;z-index:9901;overflow:hidden;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slideInUp{animation:slideInUp .3s ease;-webkit-animation:slideInUp .3s ease;}@-webkit-keyframes slideInUp{from{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}.ym_roll,.gear_roll,.datetime_roll,.time_roll{display:-webkit-box;width:100%;height:auto;overflow:hidden;font-weight:bold;background-color:transparent;-webkit-mask:-webkit-gradient(linear,0% 50%,0% 100%,from(#debb47),to(rgba(36,142,36,0)));-webkit-mask:-webkit-linear-gradient(top,#debb47 50%,rgba(36,142,36,0))}.ym_roll>div,.gear_roll>div,.datetime_roll>div,.time_roll>div{font-size:2.3em;height:6em;float:left;background-color:transparent;position:relative;overflow:hidden;-webkit-box-flex:4}.ym_roll>div .gear,.gear_roll>div .gear,.datetime_roll>div .gear,.time_roll>div .gear{width:100%;float:left;position:absolute;z-index:9902;margin-top:-6em}.gear_roll_mask{-webkit-mask:-webkit-gradient(linear,0% 40%,0% 0%,from(#debb47),to(rgba(36,142,36,0)));-webkit-mask:-webkit-linear-gradient(bottom,#debb47 50%,rgba(36,142,36,0));padding:0 0 3em 0}.gear_roll>div:nth-child(2){-webkit-box-flex:2}.gear_roll>div:nth-child(1),.datetime_roll>div:nth-child(1){-webkit-box-flex:4}.datetime_roll>div:first-child{-webkit-box-flex:6}.datetime_roll>div:last-child{-webkit-box-flex:6}.select_grid{position:relative;top:2em;width:100%;height:2em;margin:0;box-sizing:border-box;z-index:0;border-top:1px solid #abaeb5;border-bottom:1px solid #abaeb5}.select_grid>div{color:#000;position:absolute;right:0;top:0;font-size:.8em;line-height:2.5em}.gear_roll>div:nth-child(3) .select_grid>div{left:42%}.datetime_roll>div .select_grid>div{right:0}.datetime_roll>div:first-child .select_grid>div{left:auto;right:0%}.datetime_roll>div:last-child .select_grid>div{left:50%}.time_roll>div:nth-child(1) .select_grid>div{right:1em}.ym_roll>div:nth-child(1) .select_grid>div{right:.1em}.ym_roll>div .select_grid>div,.time_roll>div .select_grid>div{right:5em}.gear_btn{color:#0575f2;font-size:1.6em;font-weight:bold;line-height:1em;text-align:center;padding:.8em 1em}.gear_btn_box:before,.gear_btn_box:after{content:"";position:absolute;height:1px;width:100%;display:block;background-color:#96979b;z-index:15;-webkit-transform:scaleY(0.33);transform:scaleY(0.33)}.gear_btn_box{display:-webkit-box;-webkit-box-pack:justify;-webkit-box-align:stretch;position:relative}.gear_btn_box:before{left:0;top:0;-webkit-transform-origin:50% 20%;transform-origin:50% 20%}.gear_btn_box:after{left:0;bottom:0;-webkit-transform-origin:50% 70%;transform-origin:50% 70%}.select_tooth{height:2em;line-height:2em;text-align:center}.select_tooth_text{font-size:0.8em;}';
     var cssEle = document.createElement("style");
 	cssEle.type = "text/css";
 	cssEle.appendChild(document.createTextNode(cssHtm));
@@ -66,57 +52,52 @@ window.selectPicker = (function() {
             function popupDate(e) {
                 _self.gear = document.createElement("div");
                 _self.gear.className = "gearCont";
-                _self.gear.innerHTML = '<div class="date_ctrl slideInUp">' +
-                    '<div class="date_btn_box">' +
-                    '<div class="date_btn picker_cancel">取消</div>' +
-                    '<div class="date_btn picker_finish">确定</div>' +
+                _self.gear.innerHTML = '<div class="gear_ctrl slideInUp">' +
+                    '<div class="gear_btn_box">' +
+                    '<div class="gear_btn picker_cancel">取消</div>' +
+                    '<div class="gear_btn picker_finish">确定</div>' +
                     '</div>' +
-                    '<div class="date_roll_mask">' +
-                    '<div class="date_roll">' +
+                    '<div class="gear_roll_mask">' +
+                    '<div class="gear_roll">' +
                     '<div>' +
-                    '<div class="gear select_opt" data-datetype="select_opt"></div>' +
+                    '<div class="gear select_opt"></div>' +
+                    '<div class="select_grid">' +
                     '</div>' +
                     '</div>' +
                     '</div>' +
-                    '</div><div class="date_bg" style="width:100%;height:100%;"></div>';
+                    '</div>' +
+                    '</div><div class="picker_bg" style="width:100%;height:100%;"></div>';
                 document.body.appendChild(_self.gear);
                 pickerInit();
 
                 var picker_cancel = _self.gear.querySelector(".picker_cancel");
                 picker_cancel.addEventListener('touchstart', closeMobilePicker);
-
                 var picker_finish = _self.gear.querySelector(".picker_finish");
                 picker_finish.addEventListener('touchstart', comfirmMobilePicker);
-
-                var picker_bg = _self.gear.querySelector(".date_bg");
+                var picker_bg = _self.gear.querySelector(".picker_bg");
                 picker_bg.addEventListener('click', closeMobilePicker);
-
                 var select_opt = _self.gear.querySelector(".select_opt");
                 select_opt.addEventListener('touchstart', gearTouchStart);
                 select_opt.addEventListener('touchmove', gearTouchMove);
                 select_opt.addEventListener('touchend', gearTouchEnd);
-
                 //-------------------------------------------------------------
-
                 picker_cancel.addEventListener('click', closeMobilePicker);
                 picker_finish.addEventListener('click', comfirmMobilePicker);
-
                 select_opt.addEventListener('mousedown', gearTouchStart);
                 select_opt.addEventListener('mousemove', gearTouchMove);
                 select_opt.addEventListener('mouseup', gearTouchEnd);
-
-                _self.gear.querySelector(".date_roll_mask").addEventListener('mouseleave', gearTouchOut);
-                _self.gear.querySelector(".date_roll_mask").addEventListener('mouseup', gearTouchOut);
+                _self.gear.querySelector(".gear_roll_mask").addEventListener('mouseleave', gearTouchOut);
+                _self.gear.querySelector(".gear_roll_mask").addEventListener('mouseup', gearTouchOut);
             }
 
             //初始化默认值
             function pickerInit() {
                 _self.gear.querySelector(".select_opt").setAttribute("val", _self.defaultIndex);
-                setGearTooth();
+                setGearselect_tooth();
             }
 
             //重置节点个数
-            function setGearTooth() {
+            function setGearselect_tooth() {
                 var passY = _self.options.length;
                 var select_opt = _self.gear.querySelector(".select_opt");
                 var itemStr = "";
@@ -126,7 +107,7 @@ window.selectPicker = (function() {
 
                     //当前节点前后需要展示的节点个数
                     for (var p = 0; p <= passY - 1; p++) {
-                        itemStr += "<div class='tooth'>" + (_self.options[p]) + "</div>";
+                        itemStr += "<div class='select_tooth'><span class='select_tooth_text'>" + (_self.options[p]) + "</span></div>";
                     }
                     select_opt.innerHTML = itemStr;
 
@@ -300,11 +281,7 @@ window.selectPicker = (function() {
             function setGear(target, val) {
                 val = Math.round(val);
                 target.setAttribute("val", val);
-                if (/date/.test(target.dataset.datetype)) {
-                    setGearTooth();
-                } else {
-                    setGearTooth();
-                }
+                setGearselect_tooth();
             }
 
             //取消
@@ -320,7 +297,7 @@ window.selectPicker = (function() {
             //确认
             function comfirmMobilePicker(e) {
                 var n = parseInt(_self.gear.querySelector(".select_opt").getAttribute("val"));
-                if(_self.onSubmit) _self.onSubmit(_self.options[n]);
+                if(_self.onSubmit) _self.onSubmit(_self.options[n], n);
                 closeMobilePicker(e);
             }
 
