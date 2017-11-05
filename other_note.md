@@ -16,6 +16,11 @@ xmkit: `//img.xmiles.cn/xmkit/xmkit.0.1.4.js`
 
 # 信息 #
 
+## 后台 ##
+
+账号：zengfanxing
+密码：XtuU89k8g7kk
+
 ## 通用 ##
 
 账号：weijietao
@@ -899,21 +904,29 @@ violation_service: `http://106.14.187.143:9000/jamwiki/en/%E8%BD%A6%E8%BE%86%E8%
 
 ## frontend_car_service ##
 
-新用户无违章领红包：`/frontend_car_service/common?appid=1&service=violation_service&funid=99&method=page&channel=1111`
-车主信用卡：`/frontend_car_service/common?appid=1&service=proxy&funid=16`
-保险提醒：`/frontend_car_service/common?appid=1&service=violation_service&funid=104&method=get_info&carid=150302817255860&carplate=粤Y42M88`
+- 新用户无违章领红包：`/frontend_car_service/common?appid=1&service=violation_service&funid=99&method=page&channel=1111`
+
+- 车主信用卡：`/frontend_car_service/common?appid=1&service=proxy&funid=16`
+
+- 保险提醒：`/frontend_car_service/common?appid=1&service=violation_service&funid=104&method=get_info&carid=150302817255860&carplate=粤Y42M88`
+
+- 保险联系：`/frontend_car_service/common?appid=1&funid=1004&carid=150302817255860`
+
+- 支付成功：`/frontend_car_service/common?appid=1&funid=1008&from=violation_monitor&orderid=1565785785779060`
+
+- 违章监控助手：``
 
 ## weixin_service ##
 
-微信查违章：`/weixin_service/pages/wechat-violation-edit/edit.jsp?openid=YW_EAG9DSNyhujqwD3VCrSupkca42M6tGgpQ63ePsW8`
+- 微信查违章：`/weixin_service/pages/wechat-violation-edit/edit.jsp?openid=YW_EAG9DSNyhujqwD3VCrSupkca42M6tGgpQ63ePsW8`
 
 ## discovery_service ##
 
-值得买：`/discovery_service/common?funid=14&tid=1&ispage=2`
+- 值得买：`/discovery_service/common?funid=14&tid=1&ispage=2`
 
 ## violation_service ##
 
-贴条无忧险：`/violation_service/pages/insurance/index.jsp`
+- 贴条无忧险：`/violation_service/pages/insurance/index.jsp`
 
 ---
 
