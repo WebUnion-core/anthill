@@ -914,7 +914,7 @@ violation_service: `http://106.14.187.143:9000/jamwiki/en/%E8%BD%A6%E8%BE%86%E8%
 
 - 支付成功：`/frontend_car_service/common?appid=1&funid=1008&from=violation_monitor&orderid=1565785785779060`
 
-- 违章监控助手：``
+- 违章监控助手：`/frontend_car_service/common?appid=1&service=violation_service&funid=113&car_num=粤Y42M88`
 
 ## weixin_service ##
 
