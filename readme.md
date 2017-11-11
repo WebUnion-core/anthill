@@ -39,6 +39,10 @@
 
 - ID:4 > [ES6常用知识点总结](https://github.com/WeiJietao/LogBase/blob/master/ES6%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93.md)
 
+## TypeScript系列 ##
+
+- ID:40 > [TypeScript学习笔记——基础(一)](https://github.com/WeiJietao/LogBase/blob/master/TypeScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80(%E4%B8%80).md)
+
 ## HTML系列 ##
 
 - ID:5 > [HTML5知识点总结](https://github.com/WeiJietao/LogBase/blob/master/HTML5%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93.md)
