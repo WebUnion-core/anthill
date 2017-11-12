@@ -10,8 +10,6 @@
     3. 类型推论
     4. 联合类型
 3. 接口
-4. 数组的类型
-5. 函数
 
 ---
 
@@ -114,74 +112,6 @@ let dog: Animal = {
     id: 2
 };
 console.log(cat, dog);
-```
-
----
-
-## 数组的类型 ##
-
-在 TypeScript 中，数组类型有多种定义方式。
-
-1. 方括号表示法：
-
-    ```
-    let numArr: number[] = [1, 2, 3],
-        strArr: string[] = ["1", "2", "3"],
-        nsArr: (number | string)[] = [1, "2", 3],//结合联合类型的数组表示法
-        anyArr: any[] = [1, "2", true];//更常见的是结合any
-    console.log(numArr, strArr, nsArr, anyArr);
-    ```
-
-2. 数组泛型表示法(在泛型章会详细讲解)：
-
-    ```
-    let numGenericArr: Array<number> = [2, 3, 4];
-    console.log(numGenericArr);
-    ```
-
-3. 接口表示法：
-
-    ```
-    interface NumberArr {
-        [index: number]: number;
-    }
-    let numInterfaceArr: NumberArr = [3, 4, 5];
-    console.log(numInterfaceArr);
-    ```
-
----
-
-## 函数 ##
-
-一个函数有输入和输出，要在 TypeScript 中对其进行约束，需要把输入和输出都考虑到。输入多余的（或者少于要求的）参数，是不被允许的。传入的参数可以设置为可选、默认等形式。
-
-函数声明的形式比较简单：
-
-```
-function add1(num1: number, num2: number, num3?: number = 0): number {
-    return num1 + num2 + num3;
-}
-console.log(add1(1, 2), add1(1, 2, 3));
-```
-
-函数表达式要复杂的多，"=>"表示函数的定义，左边是输入类型，右边是输出类型：
-
-```
-let add2(num1: number, num2: number) => number = function(num1: number, num2: number): number {
-    return num1 + num2;
-}
-console.log(add2(1, 2));
-```
-
-使用"...items"可以获取剩余参数：
-
-```
-function log(...items: any[]) {
-    items.forEach(e, i) {
-        console.log(i + ": " + e);
-    }
-}
-log("1", 2, true);
 ```
 
 ---
