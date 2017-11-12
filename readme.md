@@ -102,7 +102,3 @@
 ## SQL系列 ##
 
 - ID:40 > [MySQL基础知识](https://github.com/WeiJietao/LogBase/blob/master/MySQL%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md)
-
-## 其他 ##
-
-- ID:19 > [other_note](https://github.com/WeiJietao/LogBase/blob/master/other_note.md)
