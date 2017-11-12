@@ -7,6 +7,7 @@
 2. 函数
 3. 类型断言
 4. 内置对象
+5. 引入第三方库
 
 ---
 
@@ -105,6 +106,12 @@ let errorObj: Error = new Error('Error occurred');
 let dateObj: Date = new Date();
 let regexpObj: RegExp = /[a-z]/;
 ```
+
+---
+
+## 引入第三方库 ##
+
+可以在[http://microsoft.github.io/TypeSearch/](http://microsoft.github.io/TypeSearch/)上查找想要安装的 TypeScript 版本的模块，以引入 jQuery 为例，首先使用npm安装模块，语句如：`npm install --save-dev @types/jquery`。接着就可以在 TypeScript 中使用 jQuery 了。
 
 ---
 
