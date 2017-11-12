@@ -41,7 +41,9 @@
 
 ## TypeScript系列 ##
 
-- ID:40 > [TypeScript学习笔记——基础(一)](https://github.com/WeiJietao/LogBase/blob/master/TypeScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80(%E4%B8%80).md)
+- ID:41 > [TypeScript学习笔记——基础(一)](https://github.com/WeiJietao/LogBase/blob/master/TypeScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80(%E4%B8%80).md)
+
+- ID:42 > [TypeScript学习笔记——基础(二)](https://github.com/WeiJietao/LogBase/blob/master/TypeScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80(%E4%BA%8C).md)
 
 ## HTML系列 ##
 
