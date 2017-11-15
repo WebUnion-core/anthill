@@ -101,6 +101,8 @@
 
 - ID:28 > [Web实用代码段集合(一)](https://github.com/WeiJietao/LogBase/blob/master/Web%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E9%9B%86%E5%90%88(%E4%B8%80).md)
 
+- ID:44 > [Web名词记录](https://github.com/WeiJietao/LogBase/blob/master/Web%E5%90%8D%E8%AF%8D%E8%AE%B0%E5%BD%95.md)
+
 ## SQL系列 ##
 
 - ID:40 > [MySQL基础知识](https://github.com/WeiJietao/LogBase/blob/master/MySQL%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md)
