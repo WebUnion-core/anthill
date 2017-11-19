@@ -106,3 +106,7 @@
 ## SQL系列 ##
 
 - ID:40 > [MySQL基础知识](https://github.com/WeiJietao/LogBase/blob/master/MySQL%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md)
+
+## Angular2 ##
+
+- ID:45 > [Angular2学习笔记——基本内容](https://github.com/WeiJietao/LogBase/blob/master/Angular2%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9.md)
