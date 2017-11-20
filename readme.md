@@ -110,3 +110,5 @@
 ## Angular2 ##
 
 - ID:45 > [Angular2学习笔记——基本内容](https://github.com/WeiJietao/LogBase/blob/master/Angular2%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9.md)
+
+- ID:46 > [Angular2学习笔记——组件编写](https://github.com/WeiJietao/LogBase/blob/master/Angular2%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E7%BB%84%E4%BB%B6%E7%BC%96%E5%86%99.md)
