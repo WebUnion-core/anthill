@@ -7,14 +7,17 @@
 2. 事件绑定
 3. 引用(reference)
 4. 服务(service)
+5. 双向数据绑定
+6. 表单验证
+7. 常用指令
+	1. \*ngIf
+	2. \*ngFor
 
 ---
 
 ## 参考链接 ##
 
 - [第二节：用Form表单做一个登录控件对于login组件的小改造](https://juejin.im/post/5860f08d1b69e6006ce1473a)
-
-- [第三节：建立一个待办事项应用](https://juejin.im/post/5860f1ce61ff4b0068a64480)
 
 ---
 
@@ -126,6 +129,100 @@ export class FormComponent implements OnInit {
 编写完服务文件后，我们需要将服务导入到组件中，主要有三个步骤：第一步，使用 import 关键字将 FormService 服务类引入；第二步，在 @Component 中，加入 providers 选项，其中包含了组件所要引入的服务类；第三步，在导出的组件类中的 constructor 中，使用`private service: FormService`将服务与组件绑定起来。
 
 至此，我们将服务与组件联系起来了，在组件类中使用 this.service 即可访问服务，例如以上代码中，this.service.checkValue 即是调用了 FormService 上的 checkValue 方法。
+
+---
+
+## 双向数据绑定 ##
+
+Angular2 提供了一个双向数据绑定的机制，即在组件中提供成员数据变量，然后在模板中引用这个数据变量。以下是使用双向数据绑定的实例代码：
+
+```
+import { Component, OnInit, Inject } from '@angular/core';
+import { FormService } from './../../core/form.service';
+
+@Component({
+    selector: 'app-form',
+    template: `<form class="input">
+                    <input
+						[(ngModel)]="cont"
+						type="text"
+						placeholder="请输入内容" />
+                    <p class="msg">Input content: {{this.cont}}</p>
+                </form>`,
+    styleUrls: ['./../../css/style.css'],
+	providers: [FormService]
+})
+
+export class FormComponent implements OnInit {
+	cont = "";//Domain Model
+
+    constructor(private service: FormService) {};
+    ngOnInit() {};
+}
+```
+
+以上代码中，我们在 FormComponent 中定义了一个名为cont的 Domain Model，然后用`[(ngModel)]="cont"`将输入框与cont的值绑定在一起，ngModel 是一个指令，它会生成一个 FormControl 的实例，并将这个实例和输入框绑定起来，双向绑定完成后，p标签内使用`{{this.cont}}`可以输出 cont 的值，最后的效果是每次我们改变输入框中输入的值，p标签的内容也会跟着同步变化。
+
+---
+
+## 表单验证 ##
+
+Angular2 对表单验证有非常完善的支持，我们可以非常方便地将一些校验规则绑定到表单控件上。直接上代码：
+
+```
+...
+<form #formRef="ngForm">
+	<input #contentRef="ngModel"
+		   [(ngModel)]="content"
+		   name="cont"
+		   type="text"
+		   placeholder="请输入内容"
+		   minlength="3"
+		   required />
+
+	<p>{{formRef.value | json}}</p>
+	<p class="msg">Input content: {{this.content}}</p>
+	<p class="msg">If valid: {{contentRef.valid}}, &nbsp;&nbsp;Error object: {{contentRef.errors | json}}. </p>
+</form>
+...
+```
+
+以上代码涉及的内容很多。首先，我们定义了一个表单引用 formRef，等号后的 ngForm 是要在模板中使用的，接着，我们用同样的形式在表单中的输入框上加上了一个名为 contentRef 的引用，其等号后的 ngModel 同样用于模板中。
+
+在输入框上，我们添加了两个规则：一个是`required`，表示必填；另一个是`minlength="3"`，表示最少输入3个字符。
+
+最后，我们要将验证状态输出，输出的内容在模板中要用`{{}}`包括起来。以上代码中，第一段输出语句的是`formRef.value | json`，其意思是将 formRef 引用的表单内所有具有 name 属性的控件的值包装成数据对象再转为JSON字符串，最后输出，其中"|"名为管道操作符；第二个输出内容为`this.content`，即输入框双向绑定的 content 的值输出；第三个输出内容为`contentRef.valid`，它表示 contentRef 引用的输入框输入内容的有效性，它是一个布尔值；最后一个输出内容是`contentRef.errors | json`，每个绑定了校验规则的表单控件都有一个 errors 对象，如果没有发生什么校验错误，它的值就是 null，否则就是一个包含错误信息的对象，这个对象的内容我就不加赘述了，最后将 error 对象转为JSON后输出。
+
+---
+
+## 常用指令 ##
+
+### \*ngIf ###
+
+`*ngIf`是一个条件判断指令，现将所赋的值转为布尔值然后决定指定的标签是否显示，下面直接举个用例：
+
+```
+...
+<p *ngIf="true">1</p>
+<p *ngIf="false">2</p>
+...
+```
+
+以上代码中，第一个p标签中`*ngIf`的值是true，这时这个标签将正常显示；而第二个p标签中`*ngIf`的值是false，这个标签则会隐藏起来。
+
+### \*ngFor ###
+
+`*ngFor`是一个遍历指令，它可以将一个数组中的每个元素绑定到指定的元素上，从而逐个渲染出来，示例代码如下：
+
+```
+...
+<ul>
+	<li *ngFor="let item of list">{{ item }}</li>
+</ul>
+...
+```
+
+以上代码中，list是一个数组(内容省略)，`*ngFor`用item指针逐个指向list的数组元素，每个数组元素与li标签绑定起来(li展示的内容就是对应的数组元素)，最后构成一个包含list所有数组元素内容的无序列表。
 
 ---
 
