@@ -3,9 +3,20 @@
 
 ## 目录 ##
 
+1. 浏览器判断原则
+2. 检查手机号码格式
+3. 获取当前URL整段查询字符串
+4. 获取当前URL查询字符串参数
+5. 禁止输入文本框缓存输入内容
+6. CRT日期转换
+7. 时间戳转为数值形式
+8. 文本框placeholder属性设置
+
 ---
 
 ## 浏览器判断原则 ##
+
+代码：
 
 ```
 var sUserAgent = navigator.userAgent.toLowerCase();
@@ -25,6 +36,8 @@ var browser = {
 
 ## 检查手机号码格式 ##
 
+代码：
+
 ```
 function checkPhoneFormat(phone) {
     var pattern = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
@@ -39,6 +52,8 @@ function checkPhoneFormat(phone) {
 ---
 
 ## 获取当前URL整段查询字符串 ##
+
+代码：
 
 ```
 function GetRequest() {
@@ -57,6 +72,8 @@ function GetRequest() {
 ---
 
 ## 获取当前URL查询字符串参数 ##
+
+代码：
 
 ```
 function parseQueryString() {
@@ -77,10 +94,98 @@ function parseQueryString() {
 
 ---
 
+## 禁止输入文本框缓存输入内容 ##
+
+代码：
+
+```
+<form autocomplete="off">
+    <input type="text" />
+</form>
+
+<input type="text" autocomplete="off" />
+```
+
+解析：
+
+将form元素的 autocomplete 设为off可以禁止其中的所有表单控件缓存输入内容，将单个表单控件的 autocomplete 设为off则只禁止单个表单控件的内容缓存。
+
+---
+
+## CRT日期转换 ##
+
+```
+function translateCRT(CRTDate) {
+    var time = CRTDate.replace(new RegExp(" CST","gm"),""),
+        now = new Date(time),
+        year = now.getFullYear(),
+        month = now.getMonth() + 1,
+        date = now.getDate(),
+        hh = now.getHours(),
+        mm = now.getMinutes();
+
+    return {
+        dataObj: now,
+        year: year,
+        month: month,
+        date: date,
+        hour: hh,
+        minute: mm
+    }
+}
+```
+
+---
+
+## 时间戳转为数值形式 ##
+
+代码：
+
+```
+//yyyy-MM-dd hh:mm:ss形式转为毫秒值
+let getTimeLenBySimpleFormat = function(format) {
+    let ymd = format.substr(0, 10).split("-"),
+        date = new Date();
+
+    date.setFullYear(parseInt(ymd[0]));
+    date.setMonth(parseInt(ymd[1]) - 1);
+    date.setDate(parseInt(ymd[2]));
+
+    if (format.length > 10) {
+        let hms = format.substr(11).split(":");
+        date.setHours(parseInt(hms[0]));
+        date.setMinutes(parseInt(hms[1]));
+        date.setSeconds(parseInt(hms[2]));            
+    }
+    return +date;
+}
+```
+
+---
+
+## 文本框placeholder属性设置 ##
+
+代码：
+
+```
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #a1a1a1;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #a1a1a1;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #a1a1a1;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #a1a1a1;
+}
+```
+
+---
+
 ```
 ARTICLE_ID : 28
 POST_DATE : 2017/08/29
-RECENTLY_MODIFY : 2017/08/29
-TIME_COUNTER : 1
 AUTHER : WJT20
 ```
