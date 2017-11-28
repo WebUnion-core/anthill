@@ -11,6 +11,7 @@
 6. CRT日期转换
 7. 时间戳转为数值形式
 8. 文本框placeholder属性设置
+9. npm登录及发布包
 
 ---
 
@@ -180,6 +181,40 @@ input::-moz-placeholder, textarea::-moz-placeholder {
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #a1a1a1;
 }
+```
+
+---
+
+## 使用touchstart代替移动端click事件 ##
+
+代码：
+
+```
+document.getElementById("dialog_bg").addEventListener("touchstart", function () {
+    //TODO
+});
+```
+
+解析：
+
+在移动端，touchstart 比 click 要灵敏得多。
+
+---
+
+## npm登录及发布包 ##
+
+1. npm登录及发布：
+
+```
+npm login
+npm publish
+```
+
+2. cnpm登录及发布：
+
+```
+npm login --registry http://registry.npmjs.org
+npm publish --registry http://registry.npmjs.org
 ```
 
 ---
