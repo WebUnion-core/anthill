@@ -12,6 +12,7 @@
 7. 时间戳转为数值形式
 8. 文本框placeholder属性设置
 9. npm登录及发布包
+10. 切换npm镜像
 
 ---
 
@@ -217,7 +218,9 @@ npm login --registry http://registry.npmjs.org
 npm publish --registry http://registry.npmjs.org
 ```
 
-3. 切换npm镜像：
+---
+
+## 切换npm镜像 ##
 
 ```
 nrm ls
