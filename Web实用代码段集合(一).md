@@ -217,6 +217,14 @@ npm login --registry http://registry.npmjs.org
 npm publish --registry http://registry.npmjs.org
 ```
 
+3. 切换npm镜像：
+
+```
+nrm ls
+nrm add npm-company http://xmiles.xicp.net:4873/
+nrm use
+```
+
 ---
 
 ```
