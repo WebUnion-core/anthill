@@ -29,7 +29,7 @@
 
 - ID:39 > [JavaScript设计模式重啃——迭代器模式](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E9%87%8D%E5%95%83%E2%80%94%E2%80%94%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F.md)
 
-- ID:43 > [JavaScript设计模式重啃——发布-订阅模式](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E9%87%8D%E5%95%83%E2%80%94%E2%80%94%E5%8F%91%E5%B8%83-%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F.md)
+- ID:43 > [JavaScript设计模式重啃——发布-订阅模式(观察者模式)](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E9%87%8D%E5%95%83%E2%80%94%E2%80%94%E5%8F%91%E5%B8%83-%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F(%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F).md)
 
 - ID:46 > [JavaScript技巧总结](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93.md)
 
