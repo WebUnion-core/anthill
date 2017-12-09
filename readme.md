@@ -31,6 +31,8 @@
 
 - ID:43 > [JavaScript设计模式重啃——发布-订阅模式(观察者模式)](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E9%87%8D%E5%95%83%E2%80%94%E2%80%94%E5%8F%91%E5%B8%83-%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F(%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F).md)
 
+- ID:47 > [JavaScript设计模式重啃——命令模式](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E9%87%8D%E5%95%83%E2%80%94%E2%80%94%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F.md)
+
 - ID:46 > [JavaScript技巧总结](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93.md)
 
 ## webpack系列 ##
@@ -92,6 +94,10 @@
 - ID:14 > [jQuery常用知识点总结](https://github.com/WeiJietao/LogBase/blob/master/jQuery%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93.md)
 
 - ID:29 > [jQuery源码解读系列(一)](https://github.com/WeiJietao/LogBase/blob/master/jQuery%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB%E7%B3%BB%E5%88%97(%E4%B8%80).md)
+
+## MV\*模式 ##
+
+- ID:48 > [MVC模式探究](https://github.com/WeiJietao/LogBase/blob/master/MVC%E6%A8%A1%E5%BC%8F%E6%8E%A2%E7%A9%B6.md)
 
 ## Web神器系列 ##
 
