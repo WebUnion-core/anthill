@@ -5,6 +5,7 @@
 
 1. 介绍
 2. 示例——菜单程序
+3. JavaScript中的命令
 
 ---
 
@@ -83,6 +84,39 @@ var refreshMenuBarCommand = new RefreshMenuBarCommand(MenuBar);
 var addSubMenuCommand = new AddSubMenuCommand(SubMenu);
 setCommand(btn1, refreshMenuBarCommand);
 setCommand(btn2, addSubMenuCommand);
+```
+
+---
+
+## JavaScript中的命令 ##
+
+JavaScript 作为将函数作为一等对象的语言，跟策略模式一样，命令模式也早已融入了 JavaScript 语言之中，运算块可以封装到普通函数中，然后将函数作为载体四处传递运算块。如果需要请求"接收者"，则可以借助闭包来实现。
+
+实现代码如下：
+
+```
+var setCommand = function(button, command) {
+    button.onclick = function() {
+        command.execute();
+    }
+};
+
+var MenuBar = {
+    refresh: function() {
+        console.log('刷新菜单界面');
+    }
+};
+
+var RefreshMenuBarCommand = function(receiver) {
+    return {
+        execute: function() {
+            receiver.refresh();
+        }
+    }
+};
+
+var refreshMenuBarCommand = RefreshMenuBarCommand(MenuBar);
+setCommand(btn1, refreshMenuBarCommand);
 ```
 
 ---
