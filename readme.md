@@ -65,7 +65,9 @@
 
 ## CSS系列 ##
 
-- ID:1 > [Flex布局总结](https://github.com/WeiJietao/LogBase/blob/master/Flex%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93.md)
+- ID:1 > [Flex布局总结(一)](https://github.com/WeiJietao/LogBase/blob/master/Flex%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93(%E4%B8%80).md)
+
+- ID:49 > [Flex布局总结(二)](https://github.com/WeiJietao/LogBase/blob/master/Flex%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93(%E4%BA%8C).md)
 
 - ID:10 > [CSS水平垂直居中](https://github.com/WeiJietao/LogBase/blob/master/CSS%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD.md)
 
