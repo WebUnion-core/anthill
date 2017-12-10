@@ -16,7 +16,7 @@
 
 ## 参考链接 ##
 
-- [Flex布局语法教程](http://www.tuicool.com/articles/vIJFfa)
+- [Flex布局语法教程](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool&utm_medium=referral)
 
 ---
 
