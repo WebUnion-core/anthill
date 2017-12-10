@@ -3,8 +3,9 @@
 
 ## 目录 ##
 
-1. 参考链接
-2. 项目
+1. 前言
+2. 参考链接
+3. 项目
     1. order属性
     2. flex-grow属性
     3. flex-shrink属性
@@ -12,13 +13,16 @@
     5. flex 属性
     6. align-self属性
 
----
+
+## 前言 ##
+
+> 本篇是基于[Flex布局总结(一)](https://github.com/WeiJietao/LogBase/blob/master/Flex%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93(%E4%B8%80).md)的续作，主要讲解 Flex 项目的相关知识。
+
 
 ## 参考链接 ##
 
 - [Flex布局语法教程](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool&utm_medium=referral)
 
----
 
 ## 项目 ##
 
@@ -36,6 +40,7 @@
 order 属性定义项目的排列顺序，其取值为一个整数，数值越小，该项目就越靠前，默认值为0。
 
 将 ul 标签的内容修改为：
+
 ```
 <ul>
     <li style="order:4"> 1 </li>
