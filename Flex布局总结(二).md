@@ -13,16 +13,15 @@
     5. flex 属性
     6. align-self属性
 
-
 ## 前言 ##
 
 > 本篇是基于[Flex布局总结(一)](https://github.com/WeiJietao/LogBase/blob/master/Flex%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93(%E4%B8%80).md)的续作，主要讲解 Flex 项目的相关知识。
-
 
 ## 参考链接 ##
 
 - [Flex布局语法教程](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool&utm_medium=referral)
 
+- [Flex布局总结(一)](https://github.com/WeiJietao/LogBase/blob/master/Flex%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93(%E4%B8%80).md)
 
 ## 项目 ##
 
