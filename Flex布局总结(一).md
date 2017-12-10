@@ -15,21 +15,15 @@
     5. align-items属性
     6. align-content属性
 
----
-
 ## 参考链接 ##
 
 - [Flex布局语法教程](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool&utm_medium=referral)
-
----
 
 ## 什么是Flex布局 ##
 
 2009年，W3C提出了一种新的布局方案——Flex，Flex 可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，可以安全地使用这项功能。
 
 Flex(Flexible Box)，意为"弹性布局"，用来为盒状模型提供最大的灵活度。
-
----
 
 ## 构建测试页面 ##
 
@@ -81,8 +75,6 @@ ul li{
 
 ![image](./images/w20.png)
 
----
-
 ## 容器 ##
 
 采用 Flex 布局的元素，称为 Flex 容器(Flex Container)。容器默认存在两根轴：水平轴和垂直轴，项目默认沿主轴排列。
@@ -108,8 +100,6 @@ ul li{
 ```
 
 设置为容器后，子元素的`float`、`clear`和`vertical-align`等属性将失效。
-
----
 
 ## 容器的属性 ##
 
