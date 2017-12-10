@@ -6,6 +6,8 @@
 1. 介绍
 2. 示例——菜单程序
 3. JavaScript中的命令
+4. 宏命令
+5. 智能命令与傻瓜命令
 
 ---
 
@@ -118,6 +120,64 @@ var RefreshMenuBarCommand = function(receiver) {
 var refreshMenuBarCommand = RefreshMenuBarCommand(MenuBar);
 setCommand(btn1, refreshMenuBarCommand);
 ```
+
+---
+
+## 宏命令 ##
+
+宏命令是一组命令的集合，通过执行宏命令的方式，可以一次执行一批命令。宏命令是命令模式和组合模式的联用产物，在组合模式章节可能会再提起宏命令，以下是一个使用宏命令的 demo：
+
+```
+// 各种要执行的命令
+var closeDoorCommand = {
+    execute: function() {
+        console.log('关门');
+    }
+};
+var openPcCommand = {
+    execute: function() {
+        console.log('开电脑');
+    }
+};
+var openQQCommand = {
+    execute: function() {
+        console.log('登录QQ');
+    }
+};
+
+// 定义宏命令
+var MacroCommand = function() {
+    return {
+        commandsList: [],// 命令队列
+        add: function(command) {
+            this.commandsList.push(command);
+        },
+        execute: function() {
+            for (var i = 0, command; i < this.commandsList.length; i++) {
+                command = this.commandsList[i];
+                command.execute();
+            }
+        }
+    }
+};
+
+var macroCommand = MacroCommand();
+
+// 组合命令
+macroCommand.add(closeDoorCommand);// 先关门
+macroCommand.add(openPcCommand);// 再打开电脑
+macroCommand.add(openQQCommand);// 最后打开QQ
+
+macroCommand.execute();// 执行宏命令
+```
+
+---
+
+## 智能命令与傻瓜命令 ##
+
+傻瓜命令只会负责把客户的请求转交给接收者来执行，这种模式的好处是请求发起者和请求接收者之间尽可能地得到了解耦。
+
+智能命令则可以直接实现请求，这样就不再需要接收者的存在，没有接收者的智能命令，退化到和策略模式非常相近，从代码结构上已经很难分辨它们，能分辨它们的只有它们的意图的不同。
 
 ---
 
