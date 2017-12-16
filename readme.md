@@ -39,6 +39,8 @@
 
 - ID:2 > [webpack常规配置总结](https://github.com/WeiJietao/LogBase/blob/master/webpack%E5%B8%B8%E8%A7%84%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93.md)
 
+- ID:50 > [webpack插件篇](https://github.com/WeiJietao/LogBase/blob/master/webpack%E6%8F%92%E4%BB%B6%E7%AF%87.md)
+
 ## ES6系列 ##
 
 - ID:3 > [Babel配置笔记](https://github.com/WeiJietao/LogBase/blob/master/Babel%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0.md)
