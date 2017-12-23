@@ -13,8 +13,7 @@
 8. 文本框placeholder属性设置
 9. npm登录及发布包
 10. 切换npm镜像
-
----
+11. 弹窗自适应居中
 
 ## 浏览器判断原则 ##
 
@@ -34,8 +33,6 @@ var browser = {
 };
 ```
 
----
-
 ## 检查手机号码格式 ##
 
 代码：
@@ -50,8 +47,6 @@ function checkPhoneFormat(phone) {
     }
 };
 ```
-
----
 
 ## 获取当前URL整段查询字符串 ##
 
@@ -70,8 +65,6 @@ function GetRequest() {
     }
 }
 ```
-
----
 
 ## 获取当前URL查询字符串参数 ##
 
@@ -94,8 +87,6 @@ function parseQueryString() {
 }
 ```
 
----
-
 ## 禁止输入文本框缓存输入内容 ##
 
 代码：
@@ -110,9 +101,7 @@ function parseQueryString() {
 
 解析：
 
-将form元素的 autocomplete 设为off可以禁止其中的所有表单控件缓存输入内容，将单个表单控件的 autocomplete 设为off则只禁止单个表单控件的内容缓存。
-
----
+将 form 元素的 autocomplete 设为off可以禁止其中的所有表单控件缓存输入内容，将单个表单控件的 autocomplete 设为 off 则只禁止单个表单控件的内容缓存。
 
 ## CRT日期转换 ##
 
@@ -136,8 +125,6 @@ function translateCRT(CRTDate) {
     }
 }
 ```
-
----
 
 ## 时间戳转为数值形式 ##
 
@@ -163,8 +150,6 @@ let getTimeLenBySimpleFormat = function(format) {
 }
 ```
 
----
-
 ## 文本框placeholder属性设置 ##
 
 代码：
@@ -184,23 +169,19 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 ```
 
----
-
 ## 使用touchstart代替移动端click事件 ##
 
 代码：
 
 ```
 document.getElementById("dialog_bg").addEventListener("touchstart", function () {
-    //TODO
+    // TODO
 });
 ```
 
 解析：
 
 在移动端，touchstart 比 click 要灵敏得多。
-
----
 
 ## npm登录及发布包 ##
 
@@ -218,14 +199,28 @@ npm login --registry http://registry.npmjs.org
 npm publish --registry http://registry.npmjs.org
 ```
 
----
-
 ## 切换npm镜像 ##
 
 ```
 nrm ls
 nrm add npm-company http://xmiles.xicp.net:4873/
 nrm use
+```
+
+## 弹窗自适应居中 ##
+
+```
+.dialog{
+    width: 80%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    border-radius: 0.1rem 0.1rem;
+    background-color: #ffffff;
+    z-index: 200;
+}
 ```
 
 ---
