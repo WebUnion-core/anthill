@@ -7,6 +7,10 @@
 2. 例子:咖啡与茶
     1. 构建父类("饮料"类)
     2. 构建子类("咖啡"类和"茶"类)
+3. 钩子方法
+4. 好莱坞原则
+    1. 概念与应用
+    2. 改写继承部分代码
 
 ## 介绍 ##
 
@@ -107,6 +111,121 @@ Beverage.prototype.init 被称为模板方法，其内部封装了子类的算�
     var tea = new Tea();
     tea.init();
     ```
+
+## 钩子方法 ##
+
+钩子方法是隔离变化的一种常见手段，我们在父类中容易变化的地方放置钩子，钩子可以有一个默认的实现，究竟要不要"挂钩"，这由子类决定。钩子方法的返回结果决定了模板方法后面部分的执行步骤，也就是程序接下来的走向，这样一来，程序就拥有了变化的可能。
+
+还是以咖啡和茶为例，假设有些顾客不喜欢在饮料中加调料，那么，我们可以在 Beverage 类中加入一个挂钩：
+
+```
+// ...饮料类部分代码省略...
+Beverage.prototype.customerWantsCondiments = function() {
+    return true; // 默认需要调料
+};
+
+Beverage.prototype.init = function() {
+    this.boilWater();
+    this.brew();
+    this.pourInCup();
+    if (this.customerWantsCondiments()) { // 如果挂钩返回true，则需要调料
+        this.addCondiments();
+    }
+}
+
+var CoffeeWithHook = function() {};
+CoffeeWithHook.prototype = new Beverage();
+// ...咖啡类部分代码省略...
+CoffeeWithHook.prototype.customerWantsCondiments = function() {
+    return window.confirm('请问需要调料吗？');
+};
+
+var coffeeWithHook = new CoffeeWithHook();
+coffeeWithHook.init();
+```
+
+## 好莱坞原则 ##
+
+### 概念与应用 ###
+
+"好莱坞原则"是一个著名的设计原则，根据这一原则，我们可以将底层组件挂载到高层组件中，由高层组件决定什么时候、以何种方式去使用底层组件，这就像演艺公司对待新人演员一样，都是"别调用我们，我们会调用你"，这也就是这个原则的名字由来。
+
+模板方法模式是好莱坞原则的一个典型使用场景，当我们用模板方法模式编写一个程序时，就意味着子类放弃了对自己的控制权，而是改变父类通知子类，哪些方法应该在什么时候被调用，作为子类，只负责提供一些设计上的细节。
+
+好莱坞原则的其他应用场景，最常见的有以下两个：
+
+1. 发布-订阅模式
+
+    发布者将消息推送给订阅者，取代了原先不断去 fetch 消息的形式。
+
+2. 回调函数
+
+    在 ajax 异步请求中，由于不知道请求返回的具体时间，而通过轮询去判断是否返回数据，这显然是不理智的行为，所以我们通常会把接下来的操作放在回调函数中，传入发起 ajax 异步请求的函数，当数据返回之后，这个回调函数才被执行，这也是好莱坞原则的一种体现。
+
+### 改写继承部分代码 ###
+
+根据好莱坞原则，我们大可改写父类和子类间"继承"部分的代码，还是以咖啡与茶为例，改写后的代码如下：
+
+```
+var Beverage = function(param) {
+
+    var boilWater = function() {
+        console.log('把水煮沸');
+    };
+
+    var brew = param.brew || function() {
+        throw new Error('必须传递brew方法');
+    };
+
+    var pourInCup = param.pourInCup || function() {
+        throw new Error('必须传递pourInCup方法');
+    };
+
+    var addCondiments = param.addCondiments || function() {
+        throw new Error('必须传递addCondiments方法');
+    };
+
+    var F = function() {};
+    F.prototype.init = function() {
+        boilWater();
+        brew();
+        pourInCup();
+        addCondiments();
+    };
+
+    return F;
+};
+
+var Coffee = Beverage({
+    brew: function() {
+        console.log('用沸水冲泡咖啡');
+    },
+    pourInCup: function() {
+        console.log('把咖啡倒进杯子');
+    },
+    addCondiments: function() {
+        console.log('加糖和牛奶');
+    }
+});
+
+var Tea = Beverage({
+    brew: function() {
+        console.log('用沸水冲泡茶叶');
+    },
+    pourInCup: function() {
+        console.log('把茶倒进杯子');
+    },
+    addCondiments: function() {
+        console.log('加柠檬');
+    }
+});
+
+var coffee = new Coffee();
+coffee.init();
+
+var tea = new Tea();
+tea.init();
+```
 
 ---
 
