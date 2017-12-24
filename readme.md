@@ -35,6 +35,8 @@
 
 - ID:52 > [JavaScript设计模式重啃——组合模式](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E9%87%8D%E5%95%83%E2%80%94%E2%80%94%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F.md)
 
+- ID:53 > [JavaScript设计模式重啃——模板方法模式](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E9%87%8D%E5%95%83%E2%80%94%E2%80%94%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F.md)
+
 - ID:46 > [JavaScript技巧总结](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93.md)
 
 ## webpack系列 ##
