@@ -138,3 +138,5 @@
 - ID:54 > [PHP基础篇](https://github.com/WeiJietao/LogBase/blob/master/PHP%E5%9F%BA%E7%A1%80%E7%AF%87.md)
 
 - ID:55 > [PHP数据类型篇](https://github.com/WeiJietao/LogBase/blob/master/PHP%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%AF%87.md)
+
+- ID:57 > [PHP特殊数据类型操作API篇](https://github.com/WeiJietao/LogBase/blob/master/PHP%E7%89%B9%E6%AE%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%93%8D%E4%BD%9CAPI%E7%AF%87.md)
