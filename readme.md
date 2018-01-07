@@ -39,6 +39,8 @@
 
 - ID:56 > [JavaScript设计模式重啃——享元模式](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E9%87%8D%E5%95%83%E2%80%94%E2%80%94%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F.md)
 
+- ID:58 > [JavaScript设计模式重啃——职责链模式](./JavaScript设计模式重啃——职责链模式.md)
+
 - ID:46 > [JavaScript技巧总结](https://github.com/WeiJietao/LogBase/blob/master/JavaScript%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93.md)
 
 ## webpack系列 ##
