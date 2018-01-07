@@ -9,9 +9,9 @@
 
 - ID:22 > [JavaScript语句与函数](./JavaScript语句与函数.md)
 
-- ID:23 > [JavaScript BOM与DOM](./JavaScript BOM与DOM.md)
+- ID:23 > [JavaScript BOM与DOM](./JavaScript%20BOM与DOM.md)
 
-- ID:24 > [JavaScript canvas介绍](./JavaScript canvas介绍.md)
+- ID:24 > [JavaScript canvas介绍](./JavaScript%20canvas介绍.md)
 
 - ID:26 > [JavaScript事件简讲](./JavaScript事件简讲.md)
 
