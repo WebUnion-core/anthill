@@ -41,6 +41,8 @@
 
 - ID:58 > [JavaScript设计模式重啃——职责链模式](./JavaScript设计模式重啃——职责链模式.md)
 
+- ID:60 > [JavaScript设计模式重啃——中介者模式](./JavaScript设计模式重啃——中介者模式.md)
+
 - ID:46 > [JavaScript技巧总结](./JavaScript技巧总结.md)
 
 ## webpack系列 ##
