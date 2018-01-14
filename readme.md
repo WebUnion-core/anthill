@@ -45,6 +45,8 @@
 
 - ID:46 > [JavaScript技巧总结](./JavaScript技巧总结.md)
 
+- ID:60 > [关于JavaScript模块化的记录](./关于JavaScript模块化的记录.md)
+
 ## webpack系列 ##
 
 - ID:2 > [webpack常规配置总结](./webpack常规配置总结.md)
