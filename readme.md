@@ -51,8 +51,6 @@
 
 - ID:65 > [JavaScript设计模式重啃——设计原则](./JavaScript设计模式重啃——设计原则.md)
 
-- ID:46 > [JavaScript技巧总结](./JavaScript技巧总结.md)
-
 - ID:61 > [关于JavaScript模块化的记录](./关于JavaScript模块化的记录.md)
 
 ## webpack系列 ##
@@ -125,7 +123,7 @@
 
 - ID:48 > [MVC模式探究](./MVC模式探究.md)
 
-## Web神器系列 ##
+## Web相关系列 ##
 
 - ID:15 > [Web数据存储知识点总结](./Web数据存储知识点总结.md)
 
@@ -136,6 +134,8 @@
 - ID:28 > [Web实用代码段集合(一)](./Web实用代码段集合(一).md)
 
 - ID:44 > [Web名词记录](./Web名词记录.md)
+
+- ID:46 > [浏览器渲染机制基础](./浏览器渲染机制基础.md)
 
 ## SQL系列 ##
 
