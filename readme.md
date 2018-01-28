@@ -49,6 +49,8 @@
 
 - ID:64 > [JavaScript设计模式重啃——适配器模式](./JavaScript设计模式重啃——适配器模式.md)
 
+- ID:65 > [JavaScript设计模式重啃——设计原则](./JavaScript设计模式重啃——设计原则.md)
+
 - ID:46 > [JavaScript技巧总结](./JavaScript技巧总结.md)
 
 - ID:61 > [关于JavaScript模块化的记录](./关于JavaScript模块化的记录.md)
