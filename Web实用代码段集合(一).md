@@ -14,6 +14,7 @@
 9. npm登录及发布包
 10. 切换npm镜像
 11. 弹窗自适应居中
+12. table布局
 
 ## 浏览器判断原则 ##
 
@@ -221,6 +222,35 @@ nrm use
     background-color: #ffffff;
     z-index: 200;
 }
+```
+
+## table布局 ##
+
+```
+<table>
+    <thead>
+        <tr>
+            <th>星期天</th>
+            <th>星期一</th>
+            <th>星期二</th>
+            <th>星期三</th>
+            <th>星期四</th>
+            <th>星期五</th>
+            <th>星期六</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </tbody>
+</table>
 ```
 
 ---
