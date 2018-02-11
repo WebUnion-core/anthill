@@ -59,6 +59,8 @@
 
 - ID:50 > [webpack插件篇](./webpack插件篇.md)
 
+- ID:67 > [webpack配置附加记录(一)](./webpack配置附加记录(一).md)
+
 ## ES6系列 ##
 
 - ID:3 > [Babel配置笔记](./Babel配置笔记.md)
