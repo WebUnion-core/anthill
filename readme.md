@@ -17,7 +17,7 @@
 
 - ID:27 > [JSON、Ajax和JSONP记录](./JSON、Ajax和JSONP记录.md)
 
-- ID:33 > [JavaScript算法与数据结构简讲](./JavaScript算法与数据结构简讲.md)
+- ID:33 > [JavaScript黑科技](./JavaScript黑科技.md)
 
 - ID:30 > [JavaScript设计模式重啃——前奏](./JavaScript设计模式重啃——前奏.md)
 
