@@ -4,15 +4,16 @@
 ## 目录 ##
 
 1. 文本相关
-    1. 自动省略
-    2. 英文单词拆解换行
+    1. 单行文本超出自动省略
+    2. 多行文本超出自动省略
+    3. 英文单词拆解换行
 2. 表单控件相关
 
 ---
 
 ## 文本相关 ##
 
-### 自动省略 ###
+### 单行文本超出自动省略 ###
 
 自动将超出元素宽度的文本以省略号形式显示：
 
@@ -22,6 +23,19 @@ p{
     text-overflow: ellipsis; /* 超出部分省略号表示 */
     overflow: hidden; /* 超出部分隐藏 */
     white-space: nowrap; /* 规定文本不换行 */
+}
+```
+
+### 多行文本超出自动省略 ###
+
+```
+p{
+    height: 50px; /* 必须限制高度 */
+    overflow: hidden; /* 超出部分隐藏 */
+    text-overflow: ellipsis; /* 超出部分省略号表示 */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 ```
 
