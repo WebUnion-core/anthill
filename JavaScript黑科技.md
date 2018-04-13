@@ -3,12 +3,13 @@
 
 ## 目录 ##
 
-1. DOMImplementation
+1. document.implementation
 2. document.readyState
+3. DOMElement.getBoundingClientRect
 
 ---
 
-## DOMImplementation ##
+## document.implementation ##
 
 document.implementation 返回一个和当前文档相关联的 DOMImplementation 接口(对象)，DOMImplementation 可以提供了不依赖于任何 document 的方法。
 
@@ -43,6 +44,18 @@ document.readyState 属性描述了文档的加载状态，其返回值为一个
 setInterval(function() {
     console.log(document.readyState);
 }, 10);
+```
+
+## DOMElement.getBoundingClientRect ##
+
+DOM 节点的 getBoundingClientRect 方法返回一个矩形对象，包含四个属性: left、top、right 和 bottom。分别表示元素相对页面的各项数据。
+
+示例:
+
+```
+var divElem = document.getElementById('div');
+var coords = divElem.getBoundingClientRect();
+console.log(coords);
 ```
 
 ---
