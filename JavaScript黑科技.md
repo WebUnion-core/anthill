@@ -6,6 +6,7 @@
 1. document.implementation
 2. document.readyState
 3. DOMElement.getBoundingClientRect
+4. Object.defineProperty
 
 ---
 
@@ -57,6 +58,97 @@ var divElem = document.getElementById('div');
 var coords = divElem.getBoundingClientRect();
 console.log(coords);
 ```
+
+## Object.defineProperty ##
+
+针对属性，我们可以给这个属性设置一些特性，比如是否只读不可以写；是否可以被`for..in`或`Object.keys()`遍历。给对象的属性添加特性描述，目前提供两种形式：数据描述和存取器描述。
+
+语法:
+
+```js
+Object.defineProperty(obj, prop, descriptor)
+```
+
+参数说明:
+1. obj: 必需，目标对象；
+2. prop: 必需，需定义或修改的属性的名字；
+3. descriptor: 必需，目标属性所拥有的特性。
+
+### 数据描述 ###
+
+1. value: Any 类型，修改属性对应的值，示例如下：
+
+    ```js
+    var data = { age: 10 };
+    Object.defineProperty(data, 'age', {
+        value: 100,
+    });
+    console.log(data.age); // => 100
+    ```
+
+2. writable: Boolean 类型，修改属性的可写性，示例如下：
+
+    ```js
+    var data = { age: 10 };
+    Object.defineProperty(data, 'age', {
+        writable: false,
+    });
+    data.age = 100;
+    console.log(data.age); // => 10
+    ```
+
+3. enumerable: Boolean 类型，修改属性的可枚举性，示例如下：
+
+    ```js
+    var data = { age: 10, name: 'WJT20' };
+    Object.defineProperty(data, 'age', {
+        enumerable: false,
+    });
+    for (let key in data) {
+        console.log(data[key]);
+    }
+    // => "WJT20"
+    ```
+
+4. configurable: Boolean 类型，决定属性的前三项配置是否可以重新配置或被 delete 删除，示例如下：
+
+    ```js
+    var data = { age: 10 };
+    Object.defineProperty(data, 'age', {
+        configurable: false,
+    });
+    delete data.age;
+    console.log(data.age); // => 10
+    ```
+
+### 存取器描述 ###
+
+1. getter: 获得属性值的方法，获取属性值的时候触发 get 属性定义的方法，返回的值作为属性的新值，示例如下：
+
+    ```js
+    var data = { age: 10 };
+    Object.defineProperty(data, 'age', {
+        get: function () {
+            return 100;
+        },
+    });
+    console.log(data.age); // => 100
+    ```
+
+2. setter: 设置属性值的方法，设置属性值的时候触发 set 属性定义的方法，示例如下：
+
+    ```js
+    var data = { age: 10 };
+    Object.defineProperty(data, 'age', {
+        set: function (value) {
+            data = value;
+        },
+    });
+    data.age = 100;
+    console.log(data); // => 100
+    ```
+
+注意：当使用了 getter 或 setter 方法，不允许使用 writable 和 value 这两个属性。
 
 ---
 
