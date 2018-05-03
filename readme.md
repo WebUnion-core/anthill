@@ -55,6 +55,8 @@
 
 - ID:71 > [JavaScript实战技巧](./JavaScript实战技巧.md)
 
+- ID:72 > [JavaScript API记录(一)](./JavaScript API记录(一).md)
+
 ## webpack系列 ##
 
 - ID:2 > [webpack常规配置总结](./webpack常规配置总结.md)
