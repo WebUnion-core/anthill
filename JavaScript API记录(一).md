@@ -14,6 +14,7 @@
     8. slice
     9. splice
     10. join
+2. String API
 
 ---
 
@@ -172,6 +173,40 @@ var arr = [1, 2, 3, 4];
 var str1 = arr.join(),
 str2 = arr.join("-");
 console.log(str1, str2); // => "1,2,3,4" "1-2-3-4"
+```
+
+## String API ##
+
+字符串操作常用 API 有以下几种:
+
+### charCodeAt ###
+
+语法: `string.charCodeAt(index)`；
+含义: 返回在指定的位置的字符的 Unicode 编码；
+示例:
+
+```js
+console.log('Go to school.'.charCodeAt(1)); // => 111
+```
+
+### indexOf ###
+
+语法: `string.indexOf(cldStr)`；
+含义: 获取子字符串在父字符串中第一次出现的位置(索引值)，如果无匹配的位置则返回-1；
+示例:
+
+```js
+console.log('ABC'.indexOf('B')); // => 1
+```
+
+### lastIndexOf ###
+
+语法: `string.lastIndexOf(cldStr)`；
+含义: 获取子字符串在父字符串中最后一次出现的位置(索引值)，如果无匹配的位置则返回-1；
+示例:
+
+```js
+console.log('ABCBA'.lastIndexOf('B')); // => 3
 ```
 
 ---
