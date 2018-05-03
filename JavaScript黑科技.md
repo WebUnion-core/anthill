@@ -23,7 +23,7 @@ DOMImplementation 没有继承任何的属性，它包含有四个方法:
 
 示例:
 
-```
+```js
 var imp = document.implementation;
 console.log(imp.hasFeature("HTML","1.0")); // 检查这个文件是否有HTML DOM 1.0功能
 ```
@@ -40,7 +40,7 @@ document.readyState 属性描述了文档的加载状态，其返回值为一个
 
 示例:
 
-```
+```js
 // 一个简单的文档状态检查的定时器
 setInterval(function() {
     console.log(document.readyState);
@@ -53,7 +53,7 @@ DOM 节点的 getBoundingClientRect 方法返回一个矩形对象，包含四�
 
 示例:
 
-```
+```js
 var divElem = document.getElementById('div');
 var coords = divElem.getBoundingClientRect();
 console.log(coords);
