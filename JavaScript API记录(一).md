@@ -15,7 +15,15 @@
     9. splice
     10. join
 2. String API
-
+    1. charCodeAt
+    2. indexOf
+    3. lastIndexOf
+    4. substr
+    5. substring
+    6. toLowerCase
+    7. toUpperCase
+    8. match
+    9. replace
 ---
 
 ## Array API ##
@@ -24,9 +32,9 @@
 
 ### push ###
 
-语法: `array.push(elem1, ..)`；
-含义: 从数组尾部加入数组元素，返回加入数组的元素；
-示例:
+语法: `array.push(elem1, ..)`；  
+含义: 从数组尾部加入数组元素，返回加入数组的元素；  
+示例:  
 
 ```js
 var arr = [1, 2, 3];
@@ -36,9 +44,9 @@ console.log(arr, new); // => [1,2,3,4] 4
 
 ### pop ###
 
-语法: `array.pop()`；
-含义: 从数组尾部移除一个数组元素，返回取出的元素；
-示例:
+语法: `array.pop()`；  
+含义: 从数组尾部移除一个数组元素，返回取出的元素；  
+示例:  
 
 ```js
 var arr = [1, 2, 3];
@@ -48,9 +56,9 @@ console.log(arr, out1); // => [1,2] 3
 
 ### unshift ###
 
-语法: `array.unshift(elem1, ..)`；
-含义: 从数组头部加入数组元素，返回加入数组的元素。
-示例:
+语法: `array.unshift(elem1, ..)`；  
+含义: 从数组头部加入数组元素，返回加入数组的元素。  
+示例:  
 
 ```js
 var arr = [1, 2, 3];
@@ -60,33 +68,33 @@ console.log(arr); // => [0,1,2,3]
 
 ### shift ###
 
-语法: `array.shift()`；
-含义: 从数组头部移除一个数组元素，返回取出的元素；
-示例:
+语法: `array.shift()`；  
+含义: 从数组头部移除一个数组元素，返回取出的元素；  
+示例:  
 
 ```js
 var arr = [1, 2, 3];
 var out = arr.shift();
-console.log(arr, out2);//输出：[2,3] 1
+console.log(arr, out2); // => [2,3] 1
 ```
 
 ### reverse ###
 
-语法: `array.reverse()`；
-含义: 将原数组反转并返回；
-示例:
+语法: `array.reverse()`；  
+含义: 将原数组反转并返回；  
+示例:  
 
 ```js
 var arr = [1, 2, 3];
 arr.reverse();
-console.log(arr);//输出：[3,2,1]
+console.log(arr); // => [3,2,1]
 ```
 
 ### sort ###
 
-语法: `array.sort(compareFunc)`；
-含义: 默认以字符编码对数组元素进行排序，可选参数 compareFunc 为一个用于比较的回调函数，具有两个参数，不调换位置应返回负数，调换位置应返回正数；
-示例:
+语法: `array.sort(compareFunc)`；  
+含义: 默认以字符编码对数组元素进行排序，可选参数 compareFunc 为一个用于比较的回调函数，具有两个参数，不调换位置应返回负数，调换位置应返回正数；  
+示例:  
 
 ```js
 var arr = [1, 2, 10, 15, 3];
@@ -120,9 +128,9 @@ console.log(arr); // => [1,2,3,10,15]
 
 ### concat ###
 
-语法: `array.concat(elem1, ..)`；
-含义: 在调用数组对象后逐个插入参数(可以是数组)，最终返回新的拼接结果数组；
-示例:
+语法: `array.concat(elem1, ..)`；  
+含义: 在调用数组对象后逐个插入参数(可以是数组)，最终返回新的拼接结果数组；  
+示例:  
 
 ```js
 var arr1 = [1, 2],
@@ -134,22 +142,22 @@ console.log(arr3); // => [1,2,3,4]
 
 ### slice ###
 
-语法: `array.slice(start, end)`；
-含义: 返回一个数组副本，元素为必需参数 start 开始到可选参数 end(不包括)之间的数组元素，不指定 end 参数时，默认获取之后所有的元素，两个参数都不指定则返回一个原数组的副本；
-示例:
+语法: `array.slice(start, end)`；  
+含义: 返回一个数组副本，元素为必需参数 start 开始到可选参数 end(不包括)之间的数组元素，不指定 end 参数时，默认获取之后所有的元素，两个参数都不指定则返回一个原数组的副本；  
+示例:  
 
 ```js
 var arr = [1, 2, 3];
-console.log(arr.slice() === arr);//输出：false
-console.log(arr.slice(1, 2));//输出：[2]
-console.log(arr.slice(1));//输出：[2, 3]
+console.log(arr.slice() === arr); // => false
+console.log(arr.slice(1, 2)); // => [2]
+console.log(arr.slice(1)); // => [2, 3]
 ```
 
 ### splice ###
 
-语法: `array.splice(start, length, elem1, ..)`；
-含义: 从原数组中 start 位置开始移除 length 个数组元素，并插入多个数组元素，如果只提供两个参数则只是移除指定元素，最终将取出的元素返回。使用 splice() 可以实现删除、插入、删除并插入数组元素等操作；
-示例:
+语法: `array.splice(start, length, elem1, ..)`；  
+含义: 从原数组中 start 位置开始移除 length 个数组元素，并插入多个数组元素，如果只提供两个参数则只是移除指定元素，最终将取出的元素返回。使用 splice() 可以实现删除、插入、删除并插入数组元素等操作；  
+示例:  
 
 ```js
 var arr1 = [1, 2, 3, 4];
@@ -164,14 +172,14 @@ console.log(arr1); // => [1,2,3,4]
 
 ### join ###
 
-语法: `array.join(mark)`；
-含义: 根据分隔符 mark 将数组元素拼接为字符串返回，默认分隔符为","；
-示例:
+语法: `array.join(mark)`；  
+含义: 根据分隔符 mark 将数组元素拼接为字符串返回，默认分隔符为","；  
+示例:  
 
 ```js
 var arr = [1, 2, 3, 4];
-var str1 = arr.join(),
-str2 = arr.join("-");
+var str1 = arr.join();
+var str2 = arr.join("-");
 console.log(str1, str2); // => "1,2,3,4" "1-2-3-4"
 ```
 
@@ -181,9 +189,9 @@ console.log(str1, str2); // => "1,2,3,4" "1-2-3-4"
 
 ### charCodeAt ###
 
-语法: `string.charCodeAt(index)`；
-含义: 返回在指定的位置的字符的 Unicode 编码；
-示例:
+语法: `string.charCodeAt(index)`；  
+含义: 返回在指定的位置的字符的 Unicode 编码；  
+示例:  
 
 ```js
 console.log('Go to school.'.charCodeAt(1)); // => 111
@@ -191,9 +199,9 @@ console.log('Go to school.'.charCodeAt(1)); // => 111
 
 ### indexOf ###
 
-语法: `string.indexOf(cldStr)`；
-含义: 获取子字符串在父字符串中第一次出现的位置(索引值)，如果无匹配的位置则返回-1；
-示例:
+语法: `string.indexOf(cldStr)`；  
+含义: 获取子字符串在父字符串中第一次出现的位置(索引值)，如果无匹配的位置则返回-1；  
+示例:  
 
 ```js
 console.log('ABC'.indexOf('B')); // => 1
@@ -201,12 +209,81 @@ console.log('ABC'.indexOf('B')); // => 1
 
 ### lastIndexOf ###
 
-语法: `string.lastIndexOf(cldStr)`；
-含义: 获取子字符串在父字符串中最后一次出现的位置(索引值)，如果无匹配的位置则返回-1；
-示例:
+语法: `string.lastIndexOf(cldStr)`；  
+含义: 获取子字符串在父字符串中最后一次出现的位置(索引值)，如果无匹配的位置则返回-1；  
+示例:  
 
 ```js
 console.log('ABCBA'.lastIndexOf('B')); // => 3
+```
+
+### substr ###
+
+语法: `string.substr(index, length)`；  
+含义: 从起始索引号提取字符串中指定数目的字符；  
+示例:  
+
+```js
+var oriStr = 'ABCD';
+var cldStr = oriStr.substr(1, 2);
+console.log(oriStr, cldStr); // => "ABCD" "BC"
+```
+
+### substring ###
+
+语法: `string.substring(start, end)`；  
+含义: 功能与 substr 一样，都是截取字符串，不同之处在于，substring 会截取两个索引号之间的子串；  
+示例:  
+
+```js
+var oriStr = 'ABCD';
+var cldStr = oriStr.substring(1, 3);
+console.log(oriStr, cldStr); // => "ABCD" "BC"
+```
+
+### toLowerCase ###
+
+语法: `string.toLowerCase()`；  
+含义: 将字符串中的字母转换为小写；  
+示例:  
+
+```js
+var str = 'ABCDEFG';
+console.log(str.toLowerCase()); // => "abcdefg"
+```
+
+### toUpperCase ###
+
+语法: `string.toUpperCase()`；  
+含义: 将字符串中的字母转换为大写；  
+示例:  
+
+```js
+var str = 'abcdefg';
+console.log(str.toUpperCase()); // => "ABCDEFG"
+```
+
+### match ###
+
+语法: `string.match(regexp|cldStr)`；  
+含义: 将字符串中匹配正则或指定字符串的子串组装成一个数组，如果没有匹配项则返回 null；  
+示例:  
+
+```js
+var matchAry = 'AbabccabdaB'.match(/ab/ig);
+console.log(matchAry); // => ["Ab","ab","ab","aB"]
+```
+
+### replace ###
+
+语法: `string.replace(regexp|cldStr, newStr)`；  
+含义: 替换字符串中匹配正则或指定字符串的子串为新字符串；  
+示例:  
+
+```js
+var oldStr = 'AaaaaB';
+var newStr = oldStr.replace(/a/g, '*');
+console.log(oldStr, newStr); // => "AaaaaB" "A****B"
 ```
 
 ---
