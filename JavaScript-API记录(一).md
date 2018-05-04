@@ -1,5 +1,5 @@
 
-# JavaScript API记录(一) #
+# JavaScript-API记录(一) #
 
 ## 目录 ##
 
