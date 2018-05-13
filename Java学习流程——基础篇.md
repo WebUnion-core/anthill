@@ -3,13 +3,22 @@
 
 ## 目录 ##
 
-1. 基本概念
-2. 注意事项
-3. 编译与运行
+1. 参考链接
+2. 基本概念
+3. 注意事项
+4. 编译与运行
     1. 编译
     2. 执行
-4. 基本数据类型
+5. 基本数据类型
     1. 内置数据类型
+    2. 引用类型
+6. 常量定义
+
+## 参考链接 ##
+
+- [Java基础语法](http://www.runoob.com/java/java-basic-syntax.html)
+
+- [Java基本数据类型](http://www.runoob.com/java/java-basic-datatypes.html?s_q_s_h_a_r_e_1MTAwNTc2MzYxNTI2MjAzNTQzNDMyNDMzMjY5JjFsNmZXNQ==)
 
 ## 基本概念 ##
 
@@ -39,7 +48,7 @@
 
 ### 编译 ###
 
-```
+```sh
 javac [-encoding UTF-8] Example.java
 ```
 
@@ -47,7 +56,7 @@ javac [-encoding UTF-8] Example.java
 
 ### 执行 ###
 
-```
+```sh
 java Example
 ```
 
@@ -137,6 +146,18 @@ public class ValType {
         System.out.println("Char Max Value: " + (int)Character.MAX_VALUE);
     }
 }
+```
+
+### 引用类型 ###
+
+引用类型指向一个对象，指向对象的变量是引用变量，这些变量在声明时被指定为一个特定的类型，引用类型包括: 对象、数组等，默认值为`null`，一个引用变量可以用来引用任何与之兼容的类型。  
+
+## 常量定义 ##
+
+定义常量使用`finial`关键字，一旦声明常量，之后将不能修改其值，常量名通常用大写字母表示，例如:
+
+```
+finial double PI = 3.1415927;
 ```
 
 ---
