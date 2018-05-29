@@ -156,7 +156,7 @@ public class ValType {
 
 定义常量使用`finial`关键字，一旦声明常量，之后将不能修改其值，常量名通常用大写字母表示，例如:
 
-```
+```java
 finial double PI = 3.1415927;
 ```
 
