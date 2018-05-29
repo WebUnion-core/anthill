@@ -7,13 +7,15 @@
     1. 单行文本超出自动省略
     2. 多行文本超出自动省略
     3. 英文单词拆解换行
+    4. 禁止双击复制
 2. 表单控件相关
     1. placeholder样式设置
 3. 图形相关
     1. 三角图标
     2. 移动端1px线的实现
-4. 冷门黑科技
-    1. 禁止双击复制
+    3. 开启硬件加速使动画流畅
+4. 其他
+    1. 使元素失去点击和触摸等事件
 
 ## 文本相关 ##
 
@@ -53,6 +55,25 @@ p {
 p {
     width: 100px; /* 限制宽度 */
     word-break: break-all; /* 超出部分自动换行 */
+}
+```
+
+### 禁止双击复制 ###
+
+移动端一般都要禁用复制操作，否则惨不忍睹，不过一般视情况而定:  
+
+```css
+body {
+    /* 禁止双击复制 */
+    -moz-user-select: none;
+    /* 火狐 */
+    -webkit-user-select: none;
+    /* webkit浏览器 */
+    -ms-user-select: none;
+    /* IE10 */
+    -khtml-user-select: none;
+    /* 早期浏览器 */
+    user-select: none;
 }
 ```
 
@@ -118,24 +139,24 @@ CSS 部分:
 }
 ```
 
-## 冷门黑科技 ##
+### 开启硬件加速使动画流畅 ###
 
-### 禁止双击复制 ###
-
-移动端一般都要禁用复制操作，否则惨不忍睹，不过一般视情况而定:  
+不管最终目的是不是要实现3D动画，只要使用 translate3d 就能使网页开启硬件加速，从而使动画流畅:  
 
 ```css
-body {
-    /* 禁止双击复制 */
-    -moz-user-select: none;
-    /* 火狐 */
-    -webkit-user-select: none;
-    /* webkit浏览器 */
-    -ms-user-select: none;
-    /* IE10 */
-    -khtml-user-select: none;
-    /* 早期浏览器 */
-    user-select: none;
+.animate {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+```
+
+## 其他 ##
+
+### 使元素失去点击和触摸等事件 ###
+
+```css
+p {
+    pointer-events: none;
 }
 ```
 
