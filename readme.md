@@ -173,6 +173,8 @@
 
 - ID:70 > [npm实用命令笔记](./npm实用命令笔记.md)
 
+- ID:77 > [我的npm工厂(一)——abbrev](./我的npm工厂(一)——abbrev.md)
+
 ## Java ##
 
 - ID:73 > [Java学习流程——基础篇](./Java学习流程——基础篇.md)
