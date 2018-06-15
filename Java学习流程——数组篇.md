@@ -3,20 +3,20 @@
 
 ## 目录 ##
 
-1. <a href="#href1">参考链接</a>
-2. <a href="#href2">数组的声明与创建</a>
-3. <a href="#href3">foreach循环</a>
-4. <a href="#href4">函数中使用数组</a>
-    1. <a href="#href4-1">数组作为函数参数</a>
-    2. <a href="#href4-2">数组作为函数返回值</a>
-5. <a href="#href5">多维数组</a>
-6. <a href="#href6">Arrays类</a>
+1. [参考链接](.#href1)
+2. [数组的声明与创建](.#href2)
+3. [foreach循环](.#href3)
+4. [函数中使用数组](.#href4)
+    1. [数组作为函数参数](.#href4-1)
+    2. [数组作为函数返回值](.#href4-2)
+5. [多维数组](.#href5)
+6. [Arrays类](.#href6)
 
 ## <a name="href1">参考链接</a> ##
 
 - [Java 数组](http://www.runoob.com/java/java-array.html)
 
-## <a name="#href2">数组的声明与创建</a> ##
+## <a name="href2">数组的声明与创建</a> ##
 
 Java 数组中的元素数据类型都是统一的，这和 JavaScript 等语言不通，声明一个数组变量的语法有两种:
 
@@ -56,7 +56,7 @@ public class AryClass {
 }
 ```
 
-## <a name="#href3">foreach循环</a> ##
+## <a name="href3">foreach循环</a> ##
 
 上一段实例代码用 for 循环遍历了整个数组，这种方法需要根据下标来获取数组元素，稍微有些麻烦，遍历一个数组，更常用的是使用 foreach 循环，示例代码如下:
 
@@ -73,9 +73,9 @@ public class AryClass {
 }
 ```
 
-## <a name="#href4">函数中使用数组</a> ##
+## <a name="href4">函数中使用数组</a> ##
 
-### <a name="#href4-1">数组作为函数参数</a> ###
+### <a name="href4-1">数组作为函数参数</a> ###
 
 ```Java
 public class AryClass {
@@ -92,7 +92,7 @@ public class AryClass {
 }
 ```
 
-### <a name="#href4-2">数组作为函数返回值</a> ###
+### <a name="href4-2">数组作为函数返回值</a> ###
 
 ```Java
 public class AryClass {
@@ -113,7 +113,7 @@ public class AryClass {
 }
 ```
 
-## <a name="#href5">多维数组</a> ##
+## <a name="href5">多维数组</a> ##
 
 多维数组可以看成是数组的数组，比如二维数组就是一个特殊的一维数组，其每一个元素都是一个一维数组。创建一个多维数组的语法为(以二维数组为例): `dataType ary[][] = new dataType[array1Length][array2Length]`。
 
@@ -147,7 +147,7 @@ public class AryClass {
 }
 ```
 
-## <a name="#href6">Arrays类</a> ##
+## <a name="href6">Arrays类</a> ##
 
 java.util.Arrays 类封装有一些常用的方法和属性，主要有以下这些:
 
