@@ -18,11 +18,14 @@
 
 # CQ #
 
-1. encrypt
+1. 模块调查:  
 
-  ```
-  import {TripleDES} from 'encrypt/desEncrypt';
-  TripleDES.decrypt(item.itemname);
-  ```
+  - classnames
+  - crypto-js
 
-2. React.createClass
+2. React
+
+  - createClass
+  - getInitialState
+
+3. 路由设置: `D:\wjt20\cq\CQ_Channel_Web\src\routes\index.js`
