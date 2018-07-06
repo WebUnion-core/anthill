@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "doc-repositort",
   "version": "1.0.0",
   "description": "WebUnion docs",
@@ -22,4 +23,29 @@
   "devDependencies": {
     "marked": "^0.4.0"
   }
+=======
+    "name": "doc-repositort",
+    "version": "1.0.0",
+    "description": "WebUnion docs",
+    "main": "index.js",
+    "scripts": {
+        "marked": "node ./bin/marked.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/WebUnion-core/doc-repositort.git"
+    },
+    "keywords": [
+        "WebUnion"
+    ],
+    "author": "WebUnion",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/WebUnion-core/doc-repositort/issues"
+    },
+    "homepage": "https://github.com/WebUnion-core/doc-repositort#readme",
+    "devDependencies": {
+        "marked": "^0.4.0"
+    }
+>>>>>>> ef5801d619fce4ec4d489fa50e184327e8dbda52
 }

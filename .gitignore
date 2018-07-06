@@ -1,3 +1,6 @@
 node_modules
+<<<<<<< HEAD
 npm-debug.log
 markdown-data.json
+=======
+>>>>>>> ef5801d619fce4ec4d489fa50e184327e8dbda52
