@@ -7,7 +7,7 @@ const dataPath = path.resolve(__dirname, './../database');
 const allMdFiles = fs.readdirSync(srcPath);
 const jsonData = [];
 const dataType = 'JSON';
-const pre = 30;
+const pre = 50;
 
 // 组装数据
 function readAllFiles() {
