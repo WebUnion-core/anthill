@@ -7,6 +7,7 @@ const dataPath = path.resolve(__dirname, './../database');
 const allMdFiles = fs.readdirSync(srcPath);
 const jsonData = [];
 const dataType = 'JSON';
+const pre = 30;
 
 // 组装数据
 function readAllFiles() {
@@ -19,7 +20,7 @@ function readAllFiles() {
             const fileCont = fs.readFileSync(filePath, 'utf-8');
             const resultCont = encodeURI(marked(fileCont));
 
-            if (index % 50 === 0) {
+            if (index % pre === 0) {
                 jsonData.push([]);
             }
 
