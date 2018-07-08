@@ -1,6 +1,7 @@
-let path = require('path');
-let fs = require('fs');
-let marked = require('marked');
+const path = require('path');
+const fs = require('fs');
+const marked = require('marked');
+const md5 = require('./md5');
 
 const srcPath = path.resolve(__dirname, './..');
 const dataPath = path.resolve(__dirname, './../database');
@@ -21,13 +22,13 @@ function readAllFiles() {
             const resultCont = encodeURI(marked(fileCont));
 
             if (index % pre === 0) {
-                jsonData.push([]);
+                jsonData.push({});
             }
 
-            jsonData[jsonData.length - 1].push({
+            jsonData[jsonData.length - 1][md5(item, 8)] = {
                 name: item,
                 cont: resultCont
-            });
+            };
         }
     });
 }
