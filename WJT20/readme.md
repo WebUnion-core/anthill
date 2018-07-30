@@ -121,6 +121,8 @@
 
 - ID:87 > [Node.js实用技巧笔记](./Node.js实用技巧笔记.md)
 
+- ID:89 > [Node.js常用原生模块系列——process模块](./Node.js常用原生模块系列——process模块.md)
+
 ## jQuery系列 ##
 
 - ID:14 > [jQuery常用知识点总结](./jQuery常用知识点总结.md)

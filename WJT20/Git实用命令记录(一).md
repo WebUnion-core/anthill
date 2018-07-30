@@ -1,8 +1,6 @@
 
 # Git实用命令记录(一) #
 
-> 红色标记的命令为最常用的。可以利用 github 等使用 git 传输代码的网站练习 git 命令。
-
 ## 目录 ##
 
 1. [参考链接](#href1)
@@ -26,16 +24,16 @@
 
 ## <a name="href3">初始化/克隆</a> ##
 
-1. `<span style="color:red">git init [NAME]</span>`: 初始化一个 git 仓库，可选参数 NAME 为自定义的仓库名;
+1. `git init [NAME]`: 初始化一个 git 仓库，可选参数 NAME 为自定义的仓库名;
 
-2. `<span style="color:red">git clone URL</span>`: 克隆一个远程仓库到本地，URL 参数即为远程仓库的 URL。
+2. `git clone URL`: 克隆一个远程仓库到本地，URL 参数即为远程仓库的 URL。
 
 
 ## <a name="href4">增加/删除</a> ##
 
-1. `<span style="color:red">git add FILE1|DIR1 [FILE2|DIR2 FILE3|DIR3 ...]</span>`: 添加指定文件/目录到暂存区;
+1. `git add FILE1|DIR1 [FILE2|DIR2 FILE3|DIR3 ...]`: 添加指定文件/目录到暂存区;
 
-2. `<span style="color:red">git add .</span>`: 添加当前目录的所有文件到暂存区;
+2. `git add .`: 添加当前目录的所有文件到暂存区;
 
 3. `git add -p`: 添加每个变化前，都会要求确认，对于同一个文件的多处变化，可以实现分次提交，如下图:
 
@@ -49,7 +47,7 @@
 
 ## <a name="href5">提交</a> ##
 
-1. `<span style="color:red">git commit [FILE1 FILE2 ...] -m [MESSAGE]</span>`: 提交暂存区到仓库区，提示信息如下图:
+1. `git commit [FILE1 FILE2 ...] -m [MESSAGE]`: 提交暂存区到仓库区，提示信息如下图:
 
     ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w62.png)
 
@@ -59,7 +57,7 @@
 
     ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w63.png)
 
-4. `<span style="color:red">git commit --amend -m [MESSAGE]</span>`: 使用一次新的 commit，替代上一次提交，如果代码没有任何新变化，则用来改写上一次 commit 的提交信息
+4. `git commit --amend -m [MESSAGE]`: 使用一次新的 commit，替代上一次提交，如果代码没有任何新变化，则用来改写上一次 commit 的提交信息
 
 5. `git commit --amend [FILE1 FILE2 ...]`: 重做上一次 commit，并包括指定文件的新变化。
 
@@ -75,11 +73,11 @@
 
     ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w65.png)
 
-4. `<span style="color:red">git remote add [NAME] [URL]</span>`: 增加一个新的远程仓库，并命名为 NAME;
+4. `git remote add [NAME] [URL]`: 增加一个新的远程仓库，并命名为 NAME;
 
-5. `<span style="color:red">git pull [REMOTE] [BRANCH]</span>`: 更新，取回远程仓库的变化，并与本地分支合并;
+5. `git pull [REMOTE] [BRANCH]`: 更新，取回远程仓库的变化，并与本地分支合并;
 
-6. `<span style="color:red">git push [REMOTE] [BRANCH]</span>`: 上传本地指定分支到远程仓库;
+6. `git push [REMOTE] [BRANCH]`: 上传本地指定分支到远程仓库;
 
 7. `git push [REMOTE] --force`: 强行推送当前分支到远程仓库，即使有冲突，慎用;
 
