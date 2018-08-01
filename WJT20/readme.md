@@ -5,8 +5,6 @@
 
 - ID:17 > [JavaScript正则知识点总结](./JavaScript正则知识点总结.md)
 
-- ID:22 > [JavaScript语句与函数](./JavaScript语句与函数.md)
-
 - ID:23 > [JavaScript BOM与DOM](./JavaScript%20BOM与DOM.md)
 
 - ID:24 > [JavaScript canvas介绍](./JavaScript%20canvas介绍.md)
@@ -58,6 +56,8 @@
 - ID:21 > [JavaScript-D系列——数据类型](./JavaScript-D系列——数据类型.md)
 
 - ID:90 > [JavaScript-D系列——类型校验与转换](./JavaScript-D系列——类型校验与转换.md)
+
+- ID:22 > [JavaScript-D系列——语句与函数](./JavaScript-D系列——语句与函数.md)
 
 ## webpack系列 ##
 
