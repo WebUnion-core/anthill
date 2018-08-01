@@ -5,8 +5,6 @@
 
 - ID:17 > [JavaScript正则知识点总结](./JavaScript正则知识点总结.md)
 
-- ID:21 > [JavaScript数据类型与类型转换](./JavaScript数据类型与类型转换.md)
-
 - ID:22 > [JavaScript语句与函数](./JavaScript语句与函数.md)
 
 - ID:23 > [JavaScript BOM与DOM](./JavaScript%20BOM与DOM.md)
@@ -18,6 +16,12 @@
 - ID:27 > [JSON、Ajax和JSONP记录](./JSON、Ajax和JSONP记录.md)
 
 - ID:33 > [JavaScript黑科技](./JavaScript黑科技.md)
+
+- ID:61 > [关于JavaScript模块化的记录](./关于JavaScript模块化的记录.md)
+
+- ID:71 > [JavaScript实战技巧](./JavaScript实战技巧.md)
+
+- ID:72 > [JavaScript-API记录(一)](./JavaScript-API记录(一).md)
 
 - ID:30 > [JavaScript设计模式重啃——前奏](./JavaScript设计模式重啃——前奏.md)
 
@@ -51,11 +55,9 @@
 
 - ID:65 > [JavaScript设计模式重啃——设计原则](./JavaScript设计模式重啃——设计原则.md)
 
-- ID:61 > [关于JavaScript模块化的记录](./关于JavaScript模块化的记录.md)
+- ID:21 > [JavaScript-D系列——数据类型](./JavaScript-D系列——数据类型.md)
 
-- ID:71 > [JavaScript实战技巧](./JavaScript实战技巧.md)
-
-- ID:72 > [JavaScript-API记录(一)](./JavaScript-API记录(一).md)
+- ID:90 > [JavaScript-D系列——类型校验与转换](./JavaScript-D系列——类型校验与转换.md)
 
 ## webpack系列 ##
 
