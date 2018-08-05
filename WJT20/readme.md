@@ -59,7 +59,7 @@
 
 - ID:72 > [JavaScript-D系列——数组与字符串API](./JavaScript-D系列——数组与字符串API.md)
 
-- ID:91 > [JavaScript-D系列——BOM](./JavaScript-D系列——BOM.ms)
+- ID:91 > [JavaScript-D系列——BOM](./JavaScript-D系列——BOM.md)
 
 ## webpack系列 ##
 
