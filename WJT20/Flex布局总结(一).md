@@ -27,9 +27,9 @@ Flex(Flexible Box)，意为"弹性布局"，用来为盒状模型提供最大的
 
 ## 构建测试页面 ##
 
-构建测试页面 index.html：
+构建测试页面 index.html:
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,9 +48,9 @@ Flex(Flexible Box)，意为"弹性布局"，用来为盒状模型提供最大的
 </html>
 ```
 
-CSS 样式文件 style.css：
+CSS 样式文件 style.css:
 
-```
+```css
 ul{
     width: 900px;
     padding: 0;
@@ -71,28 +71,31 @@ ul li{
 }
 ```
 
-查看效果为：
+查看效果为:
 
-![image](./images/w20.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w20.png)
 
 ## 容器 ##
 
-采用 Flex 布局的元素，称为 Flex 容器(Flex Container)。容器默认存在两根轴：水平轴和垂直轴，项目默认沿主轴排列。
+采用 Flex 布局的元素，称为 Flex 容器(Flex Container)。容器默认存在两根轴: 水平轴和垂直轴，项目默认沿主轴排列。
 
-无论是块级元素还是行内元素都可以定义为容器：
+无论是块级元素还是行内元素都可以定义为容器:
 
-```
+```css
+/* 块级Flex */
 .block{
-    display: flex;/* 块级Flex */
+    display: flex;
 }
+
+/* 行内Flex */
 .inline{
-    display: inline-flex;/* 行内Flex */
+    display: inline-flex;
 }
 ```
 
-对于 Webkit 内核的浏览器，必须加上`-webkit`前缀：
+对于 Webkit 内核的浏览器，必须加上`-webkit`前缀:
 
-```
+```css
 .box{
     display: -webkit-flex;
     display: flex;
@@ -103,7 +106,7 @@ ul li{
 
 ## 容器的属性 ##
 
-容器元素可以设置6个 CSS 属性：
+容器元素可以设置6个 CSS 属性:
 
 - flex-direction
 - flex-wrap
@@ -114,32 +117,32 @@ ul li{
 
 ### flex-direction属性 ###
 
-flex-direction 属性决定项目的排列方向，其取值有：
+flex-direction 属性决定项目的排列方向，其取值有:
 
-1. row：默认值，水平方向，起点在左端；
-2. row-reverse：水平方向，起点在右边；
-3. column：垂直方向，起点在上沿；
-4. column-reverse：垂直方向，起点在下沿。
+1. row: 默认值，水平方向，起点在左端；
+2. row-reverse: 水平方向，起点在右边；
+3. column: 垂直方向，起点在上沿；
+4. column-reverse: 垂直方向，起点在下沿。
 
-flex-direction 分别设为 row 和 row-reverse 的查看效果为：
+flex-direction 分别设为 row 和 row-reverse 的查看效果为:
 
-![image](./images/w21.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w21.png)
 
-flex-direction 分别设为 column 和 column-reverse 的查看效果为：
+flex-direction 分别设为 column 和 column-reverse 的查看效果为:
 
-![image](./images/w22.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w22.png)
 
 ### flex-wrap属性 ###
 
-默认情况下，项目都排在一条线上，flex-wrap 属性定义了如果一条线排不下时如何换行形成一根新的轴线，其取值有：
+默认情况下，项目都排在一条线上，flex-wrap 属性定义了如果一条线排不下时如何换行形成一根新的轴线，其取值有:
 
-1. nowrap：默认值，表示不换行；
-2. wrap：换行，第一行在上；
-3. wrap-reverse：换行，第一行在下。
+1. nowrap: 默认值，表示不换行；
+2. wrap: 换行，第一行在上；
+3. wrap-reverse: 换行，第一行在下。
 
-查看效果为：
+查看效果为:
 
-![image](./images/w23.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w23.png)
 
 ### flex-flow属性 ###
 
@@ -147,31 +150,31 @@ flex-flow 属性是 flex-direction 属性 和 flex-wrap 属性的组合，默认
 
 ### justify-content属性 ###
 
-justify-content 属性定义了项目在水平轴上的对齐方式，其取值有：
+justify-content 属性定义了项目在水平轴上的对齐方式，其取值有:
 
-1. flex-start：默认值，表示左对齐；
-2. flex-end：右对齐；
-3. center：居中对齐；
-4. space-between：两端对齐，项目之间的间隔都相等；
-5. space-around：每个项目两端的间距相等，所以项目之间的间距比项目与边框的间距大一倍。
+1. flex-start: 默认值，表示左对齐；
+2. flex-end: 右对齐；
+3. center: 居中对齐；
+4. space-between: 两端对齐，项目之间的间隔都相等；
+5. space-around: 每个项目两端的间距相等，所以项目之间的间距比项目与边框的间距大一倍。
 
-先将 flex-wrap 设置为 `wrap`，接着为 justify-content 属性设置不同的值，查看效果为：
+先将 flex-wrap 设置为 `wrap`，接着为 justify-content 属性设置不同的值，查看效果为:
 
-![image](./images/w24.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w24.png)
 
 ### align-items属性 ###
 
-align-items 属性定义了项目在垂直轴上如何对齐，其取值有：
+align-items 属性定义了项目在垂直轴上如何对齐，其取值有:
 
-1. flex-start：垂直轴上起点对齐；
-2. flex-end：垂直轴上终点对齐；
-3. center：垂直轴上中点对齐；
-4. baseline：项目的第一行文字的基线对齐；
-5. stretch：默认值，如果项目未设置高度或设置为 auto，将占满整个容器的高度。
+1. flex-start: 垂直轴上起点对齐；
+2. flex-end: 垂直轴上终点对齐；
+3. center: 垂直轴上中点对齐；
+4. baseline: 项目的第一行文字的基线对齐；
+5. stretch: 默认值，如果项目未设置高度或设置为 auto，将占满整个容器的高度。
 
-同样将 flex-wrap 设置为 `wrap`，然后将第二个 li 标签修改为`<li style="line-height:70px;"> 2 </li>`，并将 ul 标签的 height 设置为150px，接着为 align-items 属性设置不同的值，查看效果为：
+同样将 flex-wrap 设置为 `wrap`，然后将第二个 li 标签修改为`<li style="line-height:70px;"> 2 </li>`，并将 ul 标签的 height 设置为150px，接着为 align-items 属性设置不同的值，查看效果为:
 
-![image](./images/w25.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w25.png)
 
 ### align-content属性 ###
 

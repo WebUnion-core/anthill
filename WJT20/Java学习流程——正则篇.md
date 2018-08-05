@@ -18,15 +18,15 @@
 
 ## <a name="href2">介绍</a> ##
 
-- 正则表达式定义了字符串的模式。
-- 正则表达式可以用来搜索、编辑或处理文本。
+- 正则表达式定义了字符串的模式;
+- 正则表达式可以用来搜索、编辑或处理文本;
 - 正则表达式并不仅限于某一种语言，但是在每种语言中有细微的差别。
 
 其他的请自己百度，Java 中与正则直接关联的有三个包装类(其他的一些类也有使用到正则表达式，例如 String 类等等，[我是传送门](./Java学习流程——原生抽象类.md))，这三个类都位于 java.util.regex 包下，说明如下:
 
-1. Pattern 类: pattern 对象是一个正则表达式的编译表示。Pattern 类没有公共构造方法。要创建一个 Pattern 对象，你必须首先调用其公共静态编译方法，它返回一个 Pattern 对象。该方法接受一个正则表达式作为它的第一个参数。
+1. Pattern 类: pattern 对象是一个正则表达式的编译表示。Pattern 类没有公共构造方法。要创建一个 Pattern 对象，你必须首先调用其公共静态编译方法，它返回一个 Pattern 对象。该方法接受一个正则表达式作为它的第一个参数;
 
-2. Matcher 类: Matcher 对象是对输入字符串进行解释和匹配操作的引擎。与Pattern 类一样，Matcher 也没有公共构造方法。你需要调用 Pattern 对象的 matcher 方法来获得一个 Matcher 对象。
+2. Matcher 类: Matcher 对象是对输入字符串进行解释和匹配操作的引擎。与Pattern 类一样，Matcher 也没有公共构造方法。你需要调用 Pattern 对象的 matcher 方法来获得一个 Matcher 对象;
 
 3. PatternSyntaxException: PatternSyntaxException 是一个非强制异常类，它表示一个正则表达式模式中的语法错误(这个用的较少，本篇就不分析了)。
 
@@ -80,7 +80,7 @@ public class RegExpClass {
 
 ## <a name="href4">正则表达式语法</a> ##
 
-![image](./images/w59.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w59.png)
 
 ## <a name="href5">Matcher类常用方法</a> ##
 
