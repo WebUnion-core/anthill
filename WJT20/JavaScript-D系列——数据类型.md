@@ -13,6 +13,7 @@
     1. [Object类型](#href2-1)
     2. [Date类型](#href2-2)
     3. [Array类型](#href2-3)
+    4. [Math类型](#href2-4)
 
 JavaScript 有5种基本数据类型 Undefined、Null、Boolean、Number 和 String，和1种复杂数据类型 Object。
 
@@ -76,9 +77,9 @@ console.log(isNaN(1 + 'n')); // true
 
 ### <a name="href1-5">String类型</a> ###
 
-声明字符串：`var str = "WJT";`
+声明字符串: `var str = "WJT";`
 
-字符串中可以嵌入字符字面量，例如：`var str = 'WJT\nHello';`，其中，`\n`表示换行符。
+字符串中可以嵌入字符字面量，例如: `var str = 'WJT\nHello';`，其中，`\n`表示换行符。
 
 字符串属于类数组对象(类数组对象的特点: 可以通过索引号访问指定位置元素，有 length 属性):  
 
@@ -87,9 +88,9 @@ var l = 'ABC'.length;
 console.log(l); // 输出3
 ```
 
-可以使用+号拼接字符串：`var str = 'AB' + 'C';`。
+可以使用+号拼接字符串: `var str = 'AB' + 'C';`。
 
-使用字符串的 concat() 方法也可以拼接字符串：`var str = 'A'.concat('B');`，这句代码返回一个由"A"字符串尾部拼接"B"字符串的新字符串——"AB"。
+使用字符串的 concat() 方法也可以拼接字符串: `var str = 'A'.concat('B');`，这句代码返回一个由"A"字符串尾部拼接"B"字符串的新字符串——"AB"。
 
 ## <a name="href2">引用数据类型</a> ##
 
@@ -155,7 +156,7 @@ function getCurrentTime() {
 
 ### <a name="href2-3">Array类型</a> ###
 
-创建数组有两种方式：使用 new Array() 和使用数组字面量表示法。
+创建数组有两种方式: 使用 new Array() 和使用数组字面量表示法。
 
 JavaScript 数组不同于其他语言的数组的一点是，JavaScript 数组不限制数组元素的数据类型保持统一，一个数组可以包含各种类型的值。
 
@@ -172,6 +173,32 @@ console.log(arr3[arr3.length - 1]); // 访问最后一个元素: true
 
 arr3.length = 0;
 console.log(arr3[0]); // 输出: undefibed
+```
+
+### <a name="href2-4">Math类型</a> ###
+
+Math类型包含了一些常用的用于数学计算的属性和方法，常用的属性常量有: `Math.PI`，即获取π的值: 3.141592653589793。
+
+`Math.min(num1, ...)` 和 `Math.max(num1, ...)`，接收一段数值参数，分别返回其中的最大值和最小值。
+
+```js
+var num3 = 10;
+var num4 = 5;
+console.log(Math.min(num3, num4)); // 输出: 5
+console.log(Math.max(num3, num4)); // 输出: 10
+```
+
+舍入方法:
+
+1. `Math.ceil(num)`: 向上舍入;
+2. `Math.floor(num)`: 向下舍入;
+3. `Math.round(num)`: 四舍五入。
+
+`Math.random()`用于获取大于等于0小于1的浮点数，获取a到b之间的整数使用语句: `Math.floor(Math.random() * (b - a + 1) + a)`。
+
+```js
+var num7 = Math.floor(Math.random() * 10); // 获取大于等于0小于10的任意整数
+var num1 = Math.floor(Math.random() * (10 - 5 + 1) + 5); // 获取大于等于5小于11(5到10之间)的任意整数
 ```
 
 ---
