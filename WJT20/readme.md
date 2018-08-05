@@ -19,8 +19,6 @@
 
 - ID:71 > [JavaScript实战技巧](./JavaScript实战技巧.md)
 
-- ID:72 > [JavaScript-API记录(一)](./JavaScript-API记录(一).md)
-
 - ID:30 > [JavaScript设计模式重啃——前奏](./JavaScript设计模式重啃——前奏.md)
 
 - ID:35 > [JavaScript设计模式重啃——单例模式](./JavaScript设计模式重啃——单例模式.md)
@@ -58,6 +56,8 @@
 - ID:90 > [JavaScript-D系列——类型校验与转换](./JavaScript-D系列——类型校验与转换.md)
 
 - ID:22 > [JavaScript-D系列——语句与函数](./JavaScript-D系列——语句与函数.md)
+
+- ID:72 > [JavaScript-D系列——数组与字符串API](./JavaScript-D系列——数组与字符串API.md)
 
 ## webpack系列 ##
 
