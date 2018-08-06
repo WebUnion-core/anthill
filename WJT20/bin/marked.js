@@ -16,7 +16,7 @@ const ignore = JSON.stringify([ 'readme.md' ]);
 // 组装数据
 function readAllFiles() {
     allMdFiles.forEach(function(item, index) {
-        if (ignore.indexOf(item) > 0) {
+        if (ignore.indexOf(item) < 0) {
             const filePath = srcPath + '/' + item;
 
             // isFile: 是否文件
