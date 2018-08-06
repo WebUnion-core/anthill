@@ -2,6 +2,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;---<a href="#2">Maybe Types 进阶</a><br/>
 <a href="#3">Variable Types(变量类型)</a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;---<a href="#4">Reassigning variables(重新分配变量)</a><br/>
+<a href="#5">Function Types(函数类型))</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;---<a href="#6">Maybe Types 进阶</a><br/>
 
 <h3 id="1"></h3>
 
@@ -121,4 +123,31 @@ mutate();
 
 // $ExpectError
 let isString: string = foo; // Error!
+```
+
+<h3 id="1"></h3>
+
+# Function Types（函数类型）
+
+函数有两个地方需要定义类型，一个是参数，一个是返回值。
+```js
+// @flow
+function concat(a: string, b: string): string {
+  return a + b;
+}
+
+concat("foo", "bar"); // Works!
+// $ExpectError
+concat(true, false);  // Error!
+```
+即使不用类型注释，有些类型也会自动检测
+```js
+// @flow
+function concat(a, b) {
+  return a + b;
+}
+
+concat("foo", "bar"); // Works!
+// $ExpectError
+concat(true, false);  // Error!
 ```
