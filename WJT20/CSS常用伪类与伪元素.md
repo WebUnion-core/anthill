@@ -3,21 +3,21 @@
 
 ## 目录 ##
 
-1. 参考链接
-2. 伪类与伪元素的区分
-3. 伪类
-    1. 链接状态
-    2. 首尾定位
-    3. 索引定位
-    4. 表单控件
-        1. checked
-        2. disabled和enabled
-        3. focus
-4. 伪元素
-    1. 首行和首字符
-    2. 前后添加内容
+1. [参考链接](#href1)
+2. [伪类与伪元素的区分](#href2)
+3. [伪类](#href3)
+ [](#href4)   1. 链接状态
+ [](#href5)   2. 首尾定位
+ [](#href6)   3. 索引定位
+ [](#href7)   4. 表单控件
+ [](#href8)       1. checked
+ [](#href9)       2. disabled和enabled
+ [](#href10)       3. focus
+4. [伪元素](#href11)
+ [](#href12)   1. 首行和首字符
+ [](#href13)   2. 前后添加内容
 
-## 参考链接 ##
+## <a name="href1">参考链接</a> ##
 
 - [CSS 伪类 - w3school](http://www.w3school.com.cn/css/css_pseudo_classes.asp)
 
@@ -25,20 +25,20 @@
 
 - [CSS3伪类和伪元素的特性和区别](http://www.cnblogs.com/ihardcoder/p/5294927.html)
 
-## 伪类与伪元素的区分 ##
+## <a name="href2">伪类与伪元素的区分</a> ##
 
 伪类用于向某些选择器添加特殊的效果，伪元素则是用于将特殊的效果添加到某些选择器。
 
 伪类与伪元素的概念很难区分，关于两者的概念详解，可以查看这篇引用文章: [CSS3伪类和伪元素的特性和区别](http://www.cnblogs.com/ihardcoder/p/5294927.html)
 
-## 伪类 ##
+## <a name="href3">伪类</a> ##
 
 伪类的作用有以下两点:
 
 1. 获取不存在于DOM树中的信息;
 2. 获取不能被常规CSS选择器获取的信息。
 
-### 链接状态 ###
+### <a name="href3-1">链接状态</a> ###
 
 伪类中最常用的情景之一就是用于设置链接标签的状态样式了，涉及的伪类主要有以下四个:
 
@@ -82,7 +82,7 @@ CSS样式：
 
 这里还要补充一点，如果a标签的 href 属性值为空或者为"#"的话，link 和 visited 两者会冲突，其中一个状态样式就会失效。
 
-### 首尾定位 ###
+### <a name="href3-2">首尾定位</a> ###
 
 首尾定位伪类也是很常用的伪类，使用的是`:first-child`和`:last-child`这两个伪类，`:first-child`匹配的是其前面编写的选择器所匹配到的元素集合中的第一个子元素，而`:last-child`则是其中的最后一个子元素。
 
@@ -124,7 +124,7 @@ CSS样式:
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w49.png)
 
-### 索引定位 ###
+### <a name="href3-3">索引定位</a> ###
 
 前面讲过首尾定位伪类可以给集合的第一个和最后一个子元素添加样式，然而有些时候我们要添加的样式并不是作用于首尾，而是其中某个位置的元素，这时，我们可以使用索引定位伪类`:nth-child(n)`，这个伪类可以接收一个表征元素索引的参数(由1记起)。以下是给一个无序列表的第二个列表条目添加绿色字体颜色的示例代码：
 
@@ -168,7 +168,7 @@ CSS样式:
 
 索引定位伪类还有一个特殊的用法，那就是使用的参数可以是算术表达式，例如，`::nth-child(2n+1)`会给所有奇数索引位置的元素添加样式，而`::nth-child(2n)`则会给所有偶数索引位置的元素添加样式，这是一个非常强大的功能，我们可以利用这个功能替换掉一些原本要由 JavaScript 才能实现的效果，这样可以大大提升页面性能。
 
-### 表单控件 ###
+### <a name="href3-4">表单控件</a> ###
 
 CSS中有不少伪类是与表单控件(诸如文本框、文本域、单选按钮、复选按钮等等)有关的，在设计表单控件的时候，这些伪类还是挺有用的。这里我只列举一些常用的表单控件伪类，想了解更多表单控件伪类请自行查阅资料，常用的主要有以下这些:
 
@@ -177,7 +177,7 @@ CSS中有不少伪类是与表单控件(诸如文本框、文本域、单选按�
 3. `:enabled`: 选择所有启用的表单元素；
 4. `:focus`: 选择元素输入后具有焦点。
 
-#### checked ####
+
 
 `:checked`伪类常用于单选按钮和复选按钮，利用这个伪类，我们可以给选中的选项添加一些独特样式，从而与未选中的选项区分开来。以下是给选中的复选按钮选项对应的备注文本添加颜色区分的示例代码：
 
@@ -205,7 +205,7 @@ input[name="color"]:checked + label{
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w50.png)
 
-#### disabled和enabled ####
+
 
 `:disabled`和`:enabled`伪类分别用于给禁用和启用的表单控件添加不同的样式。以下是给启用状态文本框添加蓝色实线边框、给禁用状态文本框添加红色实线边框并设置黑底白字效果的示例代码:
 
@@ -241,7 +241,7 @@ input[type="text"]:disabled{
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w51.png)
 
-#### focus ####
+
 
 `:focus`伪类用于给获取到焦点的指定表单控件添加样式，以下是给一个文本框获得焦点时添加绿色实线边框的示例代码：
 
@@ -270,7 +270,7 @@ input[type="text"]:focus{
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w52.png)
 
-## 伪元素 ##
+## <a name="href4">伪元素</a> ##
 
 伪元素在DOM树中创建了一些抽象元素，这些抽象元素是不存在于文档语言里的(可以理解为html源码)。比如：documen接口不提供访问元素内容的第一个字或者第一行的机制，而伪元素可以使开发者可以提取到这些信息。一个选择器只能使用一个伪元素，并且伪元素必须处于选择器语句的最后。
 
@@ -283,7 +283,7 @@ input[type="text"]:focus{
 3. `::before`: 在元素之前添加内容；
 4. `::after`: 在元素之后添加内容。
 
-### 首行和首字符 ###
+### <a name="href4-5">首行和首字符</a> ###
 
 使用`::first-letter`可以给指定元素的文本首字符添加样式，报纸上那种第一个字符设置大字号的效果就可以用这个伪元素实现；`::first-line`则是给指定元素的首行文本添加样式。以下是实现首字符字号加大并设为红色、首行加粗的示例代码：
 
@@ -311,7 +311,7 @@ p::first-line{
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w53.png)
 
-### 前后添加内容 ###
+### <a name="href4-6">前后添加内容</a> ###
 
 前后添加内容是伪元素的主要用途之一，分别用到了`::before`和`::after`两个伪元素，以下是我们自定义一种字体颜色为红色的、文本前后被"——"包围的标题示例代码：
 

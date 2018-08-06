@@ -3,23 +3,21 @@
 
 ## 目录 ##
 
-1. 参考链接
-2. cookie
-3. sessionStorage
-4. sessionStorage、localStorage和cookie的异同
-5. JSON
-	1. 取值
-	2. 简单的JSON形式
-	3. JSON数组
-	4. JavaScript JSON API
-6. XML
-	1. 简单的XML形式
-	2. XML数组
-7. XML与JSON的对比
+1. [参考链接](#href1)
+2. [cookie](#href2)
+3. [sessionStorage](#href3)
+4. [sessionStorage、localStorage和cookie的异同](#href4)
+5. [JSON](#href5)
+	1. [取值](#href5-1)
+	2. [简单的JSON形式](#href5-2)
+	3. [JSON数组](#href5-3)
+	4. [JavaScript](#href5-4) JSON API
+6. [XML](#href6)
+	1. [简单的XML形式](#href6-5)
+	2. [XML数组](#href6-6)
+7. [XML与JSON的对比](#href7)
 
----
-
-## 参考链接 ##
+## <a name="href1">参考链接</a> ##
 
 - [cookie、 sessionStorage 、localStorage之间的区别和使用](http://www.cnblogs.com/caiyezi/p/5619506.html)
 
@@ -29,7 +27,7 @@
 
 ---
 
-## cookie ##
+## <a name="href2">cookie</a> ##
 
 cookie 指存储在用户本地终端上的数据，安全性较低，通常需要经过加密，典型的应用场景就是判断注册用户是否已经登过该网站。
 
@@ -76,7 +74,7 @@ var Cookie = {
 
 ---
 
-## localStorage ##
+## <a name="href3">localStorage</a> ##
 
 localStorage 是没有时间限制的数据存储方式。
 
@@ -93,7 +91,7 @@ console.log(localStorage.data);//读
 
 ---
 
-## sessionStorage ##
+## <a name="href4">sessionStorage</a> ##
 
 sessionStorage 针对的是一个 session 数据的存储，当用户关闭浏览器窗口后，数据就会被删除。
 
@@ -108,7 +106,7 @@ console.log(sessionStorage.data);//读
 
 ---
 
-## sessionStorage、localStorage和cookie的异同 ##
+## <a name="href5">sessionStorage、localStorage和cookie的异同</a> ##
 
 共同点：都是保存在浏览器端且同源。  
 
@@ -118,11 +116,11 @@ sessionStorage 和 localStorage 不会自动把数据发送给服务器，仅在
 
 ---
 
-## JSON ##
+## <a name="href6">JSON</a> ##
 
 JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。易于人阅读和编写。同时也易于机器解析和生成。  
 
-## 取值 ##
+## <a name="href7">取值</a> ##
 
 1. 数字(整型或浮点型)
 2. 字符串(由双括号包含)
@@ -131,7 +129,7 @@ JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。易�
 5. 对象(由花括号包含)
 6. null
 
-## 简单的JSON形式 ##
+## <a name="href8">简单的JSON形式</a> ##
 
 ```
 {
@@ -140,7 +138,7 @@ JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。易�
 }
 ```
 
-## JSON数组 ##
+## <a name="href9">JSON数组</a> ##
 
 ```
 {
@@ -151,7 +149,7 @@ JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。易�
 }
 ```
 
-## JavaScript JSON API ##
+## <a name="href10">JavaScript</a> ##
 
 将 JavaScript 对象转换为 JSON 字符串使用 JSON.stringify(obj) 方法，obj 参数就是所要操作的对象；将 JSON 字符串转换为 JavaScript 对象则使用 JSON.parse(json) 方法，json 参数就是所要操作的 JSON 字符串。
 
@@ -167,19 +165,19 @@ console.log(json, obj);
 
 ---
 
-## XML ##
+## <a name="href11">XML</a> ##
 
 XML(Extensible Markup Language，扩展标记语言) 可以用来标记数据、定义数据类型，是一种允许用户对自己的标记语言进行定义的源语言。XML 使用 DTD(document type definition) 文档类型定义来组织数据。  
 
 XML 是标准通用标记语言(SGML)的子集，非常适合 Web 传输。XML 提供统一的方法来描述和交换独立于应用程序或供应商的结构化数据。
 
-## 简单的XML形式 ##
+## <a name="href12">简单的XML形式</a> ##
 
 ```
 <user userName="WeiJietao" userId="0b9145cd"></user>
 ```
 
-## XML数组 ##
+## <a name="href13">XML数组</a> ##
 
 ```
 <usersList>
@@ -190,7 +188,7 @@ XML 是标准通用标记语言(SGML)的子集，非常适合 Web 传输。XML �
 
 ---
 
-## XML与JSON的对比 ##
+## <a name="href14">XML与JSON的对比</a> ##
 
 XML：
 

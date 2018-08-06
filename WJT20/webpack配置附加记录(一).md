@@ -3,9 +3,9 @@
 
 ## 目录 ##
 
-1. .babelrc配置
+1. [.babelrc配置](#href1)
 
-## .babelrc配置 ##
+## <a name="href1">.babelrc配置</a> ##
 
 示例:
 

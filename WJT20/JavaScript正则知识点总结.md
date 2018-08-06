@@ -3,10 +3,10 @@
 
 ## 目录 ##
 
-1. 字符
-2. RegExp类型
+1. [字符](#href1)
+2. [RegExp类型](#href2)
 
-## 字符 ##
+## <a name="href1">字符</a> ##
 
 1. 元字符  
 
@@ -38,7 +38,7 @@
 
 ---
 
-## RegExp 类型 ##
+## <a name="href2">RegExp</a> ##
 
 定义正则表达式有两种方式:
 
@@ -52,7 +52,7 @@
 
 字符串对象的 match()、search()、split() 及 replace() 等方法也与正则表达式相关。
 
-## 常用正则表达式 ##
+## <a name="href3">常用正则表达式</a> ##
 
 1. 检验`YYYY-MM-DD HH-mm`格式的时间戳:
 

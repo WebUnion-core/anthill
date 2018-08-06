@@ -3,27 +3,27 @@
 
 ## 目录 ##
 
-1. 前言
-2. 参考链接
-3. 项目
-    1. order属性
-    2. flex-grow属性
-    3. flex-shrink属性
-    4. flex-basis属性
-    5. flex 属性
-    6. align-self属性
+1. [前言](#href1)
+2. [参考链接](#href2)
+3. [项目](#href3)
+ [](#href4)   1. order属性
+ [](#href5)   2. flex-grow属性
+ [](#href6)   3. flex-shrink属性
+ [](#href7)   4. flex-basis属性
+ [](#href8)   5. flex 属性
+ [](#href9)   6. align-self属性
 
-## 前言 ##
+## <a name="href1">前言</a> ##
 
 > 本篇是[Flex布局总结(一)](https://github.com/WeiJietao/LogBase/blob/master/Flex%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93(%E4%B8%80).md)的续作，主要讲解 Flex "项目"的相关知识。
 
-## 参考链接 ##
+## <a name="href2">参考链接</a> ##
 
 - [Flex布局语法教程](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool&utm_medium=referral)
 
 - [Flex布局总结(一)](https://github.com/WeiJietao/LogBase/blob/master/Flex%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93(%E4%B8%80).md)
 
-## 项目 ##
+## <a name="href3">项目</a> ##
 
 容器的所有子元素自动成为容器成员，称为 Flex 项目(Flex Item)。项目可以设置6个 CSS 属性:
 
@@ -34,7 +34,7 @@
 - flex
 - align-self
 
-### order属性 ###
+### <a name="href3-1">order属性</a> ###
 
 order 属性定义项目的排列顺序，其取值为一个整数，数值越小，该项目就越靠前，默认值为0。
 
@@ -54,7 +54,7 @@ order 属性定义项目的排列顺序，其取值为一个整数，数值越�
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w26.png)
 
-### flex-grow属性 ###
+### <a name="href3-2">flex-grow属性</a> ###
 
 flex-grow 属性定义项目的放大比例，默认值为0，表示不放大。
 
@@ -74,7 +74,7 @@ flex-grow 属性定义项目的放大比例，默认值为0，表示不放大。
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w27.png)
 
-### flex-shrink属性 ###
+### <a name="href3-3">flex-shrink属性</a> ###
 
 flex-shrink 属性定义了项目的缩小比例，不能取负值，默认值为1，取值为0表示不缩小。
 
@@ -96,7 +96,7 @@ flex-shrink 属性定义了项目的缩小比例，不能取负值，默认值�
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w28.png)
 
-### flex-basis属性 ###
+### <a name="href3-4">flex-basis属性</a> ###
 
 flex-basis 属性定义了在分配多余空间之前，项目占据的水平轴空间，浏览器根据这个属性，计算水平轴是否有多余空间，默认值为`auto`，即项目的本来大小。
 
@@ -104,13 +104,13 @@ flex-basis 属性定义了在分配多余空间之前，项目占据的水平轴
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w29.png)
 
-### flex属性 ###
+### <a name="href3-5">flex属性</a> ###
 
 flex 属性是 flex-grow、flex-shrink 和 flex-basis 属性的组合，默认值为`0 1 auto`，后两个属性可选。
 
 flex 属性可以使用两个快捷值: `auto`和`none`，`auto`相当于`1 1 auto`，`none `相当于`0 0 auto`。
 
-### align-self属性 ###
+### <a name="href3-6">align-self属性</a> ###
 
 align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。默认值为`auto`，表示继承父元素的 align-items 属性，如果没有父元素，则等同于`stretch`。
 

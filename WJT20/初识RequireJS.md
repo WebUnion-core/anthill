@@ -3,11 +3,11 @@
 
 ## 目录 ##
 
-1. 介绍
-2. 基本API
-3. 加载文件
+1. [介绍](#href1)
+2. [基本API](#href2)
+3. [加载文件](#href3)
 
-## 介绍 ##
+## <a name="href1">介绍</a> ##
 
 RequireJS 是一个非常小巧的 JavaScript 模块载入框架，是 AMD 规范最好的实现者之一。RequireJS 非常轻量，可以和其他的框架协同工作，使用 RequireJS 可以使前端代码质量得以提升。jQuery 就是使用 RequireJS 实现模块化的，有兴趣可以去研究一下。
 
@@ -47,7 +47,7 @@ define(function(){
 1. 防止js加载阻塞页面渲染；
 2. 使用程序调用的方式加载 js，再也不用书写大量的 script 标签来引入 js 文件了。
 
-## 基本API ##
+## <a name="href2">基本API</a> ##
 
 RequireJS 主要有两个 API:
 
@@ -72,7 +72,7 @@ require(['js/a'], function(){
 
 require 第一个参数是一个数组，每个数组元素对应 script 标签的 src 属性值，即引入的 js 模块路径，第二个参数是一个可选函数，表示模块加载完成后执行的程序。
 
-## 加载文件 ##
+## <a name="href3">加载文件</a> ##
 
 require api 引入的模块来自本地，如果我们需要引入远程资源，则需要使用另一种方式来引入文件，以使用 CDN 引入百度 jQuery 文件为例:
 

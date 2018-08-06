@@ -3,25 +3,21 @@
 
 ## 目录 ##
 
-1. 参考链接
-2. 什么是Angular2？
-3. 环境配置
-	1. 初始化工程
-	2. 启动服务器
-4. 最简单的组件
-	1. 构成
-	2. 引入
-5. 引导过程
+1. [参考链接](#href1)
+2. [什么是Angular2？](#href2)
+3. [环境配置](#href3)
+	1. [初始化工程](#href3-1)
+	2. [启动服务器](#href3-2)
+4. [最简单的组件](#href4)
+	1. [构成](#href4-3)
+	2. [引入](#href4-4)
+5. [引导过程](#href5)
 
----
-
-## 参考链接 ##
+## <a name="href1">参考链接</a> ##
 
 - [认识Angular 2.0](https://juejin.im/post/5860eebe1b69e6006ce1395c)
 
----
-
-## <a name="href1">什么是Angular2？</a> ##
+## <a name="href2">什么是Angular2？</a> ##
 
 Angular2 是 Google 推出的一个跨平台全终端的框架，其优点有：
 
@@ -33,25 +29,21 @@ Angular2 是 Google 推出的一个跨平台全终端的框架，其优点有：
 
 需要注意的一点是，Angular1.x 和 Angular2.x 是有很大的区别的，想从 Angular1.x 直接过渡到 Angular2.x 是不可能的。
 
----
-
-## <a name="href2">环境配置</a> ##
+## <a name="href3">环境配置</a> ##
 
 Angular2 依附于 Node.js 和 npm，需要事先安装并配置好 Node.js 和 npm，确保功能的正常使用。
 
-### <a name="href2-1">初始化工程</a> ###
+### <a name="href3-1">初始化工程</a> ###
 
 首先使用`npm install -g @angular/cli`命令在全局环境下安装好 Angular CLI 工具，安装需要花费较长时间，待安装完成后就可以使用 ng 命令了，在本地选择我们工程要放置的位置，然后使用`ng new hello-angular`即可快速创建出一个官方提供的工程模板，接着使用`npm install`命令安装所需的依赖，后续的操作实际上就是对这个模板的改造。
 
-### <a name="href2-2">启动服务器</a> ###
+### <a name="href3-2">启动服务器</a> ###
 
 官方的 Angular2 工程模板已将 Webpack 做了一次进一步的封装，具有热更新的功能，大大提高了开发和调试效率。使用`npm run start`命令可以启动服务器，默认端口为4200，在浏览器上输入`http://127.0.0.1:4200/`即可访问模板主页。
 
----
+## <a name="href4">最简单的组件</a> ##
 
-## <a name="href3">最简单的组件</a> ##
-
-### <a name="href3-3">构成</a> ###
+### <a name="href4-3">构成</a> ###
 
 Angular2 规定，组件文件名以`.component.ts`为后缀，组件放置在`\src\app`目录下，为了方便集中管理组件，我在`\src\app`目录下创建了一个 components 目录来集中管理所有的组件，现在我们可以创建了一个最基本的组件了，位置为`\src\app\components\cont`，内容大致如下：
 
@@ -70,7 +62,7 @@ export class ContComponent implements OnInit {
 }
 ```
 
-### <a name="href3-4">引入</a> ###
+### <a name="href4-4">引入</a> ###
 
 以上创建的组件引用名为"app-cont"，要引用这个组件，只需要在`\src\app\app.component.html`文件中加入这句代码：`<app-cont></app-cont>`。
 
@@ -103,9 +95,7 @@ import { ContComponent } from './components/cont/cont.component';
 export class AppModule {}
 ```
 
----
-
-## <a name="href4">引导过程</a> ##
+## <a name="href5">引导过程</a> ##
 
 Angular2通过在main.ts中引导AppModule来启动应用。针对不同的平台，Angular提供了很多引导选项。引导的方式有即时编译器动态引导(JiT)和使用预编译器进行静态引导(AoT - Ahead-Of-Time)两种方式，其中静态方案可以生成更小、启动更快的应用，所以建议优先使用它，特别是在移动设备或高延迟网络下，其配置内容如下：
 

@@ -3,28 +3,26 @@
 
 ## 目录 ##
 
-1. BOM
-    1. window对象
-    2. location对象
-    3. navigator对象
-    4. history对象
-2. DOM
-    1. 节点属性
-    2. 节点方法
-    3. 元素节点
-    4. 获取元素节点
-    5. 属性节点
-    6. 文本节点
-    7. 获取内容
-    8. 添加样式
+1. [BOM](#href1)
+ [](#href2)   1. window对象
+ [](#href3)   2. location对象
+ [](#href4)   3. navigator对象
+ [](#href5)   4. history对象
+2. [DOM](#href6)
+ [](#href7)   1. 节点属性
+ [](#href8)   2. 节点方法
+ [](#href9)   3. 元素节点
+ [](#href10)   4. 获取元素节点
+ [](#href11)   5. 属性节点
+ [](#href12)   6. 文本节点
+ [](#href13)   7. 获取内容
+ [](#href14)   8. 添加样式
 
----
-
-## BOM ##
+## <a name="href1">BOM</a> ##
 
 BOM(Browser Object Model，浏览器对象模型)提供了很多对象用于访问浏览器的功能，这些功能与任何网页内容无关。
 
-### window对象 ###
+### <a name="href1-1">window对象</a> ###
 
 BOM 的核心对象是 window，它代表浏览器的一个实例，window 对象有两个身份：
 
@@ -115,7 +113,7 @@ window 对象常用功能：
     }
     ```
 
-### location对象 ###
+### <a name="href1-2">location对象</a> ###
 
 location 是最有用的 BOM 对象之一，它提供了当前窗口中加载的文档有关的信息，还提供一些导航内容，location 对象是一个特殊的对象，它既是 window 对象的属性，又是 document 对象的属性。
 
@@ -164,11 +162,11 @@ location.replace("http://localhost:8090/test/index.html");//不会在历史纪�
 
 location.reload(ifGetFromServer) 可以对当前页面进行刷新加载，ifGetFromServer 参数是一个可选参数(布尔值)，默认为 false，设为 true 将从服务器上加载页面。
 
-### navigator对象 ###
+### <a name="href1-3">navigator对象</a> ###
 
 navigator 对象常用于识别客户端浏览器类型，navigator 对象的 useAgent 属性返回浏览器的用户代理字符串，不同内核的浏览器返回的内容可能不同。
 
-### history对象 ###
+### <a name="href1-4">history对象</a> ###
 
 history 对象保存着用户上网的历史纪录，常用的有三个方法：
 
@@ -180,7 +178,7 @@ history 对象保存着用户上网的历史纪录，常用的有三个方法：
 
 ---
 
-## DOM ##
+## <a name="href2">DOM</a> ##
 
 DOM(Document Object Model，文档对象模型)描绘了一个层次化的节点树，允许开发人员添加、移除和修改页面的一部分。
 
@@ -192,7 +190,7 @@ DOM 将 HTML 或XML文档描绘成一个由多层节点构成的结构，节点�
 2. 属性节点(Attribute);
 3. 文本节点(Text)。
 
-### 节点属性 ###
+### <a name="href2-5">节点属性</a> ###
 
 每一个节点都有以下属性：
 
@@ -210,7 +208,7 @@ DOM 将 HTML 或XML文档描绘成一个由多层节点构成的结构，节点�
 
 7. lastChild 属性：返回最后一个子节点，等同于 node.childNodes[node.ChildNodes.length - 1]。
 
-### 节点方法 ###
+### <a name="href2-6">节点方法</a> ###
 
 1. node.appendChild(newNode)：在节点的子节点集合最后面插入新节点，newNode 节点为插入的新节点；
 
@@ -222,13 +220,13 @@ DOM 将 HTML 或XML文档描绘成一个由多层节点构成的结构，节点�
 
 5. node.cloneNode(ifAll)：复制一个节点，ifAll 参数(布尔值)为是否复制节点的所有子节点，如果为 true 则连同其子节点一起复制，为 false 则只复制节点本身。
 
-### 元素节点 ###
+### <a name="href2-7">元素节点</a> ###
 
 元素节点的 nodeType 属性值为1，nodeName属性值为元素的标签名，nodeValue属性值为 null。获取元素节点的属性名可以使用 nodeName 属性也可以使用 tagName 属性，两者返回的值相同。
 
 创建一个元素节点使用 document 对象的 createElement(tagName) 方法，接收的 tagName 参数为元素的标签名。
 
-### 获取元素节点 ###
+### <a name="href2-8">获取元素节点</a> ###
 
 获取元素节点有四种方式：
 
@@ -242,7 +240,7 @@ DOM 将 HTML 或XML文档描绘成一个由多层节点构成的结构，节点�
 
 特殊的节点 body 可以使用 document.body 属性获取。
 
-### 属性节点 ###
+### <a name="href2-9">属性节点</a> ###
 
 属性节点的 nodeType 属性值为2，一些常用的属性例如 id、className、title 等可以直接通过元素节点访问。
 
@@ -258,7 +256,7 @@ console.log(a.getAttribute("href"), a.getAttribute("name"), a.getAttribute("data
 a.setAttribute("href", "./abc");//设置属性值
 ```
 
-### 文本节点 ###
+### <a name="href2-10">文本节点</a> ###
 
 文本节点的 nodeType 属性值为3，nodeValue 属性值为文本内容。注意，HTML 页面中标签间的空格或缩进属于文本节点。
 
@@ -268,7 +266,7 @@ a.setAttribute("href", "./abc");//设置属性值
 var textNode2 = document.createTextNode("EEE");//创建文本节点
 ```
 
-### 获取内容 ###
+### <a name="href2-11">获取内容</a> ###
 
 元素节点的 innerHTML 属性可以获取/设置节点内部的内容，设置的内容可以是 HTML 标签。元素节点的 outerHTML 属性获取/设置的是包含调用节点在内的所有内容。元素节点的 innerText 属性可以获取/设置节点内部的所有文本(忽略标签)，设置的内容只能是文本。
 
@@ -280,7 +278,7 @@ p.innerHTML = "";//清空节点内部所有内容
 p.outerHTML = "<strong style='background-color:red;'>" + p.outerHTML + "</strong>";//将元素节点包裹在一对 <strong> 标签内
 ```
 
-### 添加样式 ###
+### <a name="href2-12">添加样式</a> ###
 
 给元素节点添加样式使用的是元素节点的 style 属性，只需要给 style 属性再添加一些样式属性即可，需要注意的是，像 font-size 等用\-号连接两个单词的样式属性，应将\-号去掉并把第二个单词首字母转为大写。
 

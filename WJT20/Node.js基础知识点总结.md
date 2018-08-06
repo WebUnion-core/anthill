@@ -3,42 +3,40 @@
 
 ## 目录 ##
 
-1. 参考链接
-2. 模块  
-3. 常用模块和组件
-4. Node.js的用途  
-    1. Web开发
-    2. Web聊天室
-    3. Web爬虫
-    4. Web博客
-5. 进程与线程  
-    1. 单线程
-    2. 同步与异步
-    3. 进程与线程的区别
-6. 模块与包  
-    1. package.json文件
-    2. package.json属性
-7. 异步式I/O与事件驱动
-8. 路径变量
-9. 项目文件结构
-10. 使用HTTP服务器
-    1. 简单的Web服务器
-    2. 页面重定向
-    3. url模块
-    4. 事件模块
-11. 缓冲
-    1. Buffer模块
-    2. Buffer类
-    3. 写入缓冲区
-    4. 复制缓冲区
-12. 流
-    1. 流模块
-    2. 可读流
-    3. 可写流
+1. [参考链接](#href1)
+2. [模块](#href2)  
+3. [常用模块和组件](#href3)
+4. [Node.js的用途](#href4)  
+ [](#href5)   1. Web开发
+ [](#href6)   2. Web聊天室
+ [](#href7)   3. Web爬虫
+ [](#href8)   4. Web博客
+5. [进程与线程](#href9)  
+ [](#href10)   1. 单线程
+ [](#href11)   2. 同步与异步
+ [](#href12)   3. 进程与线程的区别
+6. [模块与包](#href13)  
+ [](#href14)   1. package.json文件
+ [](#href15)   2. package.json属性
+7. [异步式I/O与事件驱动](#href16)
+8. [路径变量](#href17)
+9. [项目文件结构](#href18)
+10. [使用HTTP服务器](#href19)
+ [](#href20)   1. 简单的Web服务器
+ [](#href21)   2. 页面重定向
+ [](#href22)   3. url模块
+ [](#href23)   4. 事件模块
+11. [缓冲](#href24)
+ [](#href25)   1. Buffer模块
+ [](#href26)   2. Buffer类
+ [](#href27)   3. 写入缓冲区
+ [](#href28)   4. 复制缓冲区
+12. [流](#href29)
+ [](#href30)   1. 流模块
+ [](#href31)   2. 可读流
+ [](#href32)   3. 可写流
 
----
-
-## 参考链接 ##
+## <a name="href1">参考链接</a> ##
 
 - [Node.js 知识点详解(一)基础部分](https://segmentfault.com/a/1190000000728401)  
 
@@ -46,7 +44,7 @@
 
 - [Node.js 知识点详解(三)缓冲与流模块](https://segmentfault.com/a/1190000002452266)
 
-## 模块 ##
+## <a name="href2">模块</a> ##
 
 Node.js 模块使用 exports 和 require 两个接口对象，exports 是模块公开接口对象，require 是模块接口获取对象。一般将代码合理拆分到不同 JS 文件，每一个文件就是一个模块。
 
@@ -90,7 +88,7 @@ require 可以接受以下几种参数形式且模块名中的 .js 扩展名可�
 
 模块化的缺点：会造成性能损耗，具体体现为系统分层导致调用链会很长；模块间通信，模块间发送信息导致的性能损耗。
 
-## 常用模块和组件 ##
+## <a name="href3">常用模块和组件</a> ##
 
 - 包管理：npm
 - 模板：Jade、Ejs
@@ -100,9 +98,9 @@ require 可以接受以下几种参数形式且模块名中的 .js 扩展名可�
 - 调错：Node Inspector
 - 测试：Mocha + should.js
 
-## Node.js的用途 ##
+## <a name="href4">Node.js的用途</a> ##
 
-### Web开发 ###
+### <a name="href4-1">Web开发</a> ###
 
 使用框架：Express + Ejs + Mongoose/MySQL。  
 
@@ -114,25 +112,25 @@ require 可以接受以下几种参数形式且模块名中的 .js 扩展名可�
 
 - mysql：连接 MySQL 数据库的通信 API，可以进行访问 MySQL 的操作。
 
-### Web聊天室 ###
+### <a name="href4-2">Web聊天室</a> ###
 
 使用框架：Express + Socket.io。  
 
 - socket.io：完全由 JavaScript 实现的，基于 Node.js 架构体系的，支持 websocket 协议的，用于实时通信的软件包。  
 
-### Web爬虫 ###
+### <a name="href4-3">Web爬虫</a> ###
 
 cheerio：一个快速、灵活、封装 jQuery 核心功能的工具包。去除了 jQuery 中所有 DOM 不一致性和浏览器不兼容的部分。DOM 的解析、操作、渲染更高效。
 
-### Web博客 ###
+### <a name="href4-4">Web博客</a> ###
 
 Hexo：一个基于 Node 的静态博客框架，可以部署在 Node 服务器或 github 上面。
 
-## 进程与线程 ##
+## <a name="href5">进程与线程</a> ##
 
 一个进程可以包括多个线程。
 
-### 单线程 ###
+### <a name="href5-5">单线程</a> ###
 
 单线程指的是一次只能完成一件任务。如果有多个任务，就必须排队。  
 
@@ -140,7 +138,7 @@ Hexo：一个基于 Node 的静态博客框架，可以部署在 Node 服务器�
 
 大部分 Web 应用的瓶颈都在I/O，即读写磁盘，读写网络，读写数据库。
 
-### 同步与异步 ###
+### <a name="href5-6">同步与异步</a> ###
 
 同步(Synchronous)和异步(Asynchronous)两种执行模式是用来解决单线程中执行任务时间过长导致拖延整个程序执行的问题。
 
@@ -150,17 +148,17 @@ Hexo：一个基于 Node 的静态博客框架，可以部署在 Node 服务器�
 
 在浏览器端，耗时很长的操作都应该异步执行，避免浏览器失去响应，最好的例子就是 Ajax 操作。在服务器端，异步模式甚至是唯一的模式，因为执行环境是单线程的，如果允许同步执行所有 http 请求，服务器性能会急剧下降，很快就会失去响应。
 
-### 进程与线程的区别 ###
+### <a name="href5-7">进程与线程的区别</a> ###
 
 线程和进程的区别在于，子进程和父进程有不同的代码和数据空间，而多个线程则共享数据空间，每个线程有自己的执行堆栈和程序计数器为其执行上下文。  
 
 多线程主要是为了节约 CPU 时间。线程的运行中需要使用计算机的内存资源和 CPU。
 
-## 模块与包 ##
+## <a name="href6">模块与包</a> ##
 
 npm 允许开发人员使用 package.json 文件来指定在应用程序中要用的模块，并且通过单个命令来安装它们：`npm install`。
 
-### package.json文件 ###
+### <a name="href6-8">package.json文件</a> ###
 
 package.json 文件仅包含以特定格式表示的项目信息。package.json 相关的命令：
 
@@ -180,7 +178,7 @@ npm remove <name> 移除包
 npm update <name> 更新包
 ```
 
-### package.json属性 ###
+### <a name="href6-9">package.json属性</a> ###
 
 1. `name`: 包的名称
 2. `version`: 包的版本
@@ -193,7 +191,7 @@ npm update <name> 更新包
 9. `main`: 包的入口点
 10. `keywords`: 关键字
 
-## 异步式I/O与事件驱动 ##
+## <a name="href7">异步式I/O与事件驱动</a> ##
 
 Node.js 的异步机制是基于事件的，I/O 是输入输出的意思，指的是计算机和人或者数据处理系统之间的通信。
 
@@ -201,7 +199,7 @@ Node.js 的异步机制是基于事件的，I/O 是输入输出的意思，指�
 
 Node.js 进程在同一时刻只会处理一个事件，完成后立即进入事件循环检查并处理后面的事件。这样做的好处是，CPU 和内存在同一时间集中处理一件事，同时尽可能让耗时的 I/O 操作并行执行。
 
-## 路径变量 ##
+## <a name="href8">路径变量</a> ##
 
 服务端脚本可以使用以下两个路径变量：
 
@@ -210,7 +208,7 @@ Node.js 进程在同一时刻只会处理一个事件，完成后立即进入事
 
 使用`path.join(...)`可以将作为参数的多个路径组合生成并返回新的路径值。
 
-## 项目文件结构 ##
+## <a name="href9">项目文件结构</a> ##
 
 - `.gitignore`：从git上忽略的文件清单；
 - `.npmignore`：不包括npm注册库中的文件清单；
@@ -227,9 +225,9 @@ Node.js 进程在同一时刻只会处理一个事件，完成后立即进入事
 - `test`：保存模块测试的文件夹；
 - `index.js`：包的入口文件。
 
-## 使用HTTP服务器 ##
+## <a name="href10">使用HTTP服务器</a> ##
 
-### 简单的Web服务器 ###
+### <a name="href10-10">简单的Web服务器</a> ###
 
 ```js
 var http = require('http');
@@ -239,7 +237,7 @@ http.createServer(function(req, res) {
 console.log("Server running at 127.0.0.1:80.");
 ```
 
-### 页面重定向 ###
+### <a name="href10-11">页面重定向</a> ###
 
 实现页面重定向，需要先发送301响应信息来通知客户页面资源已转移，并提供一个重定向的位置头。
 
@@ -254,7 +252,7 @@ http.createServer(function(req, res) {
 console.log('Server running at 127.0.0.1:80.');
 ```
 
-### url模块 ###
+### <a name="href10-12">url模块</a> ###
 
 Node.js 服务器可以直接请求 url 模块，url 模块的 parse() 方法，可以接受一个 URL 字符串参数，解析 URL 字符串返回一个包含 URL 具体信息的对象，其中常用的有 port、search、path 等信息。
 
@@ -266,7 +264,7 @@ var urlString = "http://www.xxx.com:80/webpage?id=001",
 console.log(urlObj.port, urlObj.search); //输出"80 ?id=001"
 ```
 
-### 事件模块 ###
+### <a name="href10-13">事件模块</a> ###
 
 事件模块是 Node.js 的核心，许多其他模块用它来围绕事件架构功能。
 
@@ -304,13 +302,13 @@ console.log(urlObj.port, urlObj.search); //输出"80 ?id=001"
     eventEmitter.deleteListener('say hello', handle);
     ```
 
-## 缓冲 ##
+## <a name="href11">缓冲</a> ##
 
-### Buffer模块 ###
+### <a name="href11-14">Buffer模块</a> ###
 
 Buffer 模块为 Node.js带来了一种存储原始数据的方法，使得 Node.js 可以在 js 上下文中使用二进制数据，每当需要 Node.js 中处理 I/O操作中移动的数据时，就有可能使用 Buffer 模块。
 
-### Buffer类 ###
+### <a name="href11-15">Buffer类</a> ###
 
 Buffer 类是一个全局变量类型，用来直接处理2进制数据的。 它能够使用多种方式构建。  
 
@@ -330,7 +328,7 @@ __Buffer类(静态)方法__
 
 3. Buffer.concat(list, [totalLength])：list 参数为数组类型，是一个 Buffer 数组，用于被连接。totalLength 参数是 Number 类型，为上述 Buffer 数组的所有 Buffer 的总大小。
 
-### 写入缓冲区 ###
+### <a name="href11-16">写入缓冲区</a> ###
 
 将数据写入缓存区用到了 Buffer 实例对象的 write() 方法，接受第一个参数为写入内容，第二个参数是采用的编码格式。
 
@@ -339,7 +337,7 @@ var buffer = new Buffer(8);//创建一个分配了8个字节内存的缓冲区
 console.log(buffer.write('a','utf8'));//字符"a"的"utf8"编码占1个字节，输出1
 ```
 
-### 复制缓冲区 ###
+### <a name="href11-17">复制缓冲区</a> ###
 
 Buffer 实例对象的 copy(bufferToCopyTo) 方法可以将一个 Buffer 实例的整体内容复制到另一个 Buffer 实例中，bufferToCopyTo 参数指要复制的目标 Buffer 实例对象。  
 
@@ -351,9 +349,9 @@ buffer1.copy(buffer2);
 console.log(buffer2.toString());//输出"Good"
 ```
 
-## 流 ##
+## <a name="href12">流</a> ##
 
-### 流模块 ###
+### <a name="href12-18">流模块</a> ###
 
 流主要有三种类型：  
 
@@ -361,7 +359,7 @@ console.log(buffer2.toString());//输出"Good"
 2. 标准输出
 3. 标准错误
 
-### 可读流 ###
+### <a name="href12-19">可读流</a> ###
 
 缓冲区是 Node.js 处理原始数据的方式，流是 Node.js 移动数据的方式。Node.js 中的流是可读的或者是可写的。Node.js 中许多模块都使用了流。  
 
@@ -379,7 +377,7 @@ stream.on('close', function() {
 });
 ```
 
-### 可写流 ###
+### <a name="href12-20">可写流</a> ###
 
 创建可写流可以很方便地写数据。
 

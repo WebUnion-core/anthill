@@ -3,19 +3,19 @@
 
 ## 目录 ##
 
-1. 参考链接
-2. 同源策略
-3. JSONP介绍
-    1. 意义
-    2. 原理
-4. 体验从淘宝获取数据
-    1. 原生JS实现
-    2. jQuery实现
-5. 整体实现
-    1. 远程跨域服务器接口
-    2. 前台内容
+1. [参考链接](#href1)
+2. [同源策略](#href2)
+3. [JSONP介绍](#href3)
+ [](#href4)   1. 意义
+ [](#href5)   2. 原理
+4. [体验从淘宝获取数据](#href6)
+ [](#href7)   1. 原生JS实现
+ [](#href8)   2. jQuery实现
+5. [整体实现](#href9)
+ [](#href10)   1. 远程跨域服务器接口
+ [](#href11)   2. 前台内容
 
-## 参考链接 ##
+## <a name="href1">参考链接</a> ##
 
 - [jsonp 实现原理及代码解析](https://segmentfault.com/a/1190000008127050)
 
@@ -31,21 +31,21 @@
 
 - [JSONP原理及实现跨域方式](https://segmentfault.com/a/1190000002799156)
 
-## 同源策略 ##
+## <a name="href2">同源策略</a> ##
 
 同源策略是由 Netscape 提出的一个著名的安全策略，同源策略可以有效地解决一些危险行为，限制页面间的通信。
 
-## JSONP介绍 ##
+## <a name="href3">JSONP介绍</a> ##
 
-### 意义 ###
+### <a name="href3-1">意义</a> ###
 
 JSONP(JSON with Padding) 的出现主要是为了解决 Ajax 的跨域问题，所谓“跨域”就是当前网页的地址和我们要取的数据地址不在一个域下。
 
-### 原理 ###
+### <a name="href3-2">原理</a> ###
 
 JSONP 利用 script 标签不受同源策略约束的特点，通过把请求写入到 script 标签的 src 中将前端方法作为参数传递到服务器端，然后由服务器注入参数之后再返回，实现服务器端向客户端通信。
 
-## 体验从淘宝获取数据 ##
+## <a name="href4">体验从淘宝获取数据</a> ##
 
 许多大型网站都有使用 JSONP 技术，本章节以使用 JSONP 获取淘宝数据为例。  
 
@@ -57,7 +57,7 @@ JSONP 利用 script 标签不受同源策略约束的特点，通过把请求写
 
 URL 中"?"后面跟的是传递参数键值对组合，每个参数项配置用"&"分隔，其中有一个"callback=jsonp33"的参数项，淘宝主页前台发送 GET 请求到后台，后台识别出 callback 键对应的名为 jsonp33 前端函数，接着对该方法进行参数包装并返回，最终 GET 请求接收成功后将会在前端自动调用 jsonp33 函数。分析至此，我们了解了前台一定包装有一个 jsonp33 函数，我们可以在自己创建的页面自定义一个 jsonp33 函数从而获取并显示数据。
 
-### 原生JS实现 ###
+### <a name="href4-3">原生JS实现</a> ###
 
 JSONP 有两种比较方便的实现手段: 使用原生 JavaScript 实现和使用 jQuery 实现。使用原生JS的实现方式的关键是 DOM 手动创建 script 标签，将 src 属性设置为请求 URL。
 
@@ -108,7 +108,7 @@ function jsonp33(data) {
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w16.png)
 
-### jQuery实现 ###
+### <a name="href4-4">jQuery实现</a> ###
 
 jQuery 把 JSONP 包装在 $.ajax() 中，然而它与 Ajax 间并没有直接关系，使用 jQuery 实现 JSONP 也很简单，其实现原理也是一样的。
 
@@ -142,11 +142,11 @@ jQuery 把 JSONP 包装在 $.ajax() 中，然而它与 Ajax 间并没有直接�
 </html>
 ```
 
-## 整体实现 ##
+## <a name="href5">整体实现</a> ##
 
 体验过使用 JSONP 从淘宝获取数据后，从整体即前后台上实现 JSONP 获取数据并不困难。
 
-### 远程跨域服务器接口 ###
+### <a name="href5-5">远程跨域服务器接口</a> ###
 
 远程跨域服务器，URL 为`http://169.255.211.233:80/`，后台脚本(index.php)内容为:
 
@@ -159,7 +159,7 @@ jQuery 把 JSONP 包装在 $.ajax() 中，然而它与 Ajax 间并没有直接�
 ?>
 ```
 
-### 前台内容 ###
+### <a name="href5-6">前台内容</a> ###
 
 本地服务器，URL 为`http://localhost:8090/`，前台页面(index.html)内容为:
 

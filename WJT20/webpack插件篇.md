@@ -3,11 +3,15 @@
 
 ## 目录 ##
 
-## 参考链接 ##
+1. [参考链接](#href1)
+2. [HtmlWebpackPlugin](#href2)
+3. [ExtractTextWebpackPlugin](#href3)
+
+## <a name="href1">参考链接</a> ##
 
 - [react+webpack项目常用的插件(plugins)](https://segmentfault.com/a/1190000009120632)
 
-## HtmlWebpackPlugin ##
+## <a name="href2">HtmlWebpackPlugin</a> ##
 
 HtmlWebpackPlugin 是一个非原生插件，需要在工程中引入 html-webpack-plugin 模块，此插件用于简化创建生成 HTML 文件，如果引入文件中带有 hash 值的话，这个插件就特别有用，不需要手动去更改引入的文件名。
 
@@ -56,7 +60,7 @@ webpack 插件的配置写在 webpack.config.js 文件的 plugins 选项中(plug
 3. template: 页面模板路径；
 4. hash: 增加 hash 值，使每次生成的都是唯一的不重复的。
 
-## ExtractTextWebpackPlugin ##
+## <a name="href3">ExtractTextWebpackPlugin</a> ##
 
 ExtractTextWebpackPlugin 是一个非原生插件，需要在工程中引入 extract-text-webpack-plugin 模块，此插件用于分离样式表，webpack 中引入样式实际上是在页面中动态生成 style 标签植入样式，众所周知，这种做法极不利于维护，ExtractTextWebpackPlugin 可以帮助我们将样式文件单独打包，这样更利于页面样式的维护。
 
