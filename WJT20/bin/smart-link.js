@@ -53,9 +53,7 @@ function readAllFiles() {
                     const direcStart = fileCont.indexOf('## 目录 ##') + 8;
                     const direcEnd = direcStart + fileCont.substr(direcStart).indexOf('##');
                     const direcStr = fileCont.substring(direcStart, direcEnd);
-                    console.log(item, direcStr);
                     const direcAry = direcStr.match(/\s+[0-9]+.\s.+/g);
-
 
                     direcAry.forEach(function(item) {
                         const ary = item.split(' ');
