@@ -3,29 +3,29 @@
 
 ## 目录 ##
 
-1. 参考链接
-2. 什么是Flex布局
-3. 构建测试页面
-4. 容器
-5. 容器的属性
-    1. flex-direction属性
-    2. flex-wrap属性
-    3. flex-flow属性
-    4. justify-content属性
-    5. align-items属性
-    6. align-content属性
+1. [参考链接](#href1)
+2. [什么是Flex布局](#href2)
+3. [构建测试页面](#href3)
+4. [容器](#href4)
+5. [容器的属性](#href5)
+ [](#href6)   1. flex-direction属性
+ [](#href7)   2. flex-wrap属性
+ [](#href8)   3. flex-flow属性
+ [](#href9)   4. justify-content属性
+ [](#href10)   5. align-items属性
+ [](#href11)   6. align-content属性
 
-## 参考链接 ##
+## <a name="href1">参考链接</a> ##
 
 - [Flex布局语法教程](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool&utm_medium=referral)
 
-## 什么是Flex布局 ##
+## <a name="href2">什么是Flex布局</a> ##
 
 2009年，W3C提出了一种新的布局方案——Flex，Flex 可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，可以安全地使用这项功能。
 
 Flex(Flexible Box)，意为"弹性布局"，用来为盒状模型提供最大的灵活度。
 
-## 构建测试页面 ##
+## <a name="href3">构建测试页面</a> ##
 
 构建测试页面 index.html:
 
@@ -75,7 +75,7 @@ ul li{
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w20.png)
 
-## 容器 ##
+## <a name="href4">容器</a> ##
 
 采用 Flex 布局的元素，称为 Flex 容器(Flex Container)。容器默认存在两根轴: 水平轴和垂直轴，项目默认沿主轴排列。
 
@@ -104,7 +104,7 @@ ul li{
 
 设置为容器后，子元素的`float`、`clear`和`vertical-align`等属性将失效。
 
-## 容器的属性 ##
+## <a name="href5">容器的属性</a> ##
 
 容器元素可以设置6个 CSS 属性:
 
@@ -115,7 +115,7 @@ ul li{
 - align-items
 - align-content
 
-### flex-direction属性 ###
+### <a name="href5-1">flex-direction属性</a> ###
 
 flex-direction 属性决定项目的排列方向，其取值有:
 
@@ -132,7 +132,7 @@ flex-direction 分别设为 column 和 column-reverse 的查看效果为:
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w22.png)
 
-### flex-wrap属性 ###
+### <a name="href5-2">flex-wrap属性</a> ###
 
 默认情况下，项目都排在一条线上，flex-wrap 属性定义了如果一条线排不下时如何换行形成一根新的轴线，其取值有:
 
@@ -144,11 +144,11 @@ flex-direction 分别设为 column 和 column-reverse 的查看效果为:
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w23.png)
 
-### flex-flow属性 ###
+### <a name="href5-3">flex-flow属性</a> ###
 
 flex-flow 属性是 flex-direction 属性 和 flex-wrap 属性的组合，默认值为`row nowrap`。
 
-### justify-content属性 ###
+### <a name="href5-4">justify-content属性</a> ###
 
 justify-content 属性定义了项目在水平轴上的对齐方式，其取值有:
 
@@ -162,7 +162,7 @@ justify-content 属性定义了项目在水平轴上的对齐方式，其取值�
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w24.png)
 
-### align-items属性 ###
+### <a name="href5-5">align-items属性</a> ###
 
 align-items 属性定义了项目在垂直轴上如何对齐，其取值有:
 
@@ -176,7 +176,7 @@ align-items 属性定义了项目在垂直轴上如何对齐，其取值有:
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w25.png)
 
-### align-content属性 ###
+### <a name="href5-6">align-content属性</a> ###
 
 align-content 属性定义了多根轴线(项目发生换行)的对齐方式，如果项目只有一根轴线，该属性不起作用，其取值与 align-items 属性的取值相同。
 

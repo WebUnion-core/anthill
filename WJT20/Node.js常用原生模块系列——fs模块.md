@@ -3,46 +3,44 @@
 
 ## 目录 ##
 
-1. 参考链接
-2. 介绍
-3. 异步API
-    1. 读文件
-    2. 写文件
-    3. 创建目录
-    4. 查看文件/目录信息
-    5. 移动/重命名文件或目录
-    6. 读取目录中的文件
-    7. 删除文件
-    8. 判断文件/目录是否存在
-    9. 删除空目录
-4. 同步API
-    1. 读文件
-    2. 写文件
-    3. 创建目录
-    4. 查看文件/目录信息
-    5. 移动/重命名文件或目录
-    6. 读取目录中的文件
-    7. 删除文件
-    8. 判断文件/目录是否存在
-    9. 删除空目录
+1. [参考链接](#href1)
+2. [介绍](#href2)
+3. [异步API](#href3)
+ [](#href4)   1. 读文件
+ [](#href5)   2. 写文件
+ [](#href6)   3. 创建目录
+ [](#href7)   4. 查看文件/目录信息
+ [](#href8)   5. 移动/重命名文件或目录
+ [](#href9)   6. 读取目录中的文件
+ [](#href10)   7. 删除文件
+ [](#href11)   8. 判断文件/目录是否存在
+ [](#href12)   9. 删除空目录
+4. [同步API](#href13)
+ [](#href14)   1. 读文件
+ [](#href15)   2. 写文件
+ [](#href16)   3. 创建目录
+ [](#href17)   4. 查看文件/目录信息
+ [](#href18)   5. 移动/重命名文件或目录
+ [](#href19)   6. 读取目录中的文件
+ [](#href20)   7. 删除文件
+ [](#href21)   8. 判断文件/目录是否存在
+ [](#href22)   9. 删除空目录
 
----
-
-## 参考链接 ##
+## <a name="href1">参考链接</a> ##
 
 - [node.js之fs模块](http://www.jianshu.com/p/5683c8a93511)
 
 - [Node.js v10.1.0 文档](http://nodejs.cn/api/fs.html)
 
-## 介绍 ##
+## <a name="href2">介绍</a> ##
 
 fs(全称：file system)模块，是我们可以直接使用的几个 Node.js 模块之一，它提供了对文件的读取、写入、更名、删除、遍历目录、链接等 API。在脚本文件中可以使用 CommonJS 风格引入 fs 依赖，代码如：`var fs = require('fs');`
 
-## 异步API ##
+## <a name="href3">异步API</a> ##
 
 以下仅说明比较常用的几个异步 API。
 
-### 读文件 ###
+### <a name="href3-1">读文件</a> ###
 
 读文件使用的是 fs 模块的 readFile 函数，其语法结构如下:
 
@@ -66,7 +64,7 @@ fs.readFile(__dirname + '/test.txt', { flag: 'r+', encoding: 'utf8' }, function(
 });
 ```
 
-### 写文件 ###
+### <a name="href3-2">写文件</a> ###
 
 写文件使用的是 fs 模块的 writeFile 函数，其语法结构如下:
 
@@ -91,7 +89,7 @@ fs.writeFile(__dirname + '/test.txt', 'C: hhh.', {flag: 'a'}, function(err, data
 });
 ```
 
-### 创建目录 ###
+### <a name="href3-3">创建目录</a> ###
 
 创建目录使用的是 fs 模块的 mkdir 函数，其语法结构如下:
 
@@ -114,7 +112,7 @@ fs.mkdir(__dirname + '/file', function(err) {
 });
 ```
 
-### 查看文件/目录信息 ###
+### <a name="href3-4">查看文件/目录信息</a> ###
 
 要查看具体的文件/目录的信息，可以使用 fs 模块的 stat 函数，其语法结构如下:  
 
@@ -137,7 +135,7 @@ fs.stat(__dirname + '/file/test.txt', function(err, stat) {
 });
 ```
 
-### 移动/重命名文件或目录 ###
+### <a name="href3-5">移动/重命名文件或目录</a> ###
 
 移动和重命名文件或目录是同一个操作，使用的是 fs 模块的 rename 函数，其语法结构如下：
 
@@ -161,7 +159,7 @@ fs.rename(__dirname + '/file/test.txt', __dirname + '/file/test.md', function(er
 });
 ```
 
-### 读取目录中的文件 ###
+### <a name="href3-6">读取目录中的文件</a> ###
 
 读取目录中的文件使用的是 fs 模块的 readdir 函数，其语法结构如下:
 
@@ -186,7 +184,7 @@ fs.readdir(__dirname + '/file', function(err, files) {
 });
 ```
 
-### 删除文件 ###
+### <a name="href3-7">删除文件</a> ###
 
 删除文件使用的是 fs 模块的 unlink 函数，其语法结构如下：
 
@@ -209,7 +207,7 @@ fs.unlink(__dirname + '/file/test.txt', function(err) {
 });
 ```
 
-### 判断文件/目录是否存在 ###
+### <a name="href3-8">判断文件/目录是否存在</a> ###
 
 判断文件/目录是否存在使用的是 fs 模块的 exists 函数，其语法结构如下：
 
@@ -226,7 +224,7 @@ fs.exists(__dirname + '/file', function(ifExist) {
 })
 ```
 
-### 删除空目录 ###
+### <a name="href3-9">删除空目录</a> ###
 
 删除空目录使用的是 fs 模块的 rmdir 函数，其语法结构如下：
 
@@ -249,11 +247,11 @@ fs.rmdir(__dirname + '/file', function(err) {
 });
 ```
 
-## 同步API ##
+## <a name="href4">同步API</a> ##
 
 以下仅说明比较常用的几个同步 API。
 
-### 读文件 ###
+### <a name="href4-10">读文件</a> ###
 
 非异步方式读取文件内容，返回的值就是读到的文件内容:  
 
@@ -270,7 +268,7 @@ fs.readFileSync(fileName[, options])
 var content = fs.readFileSync(__dirname + '/file/test.txt', 'utf-8');
 ```
 
-### 写文件 ###
+### <a name="href4-11">写文件</a> ###
 
 非异步方式写内容到指定文件:  
 
@@ -288,7 +286,7 @@ fs.writeFileSync(fileName, data[, options])
 fs.writeFileSync(__dirname + '/file/test.txt', 'Hello, world! ', 'utf-8');
 ```
 
-### 创建目录 ###
+### <a name="href4-12">创建目录</a> ###
 
 非异步创建目录:  
 
@@ -305,7 +303,7 @@ fs.mkdirSync(dirName[, mode]);
 fs.mkdirSync(__dirname + '/file');
 ```
 
-### 查看文件/目录信息 ###
+### <a name="href4-13">查看文件/目录信息</a> ###
 
 非异步方式查看文件/目录信息:  
 
@@ -321,7 +319,7 @@ fs.statSync(path)
 var data = fs.statSync(__dirname + '/file');
 ```
 
-### 移动/重命名文件或目录 ###
+### <a name="href4-14">移动/重命名文件或目录</a> ###
 
 非异步方式移动/重命名文件或目录:  
 
@@ -338,7 +336,7 @@ fs.renameSync(oldPath, newPath)
 fs.renameSync(__dirname + '/file/test.txt', __dirname + '/file/test.md');
 ```
 
-### 读取目录中的文件 ###
+### <a name="href4-15">读取目录中的文件</a> ###
 
 非异步方式读取目录中的文件:  
 
@@ -355,7 +353,7 @@ fs.readdirSync(path[, options])
 fs.readdirSync(__dirname + '/file');
 ```
 
-### 删除文件 ###
+### <a name="href4-16">删除文件</a> ###
 
 非异步方式移除文件:  
 
@@ -371,7 +369,7 @@ fs.unlinkSync(path)
 fs.unlinkSync(__dirname + '/file/test.txt');
 ```
 
-### 判断文件/目录是否存在 ###
+### <a name="href4-17">判断文件/目录是否存在</a> ###
 
 非异步方式获取指定文件/目录是否存在，返回的 Boolean 值表示文件是否存在:
 
@@ -387,7 +385,7 @@ fs.existsSync(path)
 var ifExist = fs.existsSync(__dirname + '/file');
 ```
 
-### 删除空目录 ###
+### <a name="href4-18">删除空目录</a> ###
 
 非异步方式移除目录:  
 

@@ -3,23 +3,21 @@
 
 ## 目录 ##
 
-1. JSON
-    1. JSON语法
-    2. 解析与序列化
-2. Ajax
-    1. 创建XHR对象
-    2. 创建请求
-    3. 发送请求
-    4. 接收响应
-3. JSONP
+1. [JSON](#href1)
+ [](#href2)   1. JSON语法
+ [](#href3)   2. 解析与序列化
+2. [Ajax](#href4)
+ [](#href5)   1. 创建XHR对象
+ [](#href6)   2. 创建请求
+ [](#href7)   3. 发送请求
+ [](#href8)   4. 接收响应
+3. [JSONP](#href9)
 
----
-
-## JSON ##
+## <a name="href1">JSON</a> ##
 
 JSON(JavaScript Object Notation，JavaScript对象表示法)是一种数据格式，而不是一种编程语言，虽然具有相同的语法形式，但JSON并不属于 JavaScript，且并不只有 JavaScript 可以使用 JSON。
 
-### JSON语法 ###
+### <a name="href1-1">JSON语法</a> ###
 
 JSON语法可以表示以下三种类型的值：
 
@@ -74,7 +72,7 @@ JSON语法可以表示以下三种类型的值：
 ]
 ```
 
-### 解析与序列化 ###
+### <a name="href1-2">解析与序列化</a> ###
 
 JavaScript 提供了一个用于将 JavaScript 对象转换为JSON数据字符串(这个过程称为序列化)的方法：JSON.stringify(obj, select)，接收的 obj 参数是要序列化的对象，select 参数(可选)是一个筛选字段数组，执行这个方法时会返回对象中和数组中同名的属性的序列化结果。
 
@@ -100,14 +98,14 @@ alert(dataObj);//输出："[object Object]"
 
 ---
 
-## Ajax ##
+## <a name="href2">Ajax</a> ##
 
 Ajax(Asynchronous JavaScript + XML，异步 JavaScript 和 XML)能够向服务器请求额外的数据而无需跳转页面，能带来更好的用户体验。
 
 Ajax 的技术核心是 XMLHttpRequest 对象(简称XHR)，XHR 为向服务器发送请求和解析服务器响应带来了流畅的接口，能够以异步方式从服务器取得更多信息，从而实现不必刷新页面
 也能取得数据。
 
-### 创建XHR对象 ###
+### <a name="href2-3">创建XHR对象</a> ###
 
 使用 new XMLHttpRequest() 可以创建一个XHR实例对象。
 
@@ -115,7 +113,7 @@ Ajax 的技术核心是 XMLHttpRequest 对象(简称XHR)，XHR 为向服务器�
 var xhr = new XMLHttpRequest();
 ```
 
-### 创建请求 ###
+### <a name="href2-4">创建请求</a> ###
 
 创建一个请求用到了XHR 实例对象的 open(type, target, ifAsync) 方法，这个方法接受四个参数：type 参数为请求类型，常用的请求类型主要有"POST"和"GET"两种；target 参数是请求发送到的目的地；ifAsync 参数是一个布尔值，表示是否发起异步请求，true 为异步，false 为同步。
 
@@ -123,7 +121,7 @@ var xhr = new XMLHttpRequest();
 xhr.open("POST", "./data.php", true);
 ```
 
-### 发送请求 ###
+### <a name="href2-5">发送请求</a> ###
 
 创建了一个请求后，还要将请求发送出去，发送请求用到了 XHR 实例对象的 send(data) 方法，接收的 data 参数是所要发送的数据，如果不发送数据应传入 null 值。
 
@@ -131,7 +129,7 @@ xhr.open("POST", "./data.php", true);
 xhr.send();
 ```
 
-### 接收响应 ###
+### <a name="href2-6">接收响应</a> ###
 
 Ajax 最大的优点就是可以发起异步请求，当发起异步请求时，可以检测 XHR 实例对象的 readyState 属性来识别请求的活动状态，这个属性返回的值有5种情况：
 
@@ -171,7 +169,7 @@ POST 发送的数据作为 xhr.send() 方法的参数传递，数据可以是查
 
 ---
 
-## JSONP ##
+## <a name="href3">JSONP</a> ##
 
 同源策略：我们无法在自己页面所在域名环境下获取其他域名的请求内容。
 

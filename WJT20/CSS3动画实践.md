@@ -3,14 +3,12 @@
 
 ## 目录 ##
 
-1. @keyframes
-2. 动画配置属性
-3. animation属性
-4. transform属性 
+1. [@keyframes](#href1)
+2. [动画配置属性](#href2)
+3. [animation属性](#href3)
+4. [transform属性](#href4) 
 
----
-
-## @keyframes ##
+## <a name="href1">@keyframes</a> ##
 
 @keyframes 规则用于创建动画，在它的内部指定一个CSS样式和动画将逐步从目前的样式更改为新的样式。@keyframes 使用 from 表示开始态(等同于0%)、to 表示结束态(等同于100%)、大于0%小于100%的百分数表示某个中间态。
 
@@ -34,7 +32,7 @@
 
 ---
 
-## 动画配置属性 ##
+## <a name="href2">动画配置属性</a> ##
 
 动画配置属性主要有以下这些：
 
@@ -69,7 +67,7 @@
 
 ---
 
-## animation属性 ##
+## <a name="href3">animation属性</a> ##
 
 定义好 @keyframes 规则后，还要将动画应用到具体的元素上，可以使用各种动画属性逐个配置到元素上，但是效率很低也很繁琐，使用 animation 属性可以一次性配置这些属性，animation 属性的配置规则为：`animation: name duration timing-function delay iteration-count direction;`，每个部分对应各自的取值。同样的，animation 属性也需要用 -webkit- 前缀再定义一遍。
 
@@ -85,7 +83,7 @@
 
 ---
 
-## transform属性 ##
+## <a name="href4">transform属性</a> ##
 
 transform 属性用于添加旋转、倾斜、缩放、平移等动画效果到元素上，通过给 transform 属性赋值一个变形函数实现前面讲到的效果。变形函数如下：
 

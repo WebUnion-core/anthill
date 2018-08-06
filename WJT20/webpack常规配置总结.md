@@ -3,31 +3,31 @@
 
 ## 目录 ##
 
-1. 参考链接
-2. 什么是webpack?
-3. 安装所需模块
-4. webpack.config.js
-5. entry——入口文件配置
-6. output——出口文件配置
-7. mudule——各种Loader配置
+1. [参考链接](#href1)
+2. [什么是webpack?](#href2)
+3. [安装所需模块](#href3)
+4. [webpack.config.js](#href4)
+5. [entry——入口文件配置](#href5)
+6. [output——出口文件配置](#href6)
+7. [mudule——各种Loader配置](#href7)
 
-## 参考链接 ##
+## <a name="href1">参考链接</a> ##
 
 - [webpack踩坑记录](http://www.tuicool.com/articles/7NvYZbv)
 
 - [webpack多页应用架构系列（二）: webpack配置常用部分有哪些？](https://segmentfault.com/a/1190000006863968)
 
-## 什么是webpack? ##
+## <a name="href2">什么是webpack?</a> ##
 
 继 gulp、grunt 等工程化工具出现一段时间后，webpack 也诞生了，webpack 早期只是为了实现前端各种资源的统一模块化管理，但是随后出现的各种 loader 和 plugin 将前端引入了新时代，webpack 也变得愈加流行。
 
-## 安装所需模块 ##
+## <a name="href3">安装所需模块</a> ##
 
 在使用 webpack 之前，需要使用 npm 安装 webpack，即使用命令: `npm install --save-dev webpack`。
 
 如果安装有淘宝镜像(可以快速地安装模块)，则使用命令: `cnpm install --save-dev webpack`。
 
-## webpack.config.js ##
+## <a name="href4">webpack.config.js</a> ##
 
 使用`webpack`命令可以执行编译，此时 webpack 会读取当前目录下的 webpack.config.js 文件，webpack.config.js 顾名思义，就是一个用来配置 webpack 的脚本文件，它使用 CommonJS 风格来书写。
 
@@ -38,7 +38,7 @@
 1. APP_PATH: 入口文件集合目录的路径；
 2. BUILD_PATH: 出口文件根目录的路径。
 
-## entry——入口文件配置 ##
+## <a name="href5">entry——入口文件配置</a> ##
 
 entry 项的取值有三种形式:
 
@@ -72,7 +72,7 @@ entry 项的取值有三种形式:
     }
     ```
 
-## output——出口文件配置 ##
+## <a name="href6">output——出口文件配置</a> ##
 
 output 项负责配置输出文件的生成方式，所有的入口文件都必须遵循 output 制定的规则输出。output 是一个对象，内部可以使用几个常用的配置项: path、publicPath、filename 及 chunkFilename。
 
@@ -110,7 +110,7 @@ output: {
 ...
 ```
 
-## mudule——各种Loader配置 ##
+## <a name="href7">mudule——各种Loader配置</a> ##
 
 webpack 能够打包任何资源得益于一个名为 Loader 的类似于插件的机制，通过 Loader，webpack 能够针对每一种特定的资源做出相应的处理，使用 Loader 前要用 npm 安装对应的 Loader 模块，常用的 Loader 有以下这些:
 

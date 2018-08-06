@@ -3,22 +3,22 @@
 
 ## 目录 ##
 
-1. 参考链接
-2. 初始化
-3. 安装与卸载
-4. 查看信息
-5. 升级依赖包
-6. 其他
+1. [参考链接](#href1)
+2. [初始化](#href2)
+3. [安装与卸载](#href3)
+4. [查看信息](#href4)
+5. [升级依赖包](#href5)
+6. [其他](#href6)
 
-## 参考链接 ##
+## <a name="href1">参考链接</a> ##
 
 - [npm常用命令整理](http://blog.csdn.net/u014291497/article/details/75193865)
 
-## 初始化 ##
+## <a name="href2">初始化</a> ##
 
 `npm init [-y|--yes]`: 在当前目录下初始化 package.json 文件，可以使用`-y`或`--yes`参数将所有选项设为默认;
 
-## 安装与卸载 ##
+## <a name="href3">安装与卸载</a> ##
 
 1. `npm install [-g] <package>`: 安装模块，使用`-g`参数则为在全局下安装模块;
 
@@ -28,7 +28,7 @@
 
 4. `npm uninstall [--save] [--save-dev] [--no-save] <package>`: 卸载模块，参数与[3]相同。
 
-## 查看信息 ##
+## <a name="href4">查看信息</a> ##
 
 1. `npm ls [-g] [--depth=0]`: 查看当前目录或全局的依赖包，可指定层级为0;
 
@@ -50,11 +50,11 @@
 
 10. `npm bugs <packge>`: 查看项目 bug。
 
-## 升级依赖包 ##
+## <a name="href5">升级依赖包</a> ##
 
 `npm update <package>`: 升级依赖包版本;
 
-## 其他 ##
+## <a name="href6">其他</a> ##
 
 1. `npm prune`: 移除当前不在 package.json 中但是存在 node_modules 中的依赖;
 

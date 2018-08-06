@@ -3,20 +3,20 @@
 
 ## 目录 ##
 
-1. 浏览器判断原则
-2. 检查手机号码格式
-3. 获取当前URL整段查询字符串
-4. 获取当前URL查询字符串参数
-5. 禁止输入文本框缓存输入内容
-6. CRT日期转换
-7. 时间戳转为数值形式
-8. 文本框placeholder属性设置
-9. npm登录及发布包
-10. 切换npm镜像
-11. 弹窗自适应居中
-12. table布局
+1. [浏览器判断原则](#href1)
+2. [检查手机号码格式](#href2)
+3. [获取当前URL整段查询字符串](#href3)
+4. [获取当前URL查询字符串参数](#href4)
+5. [禁止输入文本框缓存输入内容](#href5)
+6. [CRT日期转换](#href6)
+7. [时间戳转为数值形式](#href7)
+8. [文本框placeholder属性设置](#href8)
+9. [npm登录及发布包](#href9)
+10. [切换npm镜像](#href10)
+11. [弹窗自适应居中](#href11)
+12. [table布局](#href12)
 
-## 浏览器判断原则 ##
+## <a name="href1">浏览器判断原则</a> ##
 
 代码：
 
@@ -34,7 +34,7 @@ var browser = {
 };
 ```
 
-## 检查手机号码格式 ##
+## <a name="href2">检查手机号码格式</a> ##
 
 代码：
 
@@ -49,7 +49,7 @@ function checkPhoneFormat(phone) {
 };
 ```
 
-## 获取当前URL整段查询字符串 ##
+## <a name="href3">获取当前URL整段查询字符串</a> ##
 
 代码：
 
@@ -67,7 +67,7 @@ function GetRequest() {
 }
 ```
 
-## 获取当前URL查询字符串参数 ##
+## <a name="href4">获取当前URL查询字符串参数</a> ##
 
 代码：
 
@@ -88,7 +88,7 @@ function parseQueryString() {
 }
 ```
 
-## 禁止输入文本框缓存输入内容 ##
+## <a name="href5">禁止输入文本框缓存输入内容</a> ##
 
 代码：
 
@@ -104,7 +104,7 @@ function parseQueryString() {
 
 将 form 元素的 autocomplete 设为off可以禁止其中的所有表单控件缓存输入内容，将单个表单控件的 autocomplete 设为 off 则只禁止单个表单控件的内容缓存。
 
-## CRT日期转换 ##
+## <a name="href6">CRT日期转换</a> ##
 
 ```
 function translateCRT(CRTDate) {
@@ -127,7 +127,7 @@ function translateCRT(CRTDate) {
 }
 ```
 
-## 时间戳转为数值形式 ##
+## <a name="href7">时间戳转为数值形式</a> ##
 
 代码：
 
@@ -151,7 +151,7 @@ let getTimeLenBySimpleFormat = function(format) {
 }
 ```
 
-## 文本框placeholder属性设置 ##
+## <a name="href8">文本框placeholder属性设置</a> ##
 
 代码：
 
@@ -170,7 +170,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 ```
 
-## 使用touchstart代替移动端click事件 ##
+## <a name="href9">使用touchstart代替移动端click事件</a> ##
 
 代码：
 
@@ -184,7 +184,7 @@ document.getElementById("dialog_bg").addEventListener("touchstart", function () 
 
 在移动端，touchstart 比 click 要灵敏得多。
 
-## npm登录及发布包 ##
+## <a name="href10">npm登录及发布包</a> ##
 
 1. npm登录及发布：
 
@@ -200,7 +200,7 @@ npm login --registry http://registry.npmjs.org
 npm publish --registry http://registry.npmjs.org
 ```
 
-## 切换npm镜像 ##
+## <a name="href11">切换npm镜像</a> ##
 
 ```
 nrm ls
@@ -208,7 +208,7 @@ nrm add npm-company http://xmiles.xicp.net:4873/
 nrm use
 ```
 
-## 弹窗自适应居中 ##
+## <a name="href12">弹窗自适应居中</a> ##
 
 ```
 .dialog{
@@ -224,7 +224,7 @@ nrm use
 }
 ```
 
-## table布局 ##
+## <a name="href13">table布局</a> ##
 
 ```
 <table>

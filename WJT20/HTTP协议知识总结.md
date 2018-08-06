@@ -3,17 +3,15 @@
 
 ## 目录 ##
 
-1. 参考链接
-2. HTTP概述
-3. URL
-4. 请求报文(请求消息)
-5. 响应报文(响应信息)
-6. 请求方法
-7. 状态码
+1. [参考链接](#href1)
+2. [HTTP概述](#href2)
+3. [URL](#href3)
+4. [请求报文(请求消息)](#href4)
+5. [响应报文(响应信息)](#href5)
+6. [请求方法](#href6)
+7. [状态码](#href7)
 
----
-
-## 参考链接 ##
+## <a name="href1">参考链接</a> ##
 
 - [HTTP协议详解（真的很经典）](http://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html)
 - [HTTP 协议入门](http://www.ruanyifeng.com/blog/2016/08/http.html)
@@ -21,7 +19,7 @@
 
 ---
 
-## HTTP概述 ##
+## <a name="href2">HTTP概述</a> ##
 
 HTTP(Hyper Text Transfer Protocol，超文本传输协议) 是基于 TCP/IP 协议的应用层协议，主要规定了客户端和服务器之间的通信格式，默认使用80端口。HTTP 协议在1990年首次提出，HTTP 有多个版本：1991年发布的 HTTP/0.9、1996年发布的 HTTP/1.0、1997年发布的 HTTP/1.1 及2015年发布的 HTTP/2。
 
@@ -39,7 +37,7 @@ HTTP 协议的主要特点有：
 
 ---
 
-## URL ##
+## <a name="href3">URL</a> ##
 
 HTTP 使用 URI(Uniform Resource Identifiers, 统一资源标识符) 来传输数据和建立连接。URL(Uniform Resource Locator，统一资源定位符) 是一种特殊类型的 URI，包含了用于查找某个资源的足够信息。
 
@@ -61,7 +59,7 @@ HTTP 使用 URI(Uniform Resource Identifiers, 统一资源标识符) 来传输�
 
 ---
 
-## 请求报文(请求消息) ##
+## <a name="href4">请求报文(请求消息)</a> ##
 
 HTTP 请求报文由请求行、请求头和请求体组成。
 
@@ -114,7 +112,7 @@ Connection: keep-alive
 
 ---
 
-## 响应报文(响应信息) ##
+## <a name="href5">响应报文(响应信息)</a> ##
 
 HTTP 响应报文由状态行、响应头和响应体组成。
 
@@ -172,7 +170,7 @@ Connection: keep-alive
 
 ---
 
-## 请求方法 ##
+## <a name="href6">请求方法</a> ##
 
 HTTP 常用的请求方法有：
 
@@ -188,7 +186,7 @@ HTTP 常用的请求方法有：
 
 ---
 
-## 状态码 ##
+## <a name="href7">状态码</a> ##
 
 状态码由三位数字组成，第一个数字定义响应的类别，且有五种可能取值：
 

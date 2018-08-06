@@ -3,20 +3,18 @@
 
 ## 目录 ##
 
-1. 选择器
-2. 事件
-3. 事件对象
-4. 隐藏和显示
-5. 动画效果
-6. DOM操作
-7. CSS关联
-8. 尺寸
-9. 遍历
-10. Ajax
+1. [选择器](#href1)
+2. [事件](#href2)
+3. [事件对象](#href3)
+4. [隐藏和显示](#href4)
+5. [动画效果](#href5)
+6. [DOM操作](#href6)
+7. [CSS关联](#href7)
+8. [尺寸](#href8)
+9. [遍历](#href9)
+10. [Ajax](#href10)
 
----
-
-## 选择器 ##
+## <a name="href1">选择器</a> ##
 
 1. $("\*")：所有元素
 
@@ -142,7 +140,7 @@
 
 ---
 
-## 事件 ##
+## <a name="href2">事件</a> ##
 
 1. $(document).ready(callback)：文档完全加载完后执行函数，简写形式为$(callback)
 
@@ -192,7 +190,7 @@
 
 ---
 
-## 事件对象 ##
+## <a name="href3">事件对象</a> ##
 
 1. event.isDefaultPrevented()：返回event对象上是否调用了event.preventDefault()
 
@@ -214,7 +212,7 @@
 
 ---
 
-## 隐藏和显示 ##
+## <a name="href4">隐藏和显示</a> ##
 
 1. $elem.hide()：隐藏元素
 
@@ -238,7 +236,7 @@
 
 ---
 
-## 动画效果 ##
+## <a name="href5">动画效果</a> ##
 
 1. $elem.animate({params}, [speed, callback])：根据params参数定义动画，params不能包括颜色参数，params值可以使用相对值，只需要在取值之前加上“+=”或“-=”即可，动画可以使用预定义值“show”、“hide”或“toggle”
 
@@ -246,7 +244,7 @@
 
 ---
 
-## DOM操作 ##
+## <a name="href6">DOM操作</a> ##
 
 1. $elem.text([content|callback])：设置或返回所选元素的文本内容，接受的参数可以是新内容，也可以是一个回调函数，其包括两个参数：被选元素对应的索引以及原始值
 
@@ -270,7 +268,7 @@
 
 ---
 
-## CSS关联 ##
+## <a name="href7">CSS关联</a> ##
 
 1. $elem.addClass(class)：添加一个或多个类
 
@@ -282,7 +280,7 @@
 
 ---
 
-## 尺寸 ##
+## <a name="href8">尺寸</a> ##
 
 1. $elem.width([val])：设置或返回元素的宽度(不包括内边距、边框或外边距)，val参数为数值
 
@@ -298,7 +296,7 @@
 
 ---
 
-## 遍历 ##
+## <a name="href9">遍历</a> ##
 
 1. $elem.parent()：返回元素的直接父元素
 
@@ -330,7 +328,7 @@
 
 ---
 
-## Ajax ##
+## <a name="href10">Ajax</a> ##
 
 1. $elem.load(URL, [data, callback])：加载指定页面内容到元素中。URL为操作文件位置(html文件可以额外指定选择器筛选内容)；data为POST到指定页面的数据(是一个对象)；callback为load()调用后执行的函数，可以在函数内使用三个参数：resTxt(响应信息)、statusTxt(响应结果，”success”表示成功，”error”表示出错)、xhr(XMLHttpRequest对象)。
 

@@ -3,16 +3,14 @@
 
 ## 目录 ##
 
-1. 什么是express
-2. 启动express
-3. 请求和响应
-4. 静态资源配置
-5. 启动服务
-6. 示例模板
+1. [什么是express](#href1)
+2. [启动express](#href2)
+3. [请求和响应](#href3)
+4. [静态资源配置](#href4)
+5. [启动服务](#href5)
+6. [示例模板](#href6)
 
----
-
-## 什么是express ##
+## <a name="href1">什么是express</a> ##
 
 express 是一个简洁、灵活的 node.js 的 web 应用开发框架，提供了一系列强大特性帮助开发者创建各种 Web 应用和丰富的 HTTP 工具。使用 express 可以快速地搭建一个完整功能的网站。
 
@@ -26,7 +24,7 @@ express 的核心特性：
 
 ---
 
-## 启动express ##
+## <a name="href2">启动express</a> ##
 
 使用 npm 或 cnpm 即可给我们的应用下载 express 模块，使用命令`npm install --save-dev express`即可下载 express 到 node_modules 中。
 
@@ -40,7 +38,7 @@ var app = express();
 
 ---
 
-## 请求和响应 ##
+## <a name="href3">请求和响应</a> ##
 
 express 包装了发起 HTTP 请求的 API，常用的请求类型就是 GET 和 POST 了，发起 GET 和 POST 请求的代码如下：
 
@@ -96,7 +94,7 @@ res 对象表示 HTTP 响应，即在接收到请求时向客户端发送的 HTT
 
 ---
 
-## 静态资源配置 ##
+## <a name="href4">静态资源配置</a> ##
 
 通过中间件和 express.static 可以设置指定路由下静态资源的访问位置，为了让我们的页面能成功加载图像等资源，这个步骤至关重要，以以下代码为例：
 
@@ -121,7 +119,7 @@ HTML 代码：
 
 ---
 
-## 启动服务 ##
+## <a name="href5">启动服务</a> ##
 
 express 启动 Node 服务使用的是 app.listen() 方法，这个方法写法比较灵活。
 
@@ -155,7 +153,7 @@ console.log("Server running on: http://127.0.0.1:8080");
 
 ---
 
-## 示例模板 ##
+## <a name="href6">示例模板</a> ##
 
 ```
 //模块

@@ -3,15 +3,13 @@
 
 ## 目录 ##
 
-1. 数组的类型
-2. 函数
-3. 类型断言
-4. 内置对象
-5. 引入第三方库
+1. [数组的类型](#href1)
+2. [函数](#href2)
+3. [类型断言](#href3)
+4. [内置对象](#href4)
+5. [引入第三方库](#href5)
 
----
-
-## 数组的类型 ##
+## <a name="href1">数组的类型</a> ##
 
 在 TypeScript 中，数组类型有多种定义方式。
 
@@ -44,7 +42,7 @@
 
 ---
 
-## 函数 ##
+## <a name="href2">函数</a> ##
 
 一个函数有输入和输出，要在 TypeScript 中对其进行约束，需要把输入和输出都考虑到。输入多余的（或者少于要求的）参数，是不被允许的。传入的参数可以设置为可选、默认等形式。
 
@@ -79,7 +77,7 @@ log("1", 2, true);
 
 ---
 
-## 类型断言 ##
+## <a name="href3">类型断言</a> ##
 
 类型断言可以用来手动指定一个值的类型。要使用类型断言只要在需要断言的变量前加上<Type>即可。以下是其中一种常用场景：
 
@@ -96,7 +94,7 @@ console.log(getLength(123));
 
 ---
 
-## 内置对象 ##
+## <a name="href4">内置对象</a> ##
 
 JavaScript 中有很多内置对象，它们可以直接在 TypeScript 中当做定义好了的类型。常用的内置对象有 Boolean、Error、Date、RegExp 等。
 
@@ -109,7 +107,7 @@ let regexpObj: RegExp = /[a-z]/;
 
 ---
 
-## 引入第三方库 ##
+## <a name="href5">引入第三方库</a> ##
 
 可以在[http://microsoft.github.io/TypeSearch/](http://microsoft.github.io/TypeSearch/)上查找想要安装的 TypeScript 版本的模块，以引入 jQuery 为例，首先使用npm安装模块，语句如：`npm install --save-dev @types/jquery`。接着就可以在 TypeScript 中使用 jQuery 了。
 

@@ -3,14 +3,12 @@
 
 ## 目录 ##
 
-1. document.implementation
-2. document.readyState
-3. DOMElement.getBoundingClientRect
-4. Object.defineProperty
+1. [document.implementation](#href1)
+2. [document.readyState](#href2)
+3. [DOMElement.getBoundingClientRect](#href3)
+4. [Object.defineProperty](#href4)
 
----
-
-## document.implementation ##
+## <a name="href1">document.implementation</a> ##
 
 document.implementation 返回一个和当前文档相关联的 DOMImplementation 接口(对象)，DOMImplementation 可以提供了不依赖于任何 document 的方法。
 
@@ -28,7 +26,7 @@ var imp = document.implementation;
 console.log(imp.hasFeature("HTML","1.0")); // 检查这个文件是否有HTML DOM 1.0功能
 ```
 
-## document.readyState ##
+## <a name="href2">document.readyState</a> ##
 
 document.readyState 属性描述了文档的加载状态，其返回值为一个表征状态的字符串，取值有以下几种:
 
@@ -47,7 +45,7 @@ setInterval(function() {
 }, 10);
 ```
 
-## DOMElement.getBoundingClientRect ##
+## <a name="href3">DOMElement.getBoundingClientRect</a> ##
 
 DOM 节点的 getBoundingClientRect 方法返回一个矩形对象，包含四个属性: left、top、right 和 bottom。分别表示元素相对页面的各项数据。
 
@@ -59,7 +57,7 @@ var coords = divElem.getBoundingClientRect();
 console.log(coords);
 ```
 
-## Object.defineProperty ##
+## <a name="href4">Object.defineProperty</a> ##
 
 针对属性，我们可以给这个属性设置一些特性，比如是否只读不可以写；是否可以被`for..in`或`Object.keys()`遍历。给对象的属性添加特性描述，目前提供两种形式：数据描述和存取器描述。
 
@@ -74,7 +72,7 @@ Object.defineProperty(obj, prop, descriptor)
 2. prop: 必需，需定义或修改的属性的名字；
 3. descriptor: 必需，目标属性所拥有的特性。
 
-### 数据描述 ###
+### <a name="href4-1">数据描述</a> ###
 
 1. value: Any 类型，修改属性对应的值，示例如下：
 
@@ -121,7 +119,7 @@ Object.defineProperty(obj, prop, descriptor)
     console.log(data.age); // => 10
     ```
 
-### 存取器描述 ###
+### <a name="href4-2">存取器描述</a> ###
 
 1. getter: 获得属性值的方法，获取属性值的时候触发 get 属性定义的方法，返回的值作为属性的新值，示例如下：
 

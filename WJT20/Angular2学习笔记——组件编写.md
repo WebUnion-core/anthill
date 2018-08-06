@@ -3,25 +3,23 @@
 
 ## 目录 ##
 
-1. 参考链接
-2. 事件绑定
-3. 引用(reference)
-4. 服务(service)
-5. 双向数据绑定
-6. 表单验证
-7. 常用指令
-	1. \*ngIf
-	2. \*ngFor
+1. [参考链接](#href1)
+2. [事件绑定](#href2)
+3. [引用(reference)](#href3)
+4. [服务(service)](#href4)
+5. [双向数据绑定](#href5)
+6. [表单验证](#href6)
+7. [常用指令](#href7)
+	1. [\*ngIf](#href7-1)
+	2. [\*ngFor](#href7-2)
 
----
-
-## 参考链接 ##
+## <a name="href1">参考链接</a> ##
 
 - [第二节：用Form表单做一个登录控件对于login组件的小改造](https://juejin.im/post/5860f08d1b69e6006ce1473a)
 
 ---
 
-## 事件绑定 ##
+## <a name="href2">事件绑定</a> ##
 
 Angular2 中事件绑定比较简单，如下例：
 
@@ -48,7 +46,7 @@ export class ContComponent implements OnInit {
 
 ---
 
-## 引用(reference) ##
+## <a name="href3">引用(reference)</a> ##
 
 引用(reference)类似于HTML中的ID，一个引用，绑定的是一个唯一的元素，其形式如`#userRef`，我们可以在其他地方使用 userRef 来访问这个元素，以下是应用实例代码：
 
@@ -78,7 +76,7 @@ export class FormComponent implements OnInit {
 
 ---
 
-## 服务(service) ##
+## <a name="href4">服务(service)</a> ##
 
 服务(service)用于存放组件的业务逻辑，之前我们把点击事件都写在组件中，当以后业务逻辑越来越复杂时，这样的做法会导致组件变得特别的难维护，服务正是用来解决这个问题，现在我们将之前写的代码改写为以下内容：
 
@@ -132,7 +130,7 @@ export class FormComponent implements OnInit {
 
 ---
 
-## 双向数据绑定 ##
+## <a name="href5">双向数据绑定</a> ##
 
 Angular2 提供了一个双向数据绑定的机制，即在组件中提供成员数据变量，然后在模板中引用这个数据变量。以下是使用双向数据绑定的实例代码：
 
@@ -165,7 +163,7 @@ export class FormComponent implements OnInit {
 
 ---
 
-## 表单验证 ##
+## <a name="href6">表单验证</a> ##
 
 Angular2 对表单验证有非常完善的支持，我们可以非常方便地将一些校验规则绑定到表单控件上。直接上代码：
 
@@ -195,9 +193,9 @@ Angular2 对表单验证有非常完善的支持，我们可以非常方便地�
 
 ---
 
-## 常用指令 ##
+## <a name="href7">常用指令</a> ##
 
-### \*ngIf ###
+### <a name="href7-1">\*ngIf</a> ###
 
 `*ngIf`是一个条件判断指令，现将所赋的值转为布尔值然后决定指定的标签是否显示，下面直接举个用例：
 
@@ -210,7 +208,7 @@ Angular2 对表单验证有非常完善的支持，我们可以非常方便地�
 
 以上代码中，第一个p标签中`*ngIf`的值是true，这时这个标签将正常显示；而第二个p标签中`*ngIf`的值是false，这个标签则会隐藏起来。
 
-### \*ngFor ###
+### <a name="href7-2">\*ngFor</a> ###
 
 `*ngFor`是一个遍历指令，它可以将一个数组中的每个元素绑定到指定的元素上，从而逐个渲染出来，示例代码如下：
 
