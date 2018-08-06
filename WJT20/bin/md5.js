@@ -1,6 +1,6 @@
-/**
- * md5加密的方法
- */
+#!/usr/bin/env node
+
+// md5加密的方法
 let MD5 = function (string, len) {
     function RotateLeft(lValue, iShiftBits) {
         return (lValue << iShiftBits) | (lValue >>> (32 - iShiftBits));

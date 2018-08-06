@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const path = require('path');
 const fs = require('fs');
 const marked = require('marked');
@@ -9,26 +11,29 @@ const allMdFiles = fs.readdirSync(srcPath);
 const jsonData = [];
 const dataType = 'JSON';
 const pre = 50;
+const ignore = JSON.stringify([ 'readme.md' ]);
 
 // 组装数据
 function readAllFiles() {
     allMdFiles.forEach(function(item, index) {
-        const filePath = srcPath + '/' + item;
+        if (ignore.indexOf(item) > 0) {
+            const filePath = srcPath + '/' + item;
 
-        // isFile: 是否文件
-        // isDirectory: 是否目录
-        if (fs.statSync(filePath).isFile()) {
-            const fileCont = fs.readFileSync(filePath, 'utf-8');
-            const resultCont = encodeURI(marked(fileCont));
+            // isFile: 是否文件
+            // isDirectory: 是否目录
+            if (fs.statSync(filePath).isFile()) {
+                const fileCont = fs.readFileSync(filePath, 'utf-8');
+                const resultCont = encodeURI(marked(fileCont));
 
-            if (index % pre === 0) {
-                jsonData.push({});
+                if (index % pre === 0) {
+                    jsonData.push({});
+                }
+
+                jsonData[jsonData.length - 1][md5(item, 8)] = {
+                    name: item,
+                    cont: resultCont
+                };
             }
-
-            jsonData[jsonData.length - 1][md5(item, 8)] = {
-                name: item,
-                cont: resultCont
-            };
         }
     });
 }

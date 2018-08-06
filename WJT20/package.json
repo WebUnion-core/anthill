@@ -4,7 +4,8 @@
   "description": "WebUnion docs",
   "main": "index.js",
   "scripts": {
-    "marked": "node ./bin/marked.js"
+    "marked": "node ./bin/marked.js",
+    "slink": "node ./bin/smart-link.js"
   },
   "repository": {
     "type": "git",
