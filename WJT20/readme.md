@@ -63,6 +63,8 @@
 
 - ID:17 > [JavaScript-D系列——正则](./JavaScript-D系列——正则.md)
 
+- ID:95 > [JavaScript-D系列——闭包](./JavaScript-D系列——闭包.md)
+
 ## webpack系列 ##
 
 - ID:2 > [webpack常规配置总结](./webpack常规配置总结.md)
