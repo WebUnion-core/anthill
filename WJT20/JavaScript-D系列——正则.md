@@ -1,5 +1,5 @@
 
-# JavaScript正则知识点总结 #
+# JavaScript-D系列——正则 #
 
 ## 目录 ##
 
@@ -36,8 +36,6 @@
 
     ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w13.png)
 
----
-
 ## <a name="href2">RegExp</a> ##
 
 定义正则表达式有两种方式:
@@ -50,7 +48,7 @@
 1. pattern.test(string): 对传入的 string 字符串进行模式匹配，返回一个布尔值，表示字符串是否匹配该正则。
 2. pattern.exec(string): 返回一个匹配项数组。
 
-字符串对象的 match()、search()、split() 及 replace() 等方法也与正则表达式相关。
+字符串对象的`match()`、`search()`、`split()`及`replace()`等方法也与正则表达式相关。
 
 ## <a name="href3">常用正则表达式</a> ##
 
