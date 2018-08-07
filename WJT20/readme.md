@@ -5,8 +5,6 @@
 
 - ID:17 > [JavaScript正则知识点总结](./JavaScript正则知识点总结.md)
 
-- ID:24 > [JavaScript canvas介绍](./JavaScript%20canvas介绍.md)
-
 - ID:27 > [JSON、Ajax和JSONP记录](./JSON、Ajax和JSONP记录.md)
 
 - ID:33 > [JavaScript黑科技](./JavaScript黑科技.md)
@@ -60,6 +58,8 @@
 - ID:92 > [JavaScript-D系列——DOM](./JavaScript-D系列——DOM.md)
 
 - ID:93 > [JavaScript-D系列——事件](./JavaScript-D系列——事件.md)
+
+- ID:24 > [JavaScript-D系列——Canvas](./JavaScript-D系列——Canvas.md)
 
 ## webpack系列 ##
 
