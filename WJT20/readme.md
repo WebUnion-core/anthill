@@ -61,6 +61,8 @@
 
 - ID:24 > [JavaScript-D系列——Canvas](./JavaScript-D系列——Canvas.md)
 
+- ID:94 > [JavaScript-D系列——数据存储](./JavaScript-D系列——数据存储.md)
+
 ## webpack系列 ##
 
 - ID:2 > [webpack常规配置总结](./webpack常规配置总结.md)
