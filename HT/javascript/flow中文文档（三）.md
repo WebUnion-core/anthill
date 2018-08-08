@@ -370,3 +370,50 @@ foo('a');
 foo(5);
 foo([]);
 ```
+
+### Callable Objects 可调用对象（本人对这个也不是特别理解，往有大神指出）
+
+可以输入可调用对象，例如:
+
+```js
+type CallableObj = {
+  (number, number): number,
+  bar: string
+};
+
+function add(x, y) {
+  return x + y; 
+}
+
+// $ExpectError
+(add: CallableObj);
+
+add.bar = "hello world";
+
+(add: CallableObj);
+```
+
+### Function Type
+
+有时候参数要接受任意函数的类型:
+
+```js
+function method(func: () => mixed) {
+  // ...
+}
+
+```
+
+如果你需要选择退出类型检测程序，同时你有不想用any类型,你可以用function类型
+```js
+function method(func: Function) {
+  func(1, 2);     // Works.
+  func("1", "2"); // Works.
+  func({}, []);   // Works.
+}
+
+method(function(a: number, b: number) {
+  // ...
+});
+
+```
