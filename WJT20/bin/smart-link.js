@@ -35,9 +35,7 @@ function readAllFiles() {
                             // 二级标题
                             secCounter++;
                             newTitle = '## <a name="href' + secCounter + '">' + title + '</a> ##';
-                        }
-
-                        if (item.indexOf('### ') === 0) {
+                        } else {
                             // 三级标题
                             thrCounter++;
                             newTitle = '### <a name="href' + secCounter + '-' + thrCounter + '">' + title + '</a> ###';
@@ -56,14 +54,17 @@ function readAllFiles() {
                     const direcAry = direcStr.match(/\s+[0-9]+.\s.+/g);
 
                     direcAry.forEach(function(item) {
-                        const ary = item.split(' ');
+                        let ary;
 
-                        if (item.indexOf('\r\n\t') >= 0) {
+                        if (item.indexOf('    ') >= 0) {
                             // 三级标题
                             thrCounter++;
+                            ary = item.substr(6).split(' ');
+                            ary[0] = '\n    ' + ary[0];
                             ary[1] = '[' + ary[1] + ']' + '(#href' + secCounter + '-' + thrCounter + ')';
                         } else {
                             // 二级标题
+                            ary = item.split(' ');
                             secCounter++;
                             ary[1] = '[' + ary[1] + ']' + '(#href' + secCounter + ')'
                         }
