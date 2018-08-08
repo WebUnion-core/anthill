@@ -2,7 +2,7 @@
 * [类型别名语法](#类型别名语法)
 * [类型别名泛型](#类型别名泛型)
 * [不透明类型别名](#不透明类型别名)
-
+* [子类型约束](#子类型约束)
 
 
 # 类型别名
@@ -133,4 +133,82 @@ function add(x: NumberAlias, y: NumberAlias): NumberAlias {
 }
 function toNumberAlias(x: number): NumberAlias { return x; }
 function toNumber(x: NumberAlias): number { return x; }
+```
+
+导入opaque类型别名时，它的行为类似于名义类型，隐藏其基础类型。
+
+exports.js
+```js
+export opaque type NumberAlias = number;
+```
+
+imports.js
+```js
+import type {NumberAlias} from './exports';
+
+(0: NumberAlias) // Error: 0 is not a NumberAlias!
+
+function convert(x: NumberAlias): number {
+  return x; // Error: x is not a number!
+}
+```
+
+### 子类型约束
+
+将子类型约束添加到opaque类型别名时，我们允许opaque类型在定义文件之外时用作超类型。
+
+exports.js
+
+```js
+export opaque type ID: string = string;
+```
+
+imports.js
+
+```js
+import type {ID} from './exports';
+
+function formatID(x: ID): string {
+    return "ID: " + x; // Ok! IDs are strings.
+}
+
+function toID(x: string): ID {
+    return x; // Error: strings are not IDs.
+}
+```
+
+使用子类型约束创建opaque类型别名时，类型位置中的类型必须是超类型位置中类型的子类型。
+
+```js
+//@flow
+opaque type Bad: string = number; // Error: number is not a subtype of string
+opaque type Good: {x: string} = {x: string, y: number};
+```
+
+### 泛型
+
+不透明类型的别名也可以有自己的泛型，它们的工作方式与普通类型别名中的泛型一样
+
+```js
+// @flow
+opaque type MyObject<A, B, C>: { foo: A, bar: B } = {
+  foo: A,
+  bar: B,
+  baz: C,
+};
+
+var val: MyObject<number, boolean, string> = {
+  foo: 1,
+  bar: true,
+  baz: 'three',
+};
+```
+
+### Library Definitions
+
+您还可以在libdefs中声明opaque类型别名。在那里，您省略了基础类型，但仍可选择包含超类型
+
+```js
+declare opaque type Foo;
+declare opaque type PositiveNumber: number;
 ```
