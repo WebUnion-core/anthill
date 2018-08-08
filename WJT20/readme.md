@@ -65,6 +65,8 @@
 
 - ID:95 > [JavaScript-D系列——闭包](./JavaScript-D系列——闭包.md)
 
+- ID:96 > [JavaScript-D系列——面向对象](./JavaScript-D系列——面向对象.md)
+
 ## webpack系列 ##
 
 - ID:2 > [webpack常规配置总结](./webpack常规配置总结.md)
