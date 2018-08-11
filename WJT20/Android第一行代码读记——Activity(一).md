@@ -164,7 +164,7 @@ public class BlackSandActivity extends Activity {
 
 最终效果如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w66.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w66.png?v=1)
 
 ## <a name="href3">在Activity中使用Menu</a> ##
 
