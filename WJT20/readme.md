@@ -9,8 +9,6 @@
 
 - ID:71 > [JavaScript实战技巧](./JavaScript实战技巧.md)
 
-- ID:30 > [JavaScript设计模式重啃——前奏](./JavaScript设计模式重啃——前奏.md)
-
 - ID:35 > [JavaScript设计模式重啃——单例模式](./JavaScript设计模式重啃——单例模式.md)
 
 - ID:37 > [JavaScript设计模式重啃——策略模式](./JavaScript设计模式重啃——策略模式.md)
