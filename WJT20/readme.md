@@ -219,6 +219,8 @@
 
 - ID:97 > [Android第一行代码读记——Activity(一)](./Android第一行代码读记——Activity(一).md)
 
+- ID:98 > [Android第一行代码读记——Activity(二)](./Android第一行代码读记——Activity(二).md)
+
 ## 其他 ##
 
 - ID:44 > [IT名词记录](./IT名词记录.md)
