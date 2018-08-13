@@ -178,3 +178,25 @@ handleResponse({
   message: 'hi'
 });
 ```
+
+除非这些物体在某种程度上相互冲突，否则就没有办法区分它们。
+
+但是，要解决这个问题，您可以使用精确的对象类型。
+
+```js
+// @flow
+type Success = {| success: true, value: boolean |};
+type Failed  = {| error: true, message: string |};
+
+type Response = Success | Failed;
+
+function handleResponse(response: Response) {
+  if (response.success) {
+    var value: boolean = response.value;
+  } else {
+    var message: string = response.message;
+  }
+}
+```
+
+有了精确的对象类型，我们就不可能有额外的属性，所以对象之间会发生冲突，我们就能区分出哪个是哪个。
