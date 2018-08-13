@@ -75,7 +75,7 @@ public class SecondActivity extends BlackSandActivity {
 </manifest>
 ```
 
-SecondActivity 不是主 Activity，所以不需要配置"<intent-filter>"节点内容，至此，第二个 Activity 就配置完成了。
+SecondActivity 不是主 Activity，所以不需要配置 intent-filter 节点内容，至此，第二个 Activity 就配置完成了。
 
 ## <a name="href2">Intent</a> ##
 
