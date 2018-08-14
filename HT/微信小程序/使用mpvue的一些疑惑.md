@@ -112,3 +112,11 @@ export default {
 ```
 ----
 未完，持续更新。。。
+<center>
+更多精彩内容请关注订阅号
+
+![Alt text](https://github.com/WebUnion-core/doc-repositort/blob/master/HT/imgs/weixin.jpg?raw=true "UML类图")
+
+</center>
+
+<h3 style="text-align:right;">点个赞吧↓👇↓👇↓👇↓👇</h3>
