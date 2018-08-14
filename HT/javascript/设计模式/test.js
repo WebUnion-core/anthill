@@ -1,11 +1,24 @@
-function ooo(name) {
-    this.name = name;
-    return name
-}
-console.dir(new ooo('222'))
+function cloneObject(obj) {
+    const clone = {};
 
-function ooo2(name) {
-    this.name = name;
-    return [1,2,3,4]
+    Object.keys(obj).forEach(key => {
+        clone[key] = obj[key];
+    });
+
+    return clone;
 }
-console.dir(new ooo2('444'))
+
+var a = {
+    a: 'a',
+    name: 1,
+    obj: {
+        a: '1',
+        b: 12131
+    }
+}
+
+var newA = cloneObject(a);
+
+a.obj.a = 5555
+
+console.log(newA.obj.a);
