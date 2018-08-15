@@ -11,12 +11,12 @@ wx.navigateTo({
     })
 ```
 
-使用
+使用,如果带参数的话，则直接在后面加上相应参数就行
 
 ```js
 
 wx.navigateTo({
-       url: './../slefcaoutrecord/main'
+       url: './../slefcaoutrecord/main?id=123&uid=224141'
     })
 ```
 
