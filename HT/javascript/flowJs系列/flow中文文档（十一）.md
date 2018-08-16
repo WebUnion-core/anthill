@@ -56,3 +56,5 @@ import typeof {MyClass} from './exports';
 ```
 
 就像其他类型导入一样，此代码将被编译器剥离，并且不会添加对其他模块的依赖关系。
+
+
