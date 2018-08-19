@@ -294,27 +294,27 @@ MainActivity 对应的 Layout 为 main.xml，NormalActivity 对应 normal_layout
 
 1. 初次启动程序，主程序的 onCreate、onStart 和 onResume 都会被调用，可以在控制台看到以下日志:
 
-	![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w73.png)
+	![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w73.PNG)
 
 2. 接着点击"Start normal activity"按钮启动 NormalActivity，MainActivity 离开栈顶且完全不可见，onPause 和 onStop 都会被调用:
 
-	![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w74.png)
+	![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w74.PNG)
 
 3. 点击 Back 键，返回 MainActivity，此时 onRestart 会被调用，紧随其后是 onStart 和 onResume 的调用:
 
-	![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w75.png)
+	![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w75.PNG)
 
 4. 下一步点击"Start dialog activity"按钮启动 DialogActivity，注意此时 MainActivity 仍是可见的，所以调用的只有 onPause:
 
-	![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w76.png)
+	![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w76.PNG)
 
 5. 再次点击 Back 键，同理调用的只有 onResume:
 
-	![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w77.png)
+	![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w77.PNG)
 
 6. 最后一步是退出整个程序，此时会发现除 onPause 和 onStop 以外，还调用了 onDestrory:
 
-	![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w78.png)
+	![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w78.PNG)
 
 ## <a name="href5">数据恢复操作</a> ##
 
