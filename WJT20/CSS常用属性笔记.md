@@ -4,18 +4,19 @@
 ## 目录 ##
 
 1. [文本相关](#href1)
- [](#href2)   1. 单行文本超出自动省略
- [](#href3)   2. 多行文本超出自动省略
- [](#href4)   3. 英文单词拆解换行
- [](#href5)   4. 禁止双击复制
-2. [表单控件相关](#href6)
- [](#href7)   1. placeholder样式设置
-3. [图形相关](#href8)
- [](#href9)   1. 三角图标
- [](#href10)   2. 移动端1px线的实现
- [](#href11)   3. 开启硬件加速使动画流畅
-4. [其他](#href12)
- [](#href13)   1. 使元素失去点击和触摸等事件
+    1. [单行文本超出自动省略](#href1-1)
+    2. [多行文本超出自动省略](#href1-2)
+    3. [英文单词拆解换行](#href1-3)
+    4. [禁止双击复制](#href1-4)
+2. [表单控件相关](#href2)
+    1. [placeholder样式设置](#href2-5)
+3. [图形相关](#href3)
+    1. [三角图标](#href3-6)
+    2. [移动端1px线的实现](#href3-7)
+    3. [开启硬件加速使动画流畅](#href3-8)
+    4. [画弧](#href3-10)
+4. [其他](#href4)
+    1. [使元素失去点击和触摸等事件](#href4-9)
 
 ## <a name="href1">文本相关</a> ##
 
@@ -147,6 +148,24 @@ CSS 部分:
 .animate {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+}
+```
+
+### <a name="href3-10">画弧</a> ###
+
+注意 height 和 border 的宽度比例为`8:1`，代码如下:
+
+```css
+.circular {
+    width: 100px;
+    height: 80px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-top: solid 10px #f56151;
+    border-right: solid 10px transparent;
+    border-bottom: solid 10px transparent;
+    border-left: solid 10px transparent;
+    border-radius: 50%;
 }
 ```
 
