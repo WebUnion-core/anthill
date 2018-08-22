@@ -5,13 +5,13 @@
 
 1. [介绍](#href1)
 2. [实例:电灯程序](#href2)
- [](#href3)   1. 定义状态类
- [](#href4)   2. 编写Light类
- [](#href5)   3. 测试
- [](#href6)   4. 总结
-3. [状态模式的优缺点](#href7)
- [](#href8)   1. 优点
- [](#href9)   2. 缺点
+    1. [定义状态类](#href2-1)
+    2. [编写Light类](#href2-2)
+    3. [测试](#href2-3)
+    4. [总结](#href2-4)
+3. [状态模式的优缺点](#href3)
+    1. [优点](#href3-5)
+    2. [缺点](#href3-6)
 
 ## <a name="href1">介绍</a> ##
 
@@ -23,7 +23,7 @@
 
 代码:
 
-```
+```js
 // OffLightState:
 var OffLightState = function(light) {
     this.light = light;
@@ -59,7 +59,7 @@ StrongLightState.prototype.buttonWasPressed = function() {
 
 代码:
 
-```
+```js
 var Light = function() {
     this.offLightState = new OffLightState(this);
     this.weakLightState = new WeakLightState(this);
@@ -69,8 +69,8 @@ var Light = function() {
 
 // 初始化
 Light.prototype.init = function() {
-    var button = document.createElement('button'),
-        self = this;
+    var button = document.createElement('button');
+    var self = this;
 
     this.button = document.body.appendChild(button);
     this.button.innerHTML = '开关';
@@ -92,7 +92,7 @@ Light.prototype.setState = function(newState) {
 
 代码:
 
-```
+```js
 var light = new Light();
 light.init();
 ```
