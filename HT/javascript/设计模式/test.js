@@ -1,3 +1,3 @@
-for (var i = 0; i < 5; i++) {
-        console.log(i)
-}
+a = 2;
+
+let a;
