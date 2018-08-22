@@ -13,7 +13,7 @@ Flow通过静态类型检查到吗是否存在类型错误，比如: test
 
 ```js
 // @flow
-function square(n:unmber): number {
+function square(n:unmber): number { //1
     return n * n;
 }
 
