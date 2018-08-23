@@ -24,6 +24,8 @@ wx.navigateTo({
 
 在目录里创建一个stores目录 src/stores/index.js
 
+> 在main.js 中需要将stores赋值给vue的原型对象  Vue.prototype.$store = store
+
 ```js
 import Vue from 'vue'
 import Vuex from 'vuex'

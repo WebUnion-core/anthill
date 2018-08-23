@@ -232,3 +232,213 @@ foo.call(obj)
 如果你传入了一个原始值（字符串类型、布尔类型或者数字类型）来当作 this 的绑定对象，这个原始值会被转换成它的对象形式（也就是 new String(..) 、 new Boolean(..) 或者
 new Number(..) ）。这通常被称为“装箱”。
 
+### 规则四 new 绑定
+
+在javascript中，使用new 操作符的时候，其实和其他大多数语言中使用new操作符的机制不太一样，当我们使用了new 操作符调用函数，这个函数就会被当做构造函数来调用。
+
+调用构造函数的时候，会发生四件事情：
+
+1. 创建一个空对象。
+2. 将这个空对象的__proto__成员指向了构造函数的prototype成员对象
+3. 这个新对象会绑定到函数调用的 this
+4. 如果函数没有返回其他对象，那么 new 表达式中的函数调用会自动返回这个新对象
+
+关于构造函数可查看 https://www.jianshu.com/p/794672ea66c5
+
+## 绑定优先级
+
+默认绑定的优先级是最低的。
+
+先看隐式绑定和显式绑定哪个优先级更高：
+
+```js
+
+function foo() {
+  console.log(this.a);
+}
+var obj1 = {
+  a: 2,
+  foo: foo
+};
+var obj2 = {
+  a: 3,
+  foo: foo
+};
+obj1.foo(); // 2
+obj2.foo(); // 3
+obj1.foo.call(obj2); // 3
+obj2.foo.call(obj1); // 2
+```
+
+可以看到，显式绑定优先级更高，也就是说在判断时应当先考虑是否可以应用显式绑定。
+
+现在我们需要搞清楚 new 绑定和隐式绑定的优先级谁高谁低：
+
+```js
+
+function foo(val){
+  this.a = val;
+}
+
+var obj = {
+  foo: foo,
+}
+
+obj.foo(3);
+console.log(obj.a); // 3
+
+var bar = new obj.foo(4);
+
+console.log(bar.a);
+console.log(obj.a)
+```
+
+可以看到 new 绑定比隐式绑定优先级高。但是 new 绑定和显式绑定谁的优先级更高呢
+
+```js
+
+function foo(something) {
+  this.a = something;
+}
+var obj1 = {};
+var bar = foo.bind(obj1);
+bar(2);
+console.log(obj1.a); // 2
+var baz = new bar(3);
+console.log(obj1.a); // 2
+console.log(baz.a); // 3
+```
+
+## 判断this
+
+现在我们可以根据优先级来判断函数在某个调用位置应用的是哪条规则
+
+1. 函数是否在 new 中调用（ new 绑定）？如果是的话 this 绑定的是新创建的对象。
+```js
+var bar = new foo()
+```
+2. 函数是否通过 call 、 apply （显式绑定）或者硬绑定调用？如果是的话， this 绑定的是指定的对象
+```js
+var bar = foo.call(obj2)
+```
+3. 函数是否在某个上下文对象中调用（隐式绑定）？如果是的话， this 绑定的是那个上下文对象。
+```js
+var bar = obj1.foo()
+```
+4. 如果都不是的话，使用默认绑定。如果在严格模式下，就绑定到 undefined ，否则绑定到全局对象。
+```js
+var bar = foo()
+```
+
+### 被忽略的this
+
+如果你把 null 或者 undefined 作为 this 的绑定对象传入 call 、 apply 或者 bind ，这些值在调用时会被忽略，实际应用的是默认绑定规则
+
+```js
+
+function foo() {
+  console.log(this.a);
+}
+var a = 2;
+foo.call(null); // 2
+```
+
+一般我们要展开数组，或者是对参数进行柯里化（预先设置一些参数）的时候，会经常传入一些null值进行占位u，es6中展开数组可以用拓展运算符...，但是还没有参数柯里化的相关语法。
+
+```js
+
+function foo(a, b) {
+
+  console.log("a:" + a + ", b:" + b);
+}
+// 把数组“展开”成参数
+foo.apply(null, [2, 3]); // a:2, b:3
+// 使用 bind(..) 进行柯里化
+var bar = foo.bind(null, 2);
+bar(3); // a:2, b:3
+```
+
+这两种方法都需要传入一个参数当作 this 的绑定对象。如果函数并不关心 this 的话，你仍然需要传入一个占位值，这时 null 可能是一个不错的选择,
+
+### 更安全的this
+
+```js
+
+function foo(a, b) {
+  console.log("a:" + a + ", b:" + b);
+}
+// 我们的 DMZ 空对象
+var ø = Object.create(null);
+// 把数组展开成参数
+foo.apply(ø, [2, 3]); // a:2, b:3
+// 使用 bind(..) 进行柯里化
+var bar = foo.bind(ø, 2);
+bar(3); // a:2, b:3
+```
+
+使用变量名 ø 不仅让函数变得更加“安全”，而且可以提高代码的可读性，因为 ø 表示“我希望 this 是空”，这比 null 的含义更清楚。
+
+### 间接引用
+
+另一个需要注意的是，你有可能（有意或者无意地）创建一个函数的“间接引用”，在这种情况下，调用这个函数会应用默认绑定规则。
+
+```js
+
+function foo() {
+  console.log(this.a);
+}
+
+var a = 2;
+var o = {
+  a: 3,
+  foo: foo
+};
+var p = {
+  a: 4
+};
+o.foo(); // 3
+(p.foo = o.foo)(); // 2
+```
+
+赋值表达式 p.foo = o.foo 的返回值是目标函数的引用，因此调用位置是 foo() 而不是p.foo() 或者 o.foo() 。根据我们之前说过的，这里会应用默认绑定。
+
+## 箭头函数
+
+箭头函数不适用this的四种标准规则。而是根据外层作用域来决定this。
+
+```js
+
+function foo() {
+  return () => {
+    console.log(this.a);
+  }
+}
+
+var obj = {
+  a: 2,
+  foo: foo
+}
+
+var obj2 = {
+  a: 4
+}
+
+var bar = foo.call(obj2)
+
+bar.call(obj); // 4
+```
+
+foo() 内部创建的箭头函数会捕获调用时 foo() 的 this,由于 foo() 的 this 绑定到 obj2,bar （引用箭头函数）的 this 也会绑定到 obj2,头函数的绑定无法被修改。（ new 也不行！）
+
+## 总结
+
+如果要判断一个运行中函数的 this 绑定，就需要找到这个函数的直接调用位置。找到之后就可以顺序应用下面这四条规则来判断 this 的绑定对象。
+
+1. 由 new 调用？绑定到新创建的对象。
+2. 由 call 或者 apply （或者 bind ）调用？绑定到指定的对象。
+3. 由上下文对象调用？绑定到那个上下文对象。
+4. 默认：在严格模式下绑定到 undefined ，否则绑定到全局对象。
+
+一定要注意，有些调用可能在无意中使用默认绑定规则。如果想“更安全”地忽略 this 绑定，你可以使用一个 DMZ 对象，比如 ø = Object.create(null) ，以保护全局对象。
+
+ES6 中的箭头函数并不会使用四条标准的绑定规则，而是根据当前的词法作用域来决定this ，具体来说，箭头函数会继承外层函数调用的 this 绑定（无论 this 绑定到什么）。这其实和 ES6 之前代码中的 self = this 机制一样。
