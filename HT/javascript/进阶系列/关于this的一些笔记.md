@@ -210,7 +210,25 @@ var a = "oops, global"; // a 是全局对象的属性
 doFoo(obj.foo); // "oops, global"
 ```
 
+参数传递其实就是一种隐式赋值，因此我们传入函数时也会被隐式赋值，所以结果和上一个例子一样
+
 ### 规则三 显式绑定
 
-使用 call(..) 和 apply(..) 方法。
+使用 call(..) 和 apply(..) 方法可以强制绑定this的指向。
+
+```js
+
+function foo(){
+    console.log(this.a)
+}
+
+var obj = {
+    a: 2,
+}
+
+foo.call(obj)
+```
+
+如果你传入了一个原始值（字符串类型、布尔类型或者数字类型）来当作 this 的绑定对象，这个原始值会被转换成它的对象形式（也就是 new String(..) 、 new Boolean(..) 或者
+new Number(..) ）。这通常被称为“装箱”。
 
