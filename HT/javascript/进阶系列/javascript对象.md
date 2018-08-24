@@ -85,6 +85,8 @@ console.log(obj2.c === obj1.c) // false
 
 ### 属性描述符
 
+属性描述符就是用来描述该属性的，value,writable,enumerable,configurable;
+
 ```js
 var obj1 = {
   a: 1,
