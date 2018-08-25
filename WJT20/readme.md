@@ -223,6 +223,8 @@
 
 - ID:99 > [Android第一行代码读记——Activity(三)](./Android第一行代码读记——Activity(三).md)
 
+- ID:26 > [Android第一行代码读记——Activity(四)](./Android第一行代码读记——Activity(四).md)
+
 ## React ##
 
 - ID:29 > [React架构实践记——模块说明](./React架构实践记——模块说明.md);
