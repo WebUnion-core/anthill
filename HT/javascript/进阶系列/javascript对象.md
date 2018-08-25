@@ -431,7 +431,7 @@ for(let v of obj) {
   console.log(v) // 1 , 2
 }
 
-
-
 ```
 
+## 小记
+> JavaScript  有一处奇特的语法，即构造函数没有参数时可以不用带 () 。于是我们可能会碰到 var timestamp = +new Date; 
