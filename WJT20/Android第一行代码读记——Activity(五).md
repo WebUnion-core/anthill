@@ -3,11 +3,11 @@
 
 ## 目录 ##
 
-1. 获取Activity的名字
-2. 随时随地退出Activity
-3. 启动Activity的最佳写法
+1. [获取Activity的名字](#href1)
+2. [随时随地退出Activity](#href2)
+3. [启动Activity的最佳写法](#href3)
 
-## 获取Activity的名字 ##
+## <a name="href1">获取Activity的名字</a> ##
 
 首先创建一个 BaseActivity，不需要将其注册到 AndroidManifest.xml 中，其内容如下:
 
@@ -46,9 +46,9 @@ public class MainActivity extends BaseActivity {
 
 最后启动一下程序，可以看到 LogCat 中打印了每个 Activity 的名字，如下图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w80.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w80.PNG)
 
-## 随时随地退出Activity ##
+## <a name="href2">随时随地退出Activity</a> ##
 
 如果返回栈中存在多个堆叠的 Activity，要从栈顶 Activity 回到最前面的 Activity，需要点击多次的 Back 键。接下来来做一个快速注销程序的实例。
 
@@ -140,7 +140,7 @@ public class SecondActivity extends BaseActivity {
 
 最后启动下程序，在点击"clear"按钮后，整个程序自动销毁，进程也会被杀死。
 
-## 启动Activity的最佳写法 ##
+## <a name="href3">启动Activity的最佳写法</a> ##
 
 最简单的启动 Activity 写法如下:
 
