@@ -1,41 +1,57 @@
-let Stack = (() => {
-    let dataStore = [],
-        top = 0;
-    return class Stack {
-        push(el) {
-            dataStore[top++] = el;
-        }
-        pop() { // 它返回栈顶元素，同时将变量 top 的值减 1
-            if (top <= 0) {
-                return '出栈失败,空栈顶'
+class Node {
+    constructor(el) {
+        this.element = el;
+        this.next = null;
+    }
+}
+
+let LinkedList = (() => {
+
+    let head = new Node("head");
+    return class LinkedList {
+        find(item) {
+            let currNode = head;
+            while (currNode.element != item) {
+                currNode = currNode.next;
             }
-            return dataStore[--top];
+            return currNode;
         }
-        peek() { // 返回数组的第 top-1 个位置的元素，即栈顶元素
-            return dataStore[top - 1];
+        findPrevious(item) {
+            let currNode = head;
+            while ((currNode.next != null) && (currNode.next.element != item)) {
+                currNode = currNode.next;
+            }
+            return currNode;
         }
-        length() {
-            return top;
+        insert(el, item) {
+            let newNode = new Node(el);
+            let currNode = this.find(item);
+            newNode.next = currNode.next;
+            currNode.next = newNode;
         }
-        clear() {
-            top = 0;
+        remove(item) {
+            let currNode = this.findPrevious(item);
+            let preNode = this.find(item);
+            currNode.next = preNode.next;
+        }
+        display() {
+            let node = head;
+            while (node.next != null) {
+                console.log(node.next.element);
+                node = node.next;
+            }
         }
     }
 })()
 
+let aList =  new LinkedList();
 
-function isPalindrome(word) {
-    let s = new Stack();
-    for (let i in word) {
-        s.push(word[i]);
-    }
+aList.insert("1", "head")
+aList.insert("2", "1")
+aList.insert("3", "2")
 
-    var result = "";
+aList.display(); // 1 2 3
 
-    while(s.length() > 0) {
-        result += s.pop()
-    }
-    return result === word;
-}
+aList.remove('3')
 
-console.log(isPalindrome("ht"))
+aList.display();// 1 2
