@@ -3,15 +3,6 @@ class HashTable {
         this.table = new Array(137);
     }
 
-    simpleHash(data) {
-        var total = 0;
-        for (var i = 0; i < data.length; ++i) {
-            total += data.charCodeAt(i);
-        }
-        console.log("Hash value: " + data + " -> " + total);
-        return total % this.table.length;
-    }
-
     betterHash(string) {
         const H = 37;
         var total = 0;
@@ -25,8 +16,14 @@ class HashTable {
         return parseInt(total);
     }
     put(data) {
-        let pos = this.simpleHash(data);
-        this.table[pos] = data;
+        let pos = this.betterHash(data);
+        let index = 0;
+        if (this.table[pos] == undefined) {
+            this.table[pos] = data;
+        } else {
+            while (this.table[++pos] != undefined) {}
+            this.table[pos] = data;
+        }
     }
 
     showDistro() {
@@ -34,43 +31,34 @@ class HashTable {
             if (this.table[i] != undefined) {
                 console.log(`${i} : ${this.table[i]}`);
             }
+            // if (this.table[i][0] != undefined) {
+            //     for (let j in this.table[i]) {
+            //         console.log(i + ": " + j + " : " + this.table[i][j]);
+            //     }
+            // }
         }
+    }
+
+    get(key) {
+        let hash = this.betterHash(key);
+        for (let i = hash; this.table[hash] != undefined; i++) {
+            if(this.table[hash] == key) {
+                return this.table[hash];
+            }
+        }
+        return undefined;
     }
 }
 
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function genStuData(arr) {
-    for (var i = 0; i < arr.length; ++i) {
-        var num = "";
-        for (var j = 1; j <= 9; ++j) {
-            num += Math.floor(Math.random() * 10);
-        }
-        num += getRandomInt(50, 100);
-        arr[i] = num;
-    }
-}
-var numStudents = 10;
-var arrSize = 97;
-var idLen = 9;
-var students = new Array(numStudents);
-
-genStuData(students);
-
-console.log("Student data: \n");
-
-for (var i = 0; i < students.length; ++i) {
-    console.log(students[i].substring(0, 8) + " " +
-        students[i].substring(9));
-}
-
-
-console.log("\n\nData distribution: \n");
 
 var hTable = new HashTable();
 
-for (var i = 0; i < students.length; ++i) {
-    hTable.put(students[i]);
+var someNames = ["David", "Jennifer", "Donnie", "Raymond", "Cynthia", "Mike", "Clayton", "Danny", "Jonathan"];
+
+for (var i = 0; i < someNames.length; ++i) {
+    hTable.put(someNames[i]);
 }
+
+hTable.showDistro();
+
+console.log(hTable.get("Jonathan"))
