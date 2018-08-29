@@ -1,64 +1,92 @@
-class HashTable {
+class Set {
     constructor() {
-        this.table = new Array(137);
+        this.dataStore = [];
     }
-
-    betterHash(string) {
-        const H = 37;
-        var total = 0;
-        for (var i = 0; i < string.length; ++i) {
-            total += H * total + string.charCodeAt(i);
-        }
-        total = total % this.table.length;
-        if (total < 0) {
-            total += this.table.length - 1;
-        }
-        return parseInt(total);
+    show() {
+        return this.dataStore;
     }
-    put(data) {
-        let pos = this.betterHash(data);
-        let index = 0;
-        if (this.table[pos] == undefined) {
-            this.table[pos] = data;
+    add(data) {
+        if (this.dataStore.indexOf(data) < 0) {
+            this.dataStore.push(data);
+            return true;
+        }
+        return false;
+    }
+    remove(data) {
+        let pos = this.dataStore.indexOf(data);
+        if (pos < 0) {
+            this.dataStore.splice(pos, 1);
+            return true;
+        }
+        return false;
+    }
+    contains(data) {
+        if (this.dataStore.indexOf(data) > -1) {
+            return true
+        }
+        return false
+    }
+    union(set) {
+        let tempSet = new Set();
+        for (let i in this.dataStore) {
+            tempSet.add(this.dataStore[i]);
+        }
+        for (let i in set.dataStore) {
+            if (!tempSet.contains(set.dataStore[i])) {
+                tempSet.dataStore.push(set.dataStore[i]);
+            }
+        }
+        return tempSet;
+    }
+    intersect(set) {
+        let tempSet = new Set();
+        for (let i in set.dataStore) {
+            if (this.dataStore.indexOf(set.dataStore[i]) > -1) {
+                tempSet.add(set.dataStore[i])
+            }
+        }
+        return tempSet;
+    }
+    size() {
+        return this.dataStore.length;
+    }
+    subset(set) {
+        if (this.size() > set.size()) {
+            return false;
         } else {
-            while (this.table[++pos] != undefined) {}
-            this.table[pos] = data;
+            for (let i in this.dataStore) {
+                if (!set.contains(this.dataStore[i])) {
+                    return false;
+                }
+            }
+            return true;
         }
     }
-
-    showDistro() {
-        for (let i in this.table) {
-            if (this.table[i] != undefined) {
-                console.log(`${i} : ${this.table[i]}`);
-            }
-            // if (this.table[i][0] != undefined) {
-            //     for (let j in this.table[i]) {
-            //         console.log(i + ": " + j + " : " + this.table[i][j]);
-            //     }
-            // }
-        }
-    }
-
-    get(key) {
-        let hash = this.betterHash(key);
-        for (let i = hash; this.table[hash] != undefined; i++) {
-            if(this.table[hash] == key) {
-                return this.table[hash];
+    difference(set){
+        let tempSet = new Set();
+        for(let i in this.dataStore) {
+            if(set.dataStore.indexOf(this.dataStore[i]) < 0) {
+                tempSet.add(this.dataStore[i])
             }
         }
-        return undefined;
+        return tempSet;
     }
 }
 
+var cis = new Set();
+cis.add("Mike");
+cis.add("Clayton");
+cis.add("Jennifer");
+cis.add("Raymond");
+var dmp = new Set();
+dmp.add("Raymond");
+dmp.add("Cynthia");
+dmp.add("Jonathan");
+// var it = cis.union(dmp); // [ 'Mike', 'Clayton', 'Jennifer', 'Raymond', 'Cynthia', 'Jonathan' ]
+var it = cis.intersect(dmp); // [ 'Raymond' ]
 
-var hTable = new HashTable();
+var nas = new Set();
+nas.add("Raymond");
+nas.add("Raymondasa");
 
-var someNames = ["David", "Jennifer", "Donnie", "Raymond", "Cynthia", "Mike", "Clayton", "Danny", "Jonathan"];
-
-for (var i = 0; i < someNames.length; ++i) {
-    hTable.put(someNames[i]);
-}
-
-hTable.showDistro();
-
-console.log(hTable.get("Jonathan"))
+console.log(nas.difference(cis));
