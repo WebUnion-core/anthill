@@ -1,92 +1,122 @@
-class Set {
-    constructor() {
-        this.dataStore = [];
+class Node {
+    constructor(data, left, right) {
+        this.data = data;
+        this.right = right;
+        this.left = left;
     }
     show() {
-        return this.dataStore;
-    }
-    add(data) {
-        if (this.dataStore.indexOf(data) < 0) {
-            this.dataStore.push(data);
-            return true;
-        }
-        return false;
-    }
-    remove(data) {
-        let pos = this.dataStore.indexOf(data);
-        if (pos < 0) {
-            this.dataStore.splice(pos, 1);
-            return true;
-        }
-        return false;
-    }
-    contains(data) {
-        if (this.dataStore.indexOf(data) > -1) {
-            return true
-        }
-        return false
-    }
-    union(set) {
-        let tempSet = new Set();
-        for (let i in this.dataStore) {
-            tempSet.add(this.dataStore[i]);
-        }
-        for (let i in set.dataStore) {
-            if (!tempSet.contains(set.dataStore[i])) {
-                tempSet.dataStore.push(set.dataStore[i]);
-            }
-        }
-        return tempSet;
-    }
-    intersect(set) {
-        let tempSet = new Set();
-        for (let i in set.dataStore) {
-            if (this.dataStore.indexOf(set.dataStore[i]) > -1) {
-                tempSet.add(set.dataStore[i])
-            }
-        }
-        return tempSet;
-    }
-    size() {
-        return this.dataStore.length;
-    }
-    subset(set) {
-        if (this.size() > set.size()) {
-            return false;
-        } else {
-            for (let i in this.dataStore) {
-                if (!set.contains(this.dataStore[i])) {
-                    return false;
-                }
-            }
-            return true;
-        }
-    }
-    difference(set){
-        let tempSet = new Set();
-        for(let i in this.dataStore) {
-            if(set.dataStore.indexOf(this.dataStore[i]) < 0) {
-                tempSet.add(this.dataStore[i])
-            }
-        }
-        return tempSet;
+        return this.data;
     }
 }
 
-var cis = new Set();
-cis.add("Mike");
-cis.add("Clayton");
-cis.add("Jennifer");
-cis.add("Raymond");
-var dmp = new Set();
-dmp.add("Raymond");
-dmp.add("Cynthia");
-dmp.add("Jonathan");
-// var it = cis.union(dmp); // [ 'Mike', 'Clayton', 'Jennifer', 'Raymond', 'Cynthia', 'Jonathan' ]
-var it = cis.intersect(dmp); // [ 'Raymond' ]
+class BST {
+    constructor() {
+        this.root = null;
+    }
+    insert(data) {
+        let n = new Node(data, null, null);
+        if (this.root == null) {
+            this.root = n;
+        } else {
+            let current = this.root;
+            while (true) {
+                if (data < current.data) {
+                    if (current.left == null) {
+                        current.left = n;
+                        break;
+                    }
+                    current = current.left
+                } else {
+                    if (current.right == null) {
+                        current.right = n;
+                        break;
+                    }
+                    current = current.right
+                }
+            }
+        }
+    }
+    getMin() {
+        let current = this.root;
+        while (true) {
+            if (current.left !== null) {
+                current = current.left
+            } else {
+                break;
+            }
+        }
+        return current.data;
+    }
+    getMax() {
+        let current = this.root;
+        while (true) {
+            if (current.right !== null) {
+                current = current.right
+            } else {
+                break;
+            }
+        }
+        return current.data;
+    }
+    find(data) {
+        let current = this.root;
+        let parrent;
+        if (this.root == null) {
+            return false;
+        }
+        while (true) {
+            if (data != current.data) {
+                parrent = current;
+                if (data < current.data) {
+                    if (current.left == null) return false;
+                    current = current.left;
+                } else {
+                    if (current.right == null) return false;
+                    current = current.right;
+                }
+            } else {
+                return {
+                    cur: current,
+                    pre: parrent
+                };
+            }
+        }
+    }
+    remove(data) {
+        let findData = this.find(data),
+            current = findData.cur,
+            prevent = findData.pre;
 
-var nas = new Set();
-nas.add("Raymond");
-nas.add("Raymondasa");
+        if (current.left == null && current.right == null) {
+            if (current.data < prevent.data) {
+                prevent.left = null;
+            } else {
+                prevent.right = null;
+            }
+        } else {
+            if (current.data < prevent.data) {
+                prevent.left = current.left;
+            } else {
+                prevent.right = current.left;
+            }
+        }
+    }
+}
 
-console.log(nas.difference(cis));
+
+let bst = new BST();
+
+
+bst.insert(5);
+bst.insert(1);
+bst.insert(2);
+bst.insert(7);
+bst.insert(3);
+bst.insert(4);
+bst.insert(6);
+bst.insert(7);
+bst.insert(8);
+
+bst.remove(5)
+
+console.log(bst.find(4))
