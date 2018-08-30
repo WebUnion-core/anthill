@@ -1,122 +1,79 @@
-class Node {
-    constructor(data, left, right) {
-        this.data = data;
-        this.right = right;
-        this.left = left;
-    }
-    show() {
-        return this.data;
+class Vertex {
+    constructor(label) {
+        this.label = label;
     }
 }
 
-class BST {
-    constructor() {
-        this.root = null;
-    }
-    insert(data) {
-        let n = new Node(data, null, null);
-        if (this.root == null) {
-            this.root = n;
-        } else {
-            let current = this.root;
-            while (true) {
-                if (data < current.data) {
-                    if (current.left == null) {
-                        current.left = n;
-                        break;
-                    }
-                    current = current.left
-                } else {
-                    if (current.right == null) {
-                        current.right = n;
-                        break;
-                    }
-                    current = current.right
-                }
-            }
+class Graph {
+    constructor(v) {
+        this.vertices = v; // 顶点
+        this.edges = 0; // 边
+        this.adj = [];
+        this.marked = [];
+        for (var i = 0; i < this.vertices; ++i) {
+            this.marked[i] = false;
+        }
+        for (var i = 0; i < this.vertices; ++i) {
+            this.adj[i] = [];
         }
     }
-    getMin() {
-        let current = this.root;
-        while (true) {
-            if (current.left !== null) {
-                current = current.left
-            } else {
-                break;
-            }
-        }
-        return current.data;
-    }
-    getMax() {
-        let current = this.root;
-        while (true) {
-            if (current.right !== null) {
-                current = current.right
-            } else {
-                break;
-            }
-        }
-        return current.data;
-    }
-    find(data) {
-        let current = this.root;
-        let parrent;
-        if (this.root == null) {
-            return false;
-        }
-        while (true) {
-            if (data != current.data) {
-                parrent = current;
-                if (data < current.data) {
-                    if (current.left == null) return false;
-                    current = current.left;
-                } else {
-                    if (current.right == null) return false;
-                    current = current.right;
-                }
-            } else {
-                return {
-                    cur: current,
-                    pre: parrent
-                };
-            }
-        }
-    }
-    remove(data) {
-        let findData = this.find(data),
-            current = findData.cur,
-            prevent = findData.pre;
 
-        if (current.left == null && current.right == null) {
-            if (current.data < prevent.data) {
-                prevent.left = null;
-            } else {
-                prevent.right = null;
+    addEdge(v, w) {
+        this.adj[v].push(w);
+        this.adj[w].push(v);
+        this.edges++;
+    }
+    showGraph() {
+        for (var i = 0; i < this.vertices; ++i) {
+            for (var j = 0; j < this.vertices; ++j) {
+                if (this.adj[i][j] != undefined)
+                    console.log(i + "->" + this.adj[i][j] + ' ');
             }
-        } else {
-            if (current.data < prevent.data) {
-                prevent.left = current.left;
-            } else {
-                prevent.right = current.left;
+        }
+    }
+
+    dfs(v) {
+        this.marked[v] = true;
+        if (this.adj[v] != undefined) {
+            console.log("正在预览这个顶点", v);
+        }
+        for (let val of this.adj[v]) {
+            if (!this.marked[val]) {
+                this.dfs(val)
+            }
+        }
+    }
+
+    bfs(v) {
+        let queue = [];
+        this.marked[v] = true;
+        queue.push(v); // 添加到队尾
+        while (queue.length > 0) {
+            var v = queue.shift(); // 从队首移除
+            if (v != undefined) {
+                console.log("Visisted vertex: " + v);
+            }
+
+            let test = this.adj[v];
+
+            for (let w of this.adj[v]) {
+                let test2 = this.marked[w];
+                if (!this.marked[w]) {
+                    this.marked[w] = true;
+                    queue.push(w);
+                }
             }
         }
     }
 }
 
+g = new Graph(5);
 
-let bst = new BST();
 
+g.addEdge(0, 1);
+g.addEdge(0, 2);
+g.addEdge(1, 3);
+g.addEdge(2, 4);
+g.showGraph()
 
-bst.insert(5);
-bst.insert(1);
-bst.insert(2);
-bst.insert(7);
-bst.insert(3);
-bst.insert(4);
-bst.insert(6);
-bst.insert(7);
-bst.insert(8);
-
-bst.remove(5)
-
-console.log(bst.find(4))
+g.bfs(0);
