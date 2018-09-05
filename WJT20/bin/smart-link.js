@@ -17,6 +17,8 @@ function readAllFiles() {
         if (ignore.indexOf(item) < 0 && item.indexOf('.md') > 0) {
             const filePath = srcPath + '/' + item;
 
+            console.log(filePath);
+
             // isFile: 是否文件
             // isDirectory: 是否目录
             if (fs.statSync(filePath).isFile()) {
