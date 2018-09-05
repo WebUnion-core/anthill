@@ -1,8 +1,6 @@
 
 # Android第一行代码读记——UI控件与布局(二) #
 
-## 目录 ##
-
 ## LinearLayout ##
 
 LinearLayout 即线性布局，是一种非常常用的布局，它会将它所包含的控件在线性方向上依次排列。LinearLayout 的`android:orientation`属性指定了排列方向是 vertical(竖直) 还是 horizontal(水平) 的，一个简单的 LinearLayout 布局代码如下:
@@ -13,7 +11,7 @@ LinearLayout 即线性布局，是一种非常常用的布局，它会将它所�
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-    
+
     <TextView
         android:id="@+id/text_view1"
         android:layout_width="match_parent"
@@ -25,13 +23,13 @@ LinearLayout 即线性布局，是一种非常常用的布局，它会将它所�
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Text view 2." />
-    
+
     <TextView
         android:id="@+id/text_view3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Text view 3." />
-    
+
 </LinearLayout>
 ```
 
@@ -53,7 +51,7 @@ LinearLayout 还有一个重要的属性——`android:layout_weight`，这个�
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="horizontal" >
-    
+
     <Button
         android:id="@+id/button1"
         android:layout_width="0dp"
@@ -69,7 +67,7 @@ LinearLayout 还有一个重要的属性——`android:layout_weight`，这个�
         android:layout_weight="1"
         android:background="#41c134"
         android:text="" />
-    
+
 </LinearLayout>
 ```
 
