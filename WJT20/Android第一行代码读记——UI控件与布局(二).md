@@ -1,7 +1,14 @@
 
 # Android第一行代码读记——UI控件与布局(二) #
 
-## LinearLayout ##
+## 目录 ##
+
+1. [LinearLayout](#href1)
+2. [RelativeLayout](#href2)
+3. [FrameLayout](#href3)
+4. [百分比布局](#href4)
+
+## <a name="href1">LinearLayout</a> ##
 
 LinearLayout 即线性布局，是一种非常常用的布局，它会将它所包含的控件在线性方向上依次排列。LinearLayout 的`android:orientation`属性指定了排列方向是 vertical(竖直) 还是 horizontal(水平) 的，一个简单的 LinearLayout 布局代码如下:
 
@@ -35,7 +42,7 @@ LinearLayout 即线性布局，是一种非常常用的布局，它会将它所�
 
 效果如图:
 
-
+![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w85.png)
 
 注意，如果将`android:orientation`的值设为"horizontal"，此时就不能将宽度设为"match_parent"了，否则会导致第一个控件占据整个水平空间，其他空间会被挤出去。
 
@@ -73,12 +80,13 @@ LinearLayout 还有一个重要的属性——`android:layout_weight`，这个�
 
 效果如图:
 
+![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w86.png)
 
 第一个按钮宽度占据水平全宽的4/5，第二个按钮宽度占据水平全宽的1/5，为了避免其他因素的影响，这里将按钮中的文本设为空，宽度设为0dp。
 
 假如水平方向上有一个控件的`android:layout_width`设置为 wrap_content 且`android:layout_weight`不设置，而另一个控件则设置了`android:layout_weight`，这时设置了`android:layout_weight`的控件会自动占据水平方向上的剩余空间。
 
-## RelativeLayout ##
+## <a name="href2">RelativeLayout</a> ##
 
 RelativeLayout 即相对布局，它允许控件出现在布局内的任何位置，正因为 RelativeLayout 的高自由度，其属性也非常的多，一个简单的 RelativeLayout 布局如下:
 
@@ -87,10 +95,10 @@ RelativeLayout 即相对布局，它允许控件出现在布局内的任何位�
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
-    
+
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content" 
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#3456c1"
         android:layout_alignParentLeft="true"
@@ -110,7 +118,7 @@ RelativeLayout 即相对布局，它允许控件出现在布局内的任何位�
         android:layout_height="wrap_content"
         android:background="#892323"
         android:layout_centerInParent="true" />
-		
+
 </RelativeLayout>
 ```
 
@@ -122,8 +130,9 @@ RelativeLayout 即相对布局，它允许控件出现在布局内的任何位�
 4. `android:layout_alignParentRight`: 是否将控件定位到布局的右侧;
 5. `android:layout_centerInParent`: 是否将控件定位到布局的正中央。
 
-效果如下图: 
+效果如下图:
 
+![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w87.png)
 
 以上的几个属性是根据父布局来定位控件的，如果要让控件相对其他的控件进行定位，可以使用以下几个属性:
 
@@ -139,10 +148,10 @@ RelativeLayout 即相对布局，它允许控件出现在布局内的任何位�
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
-    
+
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content" 
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#3456c1"
         android:layout_above="@+id/button3"
@@ -155,31 +164,32 @@ RelativeLayout 即相对布局，它允许控件出现在布局内的任何位�
         android:background="#41c134"
         android:layout_below="@+id/button3"
         android:layout_toRightOf="@+id/button3" />
-    
+
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#892323"
         android:layout_centerInParent="true" />
-    
+
 </RelativeLayout>
 ```
 
 效果如下图:
 
+![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w88.png)
 
-## FrameLayout ##
+## <a name="href3">FrameLayout</a> ##
 
 FrameLayout 即帧布局，相比前两种布局，帧布局应用的场景比较少，帧布局会把所有控件摆放到布局的左上角，由于应用场景较少，所以此篇不加详述了。
 
-## 百分比布局 ##
+## <a name="href4">百分比布局</a> ##
 
 百分比布局允许直接指定控件在布局中所占的百分比，从而轻松地实现平分布局甚至是任意比例分割布局的效果。百分比布局实际上是 FrameLayout 和 RelativeLayout 的功能扩展(LinearLayout 已经具备按比例指定控件大小的能力)，其分为两种: PercentFrameLayout 和 PercentRelativeLayout。
 
 由于百分比布局不属于新增的布局，所以用法与前几种布局不同，百分比布局定义在 support 库中，在使用它之前，需要在项目的 build.gradle 中添加百分比布局库的依赖，添加完成后就能保证百分比布局在 Android 所有系统版本上的兼容性:
 
-因为涉及到 gradle，所以后续内容先暂停。
+AndroidStudio 中可以很方便地使用百分比布局，而 Eclipse 则比较麻烦，所以本篇不会详细说明百分比布局的用法。
 
 ---
 
