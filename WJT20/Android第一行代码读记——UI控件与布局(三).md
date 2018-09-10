@@ -3,11 +3,11 @@
 
 ## 目录 ##
 
-1. 控件和布局的继承结构
-2. 自定义布局
-3. 自定义控件
+1. [控件和布局的继承结构](#href1)
+2. [自定义布局](#href2)
+3. [自定义控件](#href3)
 
-## 控件和布局的继承结构 ##
+## <a name="href1">控件和布局的继承结构</a> ##
 
 Android 中的各种控件都是直接或间接继承自 View，所有的布局都是继承自 ViewGroup。
 
@@ -19,7 +19,7 @@ ViewGroup 是一种特殊的 View，它可以包含许多子 View 和子 ViewGro
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w89.png)
 
-## 自定义布局 ##
+## <a name="href2">自定义布局</a> ##
 
 为了演示自定义布局的使用，本篇以实现 IOS 上的顶部标题栏布局为例，首先新建一个 XML 布局文件，名为 title_bar.xml，内容如下:
 
@@ -95,7 +95,7 @@ public class MainActivity extends BaseActivity {
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w90.png)
 
-## 自定义控件 ##
+## <a name="href3">自定义控件</a> ##
 
 上一节将标题栏改造为自定义布局，最终成功在其他布局文件中导入，自定义控件的使用方法与自定义布局类似，这里以将上一节的标题栏改造为自定义控件为例，首先要创建一个 TitleBar 控件类，其内容如下:
 
