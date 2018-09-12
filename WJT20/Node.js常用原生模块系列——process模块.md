@@ -17,7 +17,7 @@
 
 - [Node.js的process模块](http://www.css88.com/archives/4548)
 
-- [Node.js v10.1.0 文档](http://nodejs.cn/api/fs.html)
+- [Node.js v10.1.0 文档](http://nodejs.cn/api/process.html)
 
 ## <a name="href2">介绍</a> ##
 
@@ -77,7 +77,7 @@ process.stdin 与 process.stdout 相反，它是用来控制标准流输入的�
     ```
 
 ## <a name="href6">其他方法</a> ##
-	
+
 1. `process.exit()`: 退出当前进程;
 
 2. `process.cwd()`: 返回当前工作目录路径。
@@ -85,7 +85,7 @@ process.stdin 与 process.stdout 相反，它是用来控制标准流输入的�
 ## <a name="href7">事件</a> ##
 
 ### <a name="href7-1">exit事件</a> ###
-	
+
 当退出进程时，exit事件会被触发，可以用 on 方法监听指定的事件，其第一个参数为事件名，第二个参数为事件触发时将执行的回调:
 
 ```js
@@ -94,9 +94,9 @@ process.on('exit', function () {
     console.log('Exit the process.');
 });
 ```
-	
+
 ### <a name="href7-2">uncaughtException事件</a> ###
-	
+
 当进程抛出一个未被捕获的错误时，uncaughtException 事件会被触发:
 
 ```js
@@ -105,7 +105,7 @@ process.on('uncaughtException', function (err) {
 	console.error(err.stack);
 });
 ```
-	
+
 ---
 
 ```
