@@ -34,7 +34,7 @@
 
 ## <a name="href2">介绍</a> ##
 
-fs(全称: file system)模块，是我们可以直接使用的几个 Node.js 模块之一，它提供了对文件的读取、写入、更名、删除、遍历目录、链接等 API。在脚本文件中可以使用 CommonJS 风格引入 fs 依赖，代码如: `var fs = require('fs');`
+fs(全称: file system)模块，是我们可以直接使用的几个 Node.js 模块之一，它提供了对文件的读取、写入、更名、删除、遍历目录、链接等 API。在脚本文件中可以使用 CommonJS 风格引入 fs 依赖，代码如: `const fs = require('fs')`
 
 ## <a name="href3">异步API</a> ##
 
@@ -296,7 +296,7 @@ fs.readFileSync(fileName[, options]);
 示例代码:  
 
 ```js
-var content = fs.readFileSync(
+const content = fs.readFileSync(
     __dirname + '/file/test.txt',
     'utf-8'
 );
@@ -354,7 +354,7 @@ fs.statSync(path);
 示例代码:  
 
 ```js
-var data = fs.statSync(__dirname + '/file');
+const data = fs.statSync(__dirname + '/file');
 ```
 
 ### <a name="href4-14">移动/重命名文件或目录</a> ###
@@ -423,7 +423,7 @@ fs.existsSync(path);
 示例代码:  
 
 ```js
-var ifExist = fs.existsSync(__dirname + '/file');
+const ifExist = fs.existsSync(__dirname + '/file');
 ```
 
 ### <a name="href4-18">删除空目录</a> ###
