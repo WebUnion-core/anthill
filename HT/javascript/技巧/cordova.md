@@ -1,0 +1,1 @@
+打包的页面html里面要引入文件 cordova.js
