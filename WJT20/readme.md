@@ -69,13 +69,9 @@
 
 - ID:2 > [webpack常规配置总结](./webpack常规配置总结.md)
 
-- ID:50 > [webpack插件篇](./webpack插件篇.md)
-
 - ID:67 > [webpack配置附加记录(一)](./webpack配置附加记录(一).md)
 
 ## ES6系列 ##
-
-- ID:3 > [Babel配置笔记](./Babel配置笔记.md)
 
 - ID:4 > [ES6常用知识点总结](./ES6常用知识点总结.md)
 
@@ -149,15 +145,11 @@
 
 ## 前端工具/知识 ##
 
-- ID:68 > [初识RequireJS](./初识RequireJS.md)
-
 - ID:28 > [Web实用代码段集合(一)](./Web实用代码段集合(一).md)
 
 - ID:15 > [Web数据存储知识点总结](./Web数据存储知识点总结.md)
 
 - ID:16 > [JSONP跨域分析](./JSONP跨域分析.md)
-
-- ID:69 > [初探grunt](./初探grunt.md)
 
 - ID:84 > [前端面试刷题总结(一)](./前端面试刷题总结(一).md)
 
