@@ -3,22 +3,22 @@
 
 ## 目录 ##
 
-1. 参考链接
-2. 介绍
-3. os.constants
-4. 系统参数相关
-5. 环境相关
-6. 其他
+1. [参考链接](#href1)
+2. [介绍](#href2)
+3. [os.constants](#href3)
+4. [系统参数相关](#href4)
+5. [环境相关](#href5)
+6. [其他](#href6)
 
-## 参考链接 ##
+## <a name="href1">参考链接</a> ##
 
 - [Node.js v10.8.0 文档](http://nodejs.cn/api/os.html)
 
-## 介绍 ##
+## <a name="href2">介绍</a> ##
 
 os 模块提供了一些操作系统相关的实用方法，通过`const os = require('os')`引入模块。
 
-## os.constants ##
+## <a name="href3">os.constants</a> ##
 
 `os.constants`属性会返回一个包含错误码(errno)、处理信号(signals)等通用的操作系统特定常量的对象。
 
@@ -29,7 +29,7 @@ os 模块提供了一些操作系统相关的实用方法，通过`const os = re
 
 信号常量的描述: [http://nodejs.cn/api/os.html#os_signal_constants](http://nodejs.cn/api/os.html#os_signal_constants)。
 
-## 系统参数相关 ##
+## <a name="href4">系统参数相关</a> ##
 
 1. `os.release()`: 返回操作系统的发行版本号;
 
@@ -45,7 +45,7 @@ os 模块提供了一些操作系统相关的实用方法，通过`const os = re
 
 7. `os.totalmem()`: 所有系统内存的字节数。
 
-## 环境相关 ##
+## <a name="href5">环境相关</a> ##
 
 1. `os.freemem()`: 空闲系统内存的字节数;
 
@@ -53,7 +53,7 @@ os 模块提供了一些操作系统相关的实用方法，通过`const os = re
 
 3. `os.platform()`: 获取指定 Node.js 编译时的操作系统平台。返回值有: aix、darwin、freebsd、linux、openbsd、sunos、win32。
 
-## 其他 ##
+## <a name="href6">其他</a> ##
 
 1. `os.loadavg()`: 返回包含1, 5, 15分钟平均负载的数组。平均负载是系统活动的测量，由操作系统计算得出，表达为一个分数。一般来说，平均负载应该理想地比系统的逻辑 CPU 的数目要少。平均负载是 UNIX 相关的概念，在 Windows 平台上没有;
 
