@@ -21,7 +21,7 @@
 
 ## <a name="href2">介绍</a> ##
 
-process 模块用来与当前进程互动，它提供当前 Node.js 进程的有关信息，以及控制当前 Node.js 进程，process 是一个全局模块，不需要使用 require 便可使用。
+process 模块用来与当前进程互动，它提供当前 Node.js 进程的有关信息，以及控制当前 Node.js 进程，process 是一个全局模块，不需要使用 require。
 
 ## <a name="href3">进程信息</a> ##
 

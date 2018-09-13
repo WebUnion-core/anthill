@@ -125,11 +125,13 @@
 
 - ID:20 > [express记录](./express记录.md)
 
-- ID:31 > [Node.js常用原生模块系列——fs模块](./Node.js常用原生模块系列——fs模块.md)
-
 - ID:87 > [Node.js实用技巧笔记](./Node.js实用技巧笔记.md)
 
+- ID:31 > [Node.js常用原生模块系列——fs模块](./Node.js常用原生模块系列——fs模块.md)
+
 - ID:89 > [Node.js常用原生模块系列——process模块](./Node.js常用原生模块系列——process模块.md)
+
+- ID:105 > [Node.js常用原生模块系列——os模块](./Node.js常用原生模块系列——os模块.md)
 
 ## jQuery系列 ##
 
