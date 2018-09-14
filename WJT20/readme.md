@@ -231,7 +231,9 @@
 
 ## React ##
 
-- ID:29 > [React架构实践记——模块说明](./React架构实践记——模块说明.md);
+- ID:29 > [React架构实践记——模块说明](./React架构实践记——模块说明.md)
+
+- ID:50 > [React架构实践记——webpack配置部分](./React架构实践记——webpack配置部分.md)
 
 ## 高级编程技巧 ##
 
