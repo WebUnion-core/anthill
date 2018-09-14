@@ -129,6 +129,8 @@
 
 - ID:105 > [Node.js常用原生模块系列——os模块](./Node.js常用原生模块系列——os模块.md)
 
+- ID:106 > [Node.js常用原生模块系列——path模块](./Node.js常用原生模块系列——path模块.md)
+
 ## jQuery系列 ##
 
 - ID:14 > [jQuery常用知识点总结](./jQuery常用知识点总结.md)
