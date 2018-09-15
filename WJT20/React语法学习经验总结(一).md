@@ -3,11 +3,11 @@
 
 ## 目录 ##
 
-1. 最简单的组件
-2. HTML属性
-3. 动态修改DOM
+1. [最简单的组件](#href1)
+2. [HTML属性](#href2)
+3. [动态修改DOM](#href3)
 
-## 最简单的组件 ##
+## <a name="href1">最简单的组件</a> ##
 
 React 认为组件才是王道，而组件是和模板紧密关联的，为了把组件和模板关联起来，便引入了 JSX 语法，React 组件以".jsx"为扩展名，实际上每个组件都是一个独立的类，从 React.Component 继承属性和方法。
 
@@ -29,7 +29,7 @@ export default class Header extends React.Component {
 
 以上代码中，定义了一个 Header 类，这个类继承了 React.Component 的属性和方法，便成为了一个 React 组件。每个 React 组件都需要重写 render 方法，这个方法的作用是渲染组件内容，这里要注意，render 中返回的内容要使用 JSX 编写。constructor 并非必需，只有涉及到 props 的时候才需要加上。
 
-## HTML属性 ##
+## <a name="href2">HTML属性</a> ##
 
 除了 for(被 htmlFor 代替) 和 class(被 className 代替) 等特殊属性，绝大部分 HTML 属性都可以在 JSX 中使用，使用方法如下:
 
@@ -68,7 +68,7 @@ render () {
 
 style 之后有两对大括号，第一对大括号表示在 JSX 语法中嵌入 JS 代码，所以第二对大括号其实是一个 JS 对象，fontSize 实际上就是 font-size，只不过 JS 对象中的键名不允许使用"-"，所以需要用驼峰命名法表示。
 
-## 动态修改DOM ##
+## <a name="href3">动态修改DOM</a> ##
 
 react 中不建议手动修改 DOM，像修改 innerHTML、appendChild 等等操作还是少用为好。原生 JS 可以通过改变一个 DOM 节点的 innerHTML 属性的值来重置 DOM 节点的内容，react 不建议使用 innerHTML，但是可以使用替代方法——dangerouslySetInnerHTML，具体用法如下:
 
