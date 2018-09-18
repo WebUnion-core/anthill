@@ -62,3 +62,7 @@ document.addEventListener("jpush.openNotification", onOpenNotification, false);
 
 需要安装TOAST插件
 cordova plugin add cordova-plugin-x-toast
+
+## 关于微信插件 
+
+需要用2.0.0版本，否则打包不成功
