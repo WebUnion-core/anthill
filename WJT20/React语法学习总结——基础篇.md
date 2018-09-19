@@ -1,11 +1,13 @@
 
-# React语法学习经验总结(一)——基础篇 #
+# React语法学习总结——基础篇 #
 
 ## 目录 ##
 
 1. [最简单的组件](#href1)
 2. [HTML属性](#href2)
-3. [动态修改DOM](#href3)
+3. [DOM操作](#href3)
+    1. [获取DOM节点](#href3-1)
+    2. [动态修改DOM](#href3-2)
 
 ## <a name="href1">最简单的组件</a> ##
 
@@ -68,21 +70,42 @@ render () {
 
 style 之后有两对大括号，第一对大括号表示在 JSX 语法中嵌入 JS 代码，所以第二对大括号其实是一个 JS 对象，fontSize 实际上就是 font-size，只不过 JS 对象中的键名不允许使用"-"，所以需要用驼峰命名法表示。
 
-## <a name="href3">动态修改DOM</a> ##
+## <a name="href3">DOM操作</a> ##
 
-react 中不建议手动修改 DOM，像修改 innerHTML、appendChild 等等操作还是少用为好。原生 JS 可以通过改变一个 DOM 节点的 innerHTML 属性的值来重置 DOM 节点的内容，react 不建议使用 innerHTML，但是可以使用替代方法——dangerouslySetInnerHTML，具体用法如下:
+### <a name="href3-1">获取DOM节点</a> ###
+
+JavaScript 中获取 DOM 节点有多种方式，在 react 中获取 DOM 节点，应使用 ref，用法与根据 id 获取 DOM 节点差不多:
+
+```js
+...
+componentDidMount () {
+    console.log(this.refs.titleEl.innerText);
+}
+
+render () {
+    return (
+        <main>
+            <h1 ref="titleEl">HEAD TITLE</h1>
+        </main>
+    )
+}
+```
+
+### <a name="href3-2">动态修改DOM</a> ###
+
+react 中不建议手动修改 DOM，像修改 innerHTML、appendChild 等等操作还是少用为好。原生 JavaScript 可以通过改变一个 DOM 节点的 innerHTML 属性的值来重置 DOM 节点的内容，react 不建议使用 innerHTML，但是可以使用替代方法——dangerouslySetInnerHTML，具体用法如下:
 
 ```js
 ...
 render () {
-    return <p dangerouslySetInnerHTML={{ __html: 'text' }} />
+    return <p dangerouslySetInnerHTML={{ __html: '<strong>text</strong>' }} />
 }
 ```
 
 ---
 
 ```
-ARTICLE_ID : 68
+ARTICLE_ID : 69
 POST_DATE : 2018/09/14
 AUTHER : WJT20
 ```
