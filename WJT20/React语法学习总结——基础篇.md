@@ -1,5 +1,5 @@
 
-# React语法学习经验总结(一)——基础篇 #
+# React语法学习总结——基础篇 #
 
 ## 目录 ##
 
@@ -82,7 +82,7 @@ render () {
 ---
 
 ```
-ARTICLE_ID : 68
+ARTICLE_ID : 69
 POST_DATE : 2018/09/14
 AUTHER : WJT20
 ```
