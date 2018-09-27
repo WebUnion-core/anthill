@@ -1,5 +1,5 @@
 
-# Android第一行代码读记——广播(一) #
+# Android第一行代码读记——广播 #
 
 ## 目录 ##
 
@@ -10,6 +10,7 @@
 3. [发送自定义广播](#href3)
 	1. [发送标准广播](#href3-3)
 	2. [发送有序广播](#href3-4)
+4. [本地广播](#href4)
 
 ## <a name="href1">广播机制简介</a> ##
 
@@ -28,7 +29,7 @@ Android 内置了很多系统级别的广播，比如手机开机完成、电池
 
 ### <a name="href2-1">动态注册监听网络变化</a> ###
 
-要实现动态注册，首先要创建一个广播接收器(本质是创建一个继承自 BroadcastReceiver 的类)，然后重写父类的 onReceive() 方法即可，onReceive() 方法会在接收到广播时调用，可以在其中编写具体逻辑。
+要实现动态注册，首先要创建一个广播接收器(本质是创建一个继承自 BroadcastReceiver 的类)，然后重写父类的`onReceive()`方法即可，`onReceive()`方法会在接收到广播时调用，可以在其中编写具体逻辑。
 
 一个简单的广播接收器(以接收系统发送的网络状况变化广播为例)如下:
 
@@ -82,7 +83,7 @@ public class MainActivity extends BaseActivity {
 由于 Eclipse 上找不到好的静态注册广播的实例，后文的发送自定义广播小节再举出具体的静态注册广播实例。先来说明下静态注册广播的步骤:
 
 1. 创建一个继承自 BroadcastReceiver 类的广播接收器类;
-2. 在广播接收器类中复写 BroadcastReceiver 类的 onReceive() 方法;
+2. 在广播接收器类中复写 BroadcastReceiver 类的`onReceive()`方法;
 3. AndroidManifest.xml 中添加静态注册广播的配置。
 
 后文将会具体讲述静态注册广播的全过程。
@@ -204,7 +205,7 @@ public class MainActivity extends BaseActivity {
 
 ### <a name="href3-4">发送有序广播</a> ###
 
-发送有序广播很简单，只需要将 sendBroadcast() 方法改为 sendOrderedBroadcast() 方法即可，sendOrderedBroadcast() 方法接收两个参数，第一个参数是 Intent 实例对象，第二个参数则是表征权限的字符串(通常传入 null 即可):
+发送有序广播很简单，只需要将`sendBroadcast()`方法改为`sendOrderedBroadcast()`方法即可，`sendOrderedBroadcast()`方法接收两个参数，第一个参数是 Intent 实例对象，第二个参数则是表征权限的字符串(通常传入 null 即可):
 
 ```java
 // 其他代码省略
@@ -229,6 +230,7 @@ public class MainActivity extends BaseActivity {
 广播接收器接收有序广播是有先后顺序的，如何证明这一点？首先，新增一个广播接收器(AnotherBroadcastReceiver.java):
 
 ```java
+/* AnotherBroadcastReceiver.java */
 package com.example.tester;
 
 import android.content.BroadcastReceiver;
@@ -304,7 +306,70 @@ public class StandardBroadcastReceiver extends BroadcastReceiver {
 }
 ```
 
-拦截广播的传输，只需要调用 abortBroadcast() 方法即可。最后，启动程序后点击按钮，可以发现只弹出了 StandardBroadcastReceiver 发出的 Toast 消息。
+拦截广播的传输，只需要调用`abortBroadcast()`方法即可。最后，启动程序后点击按钮，可以发现只弹出了 StandardBroadcastReceiver 发出的 Toast 消息。
+
+## <a name="href4">本地广播</a> ##
+
+从本小节开始，Android 开发 IDE 由 Eclipse 改为了 Android Studio，但主要代码逻辑没有变化。
+
+标准广播和有序广播属于系统全局广播，其特点是发出的广播可以被其他任何应用接收到，这往往会导致不少安全问题，为了解决广播的安全性问题，Android 引入了一套本地广播机制，本地广播只能在当前应用程序内部传递，从而保证了广播的安全性。本地广播的用法并不复杂，主要是利用 LocalBroadcastManager 类，本地广播的实例代码如下:
+
+```java
+/* MainActivity.java */
+package com.example.wjt20.tester;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.support.v4.content.LocalBroadcastManager;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class MainActivity extends BaseActivity {
+    private IntentFilter intentFilter;
+    private LocalReceiver localReceiver;
+    private LocalBroadcastManager localBroadcastManager;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        localBroadcastManager = LocalBroadcastManager.getInstance(this); // 创建LocalBroadcastManager实例
+        Button btn = (Button) findViewById(R.id.button);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent("com.example.wjt20.tester.LOCAL_BROADCAST");
+                localBroadcastManager.sendBroadcast(intent); // 发送广播
+            }
+        });
+
+        intentFilter = new IntentFilter();
+        intentFilter.addAction("com.example.wjt20.tester.LOCAL_BROADCAST");
+
+        localReceiver = new LocalReceiver();
+        localBroadcastManager.registerReceiver(localReceiver, intentFilter); // 注册广播接收器
+    }
+
+    @Override
+    protected void onDestroy () {
+        super.onDestroy();
+        localBroadcastManager.unregisterReceiver(localReceiver); // 注销广播接收器
+    }
+
+	// LocalReceiver内部处理接收到广播的具体逻辑
+    class LocalReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive (Context context, Intent intent) {
+            Toast.makeText(context, "Received local broadcast", Toast.LENGTH_SHORT).show();
+        }
+    }
+}
+```
 
 ---
 
