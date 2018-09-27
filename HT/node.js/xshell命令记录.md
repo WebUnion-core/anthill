@@ -19,7 +19,11 @@
 
 ## 解压相关命令
 
- tar -xvf   node-v6.10.0-linux-x64.tar.xz
+tar -xvf   node-v6.10.0-linux-x64.tar.xz
+
+## 查看进程
+
+ps -aux
 
 **压缩zip文件**
 zip -r xxx.zip ./*
