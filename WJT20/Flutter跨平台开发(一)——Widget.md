@@ -89,6 +89,8 @@ export default class MyApp extends React.component {
 
 你会发现两者有许多相似的地方，StatelessWidget 相当于 React.Component，主程序继承后都能使用框架的api，build 则相当于 render，都是 return 出一个UI单元来渲染界面。
 
+补充: 启动程序后可以看到页面右上角有一个"DEBUG"的标签，如果想要将其隐藏，只要在 MaterialApp 内部添加`debugShowCheckedModeBanner: false`这一句即可。
+
 ### <a name="href4-2">主程序中的Widget</a> ###
 
 需要注意，主程序 build 中返回的必须是一个 MaterialApp 实例对象，这个实例对象的 home 属性设置内容是必需的，而且好像还得是一个 Scaffold Widget 实例，以上代码中，Scaffold 实例内部定义了 appBar 和 body 两个属性:
