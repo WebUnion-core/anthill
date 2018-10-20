@@ -3,11 +3,18 @@
 
 ## 目录 ##
 
-## SQLite简介 ##
+1. [SQLite简介](#href1)
+2. [创建数据库](#href2)
+3. [添加数据(增)](#href3)
+4. [删除数据(删)](#href4)
+5. [更新数据(改)](#href5)
+6. [查询数据(查)](#href6)
+
+## <a name="href1">SQLite简介</a> ##
 
 本篇主要记录 Android 内置的数据库——SQLite 的用法，SQLite 是一款轻量级的关系型数据库，它的运算速度非常快，占用资源很少，通常需要几百 KB 的内存就足够了，因而很适合在移动设备上使用。SQLite 不仅支持标准的 SQL 语法，还遵循了数据库的 ACID 事务。上篇讲到的文件存储和 SharedPreferences 存储只适用于保存一些简单的数据和键值对，当需要存储大量复杂的关系型数据的时候，SQLite 无疑是最佳选择。
 
-## 创建数据库 ##
+## <a name="href2">创建数据库</a> ##
 
 Android 专门提供了一个 SQLiteOpenHelper 帮助类，借助这个类可以非常简单地对数据库进行创建和升级，SQLiteOpenHelper 是一个抽象类，所以在使用它之前需要创建一个自己的帮助类去继承它，SQLiteOpenHelper 中有两个抽象方法: onCreate() 和 onUpgrade()，通常在帮助类中重写这两个方法，然后分别在这两个方法中去实现创建、升级数据库的逻辑。
 
@@ -83,7 +90,6 @@ onCreate() 中还调用了 execSQL() 方法去执行检表语句，之后弹出�
 
 ```java
 package com.example.wjt20.tester;
-
 import android.os.Bundle;
 
 public class MainActivity extends BaseActivity {
@@ -97,11 +103,11 @@ public class MainActivity extends BaseActivity {
         dbHelper.getWritableDatabase();
     }
 }
-``` 
+```
 
 生成 dbHelper 实例对象后，调用 getWritableDatabase() 方法，第一次进入页面时先检查 Author.db 数据库是否已创建，如未创建，则会自动创建数据库并调用 MyDatabaseHelper 中的 onCreate() 方法，可以看到 Toast 消息; 下次进入页面时数据库已创建，此时不再弹出 Toast。
 
-## 升级数据库 ##
+## <a name="href3">升级数据库</a> ##
 
 MyDatabaseHelper 中有一个 onUpgrade() 方法，这个方法用于对数据库进行升级，这个方法在整个数据库的管理工作中起到非常重要的作用。
 
@@ -180,7 +186,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 重启程序，可以看到 Toast 又弹了出来，证明数据库更新成功了。
 
-## 添加数据(增) ##
+## <a name="href4">添加数据(增)</a> ##
 
 最基本的数据库操作就是 CRUD，即"增删改查"，操作 SQLite 也是围绕这四种基本操作展开，首先从添加数据开始吧，代码如下:
 
@@ -203,6 +209,80 @@ protected void onCreate(Bundle savedInstanceState) {
 	values.clear();
 }
 ```
+
+以上代码先获取到 SQLiteDatabase 对象，然后使用 ContentValues 对数据进行组装，组装完毕后，调用 insert() 方法将数据存入表中。
+
+## <a name="href5">删除数据(删)</a> ##
+
+删除数据利用的是 SQLiteDatabase 提供的 delete() 方法，删除数据的示例代码如下:
+
+```java
+...
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+	super.onCreate(savedInstanceState);
+	setContentView(R.layout.activity_main);
+	dbHelper = new MyDatabaseHelper(this, "Author.db", null, 2);
+	SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+	...
+
+	db.delete("Author", "age > ?", new String[]{ "20" }); // 删除年龄大于20的"老油条"
+}
+```
+
+delete() 方法的第一个参数是表名，第二个和第三个参数则是用于筛选数据。
+
+## <a name="href6">更新数据(改)</a> ##
+
+更新数据利用的是 SQLiteDatabase 提供的 update() 方法，更新数据的示例代码如下:
+
+```java
+...
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+	super.onCreate(savedInstanceState);
+	setContentView(R.layout.activity_main);
+	dbHelper = new MyDatabaseHelper(this, "Author.db", null, 2);
+	SQLiteDatabase db = dbHelper.getWritableDatabase();
+	ContentValues values = new ContentValues();
+
+	...
+
+	values.put("score", 60.0);
+	db.update("Author", values, "name = ?", new String[]{ "WJT20" });
+}
+```
+
+首先通过 ContentValues 设置好修改后的值，然后调用 update() 方法来更新数据，update() 的第一个参数是表名，第二个参数是 ContentValues 对象，第三和第四个参数用于筛选数据。
+
+## <a name="href7">查询数据(查)</a> ##
+
+查询数据利用的是 SQLiteDatabase 提供的 query() 方法，调用 query() 方法后会返回一个 Cursor 对象，查询到的所有数据就包含在 Cursor 对象中，查询数据的示例代码如下:
+
+```java
+...
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+	super.onCreate(savedInstanceState);
+	setContentView(R.layout.activity_main);
+	dbHelper = new MyDatabaseHelper(this, "Author.db", null, 2);
+	SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+	...
+
+	Cursor cursor = db.query("Author", null, null, null,null,null,null);
+	if (cursor.moveToFirst()) {
+		do {
+			// 遍历Cursor对象，取出数据并打印
+			String name = cursor.getString(cursor.getColumnIndex("name"));
+			Log.i("AUTHOR_TABLE", "Name: " + name);
+		} while (cursor.moveToNext());
+	}
+}
+```
+
+query() 接收的参数达7个之多，这7个参数的含义为: 表名、列名、where 的约束条件、where 中的占位符提供的值、group by 的列、group by 后的进一步约束、查询结果的排序方式。
 
 ---
 
