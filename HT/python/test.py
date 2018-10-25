@@ -1,10 +1,5 @@
-class Student():
-    def __init__(self, name):
-        self.__name = name
-    
-    def getName(self):
-        print(self.__name)
+i = 1;
 
-s1 = Student('hongtao')
-s1._Student__name = '123123'
-s1.getName() # hongtao
+while i< 10:
+    i++
+    print(i)
