@@ -108,11 +108,39 @@ r = filter(lambda x:x,list_x)
 print(list(r))
 
 # 装饰器
+# 对修改是封闭的 读拓展是开放的
 print("=========装饰器=========")
 
 import time
 
-def f1():
-    print('time',time.time())
+# *args 任意参数
+def decorator(fun):
+    def wraaper(*args):
+        print("decorator",time.time())
+        fun(*args)
+    return wraaper
 
-f1()
+## 带参数
+
+@decorator
+def f1(name):
+    print("this is a funtion "+name)
+
+f1("asdasd")
+
+print("=========**kw=========")
+# *args 任意参数
+def decorator2(fun):
+    def wraaper(*args,**kw):
+        print("decorator",time.time())
+        fun(*args,**kw)
+    return wraaper
+
+## 带参数
+
+@decorator2
+def f2(name,**kw):
+    print("this is a funtion "+name)
+    print(kw)
+
+f2("asdasd",c = 'C',d = '12121212')
