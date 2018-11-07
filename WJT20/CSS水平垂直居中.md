@@ -7,10 +7,10 @@
 2. [文本居中](#href2)
     1. [水平居中](#href2-1)
     2. [垂直居中](#href2-2)
-3. [元素居中](#href3)
-    1. [水平居中](#href3-3)
-    2. [垂直居中](#href3-4)
-    3. [垂直水平居中](#href3-5)
+3. [块元素居中](#href3)
+    1. [margin:auto水平居中](#href3-3)
+    2. [margin+position居中法](#href3-4)
+    3. [transform居中法](#href3-5)
 4. [其他居中方法](#href4)
     1. [flexbox](#href4-6)
     2. [表格布局法](#href4-7)
@@ -41,86 +41,70 @@
 
 注意，这种方法在移动设备上可能无法实现居中效果，原因不明。
 
-## <a name="href3">元素居中</a> ##
+## <a name="href3">块元素居中</a> ##
 
-由于内联元素的宽度会自行覆盖父标签的宽度大小，所以无法控制内联元素居中，所以讨论的是块级元素的居中情况。
-
-### <a name="href3-3">水平居中</a> ###
+### <a name="href3-3">margin:auto水平居中</a> ###
 
 将元素的 width 值设置为固定值，然后将该元素的左右 margin 值设置为 auto，即可将元素设置为相对父元素水平居中。
 
 ```css
 .container {
+    display: block;
     width: 500px;
     height: 500px;
     margin: 0 auto;
 }
 ```
 
-### <a name="href3-4">垂直居中</a> ###
+### <a name="href3-4">margin+position居中法</a> ###
 
-要将元素设置为垂直居中，首先要将元素设置为绝对定位并将 top 和 bottom 都设为0，并将该元素的上下 margin 值设置为 auto 即可。
+这种方法针对的是宽高能够确定的元素，有两种实现方案。
 
-```css
-.container {
-    width: 500px;
-    height: 500px;
-    margin: auto 0;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-}
-```
-
-### <a name="href3-5">垂直水平居中</a> ###
-
-1. 宽高不确定居中法
-
-    如果元素的宽高未知或会自动变化，先将元素设置为绝对定位，然后将 margin 值设为 auto，并将 top、left、bottom 和 right 都设为0即可。
+1. 先将元素设置为绝对定位，然后将 margin 值设为 auto，并将 top、left、bottom 和 right 都设为0即可。
 
     ```css
     .container {
-        width: 30%;
-        height: 30%;
-        margin: auto;
         position: absolute;
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
+
+        width: 30%;
+        height: 30%;
+        margin: auto;
     }
     ```
 
-2. 宽高确定居中法
-
-    如果元素的宽高固定，将元素设为绝对定位后，将 top 和 left 都设置为 50%，然后将 margin-top 设为高度的一半的负值，将 margin-left 设为宽度的一半的负值。
+2. 将元素设为绝对定位后，将 top 和 left 都设置为 50%，然后将 margin-top 设为高度的一半的负值，margin-left 设为宽度的一半的负值:
 
     ```css
     .container {
-        width: 500px;
-        height: 500px;
         position: absolute;
         top: 50%;
         left: 50%;
+
+        width: 500px;
+        height: 500px;
         margin-top: -250px;
         margin-left: -250px;
     }
     ```
 
-3. transform 居中法
+### <a name="href3-5">transform居中法</a> ###
 
-    设置 transform 属性也可以实现水平垂直居中，但低版本浏览器(主要 IE8 及 IE8-)不兼容。使用 transform 法同样不需要确定宽高。
+设置 transform 属性也可以实现水平垂直居中，但低版本浏览器(IE8及IE8-等)不兼容。使用 transform 法同样不需要确定宽高。
 
-    ```css
-    .container {
-        width: 30%;
-        height: 30%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    ```
+```css
+.container {
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+```
 
 ## <a name="href4">其他居中方法</a> ##
 
