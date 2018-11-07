@@ -26,11 +26,11 @@
 
 ### <a name="href2-1">水平居中</a> ###
 
-使文本相对父标签水平居中使用语句：`text-align: center;`。
+使文本相对父元素水平居中使用语句：`text-align: center;`。
 
 ### <a name="href2-2">垂直居中</a> ###
 
-使单行文本垂直居中，需要将父标签的 height 属性值和 line-height 值设为相同的固定值，使用语句：
+使单行文本垂直居中，需要将父元素的 height 属性值和 line-height 值设为相同的固定值，使用语句：
 
 ```css
 .container {
