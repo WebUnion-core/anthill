@@ -3,15 +3,20 @@
 
 ## 目录 ##
 
-1. [介绍与环境配置](#href1)
-2. [数据类型](#href2)
-    1. [变量声明](#href2-1)
-    2. [模板字符串](#href2-2)
-    3. [类型推论](#href2-3)
-    4. [联合类型](#href2-4)
-3. [接口](#href3)
+1. [参考链接](#href1)
+2. [介绍与环境配置](#href2)
+3. [数据类型](#href3)
+    1. [变量声明](#href3-1)
+    2. [模板字符串](#href3-2)
+    3. [类型推论](#href3-3)
+    4. [联合类型](#href3-4)
+4. [接口](#href4)
 
-## <a name="href1">介绍与环境配置</a> ##
+## <a name="href1">参考链接</a> ##
+
+- [TypeScript Handbook（中文版）](http://wiki.jikexueyuan.com/project/typescript/Basic-Types.html)
+
+## <a name="href2">介绍与环境配置</a> ##
 
 TypeScript 是 JavaScript 的一个超集，主要提供了类型系统和对 ES6 的支持，它由 Microsoft 开发，代码开源于 GitHub 上。近几年，TypeScript 发展非常迅猛，Google 更是将其应用到 Angular2 的开发中。
 
@@ -19,9 +24,9 @@ TypeScript 是 JavaScript 的一个超集，主要提供了类型系统和对 ES
 
 安装完模块后，我们就可以使用 TypeScript 语法编写自己的脚本文件了，编写完成后，要把文件后缀名设为".ts"，例如"index.ts"，然后在命令行下输入类似`tsc index.ts`的语句即可编译指定的".ts"文件为".js"文件，执行这个文件就能看到执行结果。
 
-## <a name="href2">数据类型</a> ##
+## <a name="href3">数据类型</a> ##
 
-### <a name="href2-1">变量声明</a> ###
+### <a name="href3-1">变量声明</a> ###
 
 TypeScript 中，声明变量的同时经常会附加声明变量的类型，数据类型分为五种原始(基本)数据类型和对象类型，变量声明使用 let 关键字，基本类型的变量声明如下:
 
@@ -43,7 +48,7 @@ anyVal = 100;
 console.log(anyVal);
 ```
 
-### <a name="href2-2">模板字符串</a> ###
+### <a name="href3-2">模板字符串</a> ###
 
 TypeScript 可以使用模板字符串，用法与ES6基本一致，模板字符串形式为一对"\`"符号包含内容，内容中的"${xxx}"会被识别为代码，执行后再加载指定位置。
 
@@ -63,7 +68,7 @@ nullVal: ${nullVal}.`;
 console.log(modleStr);
 ```
 
-### <a name="href2-3">类型推论</a> ###
+### <a name="href3-3">类型推论</a> ###
 
 先声明变量，再给变量赋值，这种做法是允许的:
 
@@ -75,7 +80,9 @@ console.log(noTypeVal.toLowerCase());
 
 以上代码中少了声明变量类型的操作，这种做法不会报错，这是因为 TypeScript 会在没有明确的指定类型的时候推测出一个类型，这个过程被称为类型推论。如果定义的时候没有赋值，不管之后有没有赋值，都会被推断成 any 类型而完全不被类型检查。
 
-### <a name="href2-4">联合类型</a> ###
+但是，并不推荐使用这种不事先声明类型的做法，先声明类型再使用正是 TypeScript 的特色，这种做法反而舍弃了这种特色。
+
+### <a name="href3-4">联合类型</a> ###
 
 联合类型表示取值可以为多种类型中的一种，联合类型使用"|"分隔每个类型。当 TypeScript 不确定一个联合类型的变量到底是哪个类型的时候，我们只能访问此联合类型的所有类型里共有的属性或方法。
 
@@ -89,9 +96,11 @@ unionTypeVal = 1;
 console.log(unionTypeVal);
 ```
 
-## <a name="href3">接口</a> ##
+## <a name="href4">接口</a> ##
 
 接口是对行为的抽象，而具体如何行动需要由类去实现，接口一般首字母大写，赋值的时候，变量的形状必须和接口的形状保持一致。
+
+接口其实就是对 JavaScript Object 内部的数据进行了一次类型约束。
 
 ```ts
 interface Animal {
@@ -106,6 +115,7 @@ let cat: Animal = {
     id: 1,
     info: 'Has different color'
 };
+
 let dog: Animal = {
     type: 'Dog',
     id: 2
