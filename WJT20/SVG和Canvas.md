@@ -25,11 +25,11 @@ SVG指可伸缩矢量图形(Scalable Vector Graphics)，可用来定义用于网
 
 ## <a name="href2">预定义形状元素</a> ##
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w1.png)
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w2.png)
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w3.png)
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w4.png)
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w5.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w1.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w2.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w3.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w4.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w5.png)
 
 ## <a name="href3">绘制时钟</a> ##
 
@@ -48,7 +48,7 @@ svg文件代码:
 
 效果图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w6.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w6.png)
 
 ## <a name="href4">Canvas</a> ##
 

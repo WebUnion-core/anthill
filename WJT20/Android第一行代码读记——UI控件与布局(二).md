@@ -42,7 +42,7 @@ LinearLayout 即线性布局，是一种非常常用的布局，它会将它所�
 
 效果如图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w85.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w85.png)
 
 注意，如果将`android:orientation`的值设为"horizontal"，此时就不能将宽度设为"match_parent"了，否则会导致第一个控件占据整个水平空间，其他空间会被挤出去。
 
@@ -80,7 +80,7 @@ LinearLayout 还有一个重要的属性——`android:layout_weight`，这个�
 
 效果如图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w86.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w86.png)
 
 第一个按钮宽度占据水平全宽的4/5，第二个按钮宽度占据水平全宽的1/5，为了避免其他因素的影响，这里将按钮中的文本设为空，宽度设为0dp。
 
@@ -132,7 +132,7 @@ RelativeLayout 即相对布局，它允许控件出现在布局内的任何位�
 
 效果如下图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w87.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w87.png)
 
 以上的几个属性是根据父布局来定位控件的，如果要让控件相对其他的控件进行定位，可以使用以下几个属性:
 
@@ -177,7 +177,7 @@ RelativeLayout 即相对布局，它允许控件出现在布局内的任何位�
 
 效果如下图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w88.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w88.png)
 
 ## <a name="href3">FrameLayout</a> ##
 

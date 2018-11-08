@@ -63,7 +63,7 @@ body{
 
 效果1:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w44.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w44.png)
 
 这是没有设置父元素div1的字体大小的显示情况，font-size 的值从body标签继承而来，这时，div1的宽高值就是`20em = 20 * 10px = 200px`，div1继承的 font-size 再继承给div2，此时div2的宽高值就是`10em = 10 * 10px = 100px`。
 
@@ -89,7 +89,7 @@ body{
 
 效果2:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w45.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w45.png)
 
 将div1的 font-size 设为18px，此时，div1自身的宽高变为`20em = 20 * 18px = 360px`，div2继承了div1的 font-size，其宽高变为`10em = 10 * 18px = 180px`。
 
@@ -148,11 +148,11 @@ body{
 
 最后，我们到不同设备上查看效果，360px屏幕宽度下的效果如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w46.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w46.png)
 
 720px屏幕下的效果如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w47.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w47.png)
 
 ```
 ARTICLE_ID : 32

@@ -73,7 +73,7 @@ class MyApp extends StatelessWidget {
 
 效果如下图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w94.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w94.png)
 
 MyApp 类是主程序，继承 StatelessWidget 后成为一个 Widget，这里先中断回忆下 React 组件的写法:
 

@@ -151,7 +151,7 @@ public class MainActivity extends BaseActivity {
 
 运行程序，Logcat 的打印日志如下图，这证明文件数据读写操作成功(第一条打印信息是 save() 打印的，第二句则是 load() 打印的):
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w96.PNG)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w96.PNG)
 
 ## <a name="href3">SharedPreferences存储</a> ##
 
@@ -225,7 +225,7 @@ public class MainActivity extends BaseActivity {
 
 打印日志可以看到如下图信息，证明读取操作成功:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w97.PNG)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w97.PNG)
 
 ---
 

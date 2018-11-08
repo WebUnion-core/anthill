@@ -59,7 +59,7 @@ TextView 是 Android 中最简单的一个控件，它主要用于展示文本�
 
 效果如下图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w81.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w81.png)
 
 ## <a name="href2">Button</a> ##
 
@@ -200,7 +200,7 @@ Layout 内容:
 
 最终效果:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w82.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w82.png)
 
 ## <a name="href4">ImageView</a> ##
 
@@ -237,7 +237,7 @@ public class MainActivity extends BaseActivity {
 
 启动程序可以看到图片变为了自定义的图片:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w83.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w83.png)
 
 ## <a name="href5">ProgressBar</a> ##
 
@@ -335,7 +335,7 @@ public class MainActivity extends BaseActivity {
 
 效果如下图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w84.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w84.png)
 
 ---
 

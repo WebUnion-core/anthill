@@ -80,7 +80,7 @@ public class RegExpClass {
 
 ## <a name="href4">正则表达式语法</a> ##
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w59.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w59.png)
 
 ## <a name="href5">Matcher类常用方法</a> ##
 

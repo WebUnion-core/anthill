@@ -73,7 +73,7 @@ ul li{
 
 效果图如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w20.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w20.png)
 
 ## <a name="href4">容器</a> ##
 
@@ -131,11 +131,11 @@ flex-direction 属性决定项目的排列方向，其取值有:
 
 flex-direction 分别设为 row 和 row-reverse 的效果图如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w21.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w21.png)
 
 flex-direction 分别设为 column 和 column-reverse 的效果图如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w22.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w22.png)
 
 ### <a name="href5-2">flex-wrap属性</a> ###
 
@@ -149,7 +149,7 @@ flex-direction 分别设为 column 和 column-reverse 的效果图如下:
 
 效果图如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w23.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w23.png)
 
 ### <a name="href5-3">flex-flow属性</a> ###
 
@@ -167,7 +167,7 @@ justify-content 属性定义了项目在水平轴上的对齐方式，其取值�
 
 先将 flex-wrap 设置为 `wrap`，接着为 justify-content 属性设置不同的值，效果图如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w24.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w24.png)
 
 ### <a name="href5-5">align-items属性</a> ###
 
@@ -181,7 +181,7 @@ align-items 属性定义了项目在垂直轴上如何对齐，其取值有:
 
 同样将 flex-wrap 设置为 `wrap`，然后将第二个 li 标签修改为`<li style="line-height:70px;"> 2 </li>`，并将 ul 标签的 height 设置为150px，接着为 align-items 属性设置不同的值，效果图如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w25.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w25.png)
 
 ### <a name="href5-6">align-content属性</a> ###
 

@@ -46,7 +46,7 @@ public class MainActivity extends BaseActivity {
 
 最后启动一下程序，可以看到 LogCat 中打印了每个 Activity 的名字，如下图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w80.PNG)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w80.PNG)
 
 ## <a name="href2">随时随地退出Activity</a> ##
 

@@ -230,7 +230,7 @@ Toast.makeText(SecondActivity.this, data, Toast.LENGTH_SHORT).show();
 
 以上代码，首先在主 Activity(BlackSandActivity) 中将一个取值"2018-08-13 21:52"，键为 date_time 的键值对数据通过 putExtra 方法存入到 intent 中，接着通过 intent 打开 SecondActivity，SecondActivity 通过 getStringExtra 方法取出 intent 存储的 date_time 数据，用 Toast 展示出来，效果如图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w68.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w68.png)
 
 ## <a name="href4">返回数据给上一Activity</a> ##
 
@@ -303,7 +303,7 @@ public void onBackPressed() {
 
 最终效果如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w69.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w69.png)
 
 ---
 

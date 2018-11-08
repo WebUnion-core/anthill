@@ -60,7 +60,7 @@ ArrayAdapter 是一种适配器实现类，它可以通过泛型来指定要适�
 
 效果如图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w92.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w92.png)
 
 ## <a name="href3">定制ListView界面</a> ##
 
@@ -179,7 +179,7 @@ ArrayAdapter 是一种适配器实现类，它可以通过泛型来指定要适�
 
 最终效果如下图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w93.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w93.png)
 
 ## <a name="href4">提升ListView运行效率</a> ##
 

@@ -78,7 +78,7 @@ CSS样式：
 
 效果截图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w48.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w48.png)
 
 这里还要补充一点，如果a标签的 href 属性值为空或者为"#"的话，link 和 visited 两者会冲突，其中一个状态样式就会失效。
 
@@ -122,7 +122,7 @@ CSS样式:
 
 效果截图：
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w49.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w49.png)
 
 ### <a name="href3-3">索引定位</a> ###
 
@@ -164,7 +164,7 @@ CSS样式:
 
 效果截图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w55.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w55.png)
 
 索引定位伪类还有一个特殊的用法，那就是使用的参数可以是算术表达式，例如，`::nth-child(2n+1)`会给所有奇数索引位置的元素添加样式，而`::nth-child(2n)`则会给所有偶数索引位置的元素添加样式，这是一个非常强大的功能，我们可以利用这个功能替换掉一些原本要由 JavaScript 才能实现的效果，这样可以大大提升页面性能。
 
@@ -203,7 +203,7 @@ input[name="color"]:checked + label{
 
 效果截图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w50.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w50.png)
 
 
 
@@ -239,7 +239,7 @@ input[type="text"]:disabled{
 
 效果截图:  
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w51.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w51.png)
 
 
 
@@ -268,7 +268,7 @@ input[type="text"]:focus{
 
 效果截图:  
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w52.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w52.png)
 
 ## <a name="href4">伪元素</a> ##
 
@@ -309,7 +309,7 @@ p::first-line{
 
 效果截图:  
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w53.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w53.png)
 
 ### <a name="href4-6">前后添加内容</a> ###
 
@@ -338,7 +338,7 @@ my-title::before,my-title::after{
 
 效果截图:  
 
-![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w54.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w54.png)
 
 在这两个伪类中，通过修改 content 属性值，可以在前后添加多种不同内容，这些内容可以是图片、音频、文本等等。
 

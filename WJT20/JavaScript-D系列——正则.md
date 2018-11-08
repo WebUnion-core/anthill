@@ -10,31 +10,31 @@
 
 1. 元字符  
 
-    ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w7.png)
+    ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w7.png)
 
 2. 反义字符  
 
-    ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w8.png)
+    ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w8.png)
 
 3. 转义字符  
 
-    ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w9.png)
+    ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w9.png)
 
 4. 重复匹配  
 
-    ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w10.png)
+    ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w10.png)
 
 5. 分组/捕获  
 
-    ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w11.png)
+    ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w11.png)
 
 6. 贪婪与惰性  
 
-    ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w12.png)
+    ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w12.png)
 
 7. 修饰符  
 
-    ![image](https://raw.githubusercontent.com/WebUnion-core/public-cdn/master/wjt20-base/w13.png)
+    ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w13.png)
 
 ## <a name="href2">RegExp</a> ##
 
