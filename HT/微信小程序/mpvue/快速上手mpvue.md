@@ -1,9 +1,4 @@
 
-mpvue应该是基本上没有什么ui库支持，想用的话就去参考mpvue-weui
-
-https://blog.csdn.net/weixin_39818813/article/details/80694411
-
-不过我本人是不推荐使用，用的很不爽，个人也觉得没什么必要用，因为小程序本身体积就不大。
 
 ## 使用
 
@@ -11,7 +6,7 @@ https://blog.csdn.net/weixin_39818813/article/details/80694411
 
 ## 疑惑
 
-**使用mpvue还能使用vue里面的组件么**
+**使用mpvue还能使用小程序里面的组件么**
 
 当然是能的，接下来看代码
 
@@ -113,4 +108,4 @@ index.wxml
 
 ----
 
-未完待续。。。
+在mpvue 中使用一些ui库

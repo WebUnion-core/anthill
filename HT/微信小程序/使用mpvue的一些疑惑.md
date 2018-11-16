@@ -112,13 +112,51 @@ export default {
   }
 }
 ```
-----
-未完，持续更新。。。
-<center>
-更多精彩内容请关注订阅号
+## 使用第三方ui组件的问题
 
-![Alt text](https://github.com/WebUnion-core/doc-repositort/blob/master/HT/imgs/weixin.jpg?raw=true "UML类图")
+以vant-weapp 为例子
 
-</center>
+直接通过 git 下载 Vant Weapp 源代码
 
-<p style="text-align:right;">点个赞吧↓👇↓👇↓👇↓👇</p>
+git clone https://github.com/youzan/vant-weapp.git
+
+下载完了之后将dist 目录给复制出来，
+
+进入你的mpvue项目目录，执行npm run dev 或者 npm run build, 之后目录下会多出一个dist文件夹，将刚刚下载的vant-weapp目录中的dist目录改下名字改成你自己喜欢的名字。比如我直接改成vant-weapp，然后将vant-weapp文件夹复制到mpvue项目目录下的 dist 目录里面。
+
+然后比如我们的index页面中想使用vant-wapp 中的某个组件:
+
+我们找到我们定义的页面 /pages/index/main.json文件
+
+添加
+
+```js
+"usingComponents": {
+    "van-button": "./../../vant-weapp/button/index",
+    "van-dialog": "./../../vant-weapp/dialog/index",
+    "van-notice-bar": "./../../vant-weapp/notice-bar/index",
+    "van-action-sheet": "./../../vant-weapp/action-sheet/index",
+    "van-search": "./../../vant-weapp/search/index"
+  }
+```
+
+如
+
+```js
+{
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "页面标题",
+  "usingComponents": {
+    "van-button": "./../../vant-weapp/button/index",
+    "van-dialog": "./../../vant-weapp/dialog/index",
+    "van-notice-bar": "./../../vant-weapp/notice-bar/index",
+    "van-action-sheet": "./../../vant-weapp/action-sheet/index",
+    "van-search": "./../../vant-weapp/search/index"
+  }
+}
+
+```
+
+> 需要注意的是 ./../../vant-weapp/button/index  这个路径是mpvue项目下的dist中的相对路径。
+
+如有不明白的地方可联系 qq:836717428
