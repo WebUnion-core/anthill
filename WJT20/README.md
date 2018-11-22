@@ -181,11 +181,11 @@
 
 - ID:70 > [npm实用命令笔记](./npm实用命令笔记.md)
 
-- ID:77 > [我的npm工厂(一)——abbrev](./我的npm工厂(一)——abbrev.md)
+- ID:77 > [npm源码解读系列——abbrev](./npm源码解读系列——abbrev.md)
 
-- ID:80 > [我的npm工厂(二)——aproda](./我的npm工厂(二)——aproba.md)
+- ID:80 > [npm源码解读系列——aproda](./npm源码解读系列——aproba.md)
 
-- ID:88 > [我的npm工厂(三)——cookie](./我的npm工厂(三)——cookie.md)
+- ID:88 > [npm源码解读系列——cookie](./npm源码解读系列——cookie.md)
 
 ## Java ##
 

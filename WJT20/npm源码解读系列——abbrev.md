@@ -1,7 +1,5 @@
 
-# 我的npm工厂(一)——abbrev #
-
-> node_modules 是一个好东西，里面汇集了无数的 npm 模块，这些 npm 模块是形形色色程序员的智慧结晶，我一直想了解别人写的代码是怎样的，或许仔细分析别人的代码可以进一步提升我等的编程能力，于是乎，我决定去挖掘 node_modules 这片金矿。本文解析的是第一个 npm 模块——abbrev。
+# npm源码解读系列——abbrev #
 
 ## 目录 ##
 
@@ -89,7 +87,7 @@ function abbrev(list) {
     var abbrevs = {},
         prev = ""
     for (var i = 0, l = args.length; i < l; i++) {
-        /*
+        /**
          * 局部变量说明:
          * current: 当前数组元素
          * next: 下一个数组元素，如果没有下一个数组元素，取默认值——空字符串
