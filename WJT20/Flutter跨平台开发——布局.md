@@ -1,5 +1,5 @@
 
-# Flutter跨平台开发——布局(一) #
+# Flutter跨平台开发——布局 #
 
 ## 目录 ##
 
@@ -76,7 +76,7 @@ class _MyAppPageState extends State<MyApp> {
 	4. MainAxisAlignment.start: 子 Widget 之间间隙为零且左对齐;
 	5. MainAxisAlignment.end: 子 Widget 之间间隙为零且右对齐;
 	6. MainAxisAlignment.center: 子 Widget 之间间隙为零且全部居中对齐。
-	
+
 3. mainAxisSize: <MainAxisSize>，子 Widget 之间的间隙值，会使 mainAxisAlignment 的设置无效，可选值如下:
 	1. MainAxisSize.max: 默认值，间隙最大化;
 	2. MainAxisSize.min: 间隙最小化。
@@ -122,7 +122,7 @@ body: new Center(
 1. verticalDirection: <VerticalDirection>，竖直方向上的排列方式，可选值如下:
 	1. VerticalDirection.up: 从上往下排序，最终所有子 Widget 往底部聚拢，且最前面的 Widget 居于底部;
 	2. VerticalDirection.down: 默认值，从下往上排序，最终所有子 Widget 往顶部聚拢，且最前面的 Widget 居于顶部。
-	
+
 2. mainAxisAlignment：<MainAxisAlignment>，功能同行布局;
 
 3. mainAxisSize: <MainAxisSize>，功能同行布局;
@@ -164,7 +164,7 @@ body: new Center(
 1. scrollDirection: <Axis>，滚动方向，可选值如下:
 	1. Axis.horizontal: 水平方向滚动;
 	2. Axis.vertical: 默认值，竖直方向滚动。
-	
+
 2. reverse: <Boolean>，是否倒序，默认为 false。
 
 ```dart
