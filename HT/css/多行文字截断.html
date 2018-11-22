@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .div2 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .div1 {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .wrap {
+            height: 40px;
+            line-height: 20px;
+            overflow: hidden;
+        }
+
+        .wrap .text {
+            float: right;
+            margin-left: -5px;
+            width: 100%;
+            word-break: break-all;
+        }
+
+        .wrap::before {
+            float: left;
+            width: 5px;
+            content: '';
+            height: 40px;
+        }
+
+        .wrap::after {
+            float: right;
+            content: "...";
+            height: 20px;
+            line-height: 20px;
+            /* 为三个省略号的宽度 */
+            width: 3em;
+            /* 使盒子不占位置 */
+            margin-left: -3em;
+            /* 移动省略号位置 */
+            position: relative;
+            left: 100%;
+            top: -20px;
+            padding-right: 5px;
+        }
+    </style>
+    <h3>单行文本截断 text-overflow</h3>
+    <div class="div2">
+        啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a
+    </div>
+
+    <h3>多行文本</h3>
+    <div class="div1">
+        啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a
+    </div>
+
+
+    <h3>float 实现</h3>
+    <div class="wrap">
+        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos labore sit vel itaque
+            delectus atque quos magnam assumenda quod architecto perspiciatis animi.啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊实打实手动啊是大a啊啊实打实手动啊是大a</div>
+    </div>
+</body>
+
+</html>
