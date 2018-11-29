@@ -9,7 +9,7 @@ const allMdFiles = fs.readdirSync(srcPath);
 const jsonData = [];
 const dataType = 'JSON';
 const pre = 50;
-const ignore = JSON.stringify([ 'readme.md' ]);
+const ignore = require('./ignore.json');
 
 // 组装数据
 function readAllFiles() {
@@ -82,14 +82,14 @@ function readAllFiles() {
                     );
                 }
             }
+        } else {
+            console.log('ignore: ', item);
         }
     });
 }
 
 // 写入所有文件数据
-function writeAllDataFiles() {
-
-}
+function writeAllDataFiles() {}
 
 (function() {
     readAllFiles();

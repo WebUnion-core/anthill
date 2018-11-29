@@ -11,7 +11,7 @@ const allMdFiles = fs.readdirSync(srcPath);
 const jsonData = [];
 const dataType = 'JSON';
 const pre = 50;
-const ignore = JSON.stringify([ 'readme.md' ]);
+const ignore = require('./ignore.json');
 
 // 组装数据
 function readAllFiles() {
@@ -34,6 +34,8 @@ function readAllFiles() {
                     cont: resultCont
                 };
             }
+        } else {
+            console.log('_IGNORE_', item);
         }
     });
 }
@@ -45,7 +47,7 @@ function writeAllDataFiles() {
         // const hash = (new Date()).valueOf();
         const name = hash + '.' + dataType.toLowerCase();
         writeDataFiles(name, JSON.stringify(item, null, 4));
-        console.log('output success: ' + name);
+        // console.log('output success: ' + name);
     });
 }
 
