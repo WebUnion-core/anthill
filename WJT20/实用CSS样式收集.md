@@ -1,5 +1,5 @@
 
-# CSS常用属性笔记 #
+# 实用CSS样式收集 #
 
 ## 目录 ##
 
@@ -15,6 +15,7 @@
     2. [移动端1px线的实现](#href3-7)
     3. [开启硬件加速使动画流畅](#href3-8)
     4. [画弧](#href3-10)
+    5. [画折叠箭头](#href3-11)
 4. [其他](#href4)
     1. [使元素失去点击和触摸等事件](#href4-9)
 
@@ -166,6 +167,21 @@ CSS 部分:
     border-bottom: solid 10px transparent;
     border-left: solid 10px transparent;
     border-radius: 50%;
+}
+```
+
+### <a name="href3-11">画折叠箭头</a> ###
+
+根据需要调整 rotate 的角度:
+
+```css
+.arrow {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #9a9a9a;
+    border-bottom: 1px solid #9a9a9a;
+    transform: rotate(-45deg);
 }
 ```
 
