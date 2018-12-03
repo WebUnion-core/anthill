@@ -58,4 +58,50 @@ function captureSingle(parent) {
     })
 }
 
-start();
+// start();
+
+
+request.get({
+    url: 'http://lf.snssdk.com/api/news/feed/v46/?category=news_hot',
+    // encoding: null
+}, (err, res, body) => {
+    let data = JSON.parse(body).data
+    for (let v of data) {
+        let nesObj;
+        let content = JSON.parse(v.content)
+        let {
+            abstract,
+            display_url,
+            media_name
+        } = content
+        display_url = display_url.replace(/http:\/\/toutiao.com\/group\//, '')
+        display_url = display_url.replace('/', '')
+        nesObj = {
+            abstract,
+            media_name,
+            display_url
+        }
+
+        request.get({
+            url: `http://a3.pstatp.com/article/content/lite/14/1/${display_url}/${display_url}/1/`,
+            // encoding: null
+        }, (err, res, body) => {
+            let data = JSON.parse(body).data;
+            let content = data.content;
+            nesObj.content = content
+            console.log(data.h5_extra)
+        })
+    }
+})
+
+
+
+function saveExtra(url, info) {
+    request.get({
+        url: `http://a3.pstatp.com/article/content/lite/14/1/${display_url}/${display_url}/1/`,
+        // encoding: null
+    }, (err, res, body) => {
+        console.log(JSON.parse(body).data)
+        // newsList.push(nesObj)
+    })
+}
