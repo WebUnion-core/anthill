@@ -15,13 +15,13 @@
     3. [Array类型](#href2-3)
     4. [Math类型](#href2-4)
 
-JavaScript 有5种基本数据类型 Undefined、Null、Boolean、Number 和 String，和1种复杂数据类型 Object。
-
 ## <a name="href1">基本数据类型</a> ##
+
+JavaScript 有5种基本数据类型: Undefined、Null、Boolean、Number 和 String。
 
 ### <a name="href1-1">Undefined类型</a> ###
 
-Undefined 类型只有一个值 undefined，如果使用 var 定义的变量未初始化值，则获取的值为 undefined。
+Undefined 类型只有一个值 undefined，如果使用 var 定义的变量未初始化值，其默认的值为 undefined。
 
 ```js
 var str;
@@ -30,15 +30,15 @@ console.log(str); // undefined
 
 ### <a name="href1-2">Null类型</a> ###
 
-Null 类型只有一个值 null，null 值表示指定的值是一个空对象，所以 typeof 操作 null 值的结果是"object"。
+Null 类型只有一个值 null，表示空对象，所以 typeof 操作 null 值的结果是"object"。
 
 ### <a name="href1-3">Boolean类型</a> ###
 
-Boolean 类型有两个值 true 和 false。
+Boolean 类型有两个值 true 和 false，分别表示"是"和"否"。
 
 ### <a name="href1-4">Number类型</a> ###
 
-Number 类型取值是所有数值，JavaScript 不区分整型数值和浮点型数值，正因为如此所以浮点型数值计算时会产生精度问题，所以应避免浮点型数值的计算。如果一定要进行浮点型数值计算，可以将相加的两个浮点数转为整数，最后再将相加结果转为浮点数。
+Number 类型取值是所有数值，JavaScript 不区分整型数值和浮点型数值，正因如此，浮点型数值计算时会产生精度问题，所以应避免浮点型数值的计算。如果一定要进行浮点型数值计算，可以将相加的两个浮点数转为整数，最后再将相加结果转为浮点数。
 
 ```js
 // 普通的浮点计算
@@ -156,9 +156,7 @@ function getCurrentTime() {
 
 ### <a name="href2-3">Array类型</a> ###
 
-创建数组有两种方式: 使用 new Array() 和使用数组字面量表示法。
-
-JavaScript 数组不同于其他语言的数组的一点是，JavaScript 数组不限制数组元素的数据类型保持统一，一个数组可以包含各种类型的值。
+创建数组有两种方式: 使用`new Array()`和使用数组字面量表示法。JavaScript 数组不限制数组元素的数据类型保持统一，一个数组可以包含各种类型的值。
 
 数组实例对象具有一个 length 属性返回数组的元素个数，length 属性可以手动修改，例如想要重置一个数组只要将 length 属性值设为0。数组元素可以通过"[]"加索引号访问。
 
@@ -172,14 +170,14 @@ console.log(arr3[0]); // 输出: "a"
 console.log(arr3[arr3.length - 1]); // 访问最后一个元素: true
 
 arr3.length = 0;
-console.log(arr3[0]); // 输出: undefibed
+console.log(arr3[0]); // 输出: undefined
 ```
 
 ### <a name="href2-4">Math类型</a> ###
 
-Math类型包含了一些常用的用于数学计算的属性和方法，常用的属性常量有: `Math.PI`，即获取π的值: 3.141592653589793。
+Math类型包含了一些常用于数学计算的属性和方法，常用的属性常量有: `Math.PI`，即获取π的值: 3.141592653589793。
 
-`Math.min(num1, ...)` 和 `Math.max(num1, ...)`，接收一段数值参数，分别返回其中的最大值和最小值。
+`Math.min(num1, ...)`和 `Math.max(num1, ...)`，接收一段数值参数，分别返回其中的最大值和最小值。
 
 ```js
 var num3 = 10;

@@ -6,6 +6,8 @@
 1. [什么是内容提供器](#href1)
 2. [什么是运行时权限](#href2)
 3. [运行时申请权限实践](#href3)
+4. [访问其他程序中的数据](#href4)
+    1. [ContentResolver的基础用法](#href4-1)
 
 ## <a name="href1">什么是内容提供器</a> ##
 
@@ -170,6 +172,85 @@ public class MainActivity extends BaseActivity {
 检查授权情况使用的是`ContextCompat.checkSelfPermission()`方法，接收两个参数，第一个参数是 Content，第二个参数是具体的权限名。申请权限使用的是`ActivityCompat.requestPermissions()`方法，接收三个参数，第一个参数是 Activity 实例，第二个参数是一个保存申请权限名的 String 数组，第三个参数是请求码，只要是一个唯一值即可。调用申请权限的方法后会自动弹出一个对话框(如下图)，不管选择拒绝还是同意授权，最终都会回调到`onRequestPermissionsResult()`方法中，授权结果封装到 grantResults 参数当中，之后根据授权结果进行对应的操作。
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w103.png)
+
+## <a name="href4">访问其他程序中的数据</a> ##
+
+内容提供器的用法一般有两种，一种是使用现有的内容提供器来读取和操作相应程序中的数据，另一种是创建自己的内容提供器给我们自己的数据提供外部访问接口。
+
+如果一个应用程序通过内容提供器对其数据提供了外部访问接口，那么任何其他的应用程序就都可以对这部分数据进行访问。Android 系统中自带的电话簿、短信、媒体库等程序都提供了类似的访问接口，这就使得第三方应用程序可以充分地利用这部分数据来实现更好的功能。
+
+### <a name="href4-1">ContentResolver的基础用法</a> ###
+
+一个应用程序想要访问内容提供器中共享的数据，就一定要借助 ContentResolver 类，可以通过 Context 中的 getContentResolver() 方法获取该类的实例。
+
+ContentResolver 中提供了一系列的方法用于对数据进行CRUD操作，这和 SQLiteDatabase 很像，不同的是，ContentResolver 中的增删改查方法都是不接收表名参数的，而是使用一个Uri参数代替，这个参数被称为内容 URI，内容 URI 给内容提供器中的数据建立唯一标识符，它主要由两部分组成: authority 和 path。authority 是用于对不同于的应用程序做区分的，一般为了避免冲突，都会采用程序包名的方式进行命名。path 则是用于对同一应用程序中不同的表作区分的，通常都会添加到 authority 的后面。一个标准的Uri的格式为"协议+authority+path"，如:
+
+```
+content://com.example.app.provider/table1
+```
+
+在得到Uri字符串之后，还需要调用`Uri.parse()`方法将它解析成Uri对象才可以作为参数传入:
+
+```java
+Uri uri = Uri.parse("content://com.example.app.provider/table1");
+```
+
+接着就可以使用这个Uri对象来查询 table1 表中的数据:
+
+```java
+Cursor cursor = getContentResolver().query(
+    uri,
+    projection,
+    selection,
+    selectionArgs,
+    sortOrder
+);
+```
+
+参数说明如下:
+
+| query()方法参数 | 对应SQL部分 | 描述 |
+| :------------: | :---------: | :--: |
+| uri | from table_name | 指定查询某个应用程序下的某一张表 |
+| projection | select column1, column2 | 指定查询的列名 |
+| selection | where column = value | 指定where的约束条件 |
+| selectionArgs | - | 为where中的占位符提供具体的值 |
+| sortOrder | order by column1, column2 | 指定查询结果的排序方式 |
+
+查询完成后返回的是一个 Cursor 对象，这时就可以将数据从 Cursor 对象中逐个读取出来了。读取的思路是通过移动游标来遍历 Cursor 的所有行，然后再取出每一行中相应列的数据:
+
+```java
+if (cursor != null) {
+    while (cursor.moveToNext()) {
+        String column1 = cursor.getString(cursor.getColumnIndex("column1"));
+        int column2 = cursor.getInt(cursor.getColumnIndex("column2"));
+    }
+    cursor.close();
+}
+```
+
+向 table1 表中添加一条数据:
+
+```java
+ContentValues values = new ContentValues();
+values.put("column1", "text");
+values.put("column2", 1);
+getContentResolver().insert(uri, values);
+```
+
+更新 column1 的值:
+
+```java
+ContentValues values = new ContentValues();
+values.put("column1", "");
+getContentResolver().update(uri, values, "column1 = ? and column2 = ?", new String[]{"text", "1"});
+```
+
+删除 column1 的数据:
+
+```java
+getContentResolver().delete(uri, "column2 = ?", new String[]{"1"});
+```
 
 ---
 
