@@ -151,6 +151,8 @@ app.post(`/v1.0.0/home/activity`, (req, res) => {
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w106.png)
 
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w107.png)
+
 ## <a name="href4">静态资源配置</a> ##
 
 通过中间件和`express.static`可以设置指定路由下静态资源的访问位置，为了让我们的页面能成功加载图像等资源，这个步骤至关重要，以以下代码为例:
@@ -221,9 +223,34 @@ const ip = process.env.IP || '127.0.0.1';
 // 静态资源
 app.use('/', express.static(path.resolve(__dirname, 'dist')));
 
-// 路由
+// GET
 app.get('/', function (req, res) {
     res.sendFile(path.resolve(__dirname, './view/index.html'));
+});
+
+// POST
+app.post(`/v1.0.0/home/activity`, (req, res) => {
+    console.log('req.baseUrl: ', req.baseUrl);
+    console.log('req.originalUrl: ', req.originalUrl);
+    console.log('req.body: ', req.body);
+    console.log('req.cookies: ', req.cookies);
+    console.log('req.state: ', req.state);
+    console.log('req.path: ', req.path);
+    console.log('req.protocol: ', req.protocol);
+    console.log('req.hostname: ', req.hostname);
+    console.log('req.ip: ', req.ip);
+    console.log('req.params: ', req.params);
+    console.log('req.query: ', req.query);
+
+    // 设置Header
+    res.set({
+        'Access-Control-Allow-Origin': '*',
+        'Cache-Control': 'no-cache',
+        'Content-Type': 'application/json;charset=UTF-8'
+    });
+    res.cookie('name', 'WJT20'); // 设置cookie
+    res.status(502); // 设置响应状态码
+    res.json({ status: 'success' }); // 返回Json
 });
 
 // 监听
