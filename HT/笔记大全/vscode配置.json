@@ -1,0 +1,12 @@
+{
+  // Git丢失时忽略警告
+  "git.ignoreMissingGitWarning": true,
+  // 以像素为单位控制字号。
+  "editor.fontSize": 16,
+  "workbench.activityBar.visible": true,
+  // 控制是否显示 minimap
+  "editor.minimap.enabled": false,
+  // 控制边栏的位置。它可显示在工作台的左侧或右侧。
+  "workbench.sideBar.location": "right",
+
+}
