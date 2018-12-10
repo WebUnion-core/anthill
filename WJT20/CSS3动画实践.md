@@ -7,6 +7,7 @@
 2. [animation属性](#href2)
 3. [transform属性](#href3)
 4. [transition属性](#href4)
+5. [实现loading动画](#href5)
 
 ## <a name="href1">@keyframes</a> ##
 
@@ -147,6 +148,39 @@ transition: property duration timing-function delay;
 ```
 
 添加以上样式后，当鼠标移动到 .target 元素上时，背景颜色由黑色渐变为白色，时长为1s。
+
+## <a name="href5">实现loading动画</a> ##
+
+代码:
+
+```css
+.ico-loading::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9;
+    content: '';
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    border: 5px solid rgba(255,255,255,0.1);
+    border-top: 5px solid white;
+    transform-origin: top left;
+    animation-name: loading-rotation;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes loading-rotation {
+    0% {
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    100% {
+        transform: rotate(360deg) translate(-50%, -50%);
+    }
+}
+```
 
 ---
 
