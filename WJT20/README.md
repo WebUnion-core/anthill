@@ -119,6 +119,8 @@
 
 - ID:13 > [Mongoose实现增删改查](./Mongoose实现增删改查.md)
 
+- ID:123 > [Node.js对MySQL增删改查实践](./Node.js对MySQL增删改查实践.md)
+
 - ID:20 > [express抄家攻略](./express抄家攻略.md)
 
 - ID:87 > [Node.js实用技巧笔记](./Node.js实用技巧笔记.md)
