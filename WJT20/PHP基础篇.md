@@ -135,7 +135,8 @@ echo_counter(); // 输出: 2
 ---
 
 ```
-ARTICLE_ID : 54
-POST_DATE : 2017/12/31
-AUTHER : WJT20
+ID         : 54
+DATE       : 2017/12/31
+AUTHER     : WJT20
+TAG        : 
 ```

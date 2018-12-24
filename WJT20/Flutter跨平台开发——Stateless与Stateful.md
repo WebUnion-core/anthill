@@ -114,7 +114,8 @@ class _MyAppPageState extends State<MyApp> {
 ---
 
 ```
-ARTICLE_ID : 110
-POST_DATE : 2018/10/11
-AUTHER : WJT20
+ID         : 110
+DATE       : 2018/10/11
+AUTHER     : WJT20
+TAG        : 
 ```

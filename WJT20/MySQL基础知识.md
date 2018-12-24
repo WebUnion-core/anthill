@@ -80,7 +80,8 @@ DELETE FROM user WHERE id=1
 ---
 
 ```
-ARTICLE_ID : 40
-POST_DATE : 2017/11/6
-AUTHER : WJT20
+ID         : 40
+DATE       : 2017/11/6
+AUTHER     : WJT20
+TAG        : 
 ```

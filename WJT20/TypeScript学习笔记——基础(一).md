@@ -133,7 +133,8 @@ readonly 用于定义只读字段，只读属性指定字段只能在创建的�
 ---
 
 ```
-ARTICLE_ID : 41
-POST_DATE : 2017/11/11
-AUTHER : WJT20
+ID         : 41
+DATE       : 2017/11/11
+AUTHER     : WJT20
+TAG        : 
 ```

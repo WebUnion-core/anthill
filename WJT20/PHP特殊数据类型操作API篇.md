@@ -92,7 +92,8 @@ count() 函数用于返回数组的长度。
 ---
 
 ```
-ARTICLE_ID : 57
-POST_DATE : 2018/01/01
-AUTHER : WJT20
+ID         : 57
+DATE       : 2018/01/01
+AUTHER     : WJT20
+TAG        : 
 ```

@@ -288,7 +288,8 @@ console.log(oldStr, newStr); // => "AaaaaB" "A****B"
 ---
 
 ```
-ARTICLE_ID : 72
-POST_DATE : 2018/05/03
-AUTHER : WJT20
+ID         : 72
+DATE       : 2018/05/03
+AUTHER     : WJT20
+TAG        : 
 ```

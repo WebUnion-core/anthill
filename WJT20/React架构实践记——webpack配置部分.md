@@ -118,7 +118,8 @@ development 模式与 debug 模式的配置差不多，涉及到的选项有 plu
 ---
 
 ```
-ARTICLE_ID : 50
-POST_DATE : 2018/09/14
-AUTHER : WJT20
+ID         : 50
+DATE       : 2018/09/14
+AUTHER     : WJT20
+TAG        : 
 ```

@@ -91,7 +91,8 @@ console.log(regExp.test('13415156317@163.com')); // 输出: true
 ---
 
 ```
-ARTICLE_ID : 17
-POST_DATE : 2017/08/19
-AUTHER : WJT20
+ID         : 17
+DATE       : 2017/08/19
+AUTHER     : WJT20
+TAG        : 
 ```

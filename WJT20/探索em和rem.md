@@ -155,7 +155,8 @@ body{
 ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w47.png)
 
 ```
-ARTICLE_ID : 32
-POST_DATE : 2017/09/17
-AUTHER : WJT20
+ID         : 32
+DATE       : 2017/09/17
+AUTHER     : WJT20
+TAG        : 
 ```

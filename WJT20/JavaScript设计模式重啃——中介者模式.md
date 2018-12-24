@@ -185,7 +185,8 @@ var playerDirector = (function() {
 ---
 
 ```
-ARTICLE_ID : 60
-POST_DATE : 2018/01/14
-AUTHER : WJT20
+ID         : 60
+DATE       : 2018/01/14
+AUTHER     : WJT20
+TAG        : 
 ```

@@ -105,7 +105,8 @@ render () {
 ---
 
 ```
-ARTICLE_ID : 69
-POST_DATE : 2018/09/14
-AUTHER : WJT20
+ID         : 69
+DATE       : 2018/09/14
+AUTHER     : WJT20
+TAG        : 
 ```

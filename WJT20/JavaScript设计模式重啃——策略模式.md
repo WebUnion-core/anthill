@@ -107,7 +107,8 @@ submitBtn.onclick = function() {
 ---
 
 ```
-ARTICLE_ID : 37
-POST_DATE : 2017/10/15
-AUTHER : WJT20
+ID         : 37
+DATE       : 2017/10/15
+AUTHER     : WJT20
+TAG        :
 ```

@@ -70,7 +70,8 @@ os 模块提供了一些操作系统相关的实用方法，通过`const os = re
 ---
 
 ```
-ARTICLE_ID : 105
-POST_DATE : 2018/09/12
-AUTHER : WJT20
+ID         : 105
+DATE       : 2018/09/12
+AUTHER     : WJT20
+TAG        : 
 ```

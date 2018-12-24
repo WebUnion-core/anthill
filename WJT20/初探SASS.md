@@ -212,7 +212,8 @@ SASS允许用户编写自己的函数。
 ---
 
 ```
-ARTICLE_ID : 25
-POST_DATE : 2017/08/27
-AUTHER : WJT20
+ID         : 25
+DATE       : 2017/08/27
+AUTHER     : WJT20
+TAG        : 
 ```

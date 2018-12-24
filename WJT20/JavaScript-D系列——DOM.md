@@ -149,7 +149,8 @@ addStyle(textElem, {
 ---
 
 ```
-ARTICLE_ID : 92
-POST_DATE : 2018/08/06
-AUTHER : WJT20
+ID         : 92
+DATE       : 2018/08/06
+AUTHER     : WJT20
+TAG        : 
 ```

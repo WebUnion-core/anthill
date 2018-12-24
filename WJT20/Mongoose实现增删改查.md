@@ -170,7 +170,8 @@ TestModel.find({ name: 'WJT20' }, function(error, doc) {
 ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w40.png)
 
 ```
-ARTICLE_ID : 13
-POST_DATE : 2017/08/14
-AUTHER : WJT20
+ID         : 13
+DATE       : 2017/08/14
+AUTHER     : WJT20
+TAG        : 
 ```

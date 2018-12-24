@@ -210,7 +210,8 @@ document.body.appendChild(script); // 请求成功，会在页面上显示图像
 ---
 
 ```
-ARTICLE_ID : 27
-POST_DATE : 2017/08/29
-AUTHER : WJT20
+ID         : 27
+DATE       : 2017/08/29
+AUTHER     : WJT20
+TAG        : 
 ```

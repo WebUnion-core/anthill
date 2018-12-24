@@ -96,7 +96,8 @@ console.log(str.constructor === String); // true，为字符串类型
 ---
 
 ```
-ARTICLE_ID : 90
-POST_DATE : 2018/08/01
-AUTHER : WJT20
+ID         : 90
+DATE       : 2018/08/01
+AUTHER     : WJT20
+TAG        : 
 ```

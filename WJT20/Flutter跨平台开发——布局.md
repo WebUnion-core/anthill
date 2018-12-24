@@ -228,7 +228,8 @@ Widget build (BuildContext context) {
 ---
 
 ```
-ARTICLE_ID : 112
-POST_DATE : 2018/10/16
-AUTHER : WJT20
+ID         : 112
+DATE       : 2018/10/16
+AUTHER     : WJT20
+TAG        : 
 ```

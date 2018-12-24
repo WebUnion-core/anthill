@@ -147,7 +147,8 @@ console.log(o1 === o2); // 输出: true
 ---
 
 ```
-ARTICLE_ID : 35
-POST_DATE : 2017/09/24
-AUTHER : WJT20
+ID         : 35
+DATE       : 2017/09/24
+AUTHER     : WJT20
+TAG        : 
 ```

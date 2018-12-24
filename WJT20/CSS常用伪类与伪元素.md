@@ -345,7 +345,8 @@ my-title::before,my-title::after{
 ---
 
 ```
-ARTICLE_ID : 34
-POST_DATE : 2017/09/23
-AUTHER : WJT20
+ID         : 34
+DATE       : 2017/09/23
+AUTHER     : WJT20
+TAG        : 
 ```

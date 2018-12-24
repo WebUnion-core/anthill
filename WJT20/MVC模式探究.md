@@ -89,7 +89,8 @@ UI.register(btn1, tipInfo);
 ---
 
 ```
-ARTICLE_ID : 48
-POST_DATE : 2017/12/09
-AUTHER : WJT20
+ID         : 48
+DATE       : 2017/12/09
+AUTHER     : WJT20
+TAG        : 
 ```

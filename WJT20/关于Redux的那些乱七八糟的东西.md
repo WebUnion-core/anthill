@@ -225,7 +225,8 @@ store
 ---
 
 ```
-ARTICLE_ID : 120
-POST_DATE : 2017/12/06
-AUTHER : WJT20
+ID         : 120
+DATE       : 2017/12/06
+AUTHER     : WJT20
+TAG        : 
 ```

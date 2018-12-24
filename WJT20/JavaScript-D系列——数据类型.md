@@ -202,7 +202,8 @@ var num1 = Math.floor(Math.random() * (10 - 5 + 1) + 5); // 获取大于等于5�
 ---
 
 ```
-ARTICLE_ID : 21
-POST_DATE : 2017/08/24
-AUTHER : WJT20
+ID         : 21
+DATE       : 2017/08/24
+AUTHER     : WJT20
+TAG        : 
 ```

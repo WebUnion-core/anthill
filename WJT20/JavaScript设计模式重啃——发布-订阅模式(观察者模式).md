@@ -189,7 +189,8 @@ Event.trigger('squareMeter88', 2000000);//发布消息
 ---
 
 ```
-ARTICLE_ID : 43
-POST_DATE : 2017/11/14
-AUTHER : WJT20
+ID         : 43
+DATE       : 2017/11/14
+AUTHER     : WJT20
+TAG        : 
 ```

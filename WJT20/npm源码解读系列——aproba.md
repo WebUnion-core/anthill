@@ -180,7 +180,8 @@ var validate = module.exports = function (rawSchemas, args) {
 ---
 
 ```
-ARTICLE_ID : 80
-POST_DATE : 2018/06/16
-AUTHER : WJT20
+ID         : 80
+DATE       : 2018/06/16
+AUTHER     : WJT20
+TAG        : 
 ```

@@ -205,7 +205,8 @@ export default class Title extends React.Component {
 ---
 
 ```
-ARTICLE_ID : 109
-POST_DATE : 2018/09/19
-AUTHER : WJT20
+ID         : 109
+DATE       : 2018/09/19
+AUTHER     : WJT20
+TAG        : 
 ```

@@ -136,7 +136,8 @@ pubspec.yaml 的作用其实与 Npm 中 package.json 差不多，dependencies �
 ---
 
 ```
-ARTICLE_ID : 109
-POST_DATE : 2018/10/06
-AUTHER : WJT20
+ID         : 109
+DATE       : 2018/10/06
+AUTHER     : WJT20
+TAG        : 
 ```

@@ -399,7 +399,8 @@ readablesStream.on('close', function() {
 ---
 
 ```
-ARTICLE_ID : 12
-POST_DATE : 2017/08/14
-AUTHER : WJT20
+ID         : 12
+DATE       : 2017/08/14
+AUTHER     : WJT20
+TAG        : 
 ```

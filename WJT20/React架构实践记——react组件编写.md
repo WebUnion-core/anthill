@@ -256,7 +256,8 @@ export default (state = {}, action) => {
 ---
 
 ```
-ARTICLE_ID : 68
-POST_DATE : 2018/09/17
-AUTHER : WJT20
+ID         : 68
+DATE       : 2018/09/17
+AUTHER     : WJT20
+TAG        : 
 ```

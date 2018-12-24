@@ -169,7 +169,8 @@ let regexpObj: RegExp = /[a-z]/;
 ---
 
 ```
-ARTICLE_ID : 42
-POST_DATE : 2017/11/12
-AUTHER : WJT20
+ID         : 42
+DATE       : 2017/11/12
+AUTHER     : WJT20
+TAG        : 
 ```
