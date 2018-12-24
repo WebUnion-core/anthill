@@ -20,9 +20,7 @@
 
 ```java
 ...
-// 定义public类，继承Activity
 public class MainActivity extends Activity {
-	// 重写onCreate方法
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,13 +44,12 @@ Layout(布局) 用于显示界面内容，Android 中使用xml语法来编写布
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button" />
-
 </LinearLayout>
 ```
 
 LineaerLayout 是布局根元素，Button 是自定义的按钮元素，其内部包含以下属性:  
 
-1. `android:id`: 元素id，即给当前元素定义的唯一标识符，利用这个属性可以快速锁定到某个我们需要操作的页面元素，`@+id/button1`类似XML中引用资源的写法，其中"button1"即元素的 id 名;  
+1. `android:id`: 元素id，即给当前元素定义的唯一标识符，利用这个属性可以快速锁定到某个我们需要操作的页面元素，`@+id/button1`类似XML中引用资源的写法，其中"button1"为元素的id;  
 
 2. `android:layout_width`: 给元素设置宽度，这里的`wrap_content`表示将元素的宽度设置得和父元素一样;
 
@@ -77,7 +74,7 @@ public class MainActivity extends Activity {
 
 ### <a name="href1-3">在AndroidManifest中注册Activity</a> ###
 
-所有的  Activity 必须在 AndroidMainfest.xml 中注册才会生效:
+所有的 Activity 必须在 AndroidMainfest.xml 中注册才会生效:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -107,11 +104,14 @@ public class MainActivity extends Activity {
 
 activity 节点内部还有一个 intent-filter 节点，这个节点(及其内部的 action 和 category 节点)指明了程序运行时应该先启动哪个 Activity。
 
-activity 的父节点名为 application，其`android:icon`属性定义了 APP 的展示图标为"ic_launcher"，`adroid:label`属性则定义了标题栏名称及启动器(Launcher)中应用程序显示的名称。
+activity 的父节点名为 application，其`android:icon`属性定义了APP的展示图标为"ic_launcher"，`adroid:label`属性则定义了标题栏名称及启动器(Launcher)中应用程序显示的名称。
 
 如果 AndroidMainfest 中不包含任何主 Activity 会怎么样？其实没有主 Activity 的程序也是可以正常运行的，只不过无法在启动器中看到或打开这个程序，这种程序一般作为第三方服务供其他应用在内部调用，如支付宝快捷支付服务等。
 
-销毁一个 Activity 除了可以通过按Back键实现，还可以使用`finish()`来实现手动销毁。
+销毁一个 Activity 有以下两种方式:
+
+1. 按Back键;
+2. 使用`finish()`来实现手动销毁。
 
 ## <a name="href2">在Activity中使用Toast</a> ##
 
