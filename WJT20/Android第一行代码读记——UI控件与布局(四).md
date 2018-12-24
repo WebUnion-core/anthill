@@ -274,7 +274,8 @@ protected void onCreate(Bundle savedInstanceState) {
 ---
 
 ```
-ARTICLE_ID : 3
-POST_DATE : 2018/09/14
-AUTHER : WJT20
+ID         : 3
+DATE       : 2018/09/14
+AUTHER     : WJT20
+TAG        : Android
 ```

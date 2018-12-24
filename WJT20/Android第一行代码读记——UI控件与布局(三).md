@@ -161,7 +161,8 @@ public class TitleBar extends LinearLayout {
 ---
 
 ```
-ARTICLE_ID : 104
-POST_DATE : 2018/09/10
-AUTHER : WJT20
+ID         : 104
+DATE       : 2018/09/10
+AUTHER     : WJT20
+TAG        : Android
 ```

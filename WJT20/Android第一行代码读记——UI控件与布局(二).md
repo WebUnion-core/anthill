@@ -194,7 +194,8 @@ AndroidStudio 中可以很方便地使用百分比布局，而 Eclipse 则比较
 ---
 
 ```
-ARTICLE_ID : 103
-POST_DATE : 2018/09/03
-AUTHER : WJT20
+ID         : 103
+DATE       : 2018/09/03
+AUTHER     : WJT20
+TAG        : Android
 ```

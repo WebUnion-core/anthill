@@ -412,7 +412,8 @@ public class MyProvider extends ContentProvider {
 ---
 
 ```
-ARTICLE_ID : 119
-POST_DATE : 2018/11/28
-AUTHER : WJT20
+ID         : 119
+DATE       : 2018/11/28
+AUTHER     : WJT20
+TAG        : Android
 ```

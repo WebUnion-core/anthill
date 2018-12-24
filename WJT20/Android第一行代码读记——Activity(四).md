@@ -125,7 +125,8 @@ singleInstance 是4种启动模式中最复杂的一种，不同于其他3种启
 ---
 
 ```
-ARTICLE_ID : 26
-POST_DATE : 2018/08/25
-AUTHER : WJT20
+ID         : 26
+DATE       : 2018/08/25
+AUTHER     : WJT20
+TAG        : Android
 ```

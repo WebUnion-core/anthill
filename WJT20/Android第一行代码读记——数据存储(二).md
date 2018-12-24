@@ -288,7 +288,8 @@ query() 接收的参数达7个之多，这7个参数的含义为: 表名、列�
 ---
 
 ```
-ARTICLE_ID : 113
-POST_DATE : 2018/10/18
-AUTHER : WJT20
+ID         : 113
+DATE       : 2018/10/18
+AUTHER     : WJT20
+TAG        : Android
 ```
