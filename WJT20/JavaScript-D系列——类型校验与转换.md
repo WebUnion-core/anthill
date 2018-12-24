@@ -7,6 +7,9 @@
 2. [类型转换](#href2)
     1. [强制类型转换](#href2-1)
     2. [隐性类型转换](#href2-2)
+3. [特殊转换](#href3)
+    1. [Object转JSON](#href3-1)
+    2. [String转RegExp](#href3-2)
 
 ## <a name="href1">类型判断</a> ##
 
@@ -92,6 +95,41 @@ console.log(str.constructor === String); // true，为字符串类型
     ```
 
     转换规则同 Boolean()。
+
+## <a name="href3">特殊转换</a> ##
+
+### <a name="href3-1">Object转JSON</a> ###
+
+之前说过，Object 类型直接使用`toString()`方法是不能转为正确的格式的，那么要如何以字符串的形式显示 Object 的内容呢？JavaScript 提供了一套API专门用于 Object 和JSON之间的转换:
+
+1. `JSON.stringify(OBJECT[, REPLACER[, SPACE]])`: 将 OBJECT 参数转换为JSON字符串，REPLACER 参数(可选)用于转换结果的函数或数组，SPACE 参数(可选)可以为文本添加缩进、空格和换行符;
+
+2. `JSON.parse(JSONSTRING[, REVIVER])`: 将 JSONSTRING 参数转换为 Object 类型，如果 JSONSTRING 不符合JSON格式规范，则直接抛出错误，REVIVER 参数(可选)是一个转换结果的函数。
+
+示例:
+
+```js
+var data = {
+    name: 'WJT20',
+    id: 1
+};
+var json = JSON.stringify(data);
+console.log(json); // '{"name":"WJT20","id":1}'
+console.log(JSON.parse(json)); // {name:"WJT20",id:1}
+```
+
+### <a name="href3-2">String转RegExp</a> ###
+
+RegExp 即正则类型，将处理后的字符串作为匹配规则(转为正则表达式)是一个常见的操作，可以使用`new RegExp(STRING[, MODIFIER])`，STRING 即作为匹配规则的字符串，MODIFIER(可选)为修饰符组合("i"、"g"、"m"任意组合)。
+
+示例:
+
+```js
+var regExp = new RegExp('WJT[0-9]{2}', 'gi');
+console.log(regExp.test('I am wjt20')); // true
+```
+
+注意，作为匹配规则的字符串中的通配符前要多加一个反斜杠，例如，"\\w"要写为"\\\\w"。
 
 ---
 

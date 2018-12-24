@@ -21,7 +21,7 @@ JavaScript 有5种基本数据类型: Undefined、Null、Boolean、Number 和 St
 
 ### <a name="href1-1">Undefined类型</a> ###
 
-Undefined 类型只有一个值 undefined，如果使用 var 定义的变量未初始化值，其默认的值为 undefined。
+Undefined 类型只有一个值 undefined，如果使用`var`定义的变量未初始化值，其默认的值为 undefined。
 
 ```js
 var str;
@@ -30,11 +30,11 @@ console.log(str); // undefined
 
 ### <a name="href1-2">Null类型</a> ###
 
-Null 类型只有一个值 null，表示空对象，所以 typeof 操作 null 值的结果是"object"。
+Null 类型只有一个值null，表示空对象，所以`typeof`操作null值的结果是"object"。
 
 ### <a name="href1-3">Boolean类型</a> ###
 
-Boolean 类型有两个值 true 和 false，分别表示"是"和"否"。
+Boolean 类型有两个值true和 false，分别表示"是"和"否"。
 
 ### <a name="href1-4">Number类型</a> ###
 
@@ -60,13 +60,13 @@ var n2 = 0o10; // 八进制，值8
 var n3 = 0x10; // 十六进制，值16
 ```
 
-Number 有一个特殊值 NaN，表示一个本来要返回数值的操作值未返回数值的情况。
+Number 有一个特殊值NaN，表示一个本来要返回数值的操作值未返回数值的情况。
 
 ```js
-console.log(Number("a") + 10); // NaN
+console.log(Number('a') + 10); // NaN
 ```
 
-判断一个值是否为 NaN 只能通过`isNaN()`方法。
+判断一个值是否为NaN只能通过`isNaN()`方法。
 
 ```js
 console.log(isNaN('a')); // false
@@ -77,9 +77,9 @@ console.log(isNaN(1 + 'n')); // true
 
 ### <a name="href1-5">String类型</a> ###
 
-声明字符串: `var str = "WJT";`
+声明字符串: `var str = 'WJT'`。
 
-字符串中可以嵌入字符字面量，例如: `var str = 'WJT\nHello';`，其中，`\n`表示换行符。
+字符串中可以嵌入字符字面量，例如: `var str = 'WJT\nHello'`，其中，`\n`表示换行符。
 
 字符串属于类数组对象(类数组对象的特点: 可以通过索引号访问指定位置元素，有 length 属性):  
 
@@ -90,7 +90,7 @@ console.log(l); // 输出3
 
 可以使用+号拼接字符串: `var str = 'AB' + 'C';`。
 
-使用字符串的 concat() 方法也可以拼接字符串: `var str = 'A'.concat('B');`，这句代码返回一个由"A"字符串尾部拼接"B"字符串的新字符串——"AB"。
+使用字符串的`concat()`方法也可以拼接字符串: `var str = 'A'.concat('B')`，这句代码返回一个由"A"拼接"B"形成的新字符串——"AB"。
 
 ## <a name="href2">引用数据类型</a> ##
 
@@ -115,7 +115,7 @@ obj.sayHello('WJT20'); // 调用方法，输出: "Hello, WJT20"
 
 ### <a name="href2-2">Date类型</a> ###
 
-Date 类型就是日期时间的访问操作接口，使用 new 关键字可以创建一个 Date 实例对象。
+Date类型就是日期时间的访问操作接口，使用new关键字可以创建一个Date实例对象。
 
 ```js
 var time = new Date();
@@ -149,7 +149,6 @@ function getCurrentTime() {
     ary.push(time.toISOString().substr(0, 10));
     ary.push(time.toTimeString().match(/[0-9]+:[0-9]+:[0-9]+/)[0]);
     ary.push(time.toUTCString().match(/\w+,/)[0].slice(0, -1));
-
     return ary.join(' ');
 }
 ```
