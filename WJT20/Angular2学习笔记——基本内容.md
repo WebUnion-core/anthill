@@ -113,7 +113,8 @@ platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);
 ---
 
 ```
-ARTICLE_ID : 45
-POST_DATE : 2017/11/19
-AUTHER : WJT20
+ID         : 45
+DATE       : 2017/11/19
+AUTHER     : WJT20
+TAG        : Angular2
 ```

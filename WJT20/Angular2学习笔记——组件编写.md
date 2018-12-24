@@ -225,7 +225,8 @@ Angular2 对表单验证有非常完善的支持，我们可以非常方便地�
 ---
 
 ```
-ARTICLE_ID : 46
-POST_DATE : 2017/11/20
-AUTHER : WJT20
+ID         : 46
+DATE       : 2017/11/20
+AUTHER     : WJT20
+TAG        : Angular2
 ```
