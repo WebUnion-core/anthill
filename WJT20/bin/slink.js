@@ -20,13 +20,13 @@ function formatEachFile() {
             // isDirectory: 是否目录
             if (fs.statSync(filePath).isFile()) {
                 let fileCont = fs.readFileSync(filePath, 'utf-8');
+
+                // 读取文本信息
                 const _tag = fileCont.match(/TAG        : .+/)[0].replace('TAG        : ', '');
                 const _id = fileCont.match(/ID         : .+/)[0].replace('ID         : ', '');
-
                 if (!files[_tag]) {
                     files[_tag] = [];
                 }
-
                 files[_tag].push({
                     name: item.replace('.md', ''),
                     hash: md5(item, 8),
@@ -95,7 +95,6 @@ function formatEachFile() {
 // 格式化README
 function formatReadMe() {
     let fileCont = '\r\n# 导航 #\r\n\r\n';
-
     Object.keys(files).forEach(function(tag) {
         fileCont += '## ' + tag + '系列 ##\r\n\r\n';
         files[tag].forEach(function(item) {
