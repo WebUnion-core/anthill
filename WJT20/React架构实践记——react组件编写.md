@@ -259,5 +259,5 @@ export default (state = {}, action) => {
 ID         : 68
 DATE       : 2018/09/17
 AUTHER     : WJT20
-TAG        : 
+TAG        : React
 ```

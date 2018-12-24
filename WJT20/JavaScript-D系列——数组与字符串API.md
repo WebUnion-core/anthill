@@ -291,5 +291,5 @@ console.log(oldStr, newStr); // => "AaaaaB" "A****B"
 ID         : 72
 DATE       : 2018/05/03
 AUTHER     : WJT20
-TAG        : 
+TAG        : JavaScript
 ```

@@ -172,5 +172,5 @@ let regexpObj: RegExp = /[a-z]/;
 ID         : 42
 DATE       : 2017/11/12
 AUTHER     : WJT20
-TAG        : 
+TAG        : TypeScript
 ```

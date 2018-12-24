@@ -134,5 +134,5 @@ openTvCommand.add(macroCommand); // 报错: "叶对象不能添加子节点"
 ID         : 52
 DATE       : 2017/12/16
 AUTHER     : WJT20
-TAG        : 
+TAG        : JavaScript
 ```

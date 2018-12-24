@@ -122,5 +122,5 @@ light.init();
 ID         : 63
 DATE       : 2018/01/21
 AUTHER     : WJT20
-TAG        : 
+TAG        : JavaScript
 ```

@@ -141,5 +141,5 @@ import fn2 from './a.js';
 ID         : 61
 DATE       : 2018/01/14
 AUTHER     : WJT20
-TAG        : 
+TAG        : JavaScript
 ```

@@ -60,7 +60,7 @@ function GetRequest() {
 
     if (url.indexOf("?") != -1) {
         var str = url.substr(1);//获取url中"?"符后的字串
-        return str.replace(/amp;/g, "&"); 
+        return str.replace(/amp;/g, "&");
     } else {
         return str;
     }
@@ -259,5 +259,5 @@ nrm use
 ID         : 28
 DATE       : 2017/08/29
 AUTHER     : WJT20
-TAG        : 
+TAG        : Web前端
 ```

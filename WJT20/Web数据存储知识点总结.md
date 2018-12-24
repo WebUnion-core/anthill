@@ -214,8 +214,6 @@ JSON：
 ```
 ID         : 15
 DATE       : 2017/08/19
-RECENTLY_MODIFY : 2017/08/31
-TIME_COUNTER : 1
 AUTHER     : WJT20
-TAG        : 
+TAG        : Web前端
 ```

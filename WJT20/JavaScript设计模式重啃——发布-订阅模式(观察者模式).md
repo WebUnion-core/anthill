@@ -192,5 +192,5 @@ Event.trigger('squareMeter88', 2000000);//发布消息
 ID         : 43
 DATE       : 2017/11/14
 AUTHER     : WJT20
-TAG        : 
+TAG        : JavaScript
 ```

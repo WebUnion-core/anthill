@@ -368,5 +368,5 @@ console.log(pageName); // undefined
 ID         : 4
 DATE       : 2017/08/13
 AUTHER     : WJT20
-TAG        : 
+TAG        : ES6
 ```

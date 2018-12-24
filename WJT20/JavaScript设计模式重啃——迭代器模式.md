@@ -138,5 +138,5 @@ var each = function(ary, callback) {
 ID         : 39
 DATE       : 2017/11/6
 AUTHER     : WJT20
-TAG        : 
+TAG        : JavaScript
 ```

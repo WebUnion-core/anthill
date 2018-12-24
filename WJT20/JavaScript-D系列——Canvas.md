@@ -213,5 +213,5 @@ context.fillRect(20, 20, 50, 50); // 完全将由浅蓝到深蓝的渐变应用�
 ID         : 24
 DATE       : 2017/08/27
 AUTHER     : WJT20
-TAG        : 
+TAG        : JavaScript
 ```

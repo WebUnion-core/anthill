@@ -200,5 +200,5 @@ submitBtn.onclick = function() {
 ID         : 62
 DATE       : 2018/01/21
 AUTHER     : WJT20
-TAG        : 
+TAG        : JavaScript
 ```

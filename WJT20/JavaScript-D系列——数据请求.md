@@ -213,5 +213,5 @@ document.body.appendChild(script); // 请求成功，会在页面上显示图像
 ID         : 27
 DATE       : 2017/08/29
 AUTHER     : WJT20
-TAG        : 
+TAG        : JavaScript
 ```

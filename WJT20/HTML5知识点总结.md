@@ -81,7 +81,7 @@ HTML5 新增了一些语义标签，可以使我们创建更友好的页面结�
 8. frame；
 9. frameset；
 10. noframes；
-11. strike。 
+11. strike。
 
 ---
 
@@ -226,10 +226,8 @@ HTML5 Geolocation API 用于获得用户的地理位置。这个新特性可能�
 ---
 
 ```
-ID         : 5 
+ID         : 5
 DATE       : 2017/08/13
-RECENTLY_MODIFY : 2017/08/31
-TIME_COUNTER : 1
 AUTHER     : WJT20
-TAG        : 
+TAG        : HTML
 ```

@@ -231,8 +231,6 @@ HTTP 常用的请求方法有：
 ```
 ID         : 18
 DATE       : 2017/08/19
-RECENTLY_MODIFY : 2017/08/31
-TIME_COUNTER : 1
 AUTHER     : WJT20
-TAG        : 
+TAG        : Web相关
 ```
