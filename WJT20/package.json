@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "marked": "node ./bin/marked.js",
-    "slink": "node ./bin/smart-link.js"
+    "slink": "node ./bin/slink.js"
   },
   "repository": {
     "type": "git",

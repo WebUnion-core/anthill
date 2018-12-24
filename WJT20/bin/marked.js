@@ -10,13 +10,13 @@ const dataPath = path.resolve(__dirname, './../database');
 const allMdFiles = fs.readdirSync(srcPath);
 const jsonData = [];
 const dataType = 'JSON';
-const pre = 50;
+const length = 1000;
 const ignore = require('./ignore.json');
 
 // 组装数据
 function readAllFiles() {
     allMdFiles.forEach(function(item, index) {
-        if (ignore.indexOf(item) < 0) {
+        if (ignore.indexOf(item) < 0 && item.indexOf('.md') > 0) {
             const filePath = srcPath + '/' + item;
 
             // isFile: 是否文件
@@ -25,7 +25,7 @@ function readAllFiles() {
                 const fileCont = fs.readFileSync(filePath, 'utf-8');
                 const resultCont = encodeURI(marked(fileCont));
 
-                if (index % pre === 0) {
+                if (index % length === 0) {
                     jsonData.push({});
                 }
 
@@ -35,7 +35,7 @@ function readAllFiles() {
                 };
             }
         } else {
-            console.log('_IGNORE_', item);
+            console.log('_IGNORE_ : ', item);
         }
     });
 }
@@ -44,20 +44,9 @@ function readAllFiles() {
 function writeAllDataFiles() {
     jsonData.forEach(function(item, index) {
         const hash = 'md-data' + (index + 1);
-        // const hash = (new Date()).valueOf();
         const name = hash + '.' + dataType.toLowerCase();
-        writeDataFiles(name, JSON.stringify(item, null, 4));
-        // console.log('output success: ' + name);
+        fs.writeFileSync(dataPath + '/' + name, JSON.stringify(item, null, 4), 'utf-8');
     });
-}
-
-// 写入单个文件数据
-function writeDataFiles(fileName, content) {
-    fs.writeFileSync(
-        dataPath + '/' + fileName,
-        content,
-        'utf-8'
-    );
 }
 
 (function() {
