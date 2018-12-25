@@ -1,5 +1,5 @@
 
-# JavaScript-D系列——BOM #
+# JavaScript高级程序设计实记——BOM #
 
 ## 目录 ##
 

@@ -1,5 +1,5 @@
 
-# JavaScript-D系列——闭包 #
+# JavaScript高级程序设计实记——闭包 #
 
 ## 目录 ##
 

@@ -1,5 +1,5 @@
 
-# JavaScript-D系列——正则 #
+# JavaScript高级程序设计实记——正则 #
 
 ## 目录 ##
 

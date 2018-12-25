@@ -1,5 +1,5 @@
 
-# JavaScript-D系列——事件 #
+# JavaScript高级程序设计实记——事件 #
 
 ## 目录 ##
 

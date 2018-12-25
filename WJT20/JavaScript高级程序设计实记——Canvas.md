@@ -1,5 +1,5 @@
 
-# JavaScript-D系列——Canvas #
+# JavaScript高级程序设计实记——Canvas #
 
 ## 目录 ##
 

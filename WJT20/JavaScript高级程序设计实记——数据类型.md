@@ -1,5 +1,5 @@
 
-# JavaScript-D系列——数据类型 #
+# JavaScript高级程序设计实记——数据类型 #
 
 ## 目录 ##
 

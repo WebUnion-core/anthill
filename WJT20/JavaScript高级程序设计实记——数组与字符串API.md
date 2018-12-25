@@ -1,5 +1,5 @@
 
-# JavaScript-D系列——数组与字符串API #
+# JavaScript高级程序设计实记——数组与字符串API #
 
 ## 目录 ##
 

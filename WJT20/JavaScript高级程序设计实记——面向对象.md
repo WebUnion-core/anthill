@@ -1,5 +1,5 @@
 
-# JavaScript-D系列——面向对象 #
+# JavaScript高级程序设计实记——面向对象 #
 
 ## 目录 ##
 
