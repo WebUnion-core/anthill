@@ -109,32 +109,6 @@
 
 ## JavaScript系列 ##
 
-- [91, 5F943DAB1EFD366C] : [JavaScript-D系列——BOM](./JavaScript-D系列——BOM.md)
-
-- [24, 77520FAC3A482455] : [JavaScript-D系列——Canvas](./JavaScript-D系列——Canvas.md)
-
-- [92, 124DAC51AF32F43B] : [JavaScript-D系列——DOM](./JavaScript-D系列——DOM.md)
-
-- [93, F06F6739E88AA395] : [JavaScript-D系列——事件](./JavaScript-D系列——事件.md)
-
-- [94, 78C729F5500803FC] : [JavaScript-D系列——数据存储](./JavaScript-D系列——数据存储.md)
-
-- [21, E30C27F0302E95AC] : [JavaScript-D系列——数据类型](./JavaScript-D系列——数据类型.md)
-
-- [27, CA7C6D5E62D0328B] : [JavaScript-D系列——数据请求](./JavaScript-D系列——数据请求.md)
-
-- [72, 72D93543E488CEF1] : [JavaScript-D系列——数组与字符串API](./JavaScript-D系列——数组与字符串API.md)
-
-- [17, F8A29149C2437973] : [JavaScript-D系列——正则](./JavaScript-D系列——正则.md)
-
-- [90, 13E03AF3890903DF] : [JavaScript-D系列——类型校验与转换](./JavaScript-D系列——类型校验与转换.md)
-
-- [22, F110D07252CAF4B5] : [JavaScript-D系列——语句与函数](./JavaScript-D系列——语句与函数.md)
-
-- [95, D87D0A3426D24EDC] : [JavaScript-D系列——闭包](./JavaScript-D系列——闭包.md)
-
-- [96, 59D30790925A74BD] : [JavaScript-D系列——面向对象](./JavaScript-D系列——面向对象.md)
-
 - [71, C6F08382C9532350] : [JavaScript实战技巧](./JavaScript实战技巧.md)
 
 - [60, 935CA2B1481EC0CD] : [JavaScript设计模式重啃——中介者模式](./JavaScript设计模式重啃——中介者模式.md)
@@ -166,6 +140,32 @@
 - [39, AAC9372C629652F0] : [JavaScript设计模式重啃——迭代器模式](./JavaScript设计模式重啃——迭代器模式.md)
 
 - [64, 8BB8FCE99E797506] : [JavaScript设计模式重啃——适配器模式](./JavaScript设计模式重啃——适配器模式.md)
+
+- [91, 36847B892A61BC3D] : [JavaScript高级程序设计实记——BOM](./JavaScript高级程序设计实记——BOM.md)
+
+- [24, 0D20156160F3A27D] : [JavaScript高级程序设计实记——Canvas](./JavaScript高级程序设计实记——Canvas.md)
+
+- [92, 3F1E01E9D33FB645] : [JavaScript高级程序设计实记——DOM](./JavaScript高级程序设计实记——DOM.md)
+
+- [93, A98D76E7ADDDC04B] : [JavaScript高级程序设计实记——事件](./JavaScript高级程序设计实记——事件.md)
+
+- [94, 4E4FEA30A0E3BE41] : [JavaScript高级程序设计实记——数据存储](./JavaScript高级程序设计实记——数据存储.md)
+
+- [21, 0727FEBE57F65A34] : [JavaScript高级程序设计实记——数据类型](./JavaScript高级程序设计实记——数据类型.md)
+
+- [27, 98BB27215E59A312] : [JavaScript高级程序设计实记——数据请求](./JavaScript高级程序设计实记——数据请求.md)
+
+- [72, 06AFC29792540975] : [JavaScript高级程序设计实记——数组与字符串API](./JavaScript高级程序设计实记——数组与字符串API.md)
+
+- [17, 045BF492D1EE6796] : [JavaScript高级程序设计实记——正则](./JavaScript高级程序设计实记——正则.md)
+
+- [90, E844BA9743C384DF] : [JavaScript高级程序设计实记——类型校验与转换](./JavaScript高级程序设计实记——类型校验与转换.md)
+
+- [22, 2D20C8FEA4363249] : [JavaScript高级程序设计实记——语句与函数](./JavaScript高级程序设计实记——语句与函数.md)
+
+- [95, 7952953207526139] : [JavaScript高级程序设计实记——闭包](./JavaScript高级程序设计实记——闭包.md)
+
+- [96, 9CB77B4E1040EF06] : [JavaScript高级程序设计实记——面向对象](./JavaScript高级程序设计实记——面向对象.md)
 
 - [33, 16AE148B2C25DD8D] : [JavaScript黑科技](./JavaScript黑科技.md)
 
