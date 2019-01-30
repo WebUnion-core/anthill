@@ -8,7 +8,9 @@
 3. [安装与卸载](#href3)
 4. [查看信息](#href4)
 5. [升级依赖包](#href5)
-6. [其他](#href6)
+6. [npm登录及发布包](#href6)
+7. [切换npm镜像](#href7)
+8. [其他](#href8)
 
 ## <a name="href1">参考链接</a> ##
 
@@ -54,7 +56,31 @@
 
 `npm update <package>`: 升级依赖包版本;
 
-## <a name="href6">其他</a> ##
+## <a name="href6">npm登录及发布包</a> ##
+
+1. npm登录及发布:
+
+```
+npm login
+npm publish
+```
+
+2. cnpm登录及发布:
+
+```
+npm login --registry http://registry.npmjs.org
+npm publish --registry http://registry.npmjs.org
+```
+
+## <a name="href7">切换npm镜像</a> ##
+
+```
+nrm ls
+nrm add npm-company http://xmiles.xicp.net:4873/
+nrm use
+```
+
+## <a name="href8">其他</a> ##
 
 1. `npm prune`: 移除当前不在 package.json 中但是存在 node_modules 中的依赖;
 
