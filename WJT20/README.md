@@ -241,17 +241,9 @@
 
 - [120, AE78A2DDBCD14AC0] : [关于Redux的那些乱七八糟的东西](./关于Redux的那些乱七八糟的东西.md)
 
-## TypeScript系列 ##
-
-- [41, 2335101CF7E8C417] : [TypeScript学习笔记——基础(一)](./TypeScript学习笔记——基础(一).md)
-
-- [42, CA0D04231C38C61B] : [TypeScript学习笔记——基础(二)](./TypeScript学习笔记——基础(二).md)
-
-## webpack系列 ##
-
-- [2, 3BF0F739A0B5948C] : [webpack常规配置总结](./webpack常规配置总结.md)
-
 ## Web前端系列 ##
+
+- [9, 8C28BA4C7A3583FB] : [SVG+CSS3动画效果合集](./SVG+CSS3动画效果合集.md)
 
 - [15, 6FB3F76E3FC87D1A] : [Web数据存储知识点总结](./Web数据存储知识点总结.md)
 
@@ -264,6 +256,16 @@
 - [32, 33F971AA0A2DE131] : [探索em和rem](./探索em和rem.md)
 
 - [66, 3E92F0078CDFA413] : [浏览器渲染机制基础](./浏览器渲染机制基础.md)
+
+## TypeScript系列 ##
+
+- [41, 2335101CF7E8C417] : [TypeScript学习笔记——基础(一)](./TypeScript学习笔记——基础(一).md)
+
+- [42, CA0D04231C38C61B] : [TypeScript学习笔记——基础(二)](./TypeScript学习笔记——基础(二).md)
+
+## webpack系列 ##
+
+- [2, 3BF0F739A0B5948C] : [webpack常规配置总结](./webpack常规配置总结.md)
 
 ## 其他系列 ##
 
