@@ -230,13 +230,12 @@ SVG 指可伸缩矢量图形(Scalable Vector Graphics)，可用来定义用于�
 示例代码:
 
 ```xml
-<svg xmlns="http://www.w3.org/2000/svg" version="1.0">
-    <circle cx="300" cy="300" r="280" fill="#2795a5" opacity="0.5" />
-    <circle cx="300" cy="300" r="280" fill="#2795a5" opacity="0.5" stroke="#3456c1" stroke-width="5" />
-    <circle cx="300" cy="300" r="15" fill="black" stroke="#3456c1" stroke-width="5" />
-    <line x1="300" y1="300" x2="550" y2="300" stroke="black" stroke-width="10" />
-    <line x1="300" y1="300" x2="300" y2="480" stroke="black" stroke-width="10" />
-    <line x1="300" y1="300" x2="200" y2="200" stroke="black" stroke-width="10" />
+<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="560" height="560">
+    <circle cx="280" cy="280" r="250" fill="#2795a5" opacity="0.75" stroke="#3456c1" stroke-width="5" />
+    <circle cx="280" cy="280" r="15" fill="black" stroke="#3456c1" stroke-width="5" />
+    <line x1="280" y1="280" x2="480" y2="280" stroke="black" stroke-width="10" />
+    <line x1="280" y1="280" x2="280" y2="420" stroke="black" stroke-width="10" />
+    <line x1="280" y1="280" x2="200" y2="200" stroke="black" stroke-width="10" />
 </svg>
 ```
 
