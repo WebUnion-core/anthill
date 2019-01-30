@@ -11,6 +11,10 @@
 6. [绘制文本](#href6)
 7. [阴影](#href7)
 8. [渐变](#href8)
+9. [SVG](#href9)
+    1. [预定义形状元素](#href9-1)
+    2. [绘制时钟实例](#href9-2)
+    3. [Canvas与SVG的区别](#href9-3)
 
 Canvas 是 HTML5 添加的最受欢迎的功能，这个元素负责在页面中设定一个区域，然后可以通过 JavaScript 动态地在这个区域中绘制图形。
 
@@ -206,6 +210,59 @@ context.fillRect(20, 20, 50, 50); // 完全将由浅蓝到深蓝的渐变应用�
 ```
 
 注意，如果想让渐变完全覆盖图像，应将`createLinearGradient()`前两个参数设为图像左上点坐标，后两个参数设为图像右下点坐标。
+
+## <a name="href9">SVG</a> ##
+
+这一小节不是书中的内容，因为 SVG 和 Canvas 都是 HTML5 新增的内容，所以特别在本篇文章中记录这两者的内容，并比较两者的异同。
+
+SVG 指可伸缩矢量图形(Scalable Vector Graphics)，可用来定义用于网络的基于矢量的图形。SVG 使用 XML 格式定义图形，在放大或改变尺寸的情况下其图形质量不会有所损失，IE9 以及 Firefox 和 Chrome 都支持 SVG。
+
+### <a name="href9-1">预定义形状元素</a> ###
+
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w1.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w2.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w3.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w4.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w5.png)
+
+### <a name="href9-2">绘制时钟实例</a> ###
+
+示例代码:
+
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" version="1.0">
+    <circle cx="300" cy="300" r="280" fill="#2795a5" opacity="0.5" />
+    <circle cx="300" cy="300" r="280" fill="#2795a5" opacity="0.5" stroke="#3456c1" stroke-width="5" />
+    <circle cx="300" cy="300" r="15" fill="black" stroke="#3456c1" stroke-width="5" />
+    <line x1="300" y1="300" x2="550" y2="300" stroke="black" stroke-width="10" />
+    <line x1="300" y1="300" x2="300" y2="480" stroke="black" stroke-width="10" />
+    <line x1="300" y1="300" x2="200" y2="200" stroke="black" stroke-width="10" />
+</svg>
+```
+
+效果图:
+
+![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w6.png)
+
+### <a name="href9-3">Canvas与SVG的区别</a> ###
+
+Canvas 和 SVG 的主要区别是: 使用 Canvas 绘制图形是通过调用其API，而 SVG 则是通过构建一棵 XML 元素树来实现的。
+
+Canvas 的特点:
+
+1. 依赖分辨率;
+2. 不支持事件处理器;
+3. 弱的文本渲染能力;
+4. 能够以`.png`或`.jpg`格式保存结果图像;
+5. 最适合图像密集型的游戏，其中的许多对象会被频繁重绘。
+
+SVG 的特点:
+
+1. 不依赖分辨率;
+2. 支持事件处理器;
+3. 最适合带有大型渲染区域的应用程序(比如谷歌地图);
+4. 复杂度高会减慢渲染速度(任何过度使用 DOM 的应用都不快);
+5. 不适合游戏应用。
 
 ---
 
