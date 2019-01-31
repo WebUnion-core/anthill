@@ -9,6 +9,7 @@
 ## <a name="href1">参考链接</a> ##
 
 - [利用CSS3的animation step属性实现wifi动画](https://juejin.im/post/597694e75188250d4d352cf9)
+- [不炫技，SVG+CSS3 旋转动画属性就能实现的梦幻效果](https://juejin.im/post/5a150fc06fb9a0451e3f7042)
 
 ## <a name="href2">信号格动画</a> ##
 
@@ -59,6 +60,100 @@
 效果图如下:
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w116.gif)
+
+## 旋转花瓣动画 ##
+
+源码:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SVG旋转花瓣动画效果实现</title>
+    <style>
+    .svg-container {
+        background-color: #212121;
+    }
+
+    @keyframes petal2 {
+        0% {
+            opacity: 0;
+            transform: rotate(0deg);
+            transform-origin: 280px 280px;
+        }
+        100% {
+            transform: rotate(60deg);
+            transform-origin: 280px 280px;
+        }
+    }
+    @keyframes petal3 {
+        0% {
+            opacity: 0;
+            transform: rotate(0deg);
+            transform-origin: 280px 280px;
+        }
+        100% {
+            transform: rotate(120deg);
+            transform-origin: 280px 280px;
+        }
+    }
+    @keyframes petal4 {
+        0% {
+            opacity: 0;
+            transform: rotate(0deg);
+            transform-origin: 280px 280px;
+        }
+        100% {
+            transform: rotate(180deg);
+            transform-origin: 280px 280px;
+        }
+    }
+    @keyframes petal5 {
+        0% {
+            opacity: 0;
+            transform: rotate(0deg);
+            transform-origin: 280px 280px;
+        }
+        100% {
+            transform: rotate(240deg);
+            transform-origin: 280px 280px;
+        }
+    }
+    @keyframes petal6 {
+        0% {
+            opacity: 0;
+            transform: rotate(0deg);
+            transform-origin: 280px 280px;
+        }
+        100% {
+            transform: rotate(300deg);
+            transform-origin: 280px 280px;
+        }
+    }
+    #petal2 { animation: petal2 ease 1s both; }
+    #petal3 { animation: petal3 ease 1.2s both; }
+    #petal4 { animation: petal4 ease 1.4s both; }
+    #petal5 { animation: petal5 ease 1.6s both; }
+    #petal6 { animation: petal6 ease 1.8s both; }
+    </style>
+</head>
+<body>
+    <svg class="svg-container" xmlns="http://www.w3.org/2000/svg" version="1.0" width="560" height="560">
+        <ellipse id="petal1" cx="370" cy="280" rx="90" ry="20" fill="#00a4e9" opacity="0.75" />
+        <use id="petal2" xlink:href="#petal1" x="0" y="0" />
+        <use id="petal3" xlink:href="#petal1" x="0" y="0" />
+        <use id="petal4" xlink:href="#petal1" x="0" y="0" />
+        <use id="petal5" xlink:href="#petal1" x="0" y="0" />
+        <use id="petal6" xlink:href="#petal1" x="0" y="0" />
+    </svg>
+</body>
+</html>
+```
+
+效果图如下:
+
+![image]()
 
 ---
 
