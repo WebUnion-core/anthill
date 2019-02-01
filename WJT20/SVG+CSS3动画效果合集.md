@@ -5,6 +5,8 @@
 
 1. [参考链接](#href1)
 2. [信号格动画](#href2)
+3. [旋转花瓣动画](#href3)
+4. [旋转方块动画](#href4)
 
 ## <a name="href1">参考链接</a> ##
 
@@ -61,7 +63,7 @@
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w116.gif)
 
-## 旋转花瓣动画 ##
+## <a name="href3">旋转花瓣动画</a> ##
 
 源码:
 
@@ -75,7 +77,6 @@
     .svg-container {
         background-color: #212121;
     }
-
     @keyframes petal2 {
         0% {
             opacity: 0;
@@ -154,6 +155,89 @@
 效果图如下:
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w117.gif)
+
+## <a name="href4">旋转方块动画</a> ##
+
+源码:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SVG旋转方块动画效果实现</title>
+    <style>
+    @keyframes content {
+        to { transform: rotateY(360deg); }
+    }
+    svg {
+        position: absolute;
+        top: 230px;
+        left: 230px;
+        width: 100px;
+        height: 100px;
+    }
+    .container {
+        background-color: #212121;
+        width: 560px;
+        height: 560px;
+        perspective: 560px;
+    }
+    .svg-content {
+        transform-style: preserve-3d;
+        animation: content 2s linear both infinite;
+    }
+    #cubic-top {
+        transform: translateY(-100px) rotateX(90deg);
+        transform-origin: bottom center;
+    }
+    #cubic-right {
+        transform: translateX(100px) rotateY(90deg);
+        transform-origin: center left;
+    }
+    #cubic-bottom {
+        transform: translateY(100px)  rotateX(-90deg);
+        transform-origin:top center;
+    }
+    #cubic-left {
+        transform: translateX(-100px) rotateY(-90deg);
+        transform-origin: center right;
+    }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="svg-content">
+            <svg id="cubic-front" xmlns="http://www.w3.org/2000/svg" version="1.0">
+                <rect width="100" height="100" fill="#3456c1" opacity="0.35" />
+            </svg>
+
+            <svg id="cubic-back" xmlns="http://www.w3.org/2000/svg" version="1.0">
+                <rect width="100" height="100" fill="#0e9994" opacity="0.35" />
+            </svg>
+
+            <svg id="cubic-left" xmlns="http://www.w3.org/2000/svg" version="1.0">
+                <rect width="100" height="100" fill="#e11515" opacity="0.35" />
+            </svg>
+
+            <svg id="cubic-right" xmlns="http://www.w3.org/2000/svg" version="1.0">
+                <rect width="100" height="100" fill="#edb71c" opacity="0.35" />
+            </svg>
+
+            <svg id="cubic-top" xmlns="http://www.w3.org/2000/svg" version="1.0">
+                <rect width="100" height="100" fill="#3a9834" opacity="0.35" />
+            </svg>
+
+            <svg id="cubic-bottom" xmlns="http://www.w3.org/2000/svg" version="1.0">
+                <rect width="100" height="100" fill="#d8791c" opacity="0.35" />
+            </svg>
+        </div>
+    </main>
+</body>
+</html>
+```
+
+效果图如下:
 
 ---
 
