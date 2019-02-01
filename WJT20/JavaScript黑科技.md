@@ -5,19 +5,22 @@
 
 1. [document.implementation](#href1)
 2. [document.readyState](#href2)
-3. [DOMElement.getBoundingClientRect](#href3)
-4. [Object.defineProperty](#href4)
+3. [DOMElement.getBoundingClientRect()](#href3)
+4. [Object.defineProperty()](#href4)
+    1. [数据描述](#href4-1)
+    2. [存取器描述](#href4-2)
+5. [Object.freeze()](#href5)
 
 ## <a name="href1">document.implementation</a> ##
 
-document.implementation 返回一个和当前文档相关联的 DOMImplementation 接口(对象)，DOMImplementation 可以提供了不依赖于任何 document 的方法。
+`document.implementation`返回一个和当前文档相关联的 DOMImplementation 接口(对象)，DOMImplementation 可以提供了不依赖于任何 document 的方法。
 
 DOMImplementation 没有继承任何的属性，它包含有四个方法:
 
-1. createDocument(): 创建一个新 Document 对象和指定的根元素；
-2. createDocumentType(): 创建空的 DocumentType 节点；
-3. createHTMLDocument(): 创建一个 HTML Document 对象；
-4. hasFeature(): 检查 DOMImplementation 是否可执行指定的特性和版本，返回一个布尔值。
+1. `createDocument()`: 创建一个新 Document 对象和指定的根元素;
+2. `createDocumentType()`: 创建空的 DocumentType 节点;
+3. `createHTMLDocument()`: 创建一个 HTML Document 对象;
+4. `hasFeature()`: 检查 DOMImplementation 是否可执行指定的特性和版本，返回一个布尔值。
 
 示例:
 
@@ -28,10 +31,10 @@ console.log(imp.hasFeature("HTML","1.0")); // 检查这个文件是否有HTML DO
 
 ## <a name="href2">document.readyState</a> ##
 
-document.readyState 属性描述了文档的加载状态，其返回值为一个表征状态的字符串，取值有以下几种:
+`document.readyState`属性描述了文档的加载状态，其返回值为一个表征状态的字符串，取值有以下几种:
 
-1. loading: 文档加载中；
-2. interactive: 文档已经完成加载，文档已被解析，但是诸如图像，样式表和框架之类的子资源仍在加载；
+1. loading: 文档加载中;
+2. interactive: 文档已经完成加载，文档已被解析，但是诸如图像，样式表和框架之类的子资源仍在加载;
 3. complete: 文档和所有子资源已完成加载，此状态表示 load 事件即将被触发。
 
 每次状态的切换，便会触发一次 readystatechange 事件。
@@ -45,9 +48,9 @@ setInterval(function() {
 }, 10);
 ```
 
-## <a name="href3">DOMElement.getBoundingClientRect</a> ##
+## <a name="href3">DOMElement.getBoundingClientRect()</a> ##
 
-DOM 节点的 getBoundingClientRect 方法返回一个矩形对象，包含四个属性: left、top、right 和 bottom。分别表示元素相对页面的各项数据。
+DOM 节点的`getBoundingClientRect()`方法返回一个矩形对象，包含四个属性: left、top、right 和 bottom。分别表示元素相对页面的各项数据。
 
 示例:
 
@@ -57,9 +60,9 @@ var coords = divElem.getBoundingClientRect();
 console.log(coords);
 ```
 
-## <a name="href4">Object.defineProperty</a> ##
+## <a name="href4">Object.defineProperty()</a> ##
 
-针对属性，我们可以给这个属性设置一些特性，比如是否只读不可以写；是否可以被`for..in`或`Object.keys()`遍历。给对象的属性添加特性描述，目前提供两种形式：数据描述和存取器描述。
+针对属性，我们可以给这个属性设置一些特性，比如是否只读不可以写; 是否可以被`for..in`或`Object.keys()`遍历。给对象的属性添加特性描述，目前提供两种形式: 数据描述和存取器描述。
 
 语法:
 
@@ -68,34 +71,34 @@ Object.defineProperty(obj, prop, descriptor)
 ```
 
 参数说明:
-1. obj: 必需，目标对象；
-2. prop: 必需，需定义或修改的属性的名字；
+1. obj: 必需，目标对象;
+2. prop: 必需，需定义或修改的属性的名字;
 3. descriptor: 必需，目标属性所拥有的特性。
 
 ### <a name="href4-1">数据描述</a> ###
 
-1. value: Any 类型，修改属性对应的值，示例如下：
+1. value: Any 类型，修改属性对应的值，示例如下:
 
     ```js
     var data = { age: 10 };
     Object.defineProperty(data, 'age', {
-        value: 100,
+        value: 100
     });
     console.log(data.age); // => 100
     ```
 
-2. writable: Boolean 类型，修改属性的可写性，示例如下：
+2. writable: Boolean 类型，修改属性的可写性，示例如下:
 
     ```js
     var data = { age: 10 };
     Object.defineProperty(data, 'age', {
-        writable: false,
+        writable: false
     });
     data.age = 100;
     console.log(data.age); // => 10
     ```
 
-3. enumerable: Boolean 类型，修改属性的可枚举性，示例如下：
+3. enumerable: Boolean 类型，修改属性的可枚举性，示例如下:
 
     ```js
     var data = { age: 10, name: 'WJT20' };
@@ -108,7 +111,7 @@ Object.defineProperty(obj, prop, descriptor)
     // => "WJT20"
     ```
 
-4. configurable: Boolean 类型，决定属性的前三项配置是否可以重新配置或被 delete 删除，示例如下：
+4. configurable: Boolean 类型，决定属性的前三项配置是否可以重新配置或被 delete 删除，示例如下:
 
     ```js
     var data = { age: 10 };
@@ -121,7 +124,7 @@ Object.defineProperty(obj, prop, descriptor)
 
 ### <a name="href4-2">存取器描述</a> ###
 
-1. getter: 获得属性值的方法，获取属性值的时候触发 get 属性定义的方法，返回的值作为属性的新值，示例如下：
+1. getter: 获得属性值的方法，获取属性值的时候触发 get 属性定义的方法，返回的值作为属性的新值，示例如下:
 
     ```js
     var data = { age: 10 };
@@ -133,7 +136,7 @@ Object.defineProperty(obj, prop, descriptor)
     console.log(data.age); // => 100
     ```
 
-2. setter: 设置属性值的方法，设置属性值的时候触发 set 属性定义的方法，示例如下：
+2. setter: 设置属性值的方法，设置属性值的时候触发 set 属性定义的方法，示例如下:
 
     ```js
     var data = { age: 10 };
@@ -146,7 +149,35 @@ Object.defineProperty(obj, prop, descriptor)
     console.log(data); // => 100
     ```
 
-注意：当使用了 getter 或 setter 方法，不允许使用 writable 和 value 这两个属性。
+注意: 当使用了 getter 或 setter 方法，不允许使用 writable 和 value 这两个属性。
+
+## <a name="href5">Object.freeze()</a> ##
+
+`Object.freeze()`方法可以冻结一个对象(包括数组)，冻结指的是不能向这个对象添加新的属性，不能修改其已有属性的值，不能删除已有属性，以及不能修改该对象已有属性的可枚举性、可配置性、可写性。该方法返回被冻结的对象。
+
+示例:
+
+```js
+var user = {
+    id: 1,
+    name: 'WJT20'
+};
+Object.freeze(user);
+user.name = 'Jerry'; // 严格模式下会直接抛出错误
+console.log(user.name); // => "WJT20"
+```
+
+判断一个对象是否被"冻结"，可以使用`Object.isFrozen()`方法:
+
+```js
+var user = {
+    id: 1,
+    name: 'WJT20'
+};
+console.log(Object.isFrozen(user)); // => false
+Object.freeze(user);
+console.log(Object.isFrozen(user)); // => true
+```
 
 ---
 
