@@ -1,4 +1,4 @@
 
 # WebUnion's knowledge base #
 
-__What you know is what you share.__ Welcome to all.
+__What you share is what you know.__ Welcome to all.
