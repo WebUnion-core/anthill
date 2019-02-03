@@ -11,10 +11,14 @@
 6. [远程同步](#href6)
 7. [查看信息](#href7)
 8. [分支](#href8)
+9. [撤销](#href9)
+10. [回退](#href10)
 
 ## <a name="href1">参考链接</a> ##
 
-- [常用 Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
+- [常用Git命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
+- [Git撤销&回滚操作](https://blog.csdn.net/ligang2585116/article/details/71094887)
+- [Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
 ## <a name="href2">git设置</a> ##
 
@@ -143,6 +147,20 @@
 10. `git branch -d <BRANCH>`: 删除本地分支;
 
 11. `git push origin --delete <BRANCH>`: 删除远程分支;
+
+## <a name="href9">撤销</a> ##
+
+当进行了错误或不恰当的`git add`或`git commit`操作后，可以通过撤销来取消之前的操作:
+
+1. 文件被修改，但未执行`git add`操作，此时可以把版本库的版本替换掉工作区的版本，只要使用`git checkout <FILE>`命令即可;
+
+2. 已经使用`git add`提交了某个文件(文件加入到暂存区)，这时候可以使用`git reset HEAD <FILE>`撤销该文件的提交。
+
+## <a name="href10">回退</a> ##
+
+1. 回退到前n个版本: `git reset --hard HEAD~<N>`;
+
+2. 回退到指定版本: `git reset --hard <VERSION>`，`<VERSION>`可以通过`git reflog`命令查看。
 
 ---
 
