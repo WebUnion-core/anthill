@@ -1,4 +1,4 @@
 
 # Anthill #
 
-__What you share is what you know.__ Welcome to all. This is our Anthill.
+__What you share is what you know.__ Welcome to all.

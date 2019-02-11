@@ -7,6 +7,7 @@
 2. [信号格动画](#href2)
 3. [旋转花瓣动画](#href3)
 4. [旋转方块动画](#href4)
+5. [Anthill动画](#href5)
 
 ## <a name="href1">参考链接</a> ##
 
@@ -238,6 +239,51 @@
 ```
 
 效果图如下:
+
+![image]()
+
+## <a name="href5">Anthill动画</a> ##
+
+源码:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SVG Anthill动画效果实现</title>
+    <style>
+    @keyframes self-rotate {
+        0% { transform: rotateX(0deg) rotateZ(0deg); }
+        100% { transform: rotateX(250deg) rotateZ(-566deg); }
+    }
+    .svg-container {
+        position: relative;
+    }
+    .background {
+        animation: self-rotate 5s both;
+        transform-origin: 280px 280px;
+    }
+    .text {
+        text-anchor: middle;
+        font-size: 40px;
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.85);
+    }
+    </style>
+</head>
+<body>
+    <svg class="svg-container" xmlns="http://www.w3.org/2000/svg" version="1.0" width="560" height="560">
+        <circle cx="280" cy="280" r="180" stroke="#f55a5a" fill="#ffffff" stroke-width="2"></circle>
+        <rect class="background" fill="#f55a5a" width="360" height="360" x="100" y="100" />
+        <text class="text" x="280" y="290" fill="#ffffff"> Anthill </text>
+    </svg>
+</body>
+</html>
+```
+
+效果图如下:
+
+![image]()
 
 ---
 
