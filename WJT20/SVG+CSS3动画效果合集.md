@@ -240,7 +240,7 @@
 
 效果图如下:
 
-![image]()
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w118.gif)
 
 ## <a name="href5">Anthill动画</a> ##
 
@@ -283,7 +283,7 @@
 
 效果图如下:
 
-![image]()
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w119.gif)
 
 ---
 
