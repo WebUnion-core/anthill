@@ -51,7 +51,7 @@ JSONP 利用 script 标签不受同源策略约束的特点，通过把请求写
 
 打开淘宝网站，等页面完全加载完成后，打开浏览器开发者工具(按键F12)，我们可以查看到淘宝页面的请求列表中有这么一个请求:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w14.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w14.png)
 
 这个请求就用到了 JSONP，我们来分析这个请求 URL: `https://textlink.simba.taobao.com/lk?_ksTS=1494252482350_32&callback=jsonp33&pid=421005_1007&refpid=mm_14507511_3485205_11375261`
 
@@ -90,7 +90,7 @@ JSONP 有两种比较方便的实现手段: 使用原生 JavaScript 实现和使
 
 网络畅通的情况下在浏览器中访问这个页面，我们可以看到这么一大串吓人的数据:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w15.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w15.png)
 
 这么多数据看着真难受，我们修改下自定义的 jsonp33 函数，对接收到的数据进行过滤处理，筛选出“商品类别”数据:
 
@@ -106,7 +106,7 @@ function jsonp33(data) {
 
 最终看到显示出的数据是这样的:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w16.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w16.png)
 
 ### <a name="href4-4">jQuery实现</a> ###
 
@@ -190,7 +190,7 @@ jQuery 把 JSONP 包装在 $.ajax() 中，然而它与 Ajax 间并没有直接�
 
 最终页面返回内容为:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w17.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w17.png)
 
 ---
 

@@ -89,7 +89,7 @@ var TestModel = db.model('test', TestSchema);
 
     使用 MondoDB 可视化工具 Robomongo 可以看到以下结果:
 
-    ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w36.png)
+    ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w36.png)
 
 2. 使用 Entity 的 save(callback) 方法，参数 callback 与 Model.create() 的 callback 参数形式相同。
 
@@ -112,7 +112,7 @@ var TestModel = db.model('test', TestSchema);
 
     效果:
 
-    ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w37.png)
+    ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w37.png)
 
 ## <a name="href6">删——删除记录</a> ##
 
@@ -131,7 +131,7 @@ TestModel.remove({ name: 'WJT20' }, function(error) {
 
 效果:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w38.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w38.png)
 
 ## <a name="href7">改——修改记录</a> ##
 
@@ -149,7 +149,7 @@ TestModel.update({ name: 'WJT20' }, { $set: { name: 'Didy' } }, function(error) 
 
 效果:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w39.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w39.png)
 
 ## <a name="href8">查——查询记录</a> ##
 
@@ -167,7 +167,7 @@ TestModel.find({ name: 'WJT20' }, function(error, doc) {
 
 效果:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w40.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w40.png)
 
 ```
 ID         : 13

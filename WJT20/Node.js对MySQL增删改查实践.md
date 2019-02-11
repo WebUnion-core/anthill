@@ -56,7 +56,7 @@ connection.connect(function(err) {
 
 根目录下打开终端，输入`node ./index.js`，输出如下内容表示数据库连接成功:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w108.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w108.png)
 
 关闭数据库连接的操作，用到的是`connection.end()`，在其他操作执行完毕后直接调用即可。
 
@@ -84,7 +84,7 @@ connection.query(
 
 重新执行脚本，可以看到"Insert successfully! "的信息，查看数据库，可以看到这条记录已经成功添加到数据库中了:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w109.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w109.png)
 
 ## <a name="href5">删——删除记录</a> ##
 
@@ -143,7 +143,7 @@ connection.query(
 
 返回的数据存放在 result 中，可以看到 result 是一个数组:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w110.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w110.png)
 
 ---
 

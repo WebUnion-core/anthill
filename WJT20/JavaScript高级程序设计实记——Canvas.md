@@ -219,11 +219,11 @@ SVG 指可伸缩矢量图形(Scalable Vector Graphics)，可用来定义用于�
 
 ### <a name="href9-1">预定义形状元素</a> ###
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w1.png)
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w2.png)
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w3.png)
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w4.png)
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w5.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w1.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w2.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w3.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w4.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w5.png)
 
 ### <a name="href9-2">绘制时钟实例</a> ###
 
@@ -241,7 +241,7 @@ SVG 指可伸缩矢量图形(Scalable Vector Graphics)，可用来定义用于�
 
 效果图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w6.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w6.png)
 
 ### <a name="href9-3">Canvas与SVG的区别</a> ###
 

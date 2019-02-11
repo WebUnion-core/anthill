@@ -191,19 +191,19 @@ audio 标签支持 mp3、wav 和 ogg 三种音频格式，其中几乎所有浏�
 
 HTML5 新增的`<canvas>`和`<svg>`标签允许在页面中绘制复杂的图形。
 
-关于 Canvas 和 Svg 的详细讲解，可以参考文章: [JavaScript高级程序设计实记——Canvas](https://github.com/WebUnion-core/doc-repositort/blob/master/WJT20/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%AE%B0%E2%80%94%E2%80%94Canvas.md)
+关于 Canvas 和 Svg 的详细讲解，可以参考文章: [JavaScript高级程序设计实记——Canvas](https://github.com/WebUnion-core/anthill/blob/master/WJT20/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%AE%B0%E2%80%94%E2%80%94Canvas.md)
 
 ## <a name="href15">拖拽事件</a> ##
 
 HTML5 将拖拽标准化，任何元素都可以拖拽。
 
-关于拖拽的详细讲解，可以参考文章: [关于拖放事件的笔记](https://github.com/WebUnion-core/doc-repositort/blob/master/WJT20/%E5%85%B3%E4%BA%8E%E6%8B%96%E6%94%BE%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%AC%94%E8%AE%B0.md)
+关于拖拽的详细讲解，可以参考文章: [关于拖放事件的笔记](https://github.com/WebUnion-core/anthill/blob/master/WJT20/%E5%85%B3%E4%BA%8E%E6%8B%96%E6%94%BE%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%AC%94%E8%AE%B0.md)
 
 ## <a name="href16">地理定位</a> ##
 
 HTML5 Geolocation API 用于获得用户的地理位置。这个新特性可能侵犯用户的隐私，除非用户同意，否则用户位置信息是不可用的。
 
-关于地理定位的详细讲解，可以参考文章: [关于地理位置定位的笔记](https://github.com/WebUnion-core/doc-repositort/blob/master/WJT20/%E5%85%B3%E4%BA%8E%E5%9C%B0%E7%90%86%E5%AE%9A%E4%BD%8D%E7%9A%84%E7%AC%94%E8%AE%B0.md)
+关于地理定位的详细讲解，可以参考文章: [关于地理位置定位的笔记](https://github.com/WebUnion-core/anthill/blob/master/WJT20/%E5%85%B3%E4%BA%8E%E5%9C%B0%E7%90%86%E5%AE%9A%E4%BD%8D%E7%9A%84%E7%AC%94%E8%AE%B0.md)
 
 ---
 

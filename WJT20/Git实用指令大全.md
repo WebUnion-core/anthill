@@ -42,7 +42,7 @@
 
 3. `git add -p`: 添加每个变化前，都会要求确认，对于同一个文件的多处变化，可以实现分次提交，如下图:
 
-    ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w61.png)
+    ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w61.png)
 
 4. `git rm <FILE1>|<DIR1> [<FILE2>|<DIR2> <FILE3>|<DIR3> ...]`: 删除工作区文件，并且将这次删除放入暂存区;
 
@@ -54,13 +54,13 @@
 
 1. `git commit [<FILE1> <FILE2> ...] -m <MESSAGE>`: 提交暂存区到仓库区，提示信息如下图:
 
-    ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w62.png)
+    ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w62.png)
 
 2. `git commit -a`: 提交工作区自上次 commit 之后的变化，直接到仓库区;
 
 3. `git commit -v`: 提交时显示所有diff信息，如下图:
 
-    ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w63.png)
+    ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w63.png)
 
 4. `git commit --amend -m <MESSAGE>`: 使用一次新的 commit，替代上一次提交，如果代码没有任何新变化，则用来改写上一次 commit 的提交信息;
 
@@ -72,11 +72,11 @@
 
 2. `git remote -v`: 显示所有远程仓库，如图:
 
-    ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w64.png)    
+    ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w64.png)    
 
 3. `git remote show <REMOTE>`: 显示某个远程仓库的信息，如图:
 
-    ![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w65.png)
+    ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w65.png)
 
 4. `git remote add <NAME> <URL>`: 增加一个新的远程仓库，并命名为NAME;
 

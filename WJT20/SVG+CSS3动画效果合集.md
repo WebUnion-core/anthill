@@ -61,7 +61,7 @@
 
 效果图如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w116.gif)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w116.gif)
 
 ## <a name="href3">旋转花瓣动画</a> ##
 
@@ -154,7 +154,7 @@
 
 效果图如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w117.gif)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w117.gif)
 
 ## <a name="href4">旋转方块动画</a> ##
 

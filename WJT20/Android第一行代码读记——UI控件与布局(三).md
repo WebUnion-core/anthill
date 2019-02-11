@@ -17,7 +17,7 @@ ViewGroup 是一种特殊的 View，它可以包含许多子 View 和子 ViewGro
 
 控件和布局的继承结构图如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w89.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w89.png)
 
 ## <a name="href2">自定义布局</a> ##
 
@@ -93,7 +93,7 @@ public class MainActivity extends BaseActivity {
 
 最后启动程序，效果如下图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w90.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w90.png)
 
 ## <a name="href3">自定义控件</a> ##
 
@@ -156,7 +156,7 @@ public class TitleBar extends LinearLayout {
 
 最后，启动一下程序，可以看到如下效果:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w91.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w91.png)
 
 ---
 
