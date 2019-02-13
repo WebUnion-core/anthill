@@ -108,16 +108,3 @@ function formatReadMe() {
     formatEachFile();
     formatReadMe();
 })();
-
-var datetime = new Date();
-var month = datetime.getMonth();
-datetime.setMonth(month - 1 >= 0 ? month - 1 : 11);
-console.log(datetime); // 2019-12-14
-
-var nowDate = new Date();
-var datetime = new Date(
-    nowDate.getFullYear(),
-    nowDate.getMonth(),
-    nowDate.getDate()
-);
-console.log(datetime); // 2018-12-31
