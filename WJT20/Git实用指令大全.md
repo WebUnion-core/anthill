@@ -86,7 +86,9 @@
 
 7. `git push <REMOTE> --force`: 强行推送当前分支到远程仓库，即使有冲突，慎用;
 
-8. `git push <REMOTE> --all`: 推送所有分支到远程仓库。
+8. `git push <REMOTE> --all`: 推送所有分支到远程仓库;
+
+9. `git reset --hard <NAME>/<BRANCH>`: 强制从远程分支上拉取最新内容到本地。
 
 ## <a name="href7">查看信息</a> ##
 
