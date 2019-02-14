@@ -200,5 +200,5 @@ function tryDecode(str, decode) {
 ID         : 88
 DATE       : 2018/07/19
 AUTHER     : WJT20
-TAG        : npm
+TAG        : 源码解读
 ```

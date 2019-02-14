@@ -92,5 +92,5 @@ nrm use
 ID         : 70
 DATE       : 2018/03/21
 AUTHER     : WJT20
-TAG        : npm
+TAG        : 包管理器
 ```
