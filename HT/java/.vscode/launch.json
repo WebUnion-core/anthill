@@ -1,0 +1,18 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Lalal",
+      "request": "launch",
+      "mainClass": "lalal.Lalal",
+      "projectName": "414141"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - App",
+      "request": "launch",
+      "mainClass": "test.App",
+      "projectName": "414141"
+    }
+  ]
+}

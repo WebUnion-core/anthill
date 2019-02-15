@@ -4,11 +4,17 @@ package test;
  *
  */
 public class App {
-    public static void main( String[] args )
-    {
-        Boolean a = true;
-        if (a) {
-            System.out.println( "Hello Worl123123d!" );
-        }
+    private int age;
+
+    public App(String name) {
+        System.out.println("名字：" + name);
+    }
+
+    public void setAge(int a) {
+        this.age = a;
+    }
+
+    public int getAge() {
+        return age;
     }
 }
