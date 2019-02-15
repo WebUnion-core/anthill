@@ -99,7 +99,7 @@ class _MyAppPageState extends State<MyApp> {
 
 效果如下图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w95.jpg)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w95.jpg)
 
 接下来解析创建一个 StatefulWidget 的整个过程:
 

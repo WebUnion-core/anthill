@@ -360,7 +360,7 @@ public class MainActivity extends BaseActivity {
 
 日志结果为:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w102.PNG)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w102.PNG)
 
 ---
 

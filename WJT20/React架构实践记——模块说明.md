@@ -24,7 +24,7 @@ OK，说了一大堆有的没的，进入正题，首先说一下这次 React �
 
 此项目名为"Bona Storm"，GitHub 地址为 [https://github.com/WebUnion-core/bona-storm](https://github.com/WebUnion-core/bona-storm)，项目的目录结构如下图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w79.PNG)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w79.PNG)
 
 主要的一级目录及文件说明如下:
 

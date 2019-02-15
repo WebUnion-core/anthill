@@ -64,10 +64,6 @@ function formatEachFile() {
                     const direcStr = fileCont.substring(direcStart, direcEnd);
                     const direcAry = direcStr.match(/\s+[0-9]+.\s.+/g);
 
-                    if (direcAry === null) {
-                        console.log(direcStr);
-                    }
-
                     direcAry.forEach(function(item) {
                         let ary;
 

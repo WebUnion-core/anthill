@@ -169,7 +169,7 @@ public class MainActivity extends BaseActivity {
 
 检查授权情况使用的是`ContextCompat.checkSelfPermission()`方法，接收两个参数，第一个参数是 Content，第二个参数是具体的权限名。申请权限使用的是`ActivityCompat.requestPermissions()`方法，接收三个参数，第一个参数是 Activity 实例，第二个参数是一个保存申请权限名的 String 数组，第三个参数是请求码，只要是一个唯一值即可。调用申请权限的方法后会自动弹出一个对话框(如下图)，不管选择拒绝还是同意授权，最终都会回调到`onRequestPermissionsResult()`方法中，授权结果封装到 grantResults 参数当中，之后根据授权结果进行对应的操作。
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w103.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w103.png)
 
 ## <a name="href4">访问其他程序中的数据</a> ##
 

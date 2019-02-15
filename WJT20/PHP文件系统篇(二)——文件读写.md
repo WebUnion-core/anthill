@@ -114,7 +114,7 @@ fclose($handle);
 
 现在打开"./cache.json"文件，可以看到文件内容变成了:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w113.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w113.png)
 
 ## <a name="href6">fgetc</a> ##
 
@@ -140,7 +140,7 @@ fclose($handle);
 
 输出结果:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w114.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w114.png)
 
 ## <a name="href7">fgets</a> ##
 
@@ -206,7 +206,7 @@ fclose($handle);
 
 输出结果:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w115.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w115.png)
 
 ---
 

@@ -57,7 +57,7 @@ order 属性定义项目的排列顺序，其取值为一个整数，数值越�
 
 效果图如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w26.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w26.png)
 
 ### <a name="href3-2">flex-grow属性</a> ###
 
@@ -77,7 +77,7 @@ flex-grow 属性定义项目的放大比例，默认值为0，表示不放大。
 
 效果图如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w27.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w27.png)
 
 ### <a name="href3-3">flex-shrink属性</a> ###
 
@@ -99,7 +99,7 @@ flex-shrink 属性定义了项目的缩小比例，不能取负值，默认值�
 
 效果图如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w28.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w28.png)
 
 ### <a name="href3-4">flex-basis属性</a> ###
 
@@ -107,7 +107,7 @@ flex-basis 属性定义了在分配多余空间之前，项目占据的水平轴
 
 修改第一个li标签为`<li style="flex-basis:100px"> 1 </li>`，效果图如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w29.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w29.png)
 
 ### <a name="href3-5">flex属性</a> ###
 
@@ -123,7 +123,7 @@ align-self 属性允许单个项目有与其他项目不一样的对齐方式，
 
 修改ul标签的 height 为150px，并将 flex-wrap 属性设为`wrap`，将 align-items 属性设为`center`，修改第一个li标签为`<li style="align-self:flex-start"> 1 </li>`，效果图如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w30.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w30.png)
 
 ---
 

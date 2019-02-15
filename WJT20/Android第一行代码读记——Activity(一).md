@@ -148,7 +148,7 @@ public class MainActivity extends Activity {
 
 最终效果如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w66.png?v=1)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w66.png?v=1)
 
 ## <a name="href3">在Activity中使用Menu</a> ##
 
@@ -223,7 +223,7 @@ public class MainActivity extends Activity {
 
 在所有步骤完成后，执行效果如下:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w67.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w67.png)
 
 ---
 

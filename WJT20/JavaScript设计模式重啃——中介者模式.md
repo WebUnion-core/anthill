@@ -15,14 +15,14 @@
 
 ## <a name="href2">初始代码</a> ##
 
-没有使用中介者模式的代码如下:
+没有使用中介者模式的代码:
 
-```
+```js
 // 玩家列表
 var players = [];
 
 // 玩家类
-function Player(name) {
+function Player(name, teamColor) {
     this.partners = []; // 队友列表
     this.enemies = []; // 敌人列表
     this.name = name; // 角色名字
@@ -30,46 +30,55 @@ function Player(name) {
     this.teamColor = teamColor; // 队伍颜色
 };
 
-Player.prototype.win = function() {
+Player.prototype.win = function () {
     console.log('winner: ' + this.name);
 };
 
-Player.prototype.lose - function() {
+Player.prototype.lose = function () {
     console.log('loser: ' + this.name);
 };
 
-Player.prototype.die = function() {
+Player.prototype.die = function () {
     var all_dead = true;
     this.state = 'dead'; // 玩家状态设为死亡
 
-    for (var i = 0, l = this.partners.length; i < l; i++) { // 遍历队友列表
-        if (this.partners[i].state !== 'dead') { // 如果还有一个队友没有死亡，则游戏还未结束
+    // 遍历队友列表
+    for (var i = 0, l = this.partners.length; i < l; i++) {
+        // 如果还有一个队友没有死亡，则游戏还未结束
+        if (this.partners[i].state !== 'dead') {
             all_dead = false;
             break;
         }
     }
 
-    if (add_dead === true) {
+    if (all_dead) {
         this.lose();
-        for (var i = 0, l = this.partners.length; i < l; i++) { // 通知所有队友游戏失败
+
+        // 通知所有队友游戏失败
+        for (var i = 0, l = this.partners.length; i < l; i++) {
             this.partners[i].lose();
         }
-        for (var i = 0, l = this.ememies.length; i < l; i++){ // 通知所有敌人游戏胜利
+
+        // 通知所有敌人游戏胜利
+        for (var i = 0, l = this.ememies.length; i < l; i++){
             this.ememies[i].win();
         }
     }
 };
 
 // 定义一个工厂来创建玩家
-var playerFactory = function(name, teamColor) {
+var playerFactory = function (name, teamColor) {
     var newPlayer = new Player(name, teamColor); // 创建新玩家
 
-    for (var i = 0, l = players.length; i < l; i++) { // 通知所有玩家，有新玩家加入游戏
+    // 通知所有玩家，有新玩家加入游戏
+    for (var i = 0, l = players.length; i < l; i++) {
         if (players[i].teamColor === newPlayer.teamColor) {
-            players[i].partners.push(newPlayer); // 相互添加到队友列表
+            // 相互添加到队友列表
+            players[i].partners.push(newPlayer);
             newPlayer.partners.push(players[i]);
         } else {
-            players[i].enemies.push(newPlayer); // 相互添加到敌人列表
+            // 相互添加到敌人列表
+            players[i].enemies.push(newPlayer);
             newPlayer.enemies.push(players[i]);
         }
     }
@@ -79,36 +88,41 @@ var playerFactory = function(name, teamColor) {
 }
 ```
 
+从以上代码可以看出，玩家与队友，玩家与敌人存在耦合关系，每次增加一个新玩家，就要对所有玩家的队友列表或敌人列表进行更新，如果玩家数量越来越多，这种维护成本将会变的非常大。这个时候仔细分析一下，其实每个玩家都不需要牢牢记住自己的队友和敌人是哪些人，我们可以增加一个"系统"(中介者)来管理玩家之间的关系，当游戏结束时，也由这个"系统"对所有玩家发出通知，这样子就可以减少大量的遍历操作，玩家间的耦合关系也将变得松散。要达到这种目的，就要使用中介者模式来改造代码。
+
 ## <a name="href3">使用中介者模式改造代码</a> ##
 
-使用中介者模式改造后的代码如下:
+首先简化玩家类:
 
-```
+```js
 function Player(name, teamColor) {
     this.name = name; // 角色名字
     this.teamColor = teamColor; // 队伍颜色
     this.state = 'alive'; // 玩家生存状态
 };
 
-Player.prototype.win = function() {
+Player.prototype.win = function () {
     console.log('winner: ' + this.name);
 };
 
-Player.prototype.lose = function() {
+Player.prototype.lose = function () {
     console.log('loser: ' + this.name);
 };
 
-Player.prototype.die = function() {
+Player.prototype.die = function () {
     this.state = 'dead';
-    playerDirector.ReceiveMessage('playerDead', this); // 给中介者发送消息，玩家死亡
+
+    // 给中介者发送消息，玩家死亡
+    playerDirector.ReceiveMessage('playerDead', this);
 };
 
-Player.prototype.remove = function() {
-    playerDirector.ReceiveMessage('removePlayer0, this'); // 给中介者发送消息，移除一个玩家
+Player.prototype.remove = function () {
+    // 给中介者发送消息，移除一个玩家
+    playerDirector.ReceiveMessage('removePlayer', this);
 };
 ```
 
-中介者对象 playerDirector 的实现有两种方法:
+接下来要考虑如何设计中介者对象 playerDirector，其实现有两种方法:
 
 1. 利用发布-订阅模式。将 playerDirector 实现为订阅者，各 player 作为发布者，一旦 player 的状态发生变化，便推送消息给 playerDirector，playerDirector 处理消息后将反馈发送给其他 player;
 
@@ -116,23 +130,23 @@ Player.prototype.remove = function() {
 
 以第二种方式创建中介者对象为例:
 
-```
+```js
 // 创建中介者对象
-var playerDirector = (function() {
-    var players = {}, // 保存所有玩家
-        operations = {}; // 中介者可以执行的操作
+var playerDirector = (function () {
+    var players = {}; // 保存所有玩家
+    var operations = {}; // 中介者可以执行的操作
 
     // 新增一个玩家
-    operations.addPlayer = function(player) {
+    operations.addPlayer = function (player) {
         var teamColor = player.teamColor;
         players[teamColor] = players[teamColor] || [];
-        players[teamColor].push(player); // 添加玩家进队伍
+        players[teamColor].push(player);
     };
 
     // 移除一个玩家
-    operations.removePlayer = function(player) {
-        var teamColor = player.teamColor,
-            teamPlayers = players[teamColor] || [];
+    operations.removePlayer = function (player) {
+        var teamColor = player.teamColor;
+        var teamPlayers = players[teamColor] || [];
 
         for (var i = teamPlayers.length - 1; i >= 0; i--) {
             if (teamPlayers[i] === player) {
@@ -142,28 +156,32 @@ var playerDirector = (function() {
     };
 
     // 玩家角色死亡
-    operations.playerDead = function(player) {
-        var teamColor = player.teamColor,
-            teamPlayers = players[teamColor];
-
+    operations.playerDead = function (player) {
+        var teamColor = player.teamColor;
+        var teamPlayers = players[teamColor];
         var all_dead = true;
 
-        for (var i = 0, l = teamPlayers.length; i < l; i++) { // 遍历队友列表
-            if (teamPlayers[i].state !== 'dead') { // 如果还有一个队友没有死亡，则游戏还未结束
+        // 遍历队友列表
+        for (var i = 0, l = teamPlayers.length; i < l; i++) {
+            // 如果还有一个队友没有死亡，则游戏还未结束
+            if (teamPlayers[i].state !== 'dead') {
                 all_dead = false;
                 break;
             }
         }
 
-        if (add_dead === true) {
-            for (var i = 0, l = teamPlayers.length; i < l; i++) { // 通知所有队友游戏失败
+        if (all_dead) {
+            // 通知所有队友游戏失败
+            for (var i = 0, l = teamPlayers.length; i < l; i++) {
                 teamPlayers[i].lose();
             }
 
             for (var color in players) {
+                // 通知所有敌人游戏胜利
                 if (color !== teamColor) {
                     var teamPlayers = players[color];
-                    for (var i = 0, l = teamPlayers.length; i < l; i++) { // 通知所有敌人游戏胜利
+
+                    for (var i = 0, l = teamPlayers.length; i < l; i++) {
                         teamPlayers[i].win();                        
                     }
                 }
@@ -171,8 +189,9 @@ var playerDirector = (function() {
         }
     };
 
-    var ReceiveMessage = function() {
-        var message = Array.prototype.shift.call(arguments); // arguments的第一个参数为消息名称
+    var ReceiveMessage = function () {
+        // arguments的第一个参数为消息名称
+        var message = Array.prototype.shift.call(arguments);
         operations[message].apply(this, arguments);
     };
 

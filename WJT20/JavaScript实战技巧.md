@@ -6,12 +6,17 @@
 1. [数组升序排序](#href1)
 2. [检查HTML标签和匹配"#id"形式的字符串](#href2)
 3. [匹配最外层HTML标签名](#href3)
-4. [console api总结](#href4)
-	1. [普通打印](#href4-1)
-	1. [分组打印](#href4-2)
-	2. [表格打印](#href4-3)
-	3. [计数和计时](#href4-4)
-	4. [条件打印和打印跟踪](#href4-5)
+4. [console](#href4) api总结
+	1. [普通打印](#href5)
+	2. [分组打印](#href6)
+	3. [表格打印](#href7)
+	4. [计数和计时](#href8)
+	5. [条件打印和打印跟踪](#href9)
+5. [浏览器判断原则](#href10)
+6. [检查手机号码格式](#href11)
+7. [获取当前URL查询字符串参数](#href12)
+8. [CRT日期转换](#href13)
+9. [使用touchstart代替移动端click事件](#href14)
 
 ## <a name="href1">数组升序排序</a> ##
 
@@ -39,7 +44,7 @@ var rquickExpr = /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$
 console.log(rquickExpr.exec('<h1><span></span></h1>')[1]); // => "h1"
 ```
 
-## <a name="href4">console api总结</a> ##
+## <a name="href4">console</a> ##
 
 ### <a name="href4-1">普通打印</a> ###
 
@@ -121,6 +126,101 @@ for (var i = 0; i < 10; i++) {
 ```js
 console.trace();
 ```
+
+## <a name="href5">浏览器判断原则</a> ##
+
+代码:
+
+```js
+var sUserAgent = navigator.userAgent.toLowerCase();
+var browser = {
+    bIsIOS: !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+    bIsUc: sUserAgent.match(/ucweb/i) == "ucweb",
+    bIsAndroid: sUserAgent.match(/android/i) == "android",
+    bIsAndroidVersion: Number(sUserAgent.substr(sUserAgent.indexOf('android') + 8, 3)),
+    bIsQQ: sUserAgent.match(/qq/i) == "qq",
+    bIsWechat: sUserAgent.match(/micromessenger/i) == "micromessenger",
+    bIsWeibo: sUserAgent.match(/weibo/i) == "weibo",
+    bIsHuawei: sUserAgent.match(/huawei/i) == "huawei"
+};
+```
+
+## <a name="href6">检查手机号码格式</a> ##
+
+代码:
+
+```js
+function checkPhoneFormat(phone) {
+    var pattern = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
+    if (pattern.test(phone)) {
+        return true;
+    } else {
+        return false;
+    }
+};
+```
+
+## <a name="href7">获取当前URL查询字符串参数</a> ##
+
+代码:
+
+```js
+function parseQueryString() {
+    var str = location.search.slice(1);
+	var arr = str.split('&');
+	var obj = {};
+
+    for (var i = 0; i < arr.length; i++) {
+		// 一般参数字符串都经过编码，使用decodeURIComponent()方法将键和值转为原始值
+        var item = arr[i].split('=');
+		var key = decodeURIComponent(item[0]);
+		var value = decodeURIComponent(item[1]);
+        obj[key] = value;
+    }
+
+    return obj;
+}
+```
+
+## <a name="href8">CRT日期转换</a> ##
+
+代码:
+
+```js
+function translateCRT(CRTDate) {
+    var time = CRTDate.replace(new RegExp(' CST', 'gm'), '');
+    var now = new Date(time);
+    var year = now.getFullYear();
+    var month = now.getMonth() + 1;
+    var date = now.getDate();
+    var hh = now.getHours();
+    var mm = now.getMinutes();
+
+    return {
+        dataObj: now,
+        year: year,
+        month: month,
+        date: date,
+        hour: hh,
+        minute: mm
+    }
+}
+```
+
+## <a name="href9">使用touchstart代替移动端click事件</a> ##
+
+代码:
+
+```js
+var dialogEl = document.getElementById('dialog-container');
+dialogEl.addEventListener('touchstart', function () {
+    // TODO
+});
+```
+
+解析:
+
+在移动端，touchstart 比 click 要灵敏得多，但是何时该使用 touchstart，何时该使用 click，应视具体场景而定。
 
 ---
 

@@ -183,5 +183,5 @@ var validate = module.exports = function (rawSchemas, args) {
 ID         : 80
 DATE       : 2018/06/16
 AUTHER     : WJT20
-TAG        : npm
+TAG        : 源码解读
 ```

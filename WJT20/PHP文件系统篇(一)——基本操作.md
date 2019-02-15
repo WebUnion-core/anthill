@@ -83,7 +83,7 @@ echo 'C盘可用空间(字节数): '.disk_free_space('C:/').PHP_EOL;
 
 输出结果:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w111.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w111.png)
 
 ## <a name="href5">disk_total_space</a> ##
 
@@ -104,7 +104,7 @@ echo 'C盘磁盘总大小(字节数): '.disk_total_space('C:/').PHP_EOL;
 
 输出结果:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w112.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w112.png)
 
 ## <a name="href6">file_exists</a> ##
 

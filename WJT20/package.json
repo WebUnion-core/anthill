@@ -1,5 +1,5 @@
 {
-  "name": "doc-repositort",
+  "name": "anthill",
   "version": "1.0.0",
   "description": "WebUnion docs",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WebUnion-core/doc-repositort.git"
+    "url": "git+https://github.com/WebUnion-core/anthill.git"
   },
   "keywords": [
     "WebUnion"
@@ -17,9 +17,9 @@
   "author": "WebUnion",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WebUnion-core/doc-repositort/issues"
+    "url": "https://github.com/WebUnion-core/anthill/issues"
   },
-  "homepage": "https://github.com/WebUnion-core/doc-repositort#readme",
+  "homepage": "https://github.com/WebUnion-core/anthill#readme",
   "devDependencies": {
     "marked": "^0.4.0"
   }

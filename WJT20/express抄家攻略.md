@@ -99,11 +99,11 @@ app.post(`/v1.0.0/home/activity`, (req, res) => {
 
 发起一次模拟请求:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w104.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w104.png)
 
 打印结果如图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w105.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w105.png)
 
 ### <a name="href3-2">响应报文对象</a> ###
 
@@ -149,9 +149,9 @@ app.post(`/v1.0.0/home/activity`, (req, res) => {
 
 再模拟请求一下，响应报文如图:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w106.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w106.png)
 
-![image](https://raw.githubusercontent.com/WebUnion-core/doc-repositort/master/WJT20/images/w107.png)
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w107.png)
 
 ## <a name="href4">静态资源配置</a> ##
 
