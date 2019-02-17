@@ -13,7 +13,6 @@
 ## <a name="href1">参考链接</a> ##
 
 - [Yarn中文文档-新手指南](https://yarnpkg.com/zh-Hans/docs/getting-started)
-
 - [关于 Yarn 和 npm 你所需要知道的一切](https://github.com/xitu/gold-miner/blob/master/TODO1/yarn-vs-npm-everything-you-need-to-know.md)
 
 ## <a name="href2">介绍</a> ##
@@ -30,13 +29,25 @@ Yarn 是一个由 Facebook，Google，Exponent 和 Tilde 构建的新的 JavaScr
 
 在自己的项目根目录下(我的项目名称为"yarn-template")执行`yarn init`命令输入项目信息接着生成 package.json 文件，这里对比一下`npm init`命令的运行结果，可以明显看出 Yarn 的优势:
 
-1. 输入信息对比:
+1. 输入信息对比。
 
-    ![image]()
+    `npm init`效果:
+
+    ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w120.png)
+
+    `yarn init`效果:
+
+    ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w121.png)
 
 2. 生成的 package.json 内容对比:
 
-    ![image]()
+    `npm init`效果:
+
+    ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w122.png)
+
+    `yarn init`效果:
+
+    ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w123.png)
 
 ## <a name="href4">添加依赖</a> ##
 
