@@ -6,14 +6,14 @@
 1. [参考链接](#href1)
 2. [同源策略](#href2)
 3. [JSONP介绍](#href3)
- [](#href4)   1. 意义
- [](#href5)   2. 原理
+ [](#href4)  1. 意义
+ [](#href5)  2. 原理
 4. [体验从淘宝获取数据](#href6)
- [](#href7)   1. 原生JS实现
- [](#href8)   2. jQuery实现
+ [](#href7)  1. 原生JS实现
+ [](#href8)  2. jQuery实现
 5. [整体实现](#href9)
- [](#href10)   1. 远程跨域服务器接口
- [](#href11)   2. 前台内容
+ [](#href10)  1. 接口服务器代码实现
+ [](#href11)  2. 前端代码实现
 
 ## <a name="href1">参考链接</a> ##
 
@@ -49,7 +49,7 @@ JSONP 利用 script 标签不受同源策略约束的特点，通过把请求写
 
 许多大型网站都有使用 JSONP 技术，本章节以使用 JSONP 获取淘宝数据为例。  
 
-打开淘宝网站，等页面完全加载完成后，打开浏览器开发者工具(按键F12)，我们可以查看到淘宝页面的请求列表中有这么一个请求:
+打开淘宝网站，等页面完全加载完成后，打开浏览器开发者工具，我们可以查看到淘宝页面的请求列表中有这么一个请求:
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w14.png)
 
@@ -92,7 +92,7 @@ JSONP 有两种比较方便的实现手段: 使用原生 JavaScript 实现和使
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w15.png)
 
-这么多数据看着真难受，我们修改下自定义的 jsonp33 函数，对接收到的数据进行过滤处理，筛选出“商品类别”数据:
+这么多数据看着真难受，我们修改下自定义的 jsonp33 函数，对接收到的数据进行过滤处理，筛选出"商品类别"数据:
 
 ```js
 function jsonp33(data) {
@@ -110,9 +110,7 @@ function jsonp33(data) {
 
 ### <a name="href4-4">jQuery实现</a> ###
 
-jQuery 把 JSONP 包装在 $.ajax() 中，然而它与 Ajax 间并没有直接关系，使用 jQuery 实现 JSONP 也很简单，其实现原理也是一样的。
-
-页面内容如下:
+jQuery 把 JSONP 包装在`$.ajax()`中，然而它与 Ajax 间并没有直接关系，使用 jQuery 实现 JSONP 也很简单，示例代码如下:
 
 ```html
 <!DOCTYPE html>
@@ -144,24 +142,22 @@ jQuery 把 JSONP 包装在 $.ajax() 中，然而它与 Ajax 间并没有直接�
 
 ## <a name="href5">整体实现</a> ##
 
-体验过使用 JSONP 从淘宝获取数据后，从整体即前后台上实现 JSONP 获取数据并不困难。
+体验过使用 JSONP 从淘宝获取数据后，我们可以动手从整体上实现 JSONP。
 
-### <a name="href5-5">远程跨域服务器接口</a> ###
+### <a name="href5-5">接口服务器代码实现</a> ###
 
-远程跨域服务器，URL 为`http://169.255.211.233:80/`，后台脚本(index.php)内容为:
+接口服务器，IP 为"A"，跨域脚本(index.php)内容为:
 
-```
-<?php
-    header('Content-Type: application/javascript; charset=UTF-8'); // 定义响应头
-    $callback = $_GET['callback']; // 获取前台方法
-    $data = '{name: "WJT", id: "0011456789"}';
-    echo $callback.'('.$data.')'; // 注入参数并返回
-?>
+```php
+header('Content-Type: application/javascript; charset=UTF-8'); // 定义响应头
+$callback = $_GET['callback']; // 获取前台方法
+$data = '{name: "WJT", id: "0011456789"}';
+echo $callback.'('.$data.')'; // 注入参数并返回
 ```
 
-### <a name="href5-6">前台内容</a> ###
+### <a name="href5-6">前端代码实现</a> ###
 
-本地服务器，URL 为`http://localhost:8090/`，前台页面(index.html)内容为:
+前端项目部署在 IP 为"B"的服务器上，前台页面(index.html)内容为:
 
 ```html
 <!DOCTYPE html>
