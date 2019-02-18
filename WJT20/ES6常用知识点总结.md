@@ -24,6 +24,11 @@
     1. [export](#href10-9)
     2. [import](#href10-10)
 11. [Promise](#href11)
+12. [新的数据结构](#href12)
+    1. [Set](#href12-11)
+    2. [WeakSet](#href12-12)
+    3. [Map](#href12-13)
+    4. [WeakMap](#href12-14)
 
 ## <a name="href1">参考链接</a> ##
 
@@ -313,7 +318,7 @@ function f1(a, b) {
 }
 export {
     f1 as addFunc,
-    f1 ad add
+    f1 as add
 };
 ```
 
@@ -362,6 +367,72 @@ new Promise(getPageName)
     });
 
 console.log(pageName); // undefined
+```
+
+## <a name="href22">新的数据结构</a> ##
+
+ES6 新增的数据结构主要分为两种: Set 和 Map，由这两者又衍生出 WeakSet 和 WeakMap 两种数据结构。
+
+### <a name="href22-1">Set</a> ###
+
+Set 类似于数组，不同的是 Set 的成员都是唯一的，其本质就是一个构造函数。
+
+Set 实例的属性和方法有以下这些:
+
+1. `size`: 返回 Set 实例的成员数量;
+2. `add(value)`: 给 Set 实例添加成员;
+3. `delete(value)`: 删除 Set 实例中的某个成员;
+4. `has(value)`: 判断 Set 实例中是否存在某个成员，返回一个 boolean 值;
+5. `clear()`: 清除所有成员。
+
+使用`Array.from()`或`...`可以将 Set 转换为数组，把数组作为 Set 构造函数的第一个参数传入则可以将数组转换为 Set 实例。
+
+遍历 Set 实例和遍历数组的方式是一样的。
+
+Set 实例常用于数组去重，示例代码如下:
+
+```js
+const data = [...(new Set([1, 2, 2, 2, 3]))];
+console.log(data); // [1, 2, 3]
+```
+
+### <a name="href22-2">WeakSet</a> ###
+
+WeakSet 和 Set 一样都不能传入重复的值，其和方法与 Set 一样(没有 size 属性，因为不可遍历)，不同的是，WeakSet 的成员只能是对象(也可以是数组等)，不能是其他数据类型。
+
+WeakSet 中的对象都是弱引用，简单点说就是 WeakSet 中的成员随时有可能被垃圾回收机制回收，所以其不适合引用，也不可遍历，它只适合临时存放一些对象。
+
+WeakSet 的其中一个应用，就是存储 DOM 节点，而不必担心节点从文档中移除，从而引起内存泄漏。
+
+### <a name="href22-3">Map</a> ###
+
+Map 类似于对象，它也是键值对组合，但是它的"键"不限于字符串，各种类型的值都可以作为"键"，所以它是一种更完善的 Hash 结构实现(不过一般来说，"字符串-值"的键值对应关系就足够了)，Map 实例的属性和方法有以下这些:
+
+1. `size`: 返回 Map 实例的成员数量;
+2. `set(key, value)`: 给 Map 实例添加成员;
+3. `get(key)`: 获取 Map 实例中指定键的成员;
+4. `has(key)`: 判断 Map 实例中是否存在指定键的成员，返回一个 boolean 值;
+5. `delete(key)`: 删除 Map 实例中的指定键的成员;
+6. `clear()`: 清除 Map 实例中的所有成员。
+
+除此之外，Map 和 Object 没有其他不同的地方，遍历方法也都是一样的。
+
+### <a name="href22-4">WeakMap</a> ###
+
+WeakMap 与 Map 类似，它不同于 Map 的地方只有两点:
+
+1. 它只接受对象(null除外)作为键名，不接受其他类型的值作为键名;
+2. WeakMap 的键名指向的对象不计入垃圾回收机制。
+
+WeakMap 的键名所引用的对象都是弱引用，它的一个应用场景是，在网页的 DOM 元素上添加数据，当该 DOM 元素被移除，其所对应的 WeakMap 记录就会自动被移除。
+
+示例代码:
+
+```js
+const wm = new WeakMap();
+const elem = document.getElementById('btn');
+wm.set(elem, 'button');
+console.log(wm.get(elem)); // "button"
 ```
 
 ```
