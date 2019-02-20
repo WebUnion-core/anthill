@@ -3,23 +3,31 @@
 
 ## 目录 ##
 
-1. [基本数据类型](#href1)
-    1. [Undefined类型](#href1-1)
-    2. [Null类型](#href1-2)
-    3. [Boolean类型](#href1-3)
-    4. [Number类型](#href1-4)
-    5. [String类型](#href1-5)
-2. [引用数据类型](#href2)
-    1. [Object类型](#href2-1)
-    2. [Date类型](#href2-2)
-    3. [Array类型](#href2-3)
-    4. [Math类型](#href2-4)
+1. 参考链接
+2. 基本数据类型
+    1. Undefined类型
+    2. Null类型
+    3. Boolean类型
+    4. Number类型
+    5. String类型
+3. 引用数据类型
+    1. Object类型
+    2. Date类型
+    3. Array类型
+    4. Math类型
+4. 深拷贝与浅拷贝
+    1. 浅拷贝
+    2. 深拷贝
 
-## <a name="href1">基本数据类型</a> ##
+## 参考链接 ##
+
+- [深拷贝与浅拷贝的区别，实现深拷贝的几种方法](https://www.cnblogs.com/echolun/p/7889848.html)
+
+## 基本数据类型 ##
 
 JavaScript 有5种基本数据类型: Undefined、Null、Boolean、Number 和 String。
 
-### <a name="href1-1">Undefined类型</a> ###
+### Undefined类型 ###
 
 Undefined 类型只有一个值 undefined，如果使用`var`定义的变量未初始化值，其默认的值为 undefined。
 
@@ -28,15 +36,15 @@ var str;
 console.log(str); // undefined
 ```
 
-### <a name="href1-2">Null类型</a> ###
+### Null类型 ###
 
 Null 类型只有一个值null，表示空对象，所以`typeof`操作null值的结果是"object"。
 
-### <a name="href1-3">Boolean类型</a> ###
+### Boolean类型 ###
 
 Boolean 类型有两个值true和 false，分别表示"是"和"否"。
 
-### <a name="href1-4">Number类型</a> ###
+### Number类型 ###
 
 Number 类型取值是所有数值，JavaScript 不区分整型数值和浮点型数值，正因如此，浮点型数值计算时会产生精度问题，所以应避免浮点型数值的计算。如果一定要进行浮点型数值计算，可以将相加的两个浮点数转为整数，最后再将相加结果转为浮点数。
 
@@ -75,7 +83,7 @@ console.log(isNaN(1 + 'n')); // true
 
 注: `NaN == NaN`返回 false。
 
-### <a name="href1-5">String类型</a> ###
+### String类型 ###
 
 声明字符串: `var str = 'WJT'`。
 
@@ -92,9 +100,11 @@ console.log(l); // 输出3
 
 使用字符串的`concat()`方法也可以拼接字符串: `var str = 'A'.concat('B')`，这句代码返回一个由"A"拼接"B"形成的新字符串——"AB"。
 
-## <a name="href2">引用数据类型</a> ##
+字符串常用的属性和方法参考: [JavaScript高级程序设计实记——数组与字符串API](https://github.com/WebUnion-core/anthill/blob/master/WJT20/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%AE%B0%E2%80%94%E2%80%94%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2API.md)
 
-### <a name="href2-1">Object类型</a> ###
+## 引用数据类型 ##
+
+### Object类型 ###
 
 Object 类型(对象)其实是一个键值对集合，可以直接使用花括号创建对象，然后定义属性或方法。所有引用类型都基于 Object 类型。
 
@@ -113,7 +123,7 @@ console.log(obj.name); // 访问属性，输出: "WJT"
 obj.sayHello('WJT20'); // 调用方法，输出: "Hello, WJT20"
 ```
 
-### <a name="href2-2">Date类型</a> ###
+### Date类型 ###
 
 Date类型就是日期时间的访问操作接口，使用new关键字可以创建一个Date实例对象。
 
@@ -153,7 +163,7 @@ function getCurrentTime() {
 }
 ```
 
-### <a name="href2-3">Array类型</a> ###
+### Array类型 ###
 
 创建数组有两种方式: 使用`new Array()`和使用数组字面量表示法。JavaScript 数组不限制数组元素的数据类型保持统一，一个数组可以包含各种类型的值。
 
@@ -172,7 +182,9 @@ arr3.length = 0;
 console.log(arr3[0]); // 输出: undefined
 ```
 
-### <a name="href2-4">Math类型</a> ###
+数组常用的属性和方法参考: [JavaScript高级程序设计实记——数组与字符串API](https://github.com/WebUnion-core/anthill/blob/master/WJT20/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%AE%B0%E2%80%94%E2%80%94%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2API.md)
+
+### Math类型 ###
 
 Math类型包含了一些常用于数学计算的属性和方法，常用的属性常量有: `Math.PI`，即获取π的值: 3.141592653589793。
 
@@ -197,6 +209,36 @@ console.log(Math.max(num3, num4)); // 输出: 10
 var num7 = Math.floor(Math.random() * 10); // 获取大于等于0小于10的任意整数
 var num1 = Math.floor(Math.random() * (10 - 5 + 1) + 5); // 获取大于等于5小于11(5到10之间)的任意整数
 ```
+
+## 深拷贝与浅拷贝 ##
+
+区分深拷贝与浅拷贝的方法，举个例子，A拷贝B，改变A的值，若B也跟着改变，则此拷贝过程为浅拷贝，否则为深拷贝。深拷贝和浅拷贝发生于引用数据类型，拷贝对象通常是 Object 或 Array。
+
+### 内存存取原理 ###
+
+在进入深拷贝和浅拷贝主题前，先要了解下数据是如何存储到内存中的。
+
+对于基本数据类型，数据名值都是存储于栈内存中，当进行复制操作时，栈内存会新开辟一个内存，正因如此，两者互不干预。示例:
+
+```js
+var a = 1;
+var b = a;
+console.log(a, b); // 1 1
+b = 2;
+console.log(a, b); // 1 2
+```
+
+可以看到，将 b 赋值为2，a 的值也不会变为2。
+
+引用数据类型则不一样，当定义一个引用类型的数据时，栈内存会提供一个引用的地址指向
+
+### 深拷贝 ###
+
+
+
+### 浅拷贝 ###
+
+
 
 ---
 
