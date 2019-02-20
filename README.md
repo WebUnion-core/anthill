@@ -1,6 +1,6 @@
 
 # Anthill #
 
-__What you share is what you know.__ Welcome to all.
+__Welcome to all.__
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/anthill.gif)
