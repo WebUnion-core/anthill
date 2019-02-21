@@ -14,10 +14,10 @@
 ## <a name="href1">参考链接</a> ##
 
 - [HTTP协议详解（真的很经典）](http://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html)
-- [HTTP 协议入门](http://www.ruanyifeng.com/blog/2016/08/http.html)
-- [HTTP 最强资料大全](http://www.tuicool.com/articles/yam2A3m)
 
----
+- [HTTP 协议入门](http://www.ruanyifeng.com/blog/2016/08/http.html)
+
+- [HTTP 最强资料大全](http://www.tuicool.com/articles/yam2A3m)
 
 ## <a name="href2">HTTP概述</a> ##
 
@@ -35,7 +35,7 @@ HTTP 协议的主要特点有：
 
 4. 无状态：HTTP协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。
 
----
+这里补充一下 HTTP2.0 的一些内容，HTTP/2 引入了"服务端推(server push)"的概念，它允许服务端在客户端需要数据之前就主动地将数据发送到客户端缓存中，从而提高性能。HTTP/2 提供更多的加密支持，HTTP/2 使用多路技术，允许多个消息在一个连接上同时交差。它增加了头压缩(header compression)，因此即使非常小的请求，其请求和响应的 Header 都只会占用很小比例的带宽。
 
 ## <a name="href3">URL</a> ##
 
@@ -56,8 +56,6 @@ HTTP 使用 URI(Uniform Resource Identifiers, 统一资源标识符) 来传输�
 6. 锚："#"后的部分称为锚，锚并非必需；
 
 7. 查询字符串："?"到"#"(如果有的话)之间的部分称为查询字符串，它是一对对的键值对组合，每对查询字符串间用"&"分隔，查询字符串并非必需。
-
----
 
 ## <a name="href4">请求报文(请求消息)</a> ##
 
@@ -109,8 +107,6 @@ Connection: keep-alive
 
 {"csp-report":{"blocked-uri":"http://alimama.alicdn.com","document-uri":"http://e.firefoxchina.cn/?cachebust=20160321"}}
 ```
-
----
 
 ## <a name="href5">响应报文(响应信息)</a> ##
 
@@ -168,8 +164,6 @@ Connection: keep-alive
 {"result":"ok"}
 ```
 
----
-
 ## <a name="href6">请求方法</a> ##
 
 HTTP 常用的请求方法有：
@@ -183,8 +177,6 @@ HTTP 常用的请求方法有：
 4. DELETE：请求服务器删除指定页面；
 
 5. HEAD：类似于 GET，只不过返回的响应中没有具体的内容，只是用于获取报头；
-
----
 
 ## <a name="href7">状态码</a> ##
 
