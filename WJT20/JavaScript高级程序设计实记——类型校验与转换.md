@@ -4,6 +4,9 @@
 ## 目录 ##
 
 1. [类型判断](#href1)
+    1. [typeof](#href1-1)
+    2. [相等符与全等符](#href1-2)
+    3. [instanceof与constructor判断](#href1-3)
 2. [类型转换](#href2)
     1. [强制类型转换](#href2-1)
     2. [隐性类型转换](#href2-2)
@@ -13,6 +16,8 @@
 
 ## <a name="href1">类型判断</a> ##
 
+### <a name="href1-1">typeof</a> ###
+
 可以使用 typeof 操作符可以返回一个值的数据类型，例如:
 
 ```js
@@ -21,16 +26,40 @@ console.log(typeof str); // "string"
 console.log(typeof 1); // "number"
 ```
 
-但是 typeof 的判断并不是特别精准。
+但是 typeof 的判断并不是特别精准，比如无法区分数组和对象，返回的值都是"object"。
+
+### <a name="href1-2">相等符与全等符</a> ###
+
+`===`为全等符(恒等符)，当等号两边的值为相同类型的时候，直接比较等号两边的值，值相同则返回 true，若等号两边的值类型不同时直接返回 false。
+
+`==`为相等符(等值符)，当等号两边的值为相同类型时比较值是否相同，类型不同时会发生类型的自动转换，转换为相同的类型后再作比较。
+
+1. 如果一个是 null、一个是 undefined，那么相等;
+2. 如果一个是字符串，一个是数值，把字符串转换成数值再进行比较;
+3. 如果任一值是 true，把它转换成1再比较；如果任一值是 false，把它转换成0再比较;
+4. 如果一个是对象，另一个是数值或字符串，把对象转换成基础类型的值再比较。对象转换成基础类型，利用它的 `toString()`或者`valueOf()`方法。JavaScript 核心内置类，会尝试`valueOf()`先于`toString()`，例外的是 Date，Date 利用的是`toString()`转换。那些不是 JavaScript 语言核心中的对象则通过各自的实现中定义的方法转换为原始值;
+5. 任何其他组合，都不相等。
+
+尽量少使用`==`进行值判断，因为问题太多，可能产生一些意料之外的 Bug。
+
+### <a name="href1-3">instanceof与constructor判断</a> ###
 
 除 Undefined 外的数据可以根据"所有数据都基于 Object"的特点，即利用 constructor 属性进行判断，代码如下:
 
 ```js
 var str = 'a bird';
-console.log(str.constructor === String); // true，为字符串类型
+console.log(str.constructor === String); // true
 ```
 
 这种方式还可以用于判断变量是否为 Array、Date 等原生对象。
+
+利用 instanceof 关键字也可以判断原生对象，不过任何原生对象与 Object 比较的结果都是 true，这点需要注意。示例代码如下:
+
+```js
+console.log(([]) instanceof Array); // true
+console.log(([]) instanceof Object); // true
+console.log((new Date()) instanceof Date); // true
+```
 
 ## <a name="href2">类型转换</a> ##
 
