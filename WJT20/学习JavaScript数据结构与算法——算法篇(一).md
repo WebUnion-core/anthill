@@ -40,7 +40,5 @@ console.log(arr); // [1,2,3,4,5]
 ID         : 128
 DATE       : 2019/02/25
 AUTHER     : WJT20
-TAG        : Web前端
+TAG        : 编程知识
 ```
-
-3     2    1     4     5
