@@ -1,15 +1,21 @@
 
-# 学习JavaScript数据结构与算法——排序算法篇 #
+# 学习JavaScript数据结构与算法——算法篇 #
 
 ## 目录 ##
 
-1. [冒泡排序](#href1)
-2. [选择排序](#href2)
-3. [插入排序](#href3)
-4. [归并排序](#href4)
-5. [快速排序](#href5)
+1. [排序](#href1)
+    1. [冒泡排序](#href1-1)
+    2. [选择排序](#href1-2)
+    3. [插入排序](#href1-3)
+    4. [归并排序](#href1-4)
+    5. [快速排序](#href1-5)
+2. [搜索](#href2)
+    1. [顺序搜索](#href2-6)
+    2. [二分搜索](#href2-7)
 
-## <a name="href1">冒泡排序</a> ##
+## <a name="href1">排序</a> ##
+
+### <a name="href1-1">冒泡排序</a> ###
 
 冒泡排序是所有排序算法中性能最差的一种，但也是最常考查、也是最简单的一种排序算法。原理是将数组中元素升序排序(由小到大)，就像气泡从底部升起到顶部一样，冒泡排序因此得名。
 
@@ -41,7 +47,7 @@ console.log(arr); // [1,2,3,4,5]
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w126.png)
 
-## <a name="href2">选择排序</a> ##
+### <a name="href1-2">选择排序</a> ###
 
 选择排序算法是一种原址比较排序算法，大致的思路是找出数据结构中的最小值并将其放置在第一位，接着找到第二小的值并将其放置在第二位，以此类推。
 
@@ -80,7 +86,7 @@ console.log(arr); // [1,2,3,4,5]
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w127.png)
 
-## <a name="href3">插入排序</a> ##
+### <a name="href1-3">插入排序</a> ###
 
 插入排序的原理是将目标数组项与其之前的元素进行比较，找到它应该插入的位置(左小右大)，以此类推。
 
@@ -116,7 +122,7 @@ console.log(arr); // [1,2,3,4,5]
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w128.png)
 
-## <a name="href4">归并排序</a> ##
+### <a name="href1-4">归并排序</a> ###
 
 归并排序是第一个可以被实际使用的排序算法，其性能比前面三个排序算法要好得多，其复杂度为`O(nlog^n)`。
 
@@ -187,7 +193,7 @@ s([5,4,3,2,1])
 
 这个工作流程有些复杂，需要耐心分析理解。
 
-## <a name="href5">快速排序</a> ##
+### <a name="href1-5">快速排序</a> ###
 
 快速排序也许是最常用的排序算法了，复杂度与归并排序一样，都是`O(nlog^n)`，但它的性能却比其他同复杂度的排序算法要好。快速排序也用到分治的方法，它比前面几种排序算法都要复杂得多，主要分为以下几个步骤:
 
@@ -253,6 +259,76 @@ q([5,4,3,2,1], 0, 4)
 -> p([1,2,3,4,5], 3, 4)
 -> index:4,arr:[1,2,3,4,5]
 ```
+
+## <a name="href2">搜索</a> ##
+
+### <a name="href2-6">顺序搜索</a> ###
+
+顺序搜索(线性搜索)是最基本的搜索算法，其原理是将数据结构中的每一个元素与要找的元素作比较，但是顺序搜索的性能是最差的。
+
+代码实现:
+
+```js
+function sequentialSearch(arr, target) {
+    for (var i = 0; i < arr.length; i++) {
+        if (target === arr[i]) {
+            return i;
+        }
+    }
+    return -1;
+}
+```
+
+测试用例:
+
+```js
+var arr = [5, 4, 3, 2, 1];
+console.log(sequentialSearch(arr, 2)); // 3
+```
+
+### <a name="href2-7">二分搜索</a> ###
+
+二分搜索要求被搜索的数据结构已排序，其遵循以下步骤:
+
+1. 选择数组的中间值;
+2. 如果选中值是待搜索值，那么算法执行完毕;
+3. 如果待搜索值比选中值要小，则返回步骤1并在选中值左边的子数组中寻找;
+4. 如果待搜索值比选中值要大，则返回步骤1并在选中值右边的子数组中寻找;
+
+代码实现:
+
+```js
+function binarySearch(arr, target) {
+    // 排序操作(从上一章节选择适合的算法使用即可)
+
+    var low = 0;
+    var high = arr.length - 1;
+    var mid;
+    var element;
+
+    while (low <= high) {
+        mid = Math.floor((low + high) / 2);
+        element = arr[mid];
+        if (element < target) {
+            low = mid + 1;
+        } else if (element > target) {
+            high = mid - 1;
+        } else {
+            return mid;
+        }
+    }
+    return -1;
+}
+```
+
+测试用例:
+
+```js
+var arr = [1, 2, 3, 4, 5]; // 直接用一个升序数组做测试，跳过算法中的排序操作
+console.log(binarySearch(arr, 1)); // 0
+```
+
+---
 
 ```
 ID         : 128
