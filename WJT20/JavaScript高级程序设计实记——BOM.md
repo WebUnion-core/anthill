@@ -1,6 +1,8 @@
 
 # JavaScript高级程序设计实记——BOM #
 
+> BOM(Browser Object Model，浏览器对象模型)提供了很多用于访问浏览器的对象，这些功能与任何网页内容无关。
+
 ## 目录 ##
 
 1. [window对象](#href1)
@@ -13,8 +15,6 @@
 3. [navigator对象](#href3)
 4. [history对象](#href4)
 
-BOM(Browser Object Model，浏览器对象模型)提供了很多对象用于访问浏览器的功能，这些功能与任何网页内容无关。
-
 ## <a name="href1">window对象</a> ##
 
 BOM 的核心对象是 window，它代表浏览器的一个实例，window 对象有两个身份:
@@ -23,19 +23,17 @@ BOM 的核心对象是 window，它代表浏览器的一个实例，window 对�
 
 2. 浏览器环境下的全局对象。
 
-JS脚本文件中，全局作用域下声明的变量、函数等都是 window 对象的属性和方法，只是通常情况下可以将 window 对象隐藏。
+全局作用域下声明的变量、函数等都是 window 对象的属性和方法，在调用这些属性和方法时可以将 window 对象隐藏。
 
 ```js
-var num1 = 123;
+var num = 123;
+console.log(num, window.num, num === window.num); // 输出: 123 123 true
 
-console.log(num1, window.num1, num1 === window.num1); // 输出: 123 123 true
-
-function fn1() {
+function fn() {
     console.log("Hahaha...");
 }
-
-fn1();
-window.fn1(); // 同上
+fn();
+window.fn(); // 同上
 ```
 
 ### <a name="href1-1">window.open</a> ###
@@ -66,7 +64,7 @@ window.open("http://www.baidu.com", "topFrame", "height=500,width=500,top=100,le
 
 ### <a name="href1-2">延时器与定时器</a> ###
 
-window 对象的 `setTimeout(callback, time)` 可以延时 time 参数指定的时间长度(毫秒)再执行接收的 callback 回调函数。
+window 对象的`setTimeout(callback, time)`方法可以延时 time 时间长度(毫秒)再执行接收的 callback 回调。
 
 ```js
 // 5秒后执行回调函数
@@ -75,7 +73,7 @@ setTimeout(function() {
 }, 5000);
 ```
 
-window 对象的 `setInterval(callback, time)` 可以每隔 time 参数指定的时间长度(毫秒)再执行接收的 callback 回调函数。
+window 对象的`setInterval(callback, time)`方法可以每隔 time 时间长度(毫秒)再执行接收的 callback 回调。
 
 ```js
 // 每隔1秒执行回调函数
@@ -84,7 +82,7 @@ setInterval(function() {
 }, 1000);
 ```
 
-一般将 `setTimeout()` 和 `setInterval()` 的返回结果(称为计时器)保存在一个变量中，然后可以使用 `clearTimeout(timer)` 和 `clearInterval(timer)` 清除设置的计时器。
+一般将`setTimeout()`和`setInterval()`的返回结果(称为计时器)保存在一个变量中，然后可以使用`clearTimeout(timer)`和`clearInterval(timer)`清除设置的计时器。
 
 ```js
 // 5秒后执行回调函数
@@ -181,15 +179,14 @@ console.log(location.search); // 输出: "?name=WJT&id=001"
 
 ```js
 function parseQueryString() {
-    var str = location.search.slice(1),
-        arr = str.split("&"),
-        obj = {};
+    var str = location.search.slice(1);
+    var arr = str.split("&");
+    var obj = {};
 
-    for(var i = 0; i < arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
         var item = arr[i].split("=");
         var key = decodeURIComponent(item[0]);
         var value = decodeURIComponent(item[1]); // 一般参数字符串都经过编码，使用decodeURIComponent()方法将键和值转为原始值
-
         obj[key] = value;
     }
 
@@ -200,7 +197,7 @@ console.log(parseQueryString());
 
 ### <a name="href2-2">页面跳转</a> ###
 
-使用 location 对象的 `assign(url)` 的方法、`replace(url)` 方法和设置 location 属性(除了 hash，常用的是修改 href 属性)都可以实现页面跳转。
+使用 location 对象的`assign(url)`的方法、`replace(url)`方法和设置 location 属性(除了 hash，常用的是修改 href 属性)都可以实现页面跳转。
 
 ```js
 location.href = "http://localhost:8090/test/index.html"; // 会在历史纪录中生成记录
@@ -233,11 +230,11 @@ var browser = {
 
 history 对象保存着用户上网的历史纪录，常用的有三个方法:
 
-1. history.go(positionNum): 加载指定位置的页面，positionNum 参数表示相对当前页面历史纪录位置的页面数值，负数表示后退第几个页面，正数表示前进第几个页面;
+1. `history.go(positionNum)`: 加载指定位置的页面，positionNum 参数表示相对当前页面历史纪录位置的页面数值，负数表示后退第几个页面，正数表示前进第几个页面;
 
-2. history.back(): 后退;
+2. `history.back()`: 后退;
 
-3. history.forward(): 前进。
+3. `history.forward()`: 前进。
 
 ```js
 history.go(1); // 跳转历史纪录指定页面
