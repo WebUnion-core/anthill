@@ -6,16 +6,13 @@
 1. [参考链接](#href1)
 2. [伪类与伪元素的区分](#href2)
 3. [伪类](#href3)
- [](#href4)   1. 链接状态
- [](#href5)   2. 首尾定位
- [](#href6)   3. 索引定位
- [](#href7)   4. 表单控件
- [](#href8)       1. checked
- [](#href9)       2. disabled和enabled
- [](#href10)       3. focus
-4. [伪元素](#href11)
- [](#href12)   1. 首行和首字符
- [](#href13)   2. 前后添加内容
+    1. [链接状态](#href3-1)
+    2. [首尾定位](#href3-2)
+    3. [索引定位](#href3-3)
+    4. [表单控件](#href3-4)
+4. [伪元素](#href4)
+    1. [首行和首字符](#href4-5)
+    2. [前后添加内容](#href4-6)
 
 ## <a name="href1">参考链接</a> ##
 
@@ -35,8 +32,8 @@
 
 伪类的作用有以下两点:
 
-1. 获取不存在于DOM树中的信息;
-2. 获取不能被常规CSS选择器获取的信息。
+1. 获取不存在于 DOM 树中的信息;
+2. 获取不能被常规 CSS 选择器获取的信息。
 
 ### <a name="href3-1">链接状态</a> ###
 
@@ -49,25 +46,23 @@
 
 如果要同时给这四个状态添加样式，那么你需要注意以下两点:
 
-1. hover 状态的样式必须在添加完 link 和 visited 的状态样式后才会生效；
+1. hover 状态的样式必须在添加完 link 和 visited 的状态样式后才会生效;
 2. active 状态的样式必须在添加完 hover 状态的样式后才会生效。
 
-综上所述，如果要同时设置这四个状态的样式，添加顺序就只有两种情况：
+综上所述，如果要同时设置这四个状态的样式，添加顺序就只有两种情况:
 
-1. link -> visited -> hover -> active；
+1. link -> visited -> hover -> active;
 2. visited -> link -> hover -> active。
 
 这四个链接伪类的样式添加顺序是诸多面试题常考的内容之一，其实你只要记住 hover 和 active 的位置是固定的，link 和 visited 两者可以互调位置。以下是示例代码:
 
-DOM结构:
+DOM 结构:
 
 ```html
-...
 <a class="link-text" href="#">text</a>
-...
 ```
 
-CSS样式：
+CSS 样式:
 
 ```css
 .link-text:link{ color: #acacac; }
@@ -86,9 +81,9 @@ CSS样式：
 
 首尾定位伪类也是很常用的伪类，使用的是`:first-child`和`:last-child`这两个伪类，`:first-child`匹配的是其前面编写的选择器所匹配到的元素集合中的第一个子元素，而`:last-child`则是其中的最后一个子元素。
 
-这里我举一个常见的应用首尾定位伪类的实例：给一个还有多个条目的列表项实现每个条目间用边框实线分隔的效果。注意，不是每个条目下边或上边添加一条边框实线那么简单哦，而是每个条目“之间”用边框实线分隔。明白其中的意思后，你会发现要实现这样的效果其实也不难，我们可以使用以下代码来实现:
+这里我举一个常见的应用首尾定位伪类的实例: 给一个还有多个条目的列表项实现每个条目间用边框实线分隔的效果。注意，不是每个条目下边或上边添加一条边框实线那么简单哦，而是每个条目“之间”用边框实线分隔。明白其中的意思后，你会发现要实现这样的效果其实也不难，我们可以使用以下代码来实现:
 
-DOM结构:
+DOM 结构:
 
 ```html
 ...
@@ -100,7 +95,7 @@ DOM结构:
 ...
 ```
 
-CSS样式:
+CSS 样式:
 
 ```css
 .list{
@@ -120,15 +115,15 @@ CSS样式:
 }
 ```
 
-效果截图：
+效果截图:
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w49.png)
 
 ### <a name="href3-3">索引定位</a> ###
 
-前面讲过首尾定位伪类可以给集合的第一个和最后一个子元素添加样式，然而有些时候我们要添加的样式并不是作用于首尾，而是其中某个位置的元素，这时，我们可以使用索引定位伪类`:nth-child(n)`，这个伪类可以接收一个表征元素索引的参数(由1记起)。以下是给一个无序列表的第二个列表条目添加绿色字体颜色的示例代码：
+前面讲过首尾定位伪类可以给集合的第一个和最后一个子元素添加样式，然而有些时候我们要添加的样式并不是作用于首尾，而是其中某个位置的元素，这时，我们可以使用索引定位伪类`:nth-child(n)`，这个伪类可以接收一个表征元素索引的参数(由1记起)。以下是给一个无序列表的第二个列表条目添加绿色字体颜色的示例代码:
 
-DOM结构:
+DOM 结构:
 
 ```html
 ...
@@ -140,7 +135,7 @@ DOM结构:
 ...
 ```
 
-CSS样式:
+CSS 样式:
 
 ```css
 .list{
@@ -170,132 +165,123 @@ CSS样式:
 
 ### <a name="href3-4">表单控件</a> ###
 
-CSS中有不少伪类是与表单控件(诸如文本框、文本域、单选按钮、复选按钮等等)有关的，在设计表单控件的时候，这些伪类还是挺有用的。这里我只列举一些常用的表单控件伪类，想了解更多表单控件伪类请自行查阅资料，常用的主要有以下这些:
+CSS 中有不少伪类是与表单控件(诸如文本框、文本域、单选按钮、复选按钮等等)有关的，在设计表单控件的时候，这些伪类还是挺有用的。这里我只列举一些常用的表单控件伪类，想了解更多表单控件伪类请自行查阅资料，常用的主要有以下这些:
 
-1. `:checked`: 选择所有选中的表单元素；
-2. `:disabled`: 选择所有禁用的表单元素；
-3. `:enabled`: 选择所有启用的表单元素；
-4. `:focus`: 选择元素输入后具有焦点。
+1. `:checked`用于选择所有选中的表单元素。
 
+    `:checked`伪类常用于单选按钮和复选按钮，利用这个伪类，我们可以给选中的选项添加一些独特样式，从而与未选中的选项区分开来。以下是给选中的复选按钮选项对应的备注文本添加颜色区分的示例代码:
 
+    DOM 结构:
 
-`:checked`伪类常用于单选按钮和复选按钮，利用这个伪类，我们可以给选中的选项添加一些独特样式，从而与未选中的选项区分开来。以下是给选中的复选按钮选项对应的备注文本添加颜色区分的示例代码：
+    ```html
+    ...
+    <form>
+        <input name="color" type="checkbox" value="red"/><label>红色</label><br/>
+        <input name="color" type="checkbox" value="green"/><label>绿色</label><br/>
+        <input name="color" type="checkbox" value="blue"/><label>蓝色</label><br/>
+    </form>
+    ...
+    ```
 
-DOM结构:
+    CSS 样式:
 
-```html
-...
-<form>
-    <input name="color" type="checkbox" value="red"/><label>红色</label><br/>
-    <input name="color" type="checkbox" value="green"/><label>绿色</label><br/>
-    <input name="color" type="checkbox" value="blue"/><label>蓝色</label><br/>
-</form>
-...
-```
+    ```css
+    input[name="color"]:checked + label{
+        color: #e43660;
+    }
+    ```
 
-CSS样式:
+    效果截图:
 
-```css
-input[name="color"]:checked + label{
-    color: #e43660;
-}
-```
+    ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w50.png)
 
-效果截图:
+2. `:disabled`用于选择所有禁用的表单元素; `:enabled`则用于选择所有启用的表单元素。
 
-![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w50.png)
+    `:disabled`和`:enabled`伪类分别用于给禁用和启用的表单控件添加不同的样式。以下是给启用状态文本框添加蓝色实线边框、给禁用状态文本框添加红色实线边框并设置黑底白字效果的示例代码:
 
+    DOM 结构:
 
+    ```html
+    <form>
+        <input type="text" value="Disabled input text" disabled/><br/>
+        <input type="text" placeholder="Enabled input text"/><br/>
+    </form>
+    ```
 
-`:disabled`和`:enabled`伪类分别用于给禁用和启用的表单控件添加不同的样式。以下是给启用状态文本框添加蓝色实线边框、给禁用状态文本框添加红色实线边框并设置黑底白字效果的示例代码:
+    CSS 样式:
 
-DOM结构:
+    ```css
+    input[type="text"]:enabled{
+        margin-bottom: 10px;
+        padding: 5px;
+        border: 2px solid #3456c1;
+    }
+    input[type="text"]:disabled{
+        margin-bottom: 10px;
+        padding: 5px;
+        border: 2px solid #e43660;
+        background-color: #000000;
+        color: #ffffff;
+    }
+    ```
 
-```html
-...
-<form>
-    <input type="text" value="Disabled input text" disabled/><br/>
-    <input type="text" placeholder="Enabled input text"/><br/>
-</form>
-...
-```
+    效果截图:  
 
-CSS样式:
+    ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w51.png)
 
-```css
-input[type="text"]:enabled{
-    margin-bottom: 10px;
-    padding: 5px;
-    border: 2px solid #3456c1;
-}
-input[type="text"]:disabled{
-    margin-bottom: 10px;
-    padding: 5px;
-    border: 2px solid #e43660;
-    background-color: #000000;
-    color: #ffffff;
-}
-```
+3. `:focus`用于选择元素输入后具有焦点。
 
-效果截图:  
+    `:focus`伪类用于给获取到焦点的指定表单控件添加样式，以下是给一个文本框获得焦点时添加绿色实线边框的示例代码:
 
-![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w51.png)
+    DOM 结构:
 
+    ```html
+    ...
+    <form>
+        <input type="text" placeholder="Enabled input text"/><br/>
+    </form>
+    ...
+    ```
 
+    CSS 样式:  
 
-`:focus`伪类用于给获取到焦点的指定表单控件添加样式，以下是给一个文本框获得焦点时添加绿色实线边框的示例代码：
+    ```css
+    input[type="text"]{
+        border: 2px solid #ececec;
+    }
+    input[type="text"]:focus{
+        border: 2px solid #41c134;
+    }
+    ```
 
-DOM结构:  
+    效果截图:  
 
-```html
-...
-<form>
-    <input type="text" placeholder="Enabled input text"/><br/>
-</form>
-...
-```
-
-CSS样式:  
-
-```css
-input[type="text"]{
-    border: 2px solid #ececec;
-}
-input[type="text"]:focus{
-    border: 2px solid #41c134;
-}
-```
-
-效果截图:  
-
-![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w52.png)
+    ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w52.png)
 
 ## <a name="href4">伪元素</a> ##
 
-伪元素在DOM树中创建了一些抽象元素，这些抽象元素是不存在于文档语言里的(可以理解为html源码)。比如：documen接口不提供访问元素内容的第一个字或者第一行的机制，而伪元素可以使开发者可以提取到这些信息。一个选择器只能使用一个伪元素，并且伪元素必须处于选择器语句的最后。
+伪元素在 DOM 树中创建了一些抽象元素，这些抽象元素是不存在于文档语言里的(可以理解为html源码)。比如: document 接口不提供访问元素内容的第一个字或者第一行的机制，而伪元素可以使开发者可以提取到这些信息。一个选择器只能使用一个伪元素，并且伪元素必须处于选择器语句的最后。
 
-为了与伪类区分，我们通常在伪元素前加两个冒号“::”。
+为了与伪类区分，我们通常在伪元素前加两个冒号"::"。
 
 常用的伪元素有四个:  
 
-1. `::first-letter`: 向文本首字符添加特殊样式；
-2. `::first-line`: 向文本首行添加特殊样式；
-3. `::before`: 在元素之前添加内容；
+1. `::first-letter`: 向文本首字符添加特殊样式;
+2. `::first-line`: 向文本首行添加特殊样式;
+3. `::before`: 在元素之前添加内容;
 4. `::after`: 在元素之后添加内容。
 
 ### <a name="href4-5">首行和首字符</a> ###
 
-使用`::first-letter`可以给指定元素的文本首字符添加样式，报纸上那种第一个字符设置大字号的效果就可以用这个伪元素实现；`::first-line`则是给指定元素的首行文本添加样式。以下是实现首字符字号加大并设为红色、首行加粗的示例代码：
+使用`::first-letter`可以给指定元素的文本首字符添加样式，报纸上那种第一个字符设置大字号的效果就可以用这个伪元素实现; `::first-line`则是给指定元素的首行文本添加样式。以下是实现首字符字号加大并设为红色、首行加粗的示例代码:
 
-DOM结构:  
+DOM 结构:  
 
 ```html
-...
 <p>你好，我是WJT20。<br/>很高兴见到你！</p>
-...
 ```
 
-CSS样式:  
+CSS 样式:  
 
 ```css
 p::first-letter{
@@ -313,17 +299,15 @@ p::first-line{
 
 ### <a name="href4-6">前后添加内容</a> ###
 
-前后添加内容是伪元素的主要用途之一，分别用到了`::before`和`::after`两个伪元素，以下是我们自定义一种字体颜色为红色的、文本前后被"——"包围的标题示例代码：
+前后添加内容是伪元素的主要用途之一，分别用到了`::before`和`::after`两个伪元素，以下是我们自定义一种字体颜色为红色的、文本前后被"——"包围的标题示例代码:
 
-DOM结构:  
+DOM 结构:  
 
 ```html
-...
 <my-title>Hello, world!</my-title>
-...
 ```
 
-CSS样式:  
+CSS 样式:  
 
 ```css
 my-title{
