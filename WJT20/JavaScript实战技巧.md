@@ -3,50 +3,29 @@
 
 ## 目录 ##
 
-1. [数组升序排序](#href1)
-2. [检查HTML标签和匹配"#id"形式的字符串](#href2)
-3. [匹配最外层HTML标签名](#href3)
-4. [console](#href4) api总结
-	1. [普通打印](#href5)
-	2. [分组打印](#href6)
-	3. [表格打印](#href7)
-	4. [计数和计时](#href8)
-	5. [条件打印和打印跟踪](#href9)
-5. [浏览器判断原则](#href10)
-6. [检查手机号码格式](#href11)
-7. [获取当前URL查询字符串参数](#href12)
-8. [CRT日期转换](#href13)
-9. [使用touchstart代替移动端click事件](#href14)
+1. [匹配最外层HTML标签名](#href1)
+2. [console总结](#href2)
+	1. [普通打印](#href3)
+	2. [分组打印](#href4)
+	3. [表格打印](#href5)
+	4. [计数和计时](#href6)
+	5. [条件打印和打印跟踪](#href7)
+3. [浏览器判断原则](#href8)
+4. [检查手机号码格式](#href9)
+5. [获取当前URL查询字符串参数](#href10)
+6. [CRT日期转换](#href11)
+7. [使用touchstart代替移动端click事件](#href12)
 
-## <a name="href1">数组升序排序</a> ##
-
-```js
-function lexSort(a, b) {
-	return a === b ? 0 : a > b ? 1 : -1
-}
-
-var ary = [2, 5, 3, 1, 4];
-console.log(ary.sort(lexSort)); // => [1,2,3,4,5]
-```
-
-## <a name="href2">检查HTML标签和匹配"#id"形式的字符串</a> ##
-
-```js
-var rquickExpr = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/;
-console.log(rquickExpr.exec('<h1></h1>')); // => ["<h1></h1>", "<h1></h1>", undefined]
-console.log(rquickExpr.exec('#head')); // => ["#head", undefined, "head"]
-```
-
-## <a name="href3">匹配最外层HTML标签名</a> ##
+## <a name="href1">匹配最外层HTML标签名</a></a> ##
 
 ```js
 var rquickExpr = /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i;
 console.log(rquickExpr.exec('<h1><span></span></h1>')[1]); // => "h1"
 ```
 
-## <a name="href4">console</a> ##
+## <a name="href2">console总结</a></a> ##
 
-### <a name="href4-1">普通打印</a> ###
+### <a name="href2-1">普通打印</a></a> ###
 
 普通(基本)的打印方法有以下四种，都可接收多个参数:
 
@@ -64,7 +43,7 @@ console.log('error: ', 'error content.');
 console.log('warn: ', 'warn content.');
 ```
 
-### <a name="href4-2">分组打印</a> ###
+### <a name="href2-2">分组打印</a></a> ###
 
 分组打印用到的是`console.group()`和`console.groupEnd()`方法，用法如下:
 
@@ -78,7 +57,7 @@ console.log('1. WJT20');
 console.groupEnd();
 ```
 
-### <a name="href4-3">表格打印</a> ###
+### <a name="href2-3">表格打印</a></a> ###
 
 表格打印方法`console.table()`可以美观地打印数组和对象:
 
@@ -93,7 +72,7 @@ console.table([
 ]);
 ```
 
-### <a name="href4-4">计数和计时</a> ###
+### <a name="href2-4">计数和计时</a></a> ###
 
 计数即`console.count()`，传入的参数表示字段，每次调用都会统计这个字段调用的次数:
 
@@ -111,7 +90,7 @@ for (var i = 0; i < 1000; i++) {} // 1000次循环
 console.timeEnd('test');
 ```
 
-### <a name="href4-5">条件打印和打印跟踪</a> ###
+### <a name="href2-5">条件打印和打印跟踪</a></a> ###
 
 条件打印即`console.assert()`:
 
@@ -127,7 +106,7 @@ for (var i = 0; i < 10; i++) {
 console.trace();
 ```
 
-## <a name="href5">浏览器判断原则</a> ##
+## <a name="href3">浏览器判断原则</a></a> ##
 
 代码:
 
@@ -145,7 +124,7 @@ var browser = {
 };
 ```
 
-## <a name="href6">检查手机号码格式</a> ##
+## <a name="href4">检查手机号码格式</a></a> ##
 
 代码:
 
@@ -160,7 +139,7 @@ function checkPhoneFormat(phone) {
 };
 ```
 
-## <a name="href7">获取当前URL查询字符串参数</a> ##
+## <a name="href5">获取当前URL查询字符串参数</a></a> ##
 
 代码:
 
@@ -182,7 +161,7 @@ function parseQueryString() {
 }
 ```
 
-## <a name="href8">CRT日期转换</a> ##
+## <a name="href6">CRT日期转换</a></a> ##
 
 代码:
 
@@ -207,7 +186,7 @@ function translateCRT(CRTDate) {
 }
 ```
 
-## <a name="href9">使用touchstart代替移动端click事件</a> ##
+## <a name="href7">使用touchstart代替移动端click事件</a></a> ##
 
 代码:
 
