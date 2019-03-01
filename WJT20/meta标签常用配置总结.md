@@ -41,6 +41,8 @@
 
 1. viewport: `<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />`
 
+    参考资料: [https://blog.csdn.net/u012402190/article/details/70172371](https://blog.csdn.net/u012402190/article/details/70172371)
+
     content 的各参数含义:
 
     1. width: 宽度(取值为数值/device-width)，默认宽度为980px;
