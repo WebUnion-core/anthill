@@ -61,6 +61,23 @@ console.log(([]) instanceof Object); // true
 console.log((new Date()) instanceof Date); // true
 ```
 
+instanceof 左边为一个实例对象，右边是一个构造函数，本人实验发现，instanceof 实际上是用左实例对象对应的构造函数的`prototype`与右构造函数的`prototype`进行比较，贴出以下代码作证明:
+
+```js
+function A (name) {
+    this.name = name;
+}
+function B (name) {
+    this.name = name;
+}
+
+// 如果将这句代码注释掉，会发现最终的输出结果都是false
+A.prototype = B.prototype;
+
+var a = new A('ABC');
+console.log(A.prototype === B.prototype, a instanceof B); // true true
+```
+
 ## <a name="href2">类型转换</a> ##
 
 ### <a name="href2-1">强制类型转换</a> ###
