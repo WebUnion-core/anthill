@@ -61,7 +61,7 @@ console.log(([]) instanceof Object); // true
 console.log((new Date()) instanceof Date); // true
 ```
 
-instanceof 左边为一个实例对象，右边是一个构造函数，本人实验发现，instanceof 实际上是用左实例对象对应的构造函数的`prototype`与右构造函数的`prototype`进行比较，贴出以下代码作证明:
+instanceof 左边为一个实例对象，右边是一个构造函数，instanceof 实际上是用左实例对象的`__proto__`与右构造函数的`prototype`进行比较，会一直沿着隐式原型链`__proto__`向上查找直到`x.__proto__.__proto__......===y.prototype`为止:
 
 ```js
 function A (name) {
@@ -75,7 +75,7 @@ function B (name) {
 A.prototype = B.prototype;
 
 var a = new A('ABC');
-console.log(A.prototype === B.prototype, a instanceof B); // true true
+console.log(a.__proto__ === B.prototype, a instanceof B); // true true
 ```
 
 ## <a name="href2">类型转换</a> ##
