@@ -218,6 +218,11 @@
             "name": "关于拖放事件的笔记",
             "hash": "D275F9741F4A66B0",
             "id": "8"
+        },
+        {
+            "name": "实用的HTML片段",
+            "hash": "DD3CB7C318DE3021",
+            "id": "28"
         }
     ],
     "Web相关": [
@@ -238,71 +243,6 @@
         }
     ],
     "JavaScript": [
-        {
-            "name": "JavaScript-D系列——BOM",
-            "hash": "5F943DAB1EFD366C",
-            "id": "91"
-        },
-        {
-            "name": "JavaScript-D系列——Canvas",
-            "hash": "77520FAC3A482455",
-            "id": "24"
-        },
-        {
-            "name": "JavaScript-D系列——DOM",
-            "hash": "124DAC51AF32F43B",
-            "id": "92"
-        },
-        {
-            "name": "JavaScript-D系列——事件",
-            "hash": "F06F6739E88AA395",
-            "id": "93"
-        },
-        {
-            "name": "JavaScript-D系列——数据存储",
-            "hash": "78C729F5500803FC",
-            "id": "94"
-        },
-        {
-            "name": "JavaScript-D系列——数据类型",
-            "hash": "E30C27F0302E95AC",
-            "id": "21"
-        },
-        {
-            "name": "JavaScript-D系列——数据请求",
-            "hash": "CA7C6D5E62D0328B",
-            "id": "27"
-        },
-        {
-            "name": "JavaScript-D系列——数组与字符串API",
-            "hash": "72D93543E488CEF1",
-            "id": "72"
-        },
-        {
-            "name": "JavaScript-D系列——正则",
-            "hash": "F8A29149C2437973",
-            "id": "17"
-        },
-        {
-            "name": "JavaScript-D系列——类型校验与转换",
-            "hash": "13E03AF3890903DF",
-            "id": "90"
-        },
-        {
-            "name": "JavaScript-D系列——语句与函数",
-            "hash": "F110D07252CAF4B5",
-            "id": "22"
-        },
-        {
-            "name": "JavaScript-D系列——闭包",
-            "hash": "D87D0A3426D24EDC",
-            "id": "95"
-        },
-        {
-            "name": "JavaScript-D系列——面向对象",
-            "hash": "59D30790925A74BD",
-            "id": "96"
-        },
         {
             "name": "JavaScript实战技巧",
             "hash": "C6F08382C9532350",
@@ -384,6 +324,71 @@
             "id": "64"
         },
         {
+            "name": "JavaScript高级程序设计实记——BOM",
+            "hash": "36847B892A61BC3D",
+            "id": "91"
+        },
+        {
+            "name": "JavaScript高级程序设计实记——Canvas",
+            "hash": "0D20156160F3A27D",
+            "id": "24"
+        },
+        {
+            "name": "JavaScript高级程序设计实记——DOM",
+            "hash": "3F1E01E9D33FB645",
+            "id": "92"
+        },
+        {
+            "name": "JavaScript高级程序设计实记——事件",
+            "hash": "A98D76E7ADDDC04B",
+            "id": "93"
+        },
+        {
+            "name": "JavaScript高级程序设计实记——数据存储",
+            "hash": "4E4FEA30A0E3BE41",
+            "id": "94"
+        },
+        {
+            "name": "JavaScript高级程序设计实记——数据类型",
+            "hash": "0727FEBE57F65A34",
+            "id": "21"
+        },
+        {
+            "name": "JavaScript高级程序设计实记——数据请求",
+            "hash": "98BB27215E59A312",
+            "id": "27"
+        },
+        {
+            "name": "JavaScript高级程序设计实记——数组与字符串API",
+            "hash": "06AFC29792540975",
+            "id": "72"
+        },
+        {
+            "name": "JavaScript高级程序设计实记——正则",
+            "hash": "045BF492D1EE6796",
+            "id": "17"
+        },
+        {
+            "name": "JavaScript高级程序设计实记——类型校验与转换",
+            "hash": "E844BA9743C384DF",
+            "id": "90"
+        },
+        {
+            "name": "JavaScript高级程序设计实记——语句与函数",
+            "hash": "2D20C8FEA4363249",
+            "id": "22"
+        },
+        {
+            "name": "JavaScript高级程序设计实记——闭包",
+            "hash": "7952953207526139",
+            "id": "95"
+        },
+        {
+            "name": "JavaScript高级程序设计实记——面向对象",
+            "hash": "9CB77B4E1040EF06",
+            "id": "96"
+        },
+        {
             "name": "JavaScript黑科技",
             "hash": "16AE148B2C25DD8D",
             "id": "33"
@@ -453,19 +458,19 @@
             "id": "14"
         }
     ],
-    "MySQL": [
-        {
-            "name": "MySQL基础知识",
-            "hash": "D768A1B0DABDF29F",
-            "id": "40"
-        }
-    ],
-    "npm": [
+    "包管理器": [
         {
             "name": "npm实用命令笔记",
             "hash": "0EC9099999C14179",
             "id": "70"
         },
+        {
+            "name": "Yarn探索笔记",
+            "hash": "EBA7D5E419D642E4",
+            "id": "126"
+        }
+    ],
+    "源码解读": [
         {
             "name": "npm源码解读系列——abbrev",
             "hash": "E5AE83CD0EB94E46",
@@ -492,6 +497,16 @@
             "name": "PHP数据类型篇",
             "hash": "F110D2DFBC52A4D4",
             "id": "55"
+        },
+        {
+            "name": "PHP文件系统篇(一)——基本操作",
+            "hash": "C738A3C891BD215D",
+            "id": "67"
+        },
+        {
+            "name": "PHP文件系统篇(二)——文件读写",
+            "hash": "C8A34D2007A00D87",
+            "id": "121"
         },
         {
             "name": "PHP特殊数据类型操作API篇",
@@ -538,14 +553,9 @@
     ],
     "Web前端": [
         {
-            "name": "SVG和Canvas",
-            "hash": "98950037298A90B6",
+            "name": "SVG+CSS3动画效果合集",
+            "hash": "8C28BA4C7A3583FB",
             "id": "9"
-        },
-        {
-            "name": "Web实用代码段集合(一)",
-            "hash": "BD61FB2871471D10",
-            "id": "28"
         },
         {
             "name": "Web数据存储知识点总结",
@@ -558,19 +568,24 @@
             "id": "51"
         },
         {
-            "name": "前端面试刷题总结(一)",
-            "hash": "BBCAE258A78B0BE9",
+            "name": "前端面试刷题总结——代码篇",
+            "hash": "81B64AD9B47089A6",
             "id": "84"
         },
         {
-            "name": "前端面试刷题总结(二)",
-            "hash": "C6671F0FAD7B0A74",
+            "name": "前端面试刷题总结——理论篇",
+            "hash": "27BA14C7ABF3EF20",
             "id": "85"
         },
         {
             "name": "探索em和rem",
             "hash": "33F971AA0A2DE131",
             "id": "32"
+        },
+        {
+            "name": "浏览器内核笔记",
+            "hash": "0C8CBE16C4FA3A66",
+            "id": "127"
         },
         {
             "name": "浏览器渲染机制基础",
@@ -599,13 +614,13 @@
     ],
     "其他": [
         {
-            "name": "互联网常用英文词汇",
-            "hash": "F54FFCDF5B3C074E",
+            "name": "WJT20开发常见的英文词汇书",
+            "hash": "843EA2202C0087FC",
             "id": "116"
         },
         {
-            "name": "互联网技术百科",
-            "hash": "9D40522BD7331592",
+            "name": "WJT20的技术百科书",
+            "hash": "B71D8060A6A5008F",
             "id": "44"
         }
     ],
@@ -619,6 +634,11 @@
             "name": "函数式编程之探索记录(二)",
             "hash": "D124C6F63F5E7C3B",
             "id": "101"
+        },
+        {
+            "name": "学习JavaScript数据结构与算法——算法篇",
+            "hash": "2BDF50A8626DBD70",
+            "id": "128"
         },
         {
             "name": "算法见闻录——基础编程模型(一)",
@@ -639,6 +659,13 @@
             "name": "算法见闻录——数据抽象(二)",
             "hash": "53CB6F085BC6D16D",
             "id": "124"
+        }
+    ],
+    "数据库": [
+        {
+            "name": "必须掌握的SQL技能",
+            "hash": "5C7A5E1D65BD997A",
+            "id": "40"
         }
     ]
 }
