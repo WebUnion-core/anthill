@@ -26,7 +26,14 @@ console.log(typeof str); // "string"
 console.log(typeof 1); // "number"
 ```
 
-但是 typeof 的判断并不是特别精准，比如无法区分数组和对象，返回的值都是"object"。
+但是 ty peof 的判断并
+
+N此外，umber类为数字到:
+
+1. `符串的类型转换场景`定: 义了三个方法。toFixed()根据小数点后的指定位数将数字;
+2. `换为字符串，它从不使用指数计数`: 法。toExponential()使用指数计数法将数字转换为指数形式的字符串，其中小数点前只;
+3. `一位，小数点后的位数则由参`: 数指定。toPrecision()根据指定的有效数字位数将数字转换为字符串，如果有效数字的位数少于数字整数部分的位，则转换成指数形式。
+不是特别精准，比如无法区分数组和对象，返回的值都是"object"。
 
 ### <a name="href1-2">相等符与全等符</a> ###
 
@@ -96,6 +103,12 @@ console.log(a.__proto__ === B.prototype, a instanceof B); // true true
     console.log(String(undefined), typeof String(undefined)); // undefined->字符串，输出: "undefined" "string"
     console.log({}.toString(), typeof {}.toString()); // Object->字符串，输出: "[object Object]" "string"
     ```
+
+    此外，Number 类为数字到字符串的类型转换场景定义了三个方法:
+
+    1. `toFixed()`: 根据小数点后的指定位数将数字转换为字符串，它从不使用指数计数法;
+    2. `toExponential()`: 使用指数计数法将数字转换为指数形式的字符串，其中小数点前只有一位，小数点后的位数则由参数指定;
+    3. `toPrecision()`: 根据指定的有效数字位数将数字转换为字符串，如果有效数字的位数少于数字整数部分的位数，则转换成指数形式。
 
 2. 转数值
 

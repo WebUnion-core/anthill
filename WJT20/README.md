@@ -163,7 +163,7 @@
 
 - [90, E844BA9743C384DF] : [JavaScript高级程序设计实记——类型校验与转换](./JavaScript高级程序设计实记——类型校验与转换.md)
 
-- [22, 2D20C8FEA4363249] : [JavaScript高级程序设计实记——语句与函数](./JavaScript高级程序设计实记——语句与函数.md)
+- [22, 24351BF1666E6D4D] : [JavaScript高级程序设计实记——语句与变量](./JavaScript高级程序设计实记——语句与变量.md)
 
 - [95, 7952953207526139] : [JavaScript高级程序设计实记——闭包](./JavaScript高级程序设计实记——闭包.md)
 
