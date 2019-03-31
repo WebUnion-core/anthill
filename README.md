@@ -1,6 +1,4 @@
 
 # Anthill #
 
-__Welcome to all.__
-
-![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/anthill.gif)
+这里是 WebUnion 的共享资源仓库(非项目)。
