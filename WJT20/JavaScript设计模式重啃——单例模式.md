@@ -21,11 +21,11 @@ var Singleton = (function() {
     var instance = null;
 
     var Singleton = function(name) {
-        if (instance) {
-            return instance;
+        if (!instance) {
+            this.name = name;
+            instance = this;
         }
-        this.name = name;
-        return instance = this;//this是生成的实例对象
+        return instance;
     }
 
     return Singleton;
@@ -34,8 +34,8 @@ var Singleton = (function() {
 var o1 = new Singleton("object 1");
 var o2 = new Singleton("object 2");
 
-console.log(o1); // 输出: { name: "object 1" }
-console.log(o2); // 输出: { name: "object 1" }
+console.log(o1); // 输出: {name:"object 1"}
+console.log(o2); // 输出: {name:"object 1"}
 console.log(o1 === o2); // 输出: true
 ```
 
@@ -63,7 +63,6 @@ var ProxySingleton = (function() {
         if (!instance) {
             instance = new Singleton(name);
         }
-
         return instance;
     }
 })();
@@ -71,8 +70,8 @@ var ProxySingleton = (function() {
 var o1 = new ProxySingleton('new object1');
 var o2 = new ProxySingleton('new object2');
 
-console.log(o1); // 输出: { name: "object 1" }
-console.log(o2); // 输出: { name: "object 1" }
+console.log(o1); // 输出: {name:"object 1"}
+console.log(o2); // 输出: {name:"object 1"}
 console.log(o1 === o2); // 输出: true
 ```
 
@@ -87,7 +86,7 @@ console.log(o1 === o2); // 输出: true
 1. 无类;
 2. 基于对象。
 
-正因为 JavaScript 无类，创建一个"对象"就可以替代所谓的"类"，所以，又为什么要生搬"类"的那一套呢？(前面写的两个章节是先让你们了解什么是单例模式，不要吐槽)。
+正因为 JavaScript 无类，创建一个"对象"就可以替代所谓的"类"，所以，又为什么要生搬"类"的那一套呢?
 
 JavaScript 中的单例模式逻辑，其实应该是这样的:
 
@@ -101,7 +100,6 @@ var singleton = (function() {
                 name: name
             }
         }
-
         return obj;
     }
 })();
@@ -109,8 +107,8 @@ var singleton = (function() {
 var o1 = singleton("new object1");
 var o2 = singleton("new object2");
 
-console.log(o1); // 输出: { name: "object 1" }
-console.log(o2); // 输出: { name: "object 1" }
+console.log(o1); // 输出: {name:"object 1"}
+console.log(o2); // 输出: {name:"object 1"}
 console.log(o1 === o2); // 输出: true
 ```
 
@@ -139,8 +137,8 @@ var createSingleObject = getSingle(createObject);
 var o1 = createSingleObject("new object1");
 var o2 = createSingleObject("new object2");
 
-console.log(o1); // 输出: { name: "object 1" }
-console.log(o2); // 输出: { name: "object 1" }
+console.log(o1); // 输出: {name:"object 1"}
+console.log(o2); // 输出: {name:"object 1"}
 console.log(o1 === o2); // 输出: true
 ```
 
