@@ -109,6 +109,8 @@
 
 - [48, C39883C19280DF55] : [MVC模式探究](./MVC模式探究.md)
 
+- [68, 7E32D974E35DE1B6] : [MVVM模式探究](./MVVM模式探究.md)
+
 ## JavaScript系列 ##
 
 - [71, C6F08382C9532350] : [JavaScript实战技巧](./JavaScript实战技巧.md)
