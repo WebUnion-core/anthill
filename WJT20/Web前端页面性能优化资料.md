@@ -32,8 +32,6 @@
 
 ![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w131.png)
 
-接下来将会说明其中的每个细节
-
 ## <a name="href3">浏览器缓存</a> ##
 
 浏览器处理缓存的策略为:
