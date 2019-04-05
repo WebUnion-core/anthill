@@ -63,8 +63,6 @@
 
 - [13, CCBA34619B864111] : [Mongoose实现增删改查](./Mongoose实现增删改查.md)
 
-- [12, 599B2B8A9675DF1D] : [Node.js基础知识点总结](./Node.js基础知识点总结.md)
-
 - [87, D5FE95D734A7123A] : [Node.js实用技巧笔记](./Node.js实用技巧笔记.md)
 
 - [123, A3A045B3F2127770] : [Node.js对MySQL增删改查实践](./Node.js对MySQL增删改查实践.md)
@@ -76,6 +74,8 @@
 - [106, 98A670145D41B7B2] : [Node.js常用原生模块系列——path模块](./Node.js常用原生模块系列——path模块.md)
 
 - [89, E76C58B89C5B068B] : [Node.js常用原生模块系列——process模块](./Node.js常用原生模块系列——process模块.md)
+
+- [117, 314869B37925E049] : [深入浅出Node.js十一日探(一)](./深入浅出Node.js十一日探(一).md)
 
 ## Flutter系列 ##
 
