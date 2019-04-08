@@ -81,6 +81,8 @@
 
 - [12, 4603FAC444A84936] : [深入浅出Node.js十一日探(二)](./深入浅出Node.js十一日探(二).md)
 
+- [130, 2F42F6290243E67B] : [深入浅出Node.js十一日探(四)](./深入浅出Node.js十一日探(四).md)
+
 ## Flutter系列 ##
 
 - [110, AFE946549D8D343A] : [Flutter跨平台开发——Stateless与Stateful](./Flutter跨平台开发——Stateless与Stateful.md)
