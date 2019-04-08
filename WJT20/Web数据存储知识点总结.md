@@ -29,7 +29,7 @@
 
 cookie 指存储在用户本地终端上的数据，安全性较低，通常需要经过加密，典型的应用场景就是判断注册用户是否已经登过该网站。
 
-cookie 包装类:   
+自封装 cookie api:
 
 ```js
 // cookie api
@@ -43,8 +43,9 @@ var Cookie = {
 
 	// 获取
 	getCookie: function(key) {
-		var arr = (decodeURIComponent(document.cookie)).split('; ');
-		var eachCookie;
+		var arr = decodeURIComponent(document.cookie).split('; ');
+		var eachCookie = null;
+
 		for (var i = 0; i < arr.length; i++) {
 			eachCookie = arr[i].split('=');
 			if (eachCookie[0] === key && eachCookie[1] != '') {
@@ -63,7 +64,7 @@ var Cookie = {
 	// 清空
 	clearCookie: function() {
 		var arr = (decodeURIComponent(document.cookie)).split('; ');
-		var eachCookie,
+		var eachCookie = '';
 		var exp = new Date();
 
 		exp.setTime(exp.getTime() - 1);
