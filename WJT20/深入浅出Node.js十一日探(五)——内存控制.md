@@ -34,7 +34,7 @@ Node.js 不能使用系统的全部内存(64位系统下约为1.4GB，32位系�
 
 以`process.memoryUsage()`方法为例，其输出信息如图:
 
-![image]()
+![image](https://raw.githubusercontent.com/WebUnion-core/anthill/master/WJT20/images/w134.png)
 
 输出的几个属性代表的含义为:
 
