@@ -5,27 +5,29 @@
 
 1. [匹配最外层HTML标签名](#href1)
 2. [console总结](#href2)
-	1. [普通打印](#href3)
-	2. [分组打印](#href4)
-	3. [表格打印](#href5)
-	4. [计数和计时](#href6)
-	5. [条件打印和打印跟踪](#href7)
-3. [浏览器判断原则](#href8)
-4. [检查手机号码格式](#href9)
-5. [获取当前URL查询字符串参数](#href10)
-6. [CRT日期转换](#href11)
-7. [使用touchstart代替移动端click事件](#href12)
+    1. [普通打印](#href2-1)
+    2. [分组打印](#href2-2)
+    3. [表格打印](#href2-3)
+    4. [计数和计时](#href2-4)
+    5. [条件打印和打印跟踪](#href2-5)
+3. [浏览器判断原则](#href3)
+4. [检查手机号码格式](#href4)
+5. [获取当前URL查询字符串参数](#href5)
+6. [CRT日期转换](#href6)
+7. [使用touchstart代替移动端click事件](#href7)
+8. [数组去重](#href8)
+9. [快速获取YYYY-MM-DD格式日期](#href9)
 
-## <a name="href1">匹配最外层HTML标签名</a></a> ##
+## <a name="href1">匹配最外层HTML标签名</a> ##
 
 ```js
 var rquickExpr = /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i;
 console.log(rquickExpr.exec('<h1><span></span></h1>')[1]); // => "h1"
 ```
 
-## <a name="href2">console总结</a></a> ##
+## <a name="href2">console总结</a> ##
 
-### <a name="href2-1">普通打印</a></a> ###
+### <a name="href2-1">普通打印</a> ###
 
 普通(基本)的打印方法有以下四种，都可接收多个参数:
 
@@ -43,7 +45,7 @@ console.log('error: ', 'error content.');
 console.log('warn: ', 'warn content.');
 ```
 
-### <a name="href2-2">分组打印</a></a> ###
+### <a name="href2-2">分组打印</a> ###
 
 分组打印用到的是`console.group()`和`console.groupEnd()`方法，用法如下:
 
@@ -57,7 +59,7 @@ console.log('1. WJT20');
 console.groupEnd();
 ```
 
-### <a name="href2-3">表格打印</a></a> ###
+### <a name="href2-3">表格打印</a> ###
 
 表格打印方法`console.table()`可以美观地打印数组和对象:
 
@@ -72,7 +74,7 @@ console.table([
 ]);
 ```
 
-### <a name="href2-4">计数和计时</a></a> ###
+### <a name="href2-4">计数和计时</a> ###
 
 计数即`console.count()`，传入的参数表示字段，每次调用都会统计这个字段调用的次数:
 
@@ -90,7 +92,7 @@ for (var i = 0; i < 1000; i++) {} // 1000次循环
 console.timeEnd('test');
 ```
 
-### <a name="href2-5">条件打印和打印跟踪</a></a> ###
+### <a name="href2-5">条件打印和打印跟踪</a> ###
 
 条件打印即`console.assert()`:
 
@@ -106,7 +108,7 @@ for (var i = 0; i < 10; i++) {
 console.trace();
 ```
 
-## <a name="href3">浏览器判断原则</a></a> ##
+## <a name="href3">浏览器判断原则</a> ##
 
 代码:
 
@@ -124,7 +126,7 @@ var browser = {
 };
 ```
 
-## <a name="href4">检查手机号码格式</a></a> ##
+## <a name="href4">检查手机号码格式</a> ##
 
 代码:
 
@@ -139,7 +141,7 @@ function checkPhoneFormat(phone) {
 };
 ```
 
-## <a name="href5">获取当前URL查询字符串参数</a></a> ##
+## <a name="href5">获取当前URL查询字符串参数</a> ##
 
 代码:
 
@@ -161,7 +163,7 @@ function parseQueryString() {
 }
 ```
 
-## <a name="href6">CRT日期转换</a></a> ##
+## <a name="href6">CRT日期转换</a> ##
 
 代码:
 
@@ -186,20 +188,66 @@ function translateCRT(CRTDate) {
 }
 ```
 
-## <a name="href7">使用touchstart代替移动端click事件</a></a> ##
+## <a name="href7">使用touchstart代替移动端click事件</a> ##
 
 代码:
 
 ```js
 var dialogEl = document.getElementById('dialog-container');
 dialogEl.addEventListener('touchstart', function () {
-    // TODO
+    ...
 });
 ```
 
 解析:
 
 在移动端，touchstart 比 click 要灵敏得多，但是何时该使用 touchstart，何时该使用 click，应视具体场景而定。
+
+## <a name="href8">数组去重</a> ##
+
+代码:
+
+```js
+function unique (arr) {
+	var newArr = [];
+	var isRepeated = false;
+
+	for (var i = 0; i < arr.length; i++) {
+		isRepeated = false;
+
+		for (var j = 0; j < newArr.length; j++) {
+			if (newArr[j] === arr[i]) {
+				isRepeated = true;
+				break;
+			}
+		}
+
+		if (!isRepeated) {
+			newArr.push(arr[i]);
+		}
+	}
+
+	return newArr;
+}
+
+console.log(unique([1, 2, 3, 4, undefined, 1, null, undefined, 3, NaN, 5, NaN])); // [1, 2, 3, 4, null, 5]
+```
+
+解析:
+
+对于 undefined、null、NaN 等特殊值，for 循环会自动忽视这些值，所以不考虑这些值的去重，另外，Object 的相等判断又是另一个复杂知识了，这里也不考虑。
+
+## <a name="href9">快速获取YYYY-MM-DD格式日期</a> ##
+
+代码:
+
+```js
+function getTimestamp(date) {
+	return date.toISOString().substr(0, 10);
+}
+
+console.log(getTimestamp(new Date()));
+```
 
 ---
 
