@@ -15,9 +15,11 @@
 
 - [HTTP协议详解（真的很经典）](http://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html)
 
-- [HTTP 协议入门](http://www.ruanyifeng.com/blog/2016/08/http.html)
+- [HTTP协议入门](http://www.ruanyifeng.com/blog/2016/08/http.html)
 
-- [HTTP 最强资料大全](http://www.tuicool.com/articles/yam2A3m)
+- [HTTP最强资料大全](http://www.tuicool.com/articles/yam2A3m)
+
+- [常见的HTTP状态码](https://www.cnblogs.com/xflonga/p/9368993.html)
 
 ## <a name="href2">HTTP概述</a> ##
 
@@ -197,7 +199,7 @@ Connection: keep-alive
 响应体:
 
 ```
-{"result":"ok"}
+{"result": "ok"}
 ```
 
 ## <a name="href6">请求方法</a> ##
@@ -208,7 +210,7 @@ HTTP 常用的请求方法有:
 2. POST: 向指定资源提交数据进行处理请求(例如提交表单或上传文件);
 3. PUT: 从客户端向服务器传送的数据取代指定的文档的内容;
 4. DELETE: 请求服务器删除指定页面;
-5. HEAD: 类似于 GET，只不过返回的响应中没有具体的内容，只是用于获取报头;
+5. HEAD: 类似于 GET，只不过返回的响应中没有具体的内容，只是用于获取报头。
 
 ## <a name="href7">状态码</a> ##
 
@@ -218,7 +220,7 @@ HTTP 常用的请求方法有:
 2. 2xx: 成功，表示请求已被成功接收;
 3. 3xx: 重定向，要完成请求必须进行更进一步操作;
 4. 4xx: 客户端错误，请求有语法错误或请求无法实现;
-5. 5xx: 服务器错误，服务器未能实现合法请求;
+5. 5xx: 服务器错误，服务器未能实现合法请求。
 
 其中更为常见的状态码有以下这些:
 
@@ -233,7 +235,9 @@ HTTP 常用的请求方法有:
 9. 403 Forbidden: 对被请求页面的访问被禁止;
 10. 404 Not Found: 请求资源不存在;
 11. 500 Internal Server Error: 服务器发生不可预期的错误;
-12. 503 Server Unavailable: 请求未完成，服务器临时过载或当机，一段时间后可能恢复正常。
+12. 502 Bad Gateway: 只有 HTTP 代理会发送这个响应代码。它表明代理方面出现问题，或者代理与上行服务器之间出现问题，而不是上行服务器本身有问题。若代理根本无法访问上行服务器，响应代码将是504;
+13. 503 Server Unavailable: 请求未完成，服务器临时过载或当机，一段时间后可能恢复正常;
+14. 504 Gateway Timeout: 跟502类似，只有 HTTP 代理会发送此响应代码。此响应代码表明代理无法连接上行服务器。
 
 ---
 
