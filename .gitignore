@@ -1,5 +1,7 @@
 */node_modules
-node_modules/
-npm-debug.log
+*/.DS_Store
 
-/.idea
+node_modules
+npm-debug.log
+.idea
+.DS_Store
