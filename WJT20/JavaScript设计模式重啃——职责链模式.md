@@ -8,8 +8,8 @@
 3. [实现灵活可拆分的职责节点](#href3)
 4. [异步职责链](#href4)
 5. [职责链模式的优缺点](#href5)
- [](#href6)   1. 优点
- [](#href7)   2. 缺点
+    1. [优点](#href5-1)
+    2. [缺点](#href5-2)
 
 ## <a name="href1">介绍</a> ##
 
@@ -25,7 +25,7 @@
 
 代码实现:
 
-```
+```js
 // 500元订单
 var order500 = funcrion(orderType, pay, stock) {
     if (orderType === 1 && pay === true) {
@@ -68,7 +68,7 @@ order500(3, false, 0); // 输出: 手机库存不足
 
 最终实现的代码如下:
 
-```
+```js
 // 500元订单
 var order500 = funcrion(orderType, pay, stock) {
     if (orderType === 1 && pay === true) {
@@ -142,7 +142,7 @@ chainOrder500.passRequest(1, false, 0);
 
 实现的代码如下:
 
-```
+```js
 // ... 内容省略
 
 // 手动传递节点的函数
