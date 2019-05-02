@@ -57,6 +57,8 @@
 
 - [4, 07C7656A9DDDD5E1] : [ES6常用知识点总结](./ES6常用知识点总结.md)
 
+- [109, AF85EEAFBA7C9D91] : [Promise剖析](./Promise剖析.md)
+
 ## Node.js系列 ##
 
 - [20, 724F382B5E35C6E3] : [express抄家攻略](./express抄家攻略.md)
@@ -237,14 +239,6 @@
 
 - [59, 7DFC9357A070ADCC] : [PHP表单交互](./PHP表单交互.md)
 
-## React系列 ##
-
-- [109, BB0EF58522855783] : [React语法学习总结——state与props](./React语法学习总结——state与props.md)
-
-- [69, ABB9D7F79CF0F37A] : [React语法学习总结——基础篇](./React语法学习总结——基础篇.md)
-
-- [120, AE78A2DDBCD14AC0] : [关于Redux的那些乱七八糟的东西](./关于Redux的那些乱七八糟的东西.md)
-
 ## Web前端系列 ##
 
 - [9, 8C28BA4C7A3583FB] : [SVG+CSS3动画效果合集](./SVG+CSS3动画效果合集.md)
@@ -286,6 +280,12 @@
 - [116, 843EA2202C0087FC] : [WJT20开发常见的英文词汇书](./WJT20开发常见的英文词汇书.md)
 
 - [44, B71D8060A6A5008F] : [WJT20的技术百科书](./WJT20的技术百科书.md)
+
+## React系列 ##
+
+- [69, 4CBE2CA08D064298] : [一起来学React](./一起来学React.md)
+
+- [120, AE78A2DDBCD14AC0] : [关于Redux的那些乱七八糟的东西](./关于Redux的那些乱七八糟的东西.md)
 
 ## 编程知识系列 ##
 
