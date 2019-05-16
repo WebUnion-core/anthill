@@ -6,15 +6,15 @@
 1. [最简单的组件](#href1)
 2. [HTML属性](#href2)
 3. [DOM操作](#href3)
-    . [获取DOM节点](#href3-1)
-    . [动态修改DOM](#href3-2)
+    1. [获取DOM节点](#href3-1)
+    2. [动态修改DOM](#href3-2)
 4. [props](#href4)
-    . [简单传输props](#href4-3)
-    . [批量传输props](#href4-4)
-    . [附属组件抽取](#href4-5)
+    1. [简单传输props](#href4-3)
+    2. [批量传输props](#href4-4)
+    3. [附属组件抽取](#href4-5)
 5. [state](#href5)
-    . [setState()](#href5-6)
-    . [子组件改变父组件的state](#href5-7)
+    1. [setState()](#href5-6)
+    2. [子组件改变父组件的state](#href5-7)
 
 ## <a name="href1">最简单的组件</a> ##
 
