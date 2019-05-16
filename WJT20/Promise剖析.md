@@ -3,19 +3,19 @@
 
 ## 目录 ##
 
-1. 参考链接
-2. 介绍
-3. 使用
-    1. 一个模拟数据表查询实例
-    2. Promise.all
+1. [参考链接](#href1)
+2. [介绍](#href2)
+3. [使用](#href3)
+    . [一个模拟数据表查询实例](#href3-1)
+    . [Promise.all](#href3-2)
 
-## 参考链接 ##
+## <a name="href1">参考链接</a> ##
 
 - [面试精选之Promise](https://juejin.im/post/5b31a4b7f265da595725f322)
 
 - [Promise原理讲解 && 实现一个Promise对象 (遵循Promise/A+规范)](https://juejin.im/post/5aa7868b6fb9a028dd4de672)
 
-## 介绍 ##
+## <a name="href2">介绍</a> ##
 
 Promise 是一种 JavaScript 异步编程方案，是目前最流行的异步编程方案之一，这几种异步编程方案是:
 
@@ -31,7 +31,7 @@ Promise 是一种 JavaScript 异步编程方案，是目前最流行的异步编
 3. 回调函数基本都是匿名的，不利于追踪 Bug;
 4. 会造成 IoC 控制反转。
 
-## 使用 ##
+## <a name="href3">使用</a> ##
 
 Promise 是一个构造函数，使用 new 关键字创建了一个 promise 对象，这个构造函数接收一个函数参数，此函数有两个形参: resolve 和 reject，resolve 用于传输执行结果给下一步异步操作，而 reject 则用于拦截错误。
 
@@ -48,7 +48,7 @@ promise 包含以下对象方法:
 
 使用链式写法需要注意，每个`.then()`节点中的回调都必须返回一个新的 promise 对象。
 
-### 一个模拟数据表查询实例 ###
+### <a name="href3-1">一个模拟数据表查询实例</a> ###
 
 了解了 Promise 的基本用法后，接下来我将实现一个使用 Node.js 文件系统的模拟数据表查询实例。
 
@@ -142,7 +142,7 @@ new Promise(queryUserTable)
     });
 ```
 
-### Promise.all ###
+### <a name="href3-2">Promise.all</a> ###
 
 其实以上代码还称不上"完美"，在`queryJobTable()`函数的异步操作中，糅合了处理查询数据的功能，根据单一职责原则，这部分代码应该提取出来，命名为`handleData()`，这个时候可以发现`queryUserTable()`和`queryJobTable()`就成了两个并行的操作，而且这两个函数除了操作的文件不同，其他的代码都是一样的，所以又可以抽象成一个公共的读文件函数。
 

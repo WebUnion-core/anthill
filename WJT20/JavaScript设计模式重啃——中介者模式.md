@@ -4,8 +4,10 @@
 ## 目录 ##
 
 1. [介绍](#href1)
-2. [初始代码](#href2)
-3. [使用中介者模式改造代码](#href3)
+2. [表单数据同步实例](#href2)
+3. [玩家对战实例](#href3)
+    . [初始代码](#href3-1)
+    . [改造代码](#href3-2)
 
 ## <a name="href1">介绍</a> ##
 
@@ -13,7 +15,54 @@
 
 中介者使各对象之间耦合松散，而且可以独立地改变它们之间的交互，中介者模式使网状的多对多关系变成了相对简单的一对多关系。
 
-## <a name="href2">初始代码</a> ##
+## <a name="href2">表单数据同步实例</a> ##
+
+接下来我们将使用中介者模式实现一个表单中的两个文本框之间的数据同步，代码如下:
+
+```html
+<form name="form">
+    <label for="phone1">电话号码1：</label>
+    <input name="phone1" type="text" />
+
+    <label for="phone2">电话号码2：</label>
+    <input name="phone2" type="text" />
+</form>
+
+<script>
+var Listener = function (formName) {
+    this.form = document.forms[formName];
+    this.fieldEls = [];
+};
+
+Listener.prototype.register = function (field) {
+    var self = this;
+    this.fieldEls.push(form[field]);
+    (function(field) {
+        self.form[field].addEventListener('keyup', function(e) {
+            for (var i = 0; i < self.fieldEls.length; i++) {
+                if (self.fieldEls[i].name !== field) {
+                    self.fieldEls[i].value = e.target.value;
+                }
+            }
+        });
+    })(field);
+}
+
+var listener = new Listener('form');
+listener.register('phone1');
+listener.register('phone2');
+</script>
+```
+
+以上代码的中介者就是由构造函数 Listener 生成的 listener 实例，我们调用 listener 的`register()`方法分别注册两个表单元素(phone1 和 phone2)，这样就实现了两个表单元素输入内容的同步化。`register()`内部的具体代码实现，如果感兴趣可以深入研究下。
+
+如果不使用中介者模式，要实现表单元素间的数据同步，我们可能要给每个表单元素绑定输入内容变化侦听句柄，并且要将每个表单元素加入到一个"公共组织"，当一个表单元素的值发生改变时，在侦听句柄中进行"公共组织"所有成员的数据同步操作，这其实就是耦合，所以在这个场景下使用中介者模式恰到好处。
+
+## <a name="href3">玩家对战实例</a> ##
+
+接下来的玩家对战实例的实现原理实际上和表单数据同步的原理差不多。我们将分别展示不使用中介者模式和使用中介者模式的代码实现。
+
+### <a name="href3-1">初始代码</a> ###
 
 没有使用中介者模式的代码:
 
@@ -90,7 +139,7 @@ var playerFactory = function (name, teamColor) {
 
 从以上代码可以看出，玩家与队友，玩家与敌人存在耦合关系，每次增加一个新玩家，就要对所有玩家的队友列表或敌人列表进行更新，如果玩家数量越来越多，这种维护成本将会变的非常大。这个时候仔细分析一下，其实每个玩家都不需要牢牢记住自己的队友和敌人是哪些人，我们可以增加一个"系统"(中介者)来管理玩家之间的关系，当游戏结束时，也由这个"系统"对所有玩家发出通知，这样子就可以减少大量的遍历操作，玩家间的耦合关系也将变得松散。要达到这种目的，就要使用中介者模式来改造代码。
 
-## <a name="href3">使用中介者模式改造代码</a> ##
+### <a name="href3-2">改造代码</a> ###
 
 首先简化玩家类:
 
