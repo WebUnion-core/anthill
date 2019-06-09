@@ -1,4 +1,3 @@
-
 # Promise剖析 #
 
 ## 目录 ##
@@ -32,11 +31,8 @@ Promise 是一种 JavaScript 异步编程方案，是目前最流行的异步编
 3. 回调函数基本都是匿名的，不利于追踪 Bug;
 4. 会造成 IoC 控制反转。
 
-<<<<<<< HEAD
-=======
 如果你想自己实现一个 Promise，可以参考这篇文章: [Promise原理讲解 && 实现一个Promise对象 (遵循Promise/A+规范)](https://juejin.im/post/5aa7868b6fb9a028dd4de672)。
 
->>>>>>> ecceb8429d3fdc3b225f97bb341fa8017654b7f5
 ## <a name="href3">使用</a> ##
 
 Promise 是一个构造函数，使用 new 关键字创建了一个 promise 对象，这个构造函数接收一个函数参数，此函数有两个形参: resolve 和 reject，resolve 用于传输执行结果给下一步异步操作，而 reject 则用于拦截错误。
