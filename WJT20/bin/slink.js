@@ -14,7 +14,7 @@ function formatEachFile() {
     allMdFiles.forEach(function(item, index) {
         if (ignore.indexOf(item) < 0 && item.indexOf('.md') > 0) {
             const filePath = srcPath + '/' + item;
-            console.log(filePath);
+            // console.log(filePath);
 
             // isFile: 是否文件
             // isDirectory: 是否目录
@@ -63,6 +63,11 @@ function formatEachFile() {
                     const direcEnd = direcStart + fileCont.substr(direcStart).indexOf('##');
                     const direcStr = fileCont.substring(direcStart, direcEnd);
                     const direcAry = direcStr.match(/\s+[0-9]+.\s.+/g);
+
+                    if (!direcAry) {
+                        console.log('_ERROR_ : ', item);
+                        return false;
+                    }
 
                     direcAry.forEach(function(item) {
                         let ary;

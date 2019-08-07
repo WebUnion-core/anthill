@@ -125,6 +125,11 @@
             "name": "ES6常用知识点总结",
             "hash": "07C7656A9DDDD5E1",
             "id": "4"
+        },
+        {
+            "name": "Promise剖析",
+            "hash": "AF85EEAFBA7C9D91",
+            "id": "109"
         }
     ],
     "Node.js": [
@@ -137,11 +142,6 @@
             "name": "Mongoose实现增删改查",
             "hash": "CCBA34619B864111",
             "id": "13"
-        },
-        {
-            "name": "Node.js基础知识点总结",
-            "hash": "599B2B8A9675DF1D",
-            "id": "12"
         },
         {
             "name": "Node.js实用技巧笔记",
@@ -172,6 +172,36 @@
             "name": "Node.js常用原生模块系列——process模块",
             "hash": "E76C58B89C5B068B",
             "id": "89"
+        },
+        {
+            "name": "深入浅出Node.js十一日探(一)——简介",
+            "hash": "484FF01DFED1F34E",
+            "id": "117"
+        },
+        {
+            "name": "深入浅出Node.js十一日探(三)——异步IO",
+            "hash": "026709F250975FCD",
+            "id": "129"
+        },
+        {
+            "name": "深入浅出Node.js十一日探(二)——模块机制",
+            "hash": "8576EF3410FA6A3E",
+            "id": "12"
+        },
+        {
+            "name": "深入浅出Node.js十一日探(五)——内存控制",
+            "hash": "9962AB37F9598E5F",
+            "id": "131"
+        },
+        {
+            "name": "深入浅出Node.js十一日探(六)——理解Buffer",
+            "hash": "815A86B5A410F70C",
+            "id": "132"
+        },
+        {
+            "name": "深入浅出Node.js十一日探(四)——异步编程",
+            "hash": "B54DB572D0557DC4",
+            "id": "130"
         }
     ],
     "Flutter": [
@@ -240,6 +270,11 @@
             "name": "MVC模式探究",
             "hash": "C39883C19280DF55",
             "id": "48"
+        },
+        {
+            "name": "MVVM模式探究",
+            "hash": "7E32D974E35DE1B6",
+            "id": "68"
         }
     ],
     "JavaScript": [
@@ -374,8 +409,8 @@
             "id": "90"
         },
         {
-            "name": "JavaScript高级程序设计实记——语句与函数",
-            "hash": "2D20C8FEA4363249",
+            "name": "JavaScript高级程序设计实记——语句与变量",
+            "hash": "24351BF1666E6D4D",
             "id": "22"
         },
         {
@@ -519,43 +554,16 @@
             "id": "59"
         }
     ],
-    "React": [
-        {
-            "name": "React架构实践记——react组件编写",
-            "hash": "8D0BDFCE7D2A61B6",
-            "id": "68"
-        },
-        {
-            "name": "React架构实践记——webpack配置部分",
-            "hash": "324D47152736A706",
-            "id": "50"
-        },
-        {
-            "name": "React架构实践记——模块说明",
-            "hash": "B0207619063ADEC4",
-            "id": "29"
-        },
-        {
-            "name": "React语法学习总结——state与props",
-            "hash": "BB0EF58522855783",
-            "id": "109"
-        },
-        {
-            "name": "React语法学习总结——基础篇",
-            "hash": "ABB9D7F79CF0F37A",
-            "id": "69"
-        },
-        {
-            "name": "关于Redux的那些乱七八糟的东西",
-            "hash": "AE78A2DDBCD14AC0",
-            "id": "120"
-        }
-    ],
     "Web前端": [
         {
             "name": "SVG+CSS3动画效果合集",
             "hash": "8C28BA4C7A3583FB",
             "id": "9"
+        },
+        {
+            "name": "Web前端页面性能优化资料",
+            "hash": "213209B6219131AD",
+            "id": "67"
         },
         {
             "name": "Web数据存储知识点总结",
@@ -605,6 +613,18 @@
             "id": "42"
         }
     ],
+    "Vue": [
+        {
+            "name": "Vue学习笔记——事件处理篇",
+            "hash": "2FE9336232BDDB41",
+            "id": "29"
+        },
+        {
+            "name": "Vue学习笔记——组件篇",
+            "hash": "1A5F9EF1BA9D4996",
+            "id": "50"
+        }
+    ],
     "webpack": [
         {
             "name": "webpack常规配置总结",
@@ -622,6 +642,18 @@
             "name": "WJT20的技术百科书",
             "hash": "B71D8060A6A5008F",
             "id": "44"
+        }
+    ],
+    "React": [
+        {
+            "name": "一起来学React",
+            "hash": "4CBE2CA08D064298",
+            "id": "69"
+        },
+        {
+            "name": "关于Redux的那些乱七八糟的东西",
+            "hash": "AE78A2DDBCD14AC0",
+            "id": "120"
         }
     ],
     "编程知识": [

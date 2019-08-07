@@ -59,6 +59,36 @@
 
 - [109, AF85EEAFBA7C9D91] : [Promise剖析](./Promise剖析.md)
 
+## Node.js系列 ##
+
+- [20, 724F382B5E35C6E3] : [express抄家攻略](./express抄家攻略.md)
+
+- [13, CCBA34619B864111] : [Mongoose实现增删改查](./Mongoose实现增删改查.md)
+
+- [87, D5FE95D734A7123A] : [Node.js实用技巧笔记](./Node.js实用技巧笔记.md)
+
+- [123, A3A045B3F2127770] : [Node.js对MySQL增删改查实践](./Node.js对MySQL增删改查实践.md)
+
+- [31, D649356C64AAE018] : [Node.js常用原生模块系列——fs模块](./Node.js常用原生模块系列——fs模块.md)
+
+- [105, 067F729744825E64] : [Node.js常用原生模块系列——os模块](./Node.js常用原生模块系列——os模块.md)
+
+- [106, 98A670145D41B7B2] : [Node.js常用原生模块系列——path模块](./Node.js常用原生模块系列——path模块.md)
+
+- [89, E76C58B89C5B068B] : [Node.js常用原生模块系列——process模块](./Node.js常用原生模块系列——process模块.md)
+
+- [117, 484FF01DFED1F34E] : [深入浅出Node.js十一日探(一)——简介](./深入浅出Node.js十一日探(一)——简介.md)
+
+- [129, 026709F250975FCD] : [深入浅出Node.js十一日探(三)——异步IO](./深入浅出Node.js十一日探(三)——异步IO.md)
+
+- [12, 8576EF3410FA6A3E] : [深入浅出Node.js十一日探(二)——模块机制](./深入浅出Node.js十一日探(二)——模块机制.md)
+
+- [131, 9962AB37F9598E5F] : [深入浅出Node.js十一日探(五)——内存控制](./深入浅出Node.js十一日探(五)——内存控制.md)
+
+- [132, 815A86B5A410F70C] : [深入浅出Node.js十一日探(六)——理解Buffer](./深入浅出Node.js十一日探(六)——理解Buffer.md)
+
+- [130, B54DB572D0557DC4] : [深入浅出Node.js十一日探(四)——异步编程](./深入浅出Node.js十一日探(四)——异步编程.md)
+
 ## Flutter系列 ##
 
 - [110, AFE946549D8D343A] : [Flutter跨平台开发——Stateless与Stateful](./Flutter跨平台开发——Stateless与Stateful.md)
@@ -179,33 +209,23 @@
 
 - [83, 7AB2E61251B61C42] : [Java学习流程——继承](./Java学习流程——继承.md)
 
-## Node.js系列 ##
+## jQuery系列 ##
 
-- [13, CCBA34619B864111] : [Mongoose实现增删改查](./Mongoose实现增删改查.md)
+- [14, 15BB495DA72780B2] : [jQuery常用知识点总结](./jQuery常用知识点总结.md)
 
-- [87, D5FE95D734A7123A] : [Node.js实用技巧笔记](./Node.js实用技巧笔记.md)
+## 包管理器系列 ##
 
-- [123, A3A045B3F2127770] : [Node.js对MySQL增删改查实践](./Node.js对MySQL增删改查实践.md)
+- [70, 0EC9099999C14179] : [npm实用命令笔记](./npm实用命令笔记.md)
 
-- [31, D649356C64AAE018] : [Node.js常用原生模块系列——fs模块](./Node.js常用原生模块系列——fs模块.md)
+- [126, EBA7D5E419D642E4] : [Yarn探索笔记](./Yarn探索笔记.md)
 
-- [105, 067F729744825E64] : [Node.js常用原生模块系列——os模块](./Node.js常用原生模块系列——os模块.md)
+## 源码解读系列 ##
 
-- [106, 98A670145D41B7B2] : [Node.js常用原生模块系列——path模块](./Node.js常用原生模块系列——path模块.md)
+- [77, E5AE83CD0EB94E46] : [npm源码解读系列——abbrev](./npm源码解读系列——abbrev.md)
 
-- [89, E76C58B89C5B068B] : [Node.js常用原生模块系列——process模块](./Node.js常用原生模块系列——process模块.md)
+- [80, 977E727211898F72] : [npm源码解读系列——aproba](./npm源码解读系列——aproba.md)
 
-- [20, 724F382B5E35C6E3] : [express抄家攻略](./express抄家攻略.md)
-
-- [117, 484FF01DFED1F34E] : [深入浅出Node.js十一日探(一)——简介](./深入浅出Node.js十一日探(一)——简介.md)
-
-- [129, 026709F250975FCD] : [深入浅出Node.js十一日探(三)——异步IO](./深入浅出Node.js十一日探(三)——异步IO.md)
-
-- [12, 8576EF3410FA6A3E] : [深入浅出Node.js十一日探(二)——模块机制](./深入浅出Node.js十一日探(二)——模块机制.md)
-
-- [131, 9962AB37F9598E5F] : [深入浅出Node.js十一日探(五)——内存控制](./深入浅出Node.js十一日探(五)——内存控制.md)
-
-- [130, B54DB572D0557DC4] : [深入浅出Node.js十一日探(四)——异步编程](./深入浅出Node.js十一日探(四)——异步编程.md)
+- [88, 7CB876E7B720BB1A] : [npm源码解读系列——cookie](./npm源码解读系列——cookie.md)
 
 ## PHP系列 ##
 
@@ -253,33 +273,15 @@
 
 - [50, 1A5F9EF1BA9D4996] : [Vue学习笔记——组件篇](./Vue学习笔记——组件篇.md)
 
+## webpack系列 ##
+
+- [2, 3BF0F739A0B5948C] : [webpack常规配置总结](./webpack常规配置总结.md)
+
 ## 其他系列 ##
 
 - [116, 843EA2202C0087FC] : [WJT20开发常见的英文词汇书](./WJT20开发常见的英文词汇书.md)
 
 - [44, B71D8060A6A5008F] : [WJT20的技术百科书](./WJT20的技术百科书.md)
-
-## 包管理器系列 ##
-
-- [126, EBA7D5E419D642E4] : [Yarn探索笔记](./Yarn探索笔记.md)
-
-- [70, 0EC9099999C14179] : [npm实用命令笔记](./npm实用命令笔记.md)
-
-## jQuery系列 ##
-
-- [14, 15BB495DA72780B2] : [jQuery常用知识点总结](./jQuery常用知识点总结.md)
-
-## 源码解读系列 ##
-
-- [77, E5AE83CD0EB94E46] : [npm源码解读系列——abbrev](./npm源码解读系列——abbrev.md)
-
-- [80, 977E727211898F72] : [npm源码解读系列——aproba](./npm源码解读系列——aproba.md)
-
-- [88, 7CB876E7B720BB1A] : [npm源码解读系列——cookie](./npm源码解读系列——cookie.md)
-
-## webpack系列 ##
-
-- [2, 3BF0F739A0B5948C] : [webpack常规配置总结](./webpack常规配置总结.md)
 
 ## React系列 ##
 

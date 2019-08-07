@@ -55,6 +55,49 @@ Buffer.poolSize = 8 * 1024;
 
 ## Buffer的转换 ##
 
+Buffer 对象支持与以下字符串编码类型的相互转换:
+
+1. ASCII;
+2. UTF-8;
+3. UTF-16LE/UCS-2;
+4. Base64;
+5. Binary;
+6. Hex。
+
+可以使用`Buffer.isEncoding(encoding)`来查看 Buffer 对象是否支持某种编码类型。如果想要转换为更多编码类型的字符串，可以借助 iconv+iconv-lite 等模块。
+
+### 字符串转Buffer ###
+
+利用 Buffer 构造函数可以实现将字符串转换为 Buffer 对象，其语法规则如下:
+
+```js
+new Buffer(str[, encoding])
+```
+
+encoding 参数默认取值为 UTF-8，即默认按 UTF-8 编码进行转码和存储。
+
+一个 Buffer 对象可以存储不同编码类型的字符串转码的值，调用`write()`方法可以实现该目的，其语法规则如下:
+
+```js
+buf.write(str[, offset, length, encoding])
+```
+
+这从侧面说明，Buffer 对象中可以写入多种编码转换后的内容。此外还需要注意一点，由于每种编码所用的字节长度不同，所以将 Buffer 反转为字符串时需要谨慎处理。
+
+### Buffer转字符串 ###
+
+Buffer 对象自带的`toString()`方法可以将 Buffer 对象转换为字符串，其语法规则如下:
+
+```js
+buf.toString([encoding, start, end])
+```
+
+encoding 参数用于控制转换的字符串类型，而 start 和 end 参数则用于控制转换位置，如果 Buffer 对象由多种编码写入，那么就需要在局部指定不同的编码，此时就要用上这两个参数了。
+
+## Buffer的拼接 ##
+
+
+
 ---
 
 ```
