@@ -75,7 +75,7 @@ xhr.withCredentials = true;
 
 以下是一个简单请求实例:
 
-Koa 服务端(http://127.0.0.1:2121)设置响应信息:
+Koa 服务端(`http:\/\/127.0.0.1:2121`)设置响应信息:
 
 ```js
 // 路由: /users
@@ -94,7 +94,7 @@ async function get (ctx, next) {
 }
 ```
 
-客户端(http://127.0.0.1:20151)使用[isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch)请求数据:
+客户端(`http:\/\/127.0.0.1:20151`)使用[isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch)请求数据:
 
 ```js
 fetch('http://127.0.0.1:2121/users', {
