@@ -96,7 +96,35 @@ encoding 参数用于控制转换的字符串类型，而 start 和 end 参数�
 
 ## Buffer的拼接 ##
 
+初学者容易将 Buffer 理解为字符串，Buffer 的拼接也使用和字符串一样的方式处理，但一旦输入流中有宽字节编码时，就会出现乱码的问题，以以下代码为例:
 
+```js
+const fs = require('fs');
+const rs = fs.createReadStream('test.md', { highWaterMark: 11 }); // 将文件可读流的每次读写的Buffer长度限制为11，更突出问题
+let data = '';
+rs.on('data', function (chunk) {
+    data += chunk; // 用字符串拼接的方式拼接Buffer
+});
+rs.on('end', function () {
+    console.log(data);
+});
+```
+
+以上代码用于读取并输出`test.md`文件的内容，如果文件中的内容是纯英文，那么这种拼接方式没有任何问题，但是如果文件中出现了宽字节的中文字符，那么那些字符就会转换为乱码字符。
+
+在以上代码中，`data += chunk`一句相当于`data = data.toString() + chunk.toString()`，`buf.toString()`方法默认以 UTF-8 为编码，中文字符在 UTF-8 下占3个字节，宽字节的中文字符在读取的时候被截成两段(甚至更多段)，这个时候解析就会出错，导致显示出来的中文变成乱码，这就是乱码出现的原因。
+
+### setEncoding()与string_deceder() ###
+
+可读流有一个设置编码的方法`setEncoding()`，它的作用是让 data 事件中传递的不再是一个 Buffer 对象，而是编码后的字符串，这样就很方便了，我们不必进行麻烦的 Buffer 乱码处理，直接对 data 事件返回的数据进行拼接操作即可:
+
+```js
+const rs = fs.createReadStream('test.md', { highWaterMark: 11 });
+rs.setEncoding('utf8');
+...
+```
+
+`setEncoding()`是怎么做到的呢？事实上，在调用`setEncoding()`时，可读流对象在内部设置了一个 decoder 对象，每次 data 事件都通过该 decoder 对象进行 Buffer 到字符串的解码，然后传递给调用者。decoder 对象来自于 string_deceder 模块 StringDecoder 的实例对象，它解决了宽字节字符串被截断问题，以中文宽字节字符为例，StringDecoder 在得到编码后，知道了宽字节字符在 UTF-8 编码下是以3个字节的方式存储的，所以
 
 ---
 
