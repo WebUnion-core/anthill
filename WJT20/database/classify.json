@@ -83,6 +83,33 @@
             "id": "46"
         }
     ],
+    "Web相关": [
+        {
+            "name": "CORS跨域深度解析",
+            "hash": "413234DFBDA9949A",
+            "id": "133"
+        },
+        {
+            "name": "HTTP协议知识总结",
+            "hash": "DC79C5D74E6E19F7",
+            "id": "18"
+        },
+        {
+            "name": "JSONP跨域分析",
+            "hash": "757F00B4C35E2C93",
+            "id": "16"
+        },
+        {
+            "name": "MVC模式探究",
+            "hash": "C39883C19280DF55",
+            "id": "48"
+        },
+        {
+            "name": "MVVM模式探究",
+            "hash": "7E32D974E35DE1B6",
+            "id": "68"
+        }
+    ],
     "CSS": [
         {
             "name": "CSS3动画实践",
@@ -253,28 +280,6 @@
             "name": "实用的HTML片段",
             "hash": "DD3CB7C318DE3021",
             "id": "28"
-        }
-    ],
-    "Web相关": [
-        {
-            "name": "HTTP协议知识总结",
-            "hash": "DC79C5D74E6E19F7",
-            "id": "18"
-        },
-        {
-            "name": "JSONP跨域分析",
-            "hash": "757F00B4C35E2C93",
-            "id": "16"
-        },
-        {
-            "name": "MVC模式探究",
-            "hash": "C39883C19280DF55",
-            "id": "48"
-        },
-        {
-            "name": "MVVM模式探究",
-            "hash": "7E32D974E35DE1B6",
-            "id": "68"
         }
     ],
     "JavaScript": [
@@ -642,6 +647,13 @@
             "name": "WJT20的技术百科书",
             "hash": "B71D8060A6A5008F",
             "id": "44"
+        }
+    ],
+    "安全防护": [
+        {
+            "name": "XSS攻击之剖析与预防",
+            "hash": "DA04F8CBEEDEE67E",
+            "id": "134"
         }
     ],
     "React": [
