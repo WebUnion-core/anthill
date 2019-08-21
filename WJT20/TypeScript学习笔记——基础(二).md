@@ -8,6 +8,9 @@
     1. [定义](#href2-1)
     2. [遍历与枚举](#href2-2)
 3. [函数](#href3)
+    1. [函数的形式](#href3-1)
+    2. [参数获取技巧](#href3-2)
+    3. [函数类型参数](#href3-3)
 4. [类型断言](#href4)
 5. [内置对象](#href5)
 6. [引入第三方库](#href6)
@@ -33,7 +36,7 @@
     console.log(numArr, strArr, nsArr, anyArr);
     ```
 
-2. 数组泛型表示法(在泛型章会详细讲解):
+2. 数组泛型表示法(在泛型章会详细讲解，个人比较推荐这种写法):
 
     ```ts
     let numGenericArr: Array<number> = [2, 3, 4];
@@ -75,6 +78,8 @@ console.log(colorIndex, colorName); // 2 "Green"
 
 一个函数有输入和输出，要在 TypeScript 中对其进行约束，需要把输入和输出(如果没有输出结果则应定义为 void 类型)都考虑到。输入多余的（或者少于要求的）参数，是不被允许的。传入的参数可以设置为可选、默认等形式。
 
+### <a name="href3-1">函数的形式</a> ###
+
 函数声明的形式比较简单:
 
 ```ts
@@ -106,17 +111,51 @@ let add2: (
 console.log(add2(1, 2));
 ```
 
-像上面这种写法就是单纯的炫技了，一个加法计算器没必要做得那么复杂，代码可读性很差，小朋友不要模仿哦。
+和 ES6 一样，TypeScript 中的"=>"也可用于固化 this 对象。
 
-使用"...items"可以获取剩余参数:
+### <a name="href3-2">参数获取技巧</a> ###
+
+我们可以使用"...items"获取函数剩余参数，然后用`forEach()`遍历:
 
 ```ts
 function log(...items: any[]): void {
-    items.forEach(e, i) {
+    items.forEach(function (e, i) {
         console.log(i + ': ' + e);
-    }
+    });
 }
 log('1', 2, true);
+```
+
+### <a name="href3-3">函数类型参数</a> ###
+
+给函数A传入函数B，函数A在具体时机执行函数B，这种场景的函数B称为"回调函数"，TypeScript 中你可能会这样实现以上场景:
+
+```ts
+function startTimeJob(callback: Function): void {
+    setTimeout(() => {
+        callback();
+    }, 1000);
+}
+
+startTimeJob(function () {
+    console.log('ABC');
+});
+```
+
+但是，TypeScript 并不推荐使用"Function"这种类型，更推荐用以下写法:
+
+```ts
+type Callback = () => void;
+
+function startTimeJob(callback: Callback): void {
+    setTimeout(() => {
+        callback();
+    }, 1000);
+}
+
+startTimeJob(function () {
+    console.log('ABC');
+});
 ```
 
 ## <a name="href4">类型断言</a> ##

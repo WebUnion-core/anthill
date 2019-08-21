@@ -269,6 +269,8 @@
 
 - [42, CA0D04231C38C61B] : [TypeScript学习笔记——基础(二)](./TypeScript学习笔记——基础(二).md)
 
+- [136, 931E24E75B1EBBA9] : [TypeScript学习笔记——类](./TypeScript学习笔记——类.md)
+
 ## Vue系列 ##
 
 - [29, 2FE9336232BDDB41] : [Vue学习笔记——事件处理篇](./Vue学习笔记——事件处理篇.md)
