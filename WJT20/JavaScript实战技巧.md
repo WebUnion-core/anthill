@@ -16,7 +16,9 @@
 6. [CRT日期转换](#href6)
 7. [使用touchstart代替移动端click事件](#href7)
 8. [数组去重](#href8)
-9. [快速获取YYYY-MM-DD格式日期](#href9)
+9. [获取YYYY-MM-DD格式日期](#href9)
+10. [类型获取](#href10)
+11. [深拷贝](#href11)
 
 ## <a name="href1">匹配最外层HTML标签名</a> ##
 
@@ -237,16 +239,90 @@ console.log(unique([1, 2, 3, 4, undefined, 1, null, undefined, 3, NaN, 5, NaN]))
 
 对于 undefined、null、NaN 等特殊值，for 循环会自动忽视这些值，所以不考虑这些值的去重，另外，Object 的相等判断又是另一个复杂知识了，这里也不考虑。
 
-## <a name="href9">快速获取YYYY-MM-DD格式日期</a> ##
+## <a name="href9">获取YYYY-MM-DD格式日期</a> ##
 
 代码:
 
 ```js
-function getTimestamp(date) {
-	return date.toISOString().substr(0, 10);
+function getTimestamp(date, spliter) {
+    if (!date) {
+        date = new Date();
+    }
+
+    if (!spliter) {
+        spliter = '-';
+    }
+
+    function format(target, figure) {
+        target = target.toString();
+        for (var i = 0; i < (figure - target.length); i++) {
+            target = '0' + target;
+        }
+        return target;
+    }
+
+    var y = format(date.getFullYear(), 4);
+    var m = format(date.getMonth() + 1, 2);
+    var d = format(date.getDate(), 2);
+
+    return y + spliter + m + spliter + d;
 }
 
-console.log(getTimestamp(new Date()));
+console.log(getTimestamp());
+```
+
+## <a name="href10">类型获取</a> ##
+
+代码:
+
+```js
+function checkedType(target) {
+    return Object.prototype.toString.call(target).slice(8, -1);
+}
+```
+
+## <a name="href11">深拷贝</a> ##
+
+代码:
+
+```js
+// 定义检测数据类型的功能函数
+function checkedType(target) {
+    return Object.prototype.toString.call(target).slice(8, -1);
+}
+
+// 实现深度克隆---对象/数组
+function clone(target) {
+    // 判断拷贝的数据类型
+    // 初始化变量result 成为最终克隆的数据
+    var result;
+    var targetType = checkedType(target);
+
+    if (targetType === 'Object') {
+        result = {};
+    } else if (targetType === 'Array') {
+        result = [];
+    } else {
+        return target;
+    }
+
+    // 遍历目标数据
+    for (var i in target) {
+        // 获取遍历数据结构的每一项值。
+        var value = target[i];
+
+        // 判断目标结构里的每一值是否存在对象/数组
+        if (checkedType(value) === 'Object' || checkedType(value) === 'Array') {
+            // 对象/数组里嵌套了对象/数组
+            // 继续遍历获取到value值
+            result[i] = clone(value);
+        } else {
+            // 获取到value值是基本的数据类型或者是函数。
+            result[i] = value;
+        }
+    }
+    return result;
+}
 ```
 
 ---
