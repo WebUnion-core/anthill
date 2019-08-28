@@ -7,6 +7,7 @@
     1. [typeof](#href1-1)
     2. [相等符与全等符](#href1-2)
     3. [instanceof与constructor判断](#href1-3)
+    4. [最推荐的判断方式](#href1-4)
 2. [类型转换](#href2)
     1. [强制类型转换](#href2-1)
     2. [隐性类型转换](#href2-2)
@@ -18,7 +19,7 @@
 
 ### <a name="href1-1">typeof</a> ###
 
-可以使用 typeof 操作符可以返回一个值的数据类型，例如:
+可以使用`typeof`操作符可以返回一个值的数据类型，例如:
 
 ```js
 var str = 'a bird';
@@ -26,24 +27,19 @@ console.log(typeof str); // "string"
 console.log(typeof 1); // "number"
 ```
 
-但是 ty peof 的判断并
-
-N此外，umber类为数字到:
-
-1. `符串的类型转换场景`定: 义了三个方法。toFixed()根据小数点后的指定位数将数字;
-2. `换为字符串，它从不使用指数计数`: 法。toExponential()使用指数计数法将数字转换为指数形式的字符串，其中小数点前只;
-3. `一位，小数点后的位数则由参`: 数指定。toPrecision()根据指定的有效数字位数将数字转换为字符串，如果有效数字的位数少于数字整数部分的位，则转换成指数形式。
-不是特别精准，比如无法区分数组和对象，返回的值都是"object"。
+但是`typeof`的判断并不是特别精准，比如无法区分数组和对象，返回的值都是"object"。
 
 ### <a name="href1-2">相等符与全等符</a> ###
 
-`===`为全等符(恒等符)，当等号两边的值为相同类型的时候，直接比较等号两边的值，值相同则返回 true，若等号两边的值类型不同时直接返回 false。
+`===`为全等符(恒等符)，当等号两边的值和类型都相同时返回 true，否则返回 false。
 
-`==`为相等符(等值符)，当等号两边的值为相同类型时比较值是否相同，类型不同时会发生类型的自动转换，转换为相同的类型后再作比较。
+`==`为相等符(等值符)，当等号两边为相同类型时就比较两边的值，两边类型不同时会发生类型的自动转换，转换为相同的类型后再作比较。
 
-1. 如果一个是 null、一个是 undefined，那么相等;
+以下是一些使用`==`的特殊场景:
+
+1. 如果一个是 null，一个是 undefined，那么相等;
 2. 如果一个是字符串，一个是数值，把字符串转换成数值再进行比较;
-3. 如果任一值是 true，把它转换成1再比较；如果任一值是 false，把它转换成0再比较;
+3. 如果任一值是 true，把它转换成1再比较，如果任一值是 false，把它转换成0再比较;
 4. 如果一个是对象，另一个是数值或字符串，把对象转换成基础类型的值再比较。对象转换成基础类型，利用它的 `toString()`或者`valueOf()`方法。JavaScript 核心内置类，会尝试`valueOf()`先于`toString()`，例外的是 Date，Date 利用的是`toString()`转换。那些不是 JavaScript 语言核心中的对象则通过各自的实现中定义的方法转换为原始值;
 5. 任何其他组合，都不相等。
 
@@ -51,7 +47,7 @@ N此外，umber类为数字到:
 
 ### <a name="href1-3">instanceof与constructor判断</a> ###
 
-除 Undefined 外的数据可以根据"所有数据都基于 Object"的特点，即利用 constructor 属性进行判断，代码如下:
+Undefined 以外的数据可以根据"所有数据都基于 Object"的特点，即利用 constructor 属性进行判断，代码如下:
 
 ```js
 var str = 'a bird';
@@ -60,7 +56,7 @@ console.log(str.constructor === String); // true
 
 这种方式还可以用于判断变量是否为 Array、Date 等原生对象。
 
-利用 instanceof 关键字也可以判断原生对象，不过任何原生对象与 Object 比较的结果都是 true，这点需要注意。示例代码如下:
+利用`instanceof`关键字也可以判断原生对象，不过任何原生对象与 Object 比较的结果都是 true，这点需要注意。示例代码如下:
 
 ```js
 console.log(([]) instanceof Array); // true
@@ -68,7 +64,7 @@ console.log(([]) instanceof Object); // true
 console.log((new Date()) instanceof Date); // true
 ```
 
-instanceof 左边为一个实例对象，右边是一个构造函数，instanceof 实际上是用左实例对象的`__proto__`与右构造函数的`prototype`进行比较，会一直沿着隐式原型链`__proto__`向上查找直到`x.__proto__.__proto__......===y.prototype`为止:
+`instanceof`左边为一个实例对象，右边是一个构造函数，`instanceof`实际上是用左实例对象的`__proto__`与右构造函数的`prototype`进行比较，会一直沿着隐式原型链`__proto__`向上查找直到`x.__proto__.__proto__......===y.prototype`为止:
 
 ```js
 function A (name) {
@@ -85,17 +81,34 @@ var a = new A('ABC');
 console.log(a.__proto__ === B.prototype, a instanceof B); // true true
 ```
 
+### <a name="href1-4">最推荐的判断方式</a> ###
+
+`Object.prototype.toString.call()`是最准确最常用的判断方式，用法如下:
+
+```js
+Object.prototype.toString.call(''); // [object String]
+Object.prototype.toString.call(1); // [object Number]
+Object.prototype.toString.call(true); // [object Boolean]
+Object.prototype.toString.call(undefined); // [object Undefined]
+Object.prototype.toString.call(null); // [object Null]
+Object.prototype.toString.call(new Function()); // [object Function]
+Object.prototype.toString.call(new Date()); // [object Date]
+Object.prototype.toString.call([]); // [object Array]
+Object.prototype.toString.call(new RegExp()); // [object RegExp]
+Object.prototype.toString.call(new Error()); // [object Error]
+```
+
 ## <a name="href2">类型转换</a> ##
 
 ### <a name="href2-1">强制类型转换</a> ###
 
 1. 转字符串
 
-    将其他类型值转为字符串有两种方法：String() 标准强制类型转换方法和对象的 toString() 方法。
+    将其他类型值转为字符串有两种方法: `String()`标准强制类型转换方法和对象的`toString()`方法。
 
-    全局对象的 String() 方法可以将任何类型转为字符串；变量对象的 toString() 方法可以将除 undefined 和 null 外的其他类型值转为字符串，undefined 和 null 不能转换的原因是这两个值没有 toString() 方法。
+        全局对象的`String()`方法可以将任何类型转为字符串；变量对象的`toString()`方法可以将除 undefined 和 null 外的其他类型值转为字符串，undefined 和 null 不能转换的原因是这两个值没有`toString()`方法。
 
-    特殊的，Object 类型使用 toString() 转为字符串不会将对象内容输出，而是输出"[object Object]"作为代替。
+    特殊的，Object 类型使用`toString()`转为字符串不会将对象内容输出，而是输出"[object Object]"作为代替。
 
     ```js
     console.log((11).toString(), typeof (11).toString()); // 数值->字符串，输出: "11" "string"
@@ -112,11 +125,11 @@ console.log(a.__proto__ === B.prototype, a instanceof B); // true true
 
 2. 转数值
 
-    将其他类型值转为数值有两种方法：Number() 标准强制类型转换方法和全局对象的 parseInt() 方法。
+    将其他类型值转为数值有两种方法: `Number()`标准强制类型转换方法和全局对象的`parseXXX()`方法。
 
-    parseInt() 会先将操作对象转换为字符串，然后逐个字符检测字符串是否有可转换为数值的部分直到所检测的字符不能转为数值，如果有可转换为数值的部分则取出该数值返回，否则返回 NaN。
+    `parseXXX()`包括`parseInt()`、`parseFloat()`等等方法，这些方法会先将操作对象转换为字符串，然后逐个字符检测字符串是否有可转换为数值的部分，如果有可转换为数值的部分则取出该数值返回，否则返回 NaN。
 
-    Object 类型、undefined 值和 null 转为数值的结果都是 NaN。对于布尔值，parseInt() 返回的结果都是 NaN，而 Number() 会把 true 转为1，把 false 转为0。
+    Object 类型、undefined 值和 null 转为数值的结果都是 NaN。对于布尔值，`parseXXX()`返回的结果都是 NaN，而`Number()`会把 true 转为1，把 false 转为0。
 
     ```js
     console.log(parseInt('11abc', 10), typeof parseInt('11abc')); // 输出: 11 "number"
@@ -127,7 +140,7 @@ console.log(a.__proto__ === B.prototype, a instanceof B); // true true
 
 3. 转布尔值
 
-    转布尔值使用的是 Boolean() 标准类型转换方法。对于非空字符串和非零数值一律返回 true，否则返回 false；undefined 和 null 返回 false，Object 类型返回 true。
+    转布尔值使用的是`Boolean()`标准类型转换方法。对于非空字符串和非零数值一律返回 true，否则返回 false；undefined 和 null 返回 false，Object 类型返回 true。
 
 ### <a name="href2-2">隐性类型转换</a> ###
 
@@ -145,7 +158,7 @@ console.log(a.__proto__ === B.prototype, a instanceof B); // true true
     console.log(+'123', typeof +'123'); // 输出: 123 "number"
     ```
 
-    转换规则同 Number()。
+    转换规则同`Number()`。
 
 3. 其他类型转布尔:
 
@@ -153,7 +166,7 @@ console.log(a.__proto__ === B.prototype, a instanceof B); // true true
     console.log(!!'123'); // 输出: true
     ```
 
-    转换规则同 Boolean()。
+    转换规则同`Boolean()`。
 
 ## <a name="href3">特殊转换</a> ##
 

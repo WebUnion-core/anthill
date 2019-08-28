@@ -19,6 +19,8 @@
 9. [获取YYYY-MM-DD格式日期](#href9)
 10. [类型获取](#href10)
 11. [深拷贝](#href11)
+12. [节流](#href12)
+13. [防抖](#href13)
 
 ## <a name="href1">匹配最外层HTML标签名</a> ##
 
@@ -322,6 +324,49 @@ function clone(target) {
         }
     }
     return result;
+}
+```
+
+## <a name="href12">节流</a> ##
+
+代码:
+
+```js
+function throttle(fn, time) {
+    var ifWork = true; // 用闭包保存一个计时器启动标记
+    return function () {
+        var params = arguments;
+        if (ifWork) {
+            // 一旦计时器启动，则将标记置为false
+            ifWork = false;
+            setTimeout(function () {
+                // 注意绑定上下文环境
+                fn.apply(this, params);
+                ifWork = true;
+            }, time);
+        }
+    };
+}
+```
+
+## <a name="href13">防抖</a> ##
+
+代码:
+
+```js
+function debounce(fn, time) {
+    var timer = null; // 用闭包把计时器对象保存下来
+    return function () {
+        var params = arguments;
+        if (timer) {
+            // 清除掉已存在的计时器
+            clearTimeout(timer);
+        }
+        timer = setTimeout(function () {
+            // 注意绑定上下文环境
+            fn.apply(this, params);
+        }, time);
+    };
 }
 ```
 
