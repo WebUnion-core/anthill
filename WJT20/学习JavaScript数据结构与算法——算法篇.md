@@ -17,7 +17,7 @@
 
 ### <a name="href1-1">冒泡排序</a> ###
 
-冒泡排序是所有排序算法中性能最差的一种，但也是最常考查、也是最简单的一种排序算法。原理是将数组中元素升序排序(由小到大)，就像气泡从底部升起到顶部一样，冒泡排序因此得名。
+冒泡排序是所有排序算法中性能最差的一种，但也是最常考查、也是最简单的一种排序算法。原理是将数组中元素升序排序，就像气泡从底部升起到顶部一样，冒泡排序因此得名。
 
 代码实现:
 
@@ -26,9 +26,11 @@ function bubbleSort(arr) {
     var length = arr.length;
     for (var i = 0; i < length; i++) {
         for (var j = 0; j < length - i - 1; j++) {
-            var aux = arr[j];
-            arr[j] = arr[j + 1];
-            arr[j + 1] = aux;
+            if (arr[j] > arr[j + 1]) {
+                var aux = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = aux;                
+            }
         }
     }
 }
