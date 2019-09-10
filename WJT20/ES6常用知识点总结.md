@@ -42,6 +42,16 @@ ECMAScript6(简称 ES6) 是 JavaScript 语言的下一代标准，也称 ECMAScr
 
 关于 Babel 的安装和使用，可以参考文章: [Babel配置笔记](https://github.com/WeiJietao/LogBase/blob/master/Babel%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0.md)
 
+Babel 是如何把 ES6 转成 ES5 呢，其大致分为三步:
+
+1. 将代码字符串解析成抽象语法树，即所谓的 AST;
+2. 对 AST 进行处理，在这个阶段可以对 ES6 代码进行相应转换，即转成 ES5 代码;
+3. 根据处理后的 AST 再生成代码字符串;
+
+基于此，其实我们自己就可以实现一个简单的"编译器"，用于把 ES6 代码转成 ES5。
+
+比如，可以使用`@babel/parser`的`parse()`方法，将代码字符串解析成 AST; 使用`@babel/core`的`transformFromAstSync()`方法，对 AST 进行处理，将其转成 ES5 并生成相应的代码字符串; 过程中，可能还需要使用`@babel/traverse`来获取依赖文件等。
+
 ## <a name="href3">let命令</a> ##
 
 let 命令是 ES6 新增的用来声明变量的命令，与 var 类似，不同之处在于 let 声明的变量只在 let 命令所在的代码块内有效。

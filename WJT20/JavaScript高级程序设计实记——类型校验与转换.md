@@ -27,7 +27,7 @@ console.log(typeof str); // "string"
 console.log(typeof 1); // "number"
 ```
 
-但是`typeof`的判断并不是特别精准，比如无法区分数组和对象，返回的值都是"object"。
+`typeof`不能校验 object 的其他类型，引用类型除了 function 都不能区分。
 
 ### <a name="href1-2">相等符与全等符</a> ###
 

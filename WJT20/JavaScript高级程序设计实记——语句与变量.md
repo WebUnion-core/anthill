@@ -126,6 +126,25 @@ function add(a, b, c) {
 
 可以通过 return 关键字在函数体中返回值，return 后的内容不会被浏览器识别和执行。
 
+任何类型的变量都可以作为参数传入函数，如果将 Object 类型的数据传入，传进函数的是原对象的地址(或者说引用)，这个地址赋值给了形参(形参看做局部变量)，例如:
+
+```js
+function changeObjProperty(a) {
+    // 改变对应地址内的对象属性值
+    a.siteUrl = "http://www.baidu.com";
+    // 变量a指向新的地址 以后的变动和旧地址无关
+    a = new Object();
+    a.siteUrl = "http://www.google.com";
+    a.name = 456;
+}
+
+var webSite = new Object();
+
+webSite.name = '123';
+changeObjProperty(webSite);
+console.log(webSite); // {name: 123, siteUrl: 'http://www.baidu.com'}
+```
+
 ### <a name="href3-6">arguments</a> ###
 
 函数内存在一个 arguments 类数组对象用于包含函数调用时传入的参数，arguments.length 可以获取传入参数的个数，`arguments[index]` 可以访问指定索引号的参数。
@@ -165,6 +184,17 @@ function requestData(callback) {
 requestData(function() {
     console.log('GET.');
 });
+```
+
+非匿名自执行函数，函数名只读，如果要重写函数对应的函数名，严格模式下会报错，一般模式下会失效:
+
+```js
+var b = 10;
+(function b() {
+	'use strict'
+	b = 20;
+	console.log(b);
+})(); // "Uncaught TypeError: Assignment to constant variable."
 ```
 
 ### <a name="href3-8">作用域</a> ###
