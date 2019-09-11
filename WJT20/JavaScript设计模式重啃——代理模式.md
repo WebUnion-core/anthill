@@ -17,7 +17,7 @@
 
 ## <a name="href2">送花实例</a> ##
 
-送花是一个使用代理模式的例子，假如A要送花给C，但是A不知道什么时候送花给C比较合适，如果送花的时机不合适，送的花可能会直接被丢掉，这时可以委托C的好友B在合适的时候送花给C，实现的代码如下:
+送花是一个使用代理模式的例子，假如 A 要送花给 C，但是 A 不知道什么时候送花给C比较合适，如果送花的时机不合适，送的花可能会直接被丢掉，这时可以委托 C 的好友B在合适的时候送花给 C，实现的代码如下:
 
 ```js
 // 传输数据体
@@ -44,12 +44,14 @@ var B = {
 
 // 具有'状态监听'和'接收'接口
 var C = {
+    flowers: [],
     listenGoodMood: function(callback) {
         setTimeout(function() {
             callback();
         }, 60000);
     },
     receiveFlower: function(flower) {
+        this.flowers.push(flower);
         console.log('成功收到花了！');
     }
 }
@@ -59,16 +61,16 @@ A.sendFlower(B); // B就是一个代理对象
 
 ## <a name="href3">保护代理和虚拟代理</a> ##
 
-用前面送花的例子来说明下保护代理和虚拟代理，所谓保护代理就是由B过滤掉一些指向C的请求，即由B控制对C的访问。虚拟代理则是代理模式的另一种形式，它会把一些开销很大的对象延迟到真正需要它的时候才去创建，例如 Flower 实例对象(创建一个实例对象是一个代价昂贵的操作)。
+用前面送花的例子来说明下保护代理和虚拟代理，所谓保护代理就是由 B 过滤掉一些指向 C 的请求，即由 B 控制对 C 的访问。虚拟代理则是代理模式的另一种形式，它会把一些开销很大的对象延迟到真正需要它的时候才去创建，例如 Flower 实例对象(创建一个实例对象是一个代价昂贵的操作)。
 
 虚拟代理的实现并不难，只要将之前的创建 Flower 实例操作移动到B的内部:
 
 ```js
 var B = {
     receiveFlower: function() {
-        C.listenGoodMood(function(flower) {
+        C.listenGoodMood(function() {
             var flower = new Flower();
-            C.receiveFlower();
+            C.receiveFlower(flower);
         });
     }
 }
@@ -157,7 +159,7 @@ var proxySynchronousFile = (function() {
 var checkboxes = document.getElementsByClassName('checkbox');
 for(var i = 0; i < checkboxes.length; i++) {
     checkboxes[i].onclick = function() {
-        if (this.checked === true) {
+        if (this.checked) {
             proxySynchronousFile(this.id);
         }
     }
