@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/WebUnion-core/anthill#readme",
   "devDependencies": {
-    "marked": "^0.4.0"
+    "marked": "^0.7.0"
   }
 }
